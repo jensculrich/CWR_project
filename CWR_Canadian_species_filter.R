@@ -1,11 +1,11 @@
 # Full US CWR Inventory from PNAS 2020 Table S1
 US_inventory <- read.csv("pnas_tableS1_Usinventory_1A_1B_1C.csv")
 # US CWR list from GRIN filter
-US_GRIN <- read.csv("All_US_CWR_Pri_Sec_Tert.csv", header = TRUE)
+US_GRIN <- read.csv("All_US_CWR_Pri_Sec_Tert.csv")
 # Canada CWR list from GRIN filter
 Canada_GRIN <- read.csv("All_Canadian_CWR_Pri_Sec_Tert.csv")
 
-nrow(US_GRIN) # 1026 rows
+nrow(US_GRIN) # 1025 rows
 nrow(US_inventory) # 656 rows
 # The GRIN US filter should give the same species list as the US inventory
 # However, the GRIN file has many more entries. In the GRIN file,
@@ -15,5 +15,10 @@ nrow(US_inventory) # 656 rows
 
 # remove duplicates in the GRIN filter
 str(US_GRIN) # the column for species name is X
-US_GRIN2 <- subset(US_GRIN, !duplicated(subset(US_GRIN, select=c(X))))
+US_GRIN2 <- subset(US_GRIN, !duplicated(subset(US_GRIN, select=c(CROP.WILD.RELATIVE))))
 nrow(US_GRIN2)
+write.csv(US_GRIN2, "GRIN_filter_no_duplicates.csv")
+
+
+# are there any species in the GRIN US filter that are not in the PNAS supp?
+# any in the PNAS supp that are not in the GRIN filter?
