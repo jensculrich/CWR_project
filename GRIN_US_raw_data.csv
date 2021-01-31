@@ -176,14 +176,14 @@ Bleeding-Heart,Dicentra formosa (Andrews) Walp.,Progenitor,,Agronomic,,Ornamenta
 Bluejoint,Calamagrostis canadensis (Michx.) P. Beauv.,,,,,
 Breadfruit,Artocarpus altilis (Parkinson) Fosberg,,,,,
 Breadfruit,Artocarpus altilis (Parkinson) Fosberg,Primary,,,,
-Breadfruit,Artocarpus mariannensis TrÈcul,Primary,,Agronomic,,Crop Quality (AG)
+Breadfruit,Artocarpus mariannensis Tr√©cul,Primary,,Agronomic,,Crop Quality (AG)
 Bromegrass,Bromus carinatus Hook. & Arn. var. marginatus (Steud.) Barkworth & Anderton,Secondary,,Biotic,,Disease Resistance (B)
 Butternut,Juglans cinerea L.,,,,,
 Canna,Canna flaccida Salisb.,Progenitor,,Agronomic,,Ornamental Features (AG)
 Canna,Canna glauca L.,Progenitor,,Agronomic,,Ornamental Features (AG)
 Canna,Canna indica L.,,,Agronomic,,Ornamental Features (AG)
 Carrot,Daucus pusillus Michx.,Tertiary,,,,
-Cassava,Manihot angustiloba (Torr.) M¸ll. Arg.,Tertiary,,Agronomic,,Crop Quality (AG)
+Cassava,Manihot angustiloba (Torr.) M√ºll. Arg.,Tertiary,,Agronomic,,Crop Quality (AG)
 Cassava,Manihot walkerae Croizat,Tertiary,,Agronomic,,Crop Quality (AG)
 Cassava,Manihot walkerae Croizat,Tertiary,,Fertility,,Gene Transfer (F)
 Cassava,Manihot davisiae Croizat,Tertiary,,,,
@@ -209,10 +209,10 @@ Chestnut,Castanea ozarkensis Ashe,Secondary,,,,
 "Chestnut, Japanese",Castanea dentata (Marshall) Borkh.,Secondary,,,,
 "Chestnut, Japanese",Castanea pumila (L.) Mill.,Secondary,,Biotic,,Pest Resistance (B)
 "Chestnut, Japanese",Castanea ozarkensis Ashe,Secondary,,,,
-Citrus,Citrus ◊depressa Hayata,Progenitor,Graftstock,Agronomic,,High Yield (AG)
-Citrus,Citrus ◊depressa Hayata,Progenitor,Graftstock,Biotic,,Disease Resistance (B)
-Citrus,Citrus ◊depressa Hayata,Progenitor,Graftstock,Phenological,,Early Maturity (P)
-Citrus,Citrus ◊depressa Hayata,Tertiary,,,,
+Citrus,Citrus √ódepressa Hayata,Progenitor,Graftstock,Agronomic,,High Yield (AG)
+Citrus,Citrus √ódepressa Hayata,Progenitor,Graftstock,Biotic,,Disease Resistance (B)
+Citrus,Citrus √ódepressa Hayata,Progenitor,Graftstock,Phenological,,Early Maturity (P)
+Citrus,Citrus √ódepressa Hayata,Tertiary,,,,
 Cocoyam,Xanthosoma sagittifolium (L.) Schott,,,,,
 Cotton,Gossypium thurberi Tod.,Tertiary,,Biotic,,Disease Resistance (B)
 Cotton,Gossypium thurberi Tod.,Tertiary,,Biotic,,Pest Resistance (B)
@@ -322,8 +322,8 @@ Gooseberry,Ribes tularense (Coville) Fedde,Secondary,,,,
 "Grape, Wine",Vitis aestivalis Michx. var. aestivalis,Tertiary,,Agronomic,,Crop Quality (AG)
 "Grape, Wine",Vitis arizonica Engelm.,Tertiary,,Biotic,,Disease Resistance (B)
 "Grape, Wine",Vitis californica Benth.,Secondary,,,,
-"Grape, Wine",Vitis ◊champinii Planch.,,Graftstock,Biotic,,Pest Resistance (B)
-"Grape, Wine",Vitis ◊champinii Planch.,Progenitor,Graftstock,,,
+"Grape, Wine",Vitis √óchampinii Planch.,,Graftstock,Biotic,,Pest Resistance (B)
+"Grape, Wine",Vitis √óchampinii Planch.,Progenitor,Graftstock,,,
 "Grape, Wine",Vitis cinerea (Engelm.) Millardet,Progenitor,Graftstock,,,
 "Grape, Wine",Vitis cinerea (Engelm.) Millardet,Tertiary,,Biotic,,Disease Resistance (B)
 "Grape, Wine",Vitis cinerea (Engelm.) Millardet,Tertiary,,Biotic,,Pest Resistance (B)
@@ -354,14 +354,14 @@ Gooseberry,Ribes tularense (Coville) Fedde,Secondary,,,,
 "Grape, Wine",Vitis monticola Buckley,Tertiary,,Biotic,,Pest Resistance (B)
 "Grape, Wine",Vitis treleasei Munson ex L. H. Bailey,Tertiary,,,,
 "Grape, Wine",Vitis girdiana Munson,Tertiary,,,,
-"Grape, Wine",Vitis ◊slavinii Rehder,,Graftstock,Biotic,,Pest Resistance (B)
+"Grape, Wine",Vitis √óslavinii Rehder,,Graftstock,Biotic,,Pest Resistance (B)
 "Grape, Wine",Vitis aestivalis Michx.,,Graftstock,Biotic,,Disease Resistance (B)
 "Grape, Wine",Vitis aestivalis Michx.,Progenitor,Graftstock,,,
 "Grape, Wine",Vitis aestivalis Michx.,Tertiary,,Biotic,,Disease Resistance (B)
 "Grape, Wine",Vitis aestivalis Michx.,Tertiary,,Biotic,,Pest Resistance (B)
 "Grape, Wine",Vitis shuttleworthii House,Tertiary,,Agronomic,,Crop Quality (AG)
 "Grape, Wine",Vitis shuttleworthii House,Tertiary,,Biotic,,Disease Resistance (B)
-"Grape, Wine",Vitis ◊novae-angliae Fernald,,Graftstock,Biotic,,Disease Resistance (B)
+"Grape, Wine",Vitis √ónovae-angliae Fernald,,Graftstock,Biotic,,Disease Resistance (B)
 "Grape, Wine",Vitis aestivalis Michx. var. linsecomii (Buckley) L. H. Bailey,Tertiary,,Biotic,,Disease Resistance (B)
 "Grape, Wine",Vitis cinerea (Engelm.) Millardet var. floridana Munson,Tertiary,,Biotic,,Disease Resistance (B)
 "Grape, Wine",Vitis cinerea (Engelm.) Millardet var. cinerea,Tertiary,,,,
@@ -493,8 +493,8 @@ Pecan,Carya carolinae-septentrionalis (Ashe) Engl. & Graebn.,Primary,,,,
 Pecan,Carya floridana Sarg.,Secondary,,,,
 Pecan,Carya ovalis (Wangenh.) Sarg.,Secondary,,,,
 Pecan,Carya pallida (Ashe) Engl. & Graebn.,Secondary,,,,
-Pecan,Carya ◊ludoviciana (Ashe) Little,,Graftstock,,,
-Pecan,Carya ◊lecontei Little,,Graftstock,Abiotic,,Waterlogging Tolerance (AB)
+Pecan,Carya √óludoviciana (Ashe) Little,,Graftstock,,,
+Pecan,Carya √ólecontei Little,,Graftstock,Abiotic,,Waterlogging Tolerance (AB)
 "Pepper, Capsicum",Capsicum annuum L.,,,,,
 "Pepper, Capsicum",Capsicum annuum L. var. glabriusculum (Dunal) Heiser & Pickersgill,Primary,,Agronomic,,High Yield (AG)
 "Pepper, Capsicum",Capsicum annuum L. var. glabriusculum (Dunal) Heiser & Pickersgill,Progenitor,,,,
@@ -663,7 +663,7 @@ Spinach,Blitum californicum S. Watson,Tertiary,,,,
 Spinach,Blitum nuttallianum Schult.,Tertiary,,,,
 Spinach,Blitum spathulatum (A. Gray) S. Fuentes et al.,Tertiary,,,,
 Spinach,Blitum hastatum Rydb.,Tertiary,,,,
-Strawberry,Fragaria ◊ananassa Duchesne ex Rozier,,,,,
+Strawberry,Fragaria √óananassa Duchesne ex Rozier,,,,,
 Strawberry,Fragaria chiloensis (L.) Mill.,Primary,,Abiotic,,Cold Tolerance (AB)
 Strawberry,Fragaria chiloensis (L.) Mill.,Primary,,Agronomic,,Crop Quality (AG)
 Strawberry,Fragaria chiloensis (L.) Mill.,Primary,,Agronomic,,High Yield (AG)
@@ -687,7 +687,7 @@ Strawberry,Dasiphora fruticosa (L.) Rydb.,Tertiary,,,,
 Strawberry,Fragaria vesca L. subsp. bracteata (A. Heller) Staudt f. bracteata (A. Heller) Staudt,Tertiary,,,,
 Strawberry,Fragaria vesca L. subsp. bracteata (A. Heller) Staudt f. albida Staudt,Tertiary,,,,
 Strawberry,Fragaria vesca L. subsp. bracteata (A. Heller) Staudt f. helleri (Holz.) Staudt,Tertiary,,,,
-Strawberry,Fragaria ◊ananassa Duchesne ex Rozier subsp. cuneifolia (Nutt. ex Howell) Staudt,Primary,,,,
+Strawberry,Fragaria √óananassa Duchesne ex Rozier subsp. cuneifolia (Nutt. ex Howell) Staudt,Primary,,,,
 Strawberry,Comarum palustre L.,Tertiary,,,,
 Strawberry,Drymocallis glandulosa (Lindl.) Rydb.,Tertiary,,,,
 Strawberry,Fragaria cascadensis K. E. Hummer,Secondary,,,,
@@ -734,10 +734,10 @@ Sunflower,Helianthus hirsutus Raf.,Tertiary,,Agronomic,,Crop Quality (AG)
 Sunflower,Helianthus hirsutus Raf.,Tertiary,,Biotic,,Disease Resistance (B)
 Sunflower,Helianthus hirsutus Raf.,Tertiary,,Biotic,,Pest Resistance (B)
 Sunflower,Helianthus hirsutus Raf.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
-Sunflower,Helianthus ◊laetiflorus Pers.,Tertiary,,Agronomic,,Crop Quality (AG)
-Sunflower,Helianthus ◊laetiflorus Pers.,Tertiary,,Biotic,,Disease Resistance (B)
-Sunflower,Helianthus ◊laetiflorus Pers.,Tertiary,,Biotic,,Pest Resistance (B)
-Sunflower,Helianthus ◊laetiflorus Pers.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
+Sunflower,Helianthus √ólaetiflorus Pers.,Tertiary,,Agronomic,,Crop Quality (AG)
+Sunflower,Helianthus √ólaetiflorus Pers.,Tertiary,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus √ólaetiflorus Pers.,Tertiary,,Biotic,,Pest Resistance (B)
+Sunflower,Helianthus √ólaetiflorus Pers.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
 Sunflower,Helianthus maximiliani Schrad.,Tertiary,,Abiotic,,Cold Tolerance (AB)
 Sunflower,Helianthus maximiliani Schrad.,Tertiary,,Biotic,,Disease Resistance (B)
 Sunflower,Helianthus maximiliani Schrad.,Tertiary,,Biotic,,Pest Resistance (B)
@@ -971,16 +971,16 @@ Wheat,Leymus mollis (Trin.) Pilg.,Tertiary,,Biotic,,Disease Resistance (B)
 Wheat,Leymus innovatus (Beal) Pilg.,Tertiary,,,,
 Wheat,Leymus triticoides (Buckley) Pilg.,Tertiary,,Abiotic,,Salt Tolerance (AB)
 Wheat,Leymus pacificus (Gould) D. R. Dewey,Tertiary,,,,
-Wheat,Leymus salina (M. E. Jones) ¡. Lˆve,Tertiary,,,,
-Wheat,Leymus condensatus (J. Presl) ¡. Lˆve,Tertiary,,,,
-Wheat,Leymus cinereus (Scribn. & Merr.) ¡. Lˆve,Tertiary,,,,
+Wheat,Leymus salina (M. E. Jones) √Å. L√∂ve,Tertiary,,,,
+Wheat,Leymus condensatus (J. Presl) √Å. L√∂ve,Tertiary,,,,
+Wheat,Leymus cinereus (Scribn. & Merr.) √Å. L√∂ve,Tertiary,,,,
 Wheat,Elymus elymoides (Raf.) Swezey,Tertiary,,,,
 Wheat,Elymus hystrix L.,Tertiary,,,,
 Wheat,Elymus trachycaulus (Link) Gould ex Shinners,Tertiary,,Biotic,,Disease Resistance (B)
 Wheat,Elymus macrourus (Turcz. ex Steud.) Tzvelev,Tertiary,,,,
 Wheat,Elymus trachycaulus (Link) Gould ex Shinners subsp. trachycaulus,Tertiary,,,,
 Wheat,Elymus arizonicus (Scribn. & J. G. Sm.) Gould,Tertiary,,,,
-Wheat,Elymus bakeri (E. E. Nelson) ¡. Lˆve,Tertiary,,,,
+Wheat,Elymus bakeri (E. E. Nelson) √Å. L√∂ve,Tertiary,,,,
 Wheat,Elymus curvatus Piper,Tertiary,,,,
 Wheat,Elymus interruptus Buckley,Tertiary,,,,
 Wheat,Elymus lanceolatus (Scribn. & J. G. Sm.) Gould,Tertiary,,,,
@@ -988,16 +988,16 @@ Wheat,Elymus scribneri (Vasey) M. E. Jones,Tertiary,,,,
 Wheat,Elymus sierrae Gould,Tertiary,,,,
 Wheat,Elymus wiegandii Fernald,Tertiary,,,,
 Wheat,Leymus ambiguus (Vasey & Scribn.) D. R. Dewey,Tertiary,,,,
-Wheat,Leymus salina (M. E. Jones) ¡. Lˆve subsp. mojavensis Barkworth & R. J. Atkins,Tertiary,,,,
-Wheat,Elymus trachycaulus (Link) Gould ex Shinners subsp. subsecundus (Link) ¡. Lˆve & D. Lˆve,Tertiary,,,,
+Wheat,Leymus salina (M. E. Jones) √Å. L√∂ve subsp. mojavensis Barkworth & R. J. Atkins,Tertiary,,,,
+Wheat,Elymus trachycaulus (Link) Gould ex Shinners subsp. subsecundus (Link) √Å. L√∂ve & D. L√∂ve,Tertiary,,,,
 Wheat,Elymus lanceolatus (Scribn. & J. G. Sm.) Gould subsp. lanceolatus,Tertiary,,,,
-Wheat,Leymus salina (M. E. Jones) ¡. Lˆve subsp. salina,Tertiary,,,,
-Wheat,Leymus salina (M. E. Jones) ¡. Lˆve subsp. salmonis (C. L. Hitchc.) R. J. Atkins,Tertiary,,,,
+Wheat,Leymus salina (M. E. Jones) √Å. L√∂ve subsp. salina,Tertiary,,,,
+Wheat,Leymus salina (M. E. Jones) √Å. L√∂ve subsp. salmonis (C. L. Hitchc.) R. J. Atkins,Tertiary,,,,
 Wheat,Leymus simplex (Scribn. & T. A. Williams) D. R. Dewey,Tertiary,,,,
 Wheat,Leymus flavescens (Scribn. & J. G. Sm.) Pilg.,Tertiary,,,,
 Wheat,Elymus glaucus Buckley subsp. glaucus,Tertiary,,,,
 Wheat,Elymus wawawaiensis J. R. Carlson & Barkworth,Tertiary,,,,
-Wheat,Elymus lanceolatus (Scribn. & J. G. Sm.) Gould subsp. psammophilus (J. M. Gillett & H. Senn) ¡. Lˆve,Tertiary,,,,
+Wheat,Elymus lanceolatus (Scribn. & J. G. Sm.) Gould subsp. psammophilus (J. M. Gillett & H. Senn) √Å. L√∂ve,Tertiary,,,,
 Wheat,Elymus elymoides (Raf.) Swezey subsp. elymoides,Tertiary,,,,
 Wheat,Elymus elymoides (Raf.) Swezey subsp. brevifolius (J. G. Sm.) Barkworth,Tertiary,,,,
 Wheat,Elymus elymoides (Raf.) Swezey subsp. californicus (J. G. Sm.) Barkworth,Tertiary,,,,
@@ -1013,10 +1013,10 @@ Wheat,Elymus riparius Wiegand,Tertiary,,,,
 Wheat,Elymus glaucus Buckley subsp. mackenziei (Bush) J. J. N. Campb.,Tertiary,,,,
 Wheat,Elymus hirsutus J. Presl,Tertiary,,,,
 Wheat,Elymus violaceus (Hornem.) Feilberg,Tertiary,,,,
-Wheat,Elymus albicans (Scribn. & J. G. Sm.) ¡. Lˆve,Tertiary,,,,
+Wheat,Elymus albicans (Scribn. & J. G. Sm.) √Å. L√∂ve,Tertiary,,,,
 Wheat,Leymus mollis (Trin.) Pilg. subsp. mollis,Tertiary,,,,
-Wheat,Leymus mollis (Trin.) Pilg. subsp. villosissimus (Scribn.) ¡. Lˆve & D. Lˆve,Tertiary,,,,
-Wheat,Elymus alaskanus (Scribn. & Merr.) ¡. Lˆve,Tertiary,,,,
+Wheat,Leymus mollis (Trin.) Pilg. subsp. villosissimus (Scribn.) √Å. L√∂ve & D. L√∂ve,Tertiary,,,,
+Wheat,Elymus alaskanus (Scribn. & Merr.) √Å. L√∂ve,Tertiary,,,,
 Wheat,Elymus glabriflorus (Vasey ex L. H. Dewey) Scribn. & C. R. Ball var. australis (Scribn. & C. R. Ball) J. J. N. Campb.,Tertiary,,,,
 Wheat,Elymus glabriflorus (Vasey ex L. H. Dewey) Scribn. & C. R. Ball var. glabriflorus,Tertiary,,,,
 Wheat,Elymus stebbinsii Gould,Tertiary,,,,
