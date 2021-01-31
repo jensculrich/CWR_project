@@ -1,0 +1,190 @@
+CROP,CROP.WILD.RELATIVE,GENEPOOL,GRAFTSTOCK,TRAIT,ONTOLOGY,BREEDING.TYPE
+"Amaranth, Purple",Amaranthus hybridus,Tertiary,,,NA,
+"Amaranth, Purple",Amaranthus retroflexus,Secondary,,,NA,
+Apple,Malus coronaria,Tertiary,,,NA,
+Apple,Malus fusca,,Graftstock,Abiotic,NA,Waterlogging Tolerance (AB)
+Apricot,Prunus americana,Progenitor,Graftstock,,NA,
+Apricot,Prunus maritima,Tertiary,,,NA,
+Apricot,Prunus nigra,Tertiary,,,NA,
+Apricot,Prunus pumila,Tertiary,,,NA,
+Apricot,Prunus pumila var. besseyi,Progenitor,Graftstock,,NA,
+Barley,Hordeum brachyantherum,Tertiary,,,NA,
+Barley,Hordeum depressum,Tertiary,,,NA,
+Barley,Hordeum jubatum,Tertiary,,Abiotic,NA,Salt Tolerance (AB)
+Barley,Hordeum pusillum,Tertiary,,,NA,
+Barley,Leymus mollis,Tertiary,,Biotic,NA,Disease Resistance (B)
+Barley,Hordeum brachyantherum subsp. brachyantherum,Tertiary,,,NA,
+Barley,Hordeum jubatum subsp. jubatum,Tertiary,,,NA,
+Barley,Hordeum jubatum subsp. Intermedium,Tertiary,,,NA,
+Bilberry,Vaccinium cespitosum,Primary,,,NA,
+Bilberry,Vaccinium corymbosum,Tertiary,,,NA,
+Bilberry,Vaccinium deliciosum,Secondary,,,NA,
+Bilberry,Vaccinium membranaceum,Secondary,,,NA,
+Bilberry,Vaccinium myrtillus,,,,NA,
+Bilberry,Vaccinium ovalifolium,Secondary,,,NA,
+Bilberry,Vaccinium parvifolium,Secondary,,,NA,
+Bilberry,Vaccinium scoparium,Secondary,,,NA,
+Bilberry,Vaccinium vitis-idaea,Secondary,,,NA,
+Blackberry,Rubus allegheniensis,Primary,,Agronomic,NA,Crop Quality (AG)
+Blackberry,Rubus canadensis,Primary,,Agronomic,NA,Crop Quality (AG)
+Blackberry,Rubus ursinus,Primary,,Agronomic,NA,Crop Quality (AG)
+Blackberry,Rubus frondosus,Primary,,Abiotic,NA,Heat Tolerance (AB)
+Blanket-Flower,Gaillardia aristata,Progenitor,,Agronomic,NA,Ornamental Features (AG)
+Bleeding-Heart,Dicentra formosa,Progenitor,,Agronomic,NA,Ornamental Features (AG)
+"Blueberry, Highbush",Vaccinium angustifolium,Primary,,Agronomic,NA,Crop Quality (AG)
+"Blueberry, Highbush",Vaccinium fuscatum,Secondary,,Abiotic,NA,Cold Tolerance (AB)
+"Blueberry, Highbush",Vaccinium myrtilloides,Tertiary,,,NA,
+"Blueberry, Highbush",Vaccinium ovatum,Tertiary,,,NA,
+"Blueberry, Highbush",Vaccinium pallidum,Secondary,,Abiotic,NA,Drought Resistance (AB)
+"Blueberry, Highbush",Vaccinium uliginosum,Tertiary,,Abiotic,NA,Cold Tolerance (AB)
+"Blueberry, Highbush",Vaccinium boreale,Secondary,,Abiotic,NA,Cold Tolerance (AB)
+Bluejoint,Calamagrostis canadensis,,,,NA,
+Bromegrass,Bromus carinatus var. marginatus,Secondary,,Biotic,NA,Disease Resistance (B)
+Butternut,Juglans cinerea,,,,NA,
+Carrot,Daucus pusillus,Tertiary,,,NA,
+"Cherry, Ornamental",Prunus virginiana,Tertiary,,Biotic,NA,Disease Resistance (B)
+"Cherry, Sour",Prunus pensylvanica,Progenitor,Graftstock,Agronomic,NA,Cold Tolerance (AB)
+"Cherry, Sweet",Prunus emarginata,,Graftstock,,NA,
+"Cherry, Sweet",Prunus serotina,Tertiary,,Abiotic,NA,Cold Tolerance (AB)
+Chestnut,Castanea dentata,Secondary,,,NA,
+Cranberry,Vaccinium macrocarpon,,,,NA,
+Cranberry,Vaccinium oxycoccos,Secondary,,Agronomic,NA,Crop Quality (AG)
+Cranberry,Vaccinium microcarpum,Primary,,Abiotic,NA,Cold Tolerance (AB)
+"Currant, Black",Ribes americanum,Secondary,,Biotic,NA,Disease Resistance (B)
+"Currant, Black",Ribes aureum,Tertiary,,,NA,
+"Currant, Black",Ribes cereum,Tertiary,,,NA,
+"Currant, Black",Ribes divaricatum,,Graftstock,,NA,
+"Currant, Black",Ribes hudsonianum,Secondary,,Agronomic,NA,Crop Quality (AG)
+"Currant, Black",Ribes oxyacanthoides,Tertiary,,,NA,
+"Currant, Black",Ribes sanguineum,Secondary,,Agronomic,NA,Growth Habit (AG)
+"Currant, Black",Ribes bracteosum,Secondary,,Agronomic,NA,Growth Habit (AG)
+"Currant, Black",Ribes hudsonianum var. petiolare,Secondary,,Biotic,NA,Disease Resistance (B)
+"Currant, Black",Ribes hudsonianum var. hudsonianum,Secondary,,,NA,
+"Currant, Red",Ribes triste,Tertiary,,Abiotic,NA,Cold Tolerance (AB)
+Fawn-Lily,Erythronium oregonum,Progenitor,,Agronomic,NA,Ornamental Features (AG)
+"Filbert, European",Corylus cornuta,Tertiary,,Biotic,NA,Disease Resistance (B)
+"Filbert, European",Corylus americana,Secondary,,Biotic,NA,Disease Resistance (B)
+"Filbert, European",Corylus californica,Secondary,,Fertility,NA,Gene Transfer (F)
+Flax,Linum lewisii,Tertiary,,,NA,
+Gooseberry,Ribes cynosbati,Secondary,,Agronomic,NA,Crop Quality (AG)
+Gooseberry,Ribes hirtellum,Progenitor,,,NA,
+Gooseberry,Ribes inerme,Secondary,,Agronomic,NA,Growth Habit (AG)
+Gooseberry,Ribes oxyacanthoides subsp. irriguum,Secondary,,,NA,
+Gooseberry,Ribes oxyacanthoides subsp. setosum,Secondary,,,NA,
+Gooseberry,Ribes oxyacanthoides subsp. oxyacanthoides,Progenitor,,,NA,
+Gooseberry,Ribes oxyacanthoides subsp. cognatum,Secondary,,,NA,
+"Grape, Wine",Vitis riparia,,Graftstock,,NA,
+"Grape, Wine",Vitis aestivalis,,Graftstock,Biotic,NA,Disease Resistance (B)
+"Grape, Wine",Vitis aestivalis var. bicolor,Tertiary,,,NA,
+"Grass, Switch",Panicum virgatum,,,,NA,
+"Hackberry, Ornamental",Celtis occidentalis,,Graftstock,,NA,
+Heal-All,Prunella vulgaris,,,,NA,
+Hop,Humulus lupulus,,,,NA,
+Hop,Humulus lupulus var. neomexicanus,Primary,,,NA,
+Hop,Humulus lupulus var. lupuloides,Primary,,Agronomic,NA,Crop Quality (AG)
+Jerusalem-Artichoke,Helianthus hirsutus,Progenitor,,,NA,
+Jerusalem-Artichoke,Helianthus strumosus,Tertiary,,,NA,
+Jerusalem-Artichoke,Helianthus tuberosus,,,,NA,
+Jerusalem-Artichoke,Helianthus divaricatus,Tertiary,,,NA,
+Leek,Allium schoenoprasum,Tertiary,,,NA,
+Lettuce,Lactuca tatarica,Tertiary,,,NA,
+Lettuce,Lactuca tatarica subsp. pulchella,Tertiary,,,NA,
+"Lily, Water-",Nymphaea tetragona,Progenitor,,Agronomic,NA,Ornamental Features (AG)
+Lupin,Lupinus polyphyllus,Progenitor,,Agronomic,NA,Ornamental Features (AG)
+Magnolia,Magnolia acuminata,Progenitor,,Agronomic,NA,Ornamental Features (AG)
+"Millet, Proso",Panicum capillare,ProbProg,,,NA,
+"Mint, Corn",Mentha canadensis,Secondary,,,NA,
+"Mint, Mountain-",Pycnanthemum virginianum,,,,NA,
+Pecan,Carya glabra,Secondary,,,NA,
+Pecan,Carya laciniosa,Primary,,,NA,
+Pecan,Carya ovata,Primary,,,NA,
+Pecan,Carya cordiformis,Primary,,,NA,
+Pecan,Carya ovalis,Secondary,,,NA,
+Quinoa,Chenopodium berlandieri,Secondary,,,NA,
+Quinoa,Chenopodium berlandieri subsp. berlandieri var. bushianum,Secondary,,,NA,
+Quinoa,Chenopodium berlandieri subsp. berlandieri var. macrocalycium,Secondary,,,NA,
+Quinoa,Chenopodium berlandieri subsp. berlandieri var. zschackei,Secondary,,,NA,
+Quinoa,Chenopodium desiccatum,Tertiary,,,NA,
+Quinoa,Chenopodium watsonii,Tertiary,,,NA,
+Quinoa,Chenopodium standleyanum,Tertiary,,,NA,
+Quinoa,Chenopodium hians,Tertiary,,,NA,
+"Raspberry, Black",Rubus leucodermis,Primary,,,NA,
+"Raspberry, Black",Rubus occidentalis,,,,NA,
+"Raspberry, Black",Rubus flagellaris,Secondary,,,NA,
+"Raspberry, Black",Rubus idaeus,Secondary,,,NA,
+"Raspberry, Red",Rubus arcticus,Tertiary,,Agronomic,NA,High Yield (AG)
+"Raspberry, Red",Rubus chamaemorus,Tertiary,,,NA,
+"Raspberry, Red",Rubus nutkanus,Secondary,,,NA,
+"Raspberry, Red",Rubus odoratus,Secondary,,Agronomic,NA,High Yield (AG)
+"Raspberry, Red",Rubus spectabilis,Primary,,Agronomic,NA,Crop Quality (AG)
+"Raspberry, Red",Rubus idaeus susbsp. trigosus,,,,NA,
+Rice,Zizania palustris,Tertiary,,,NA,
+"Rice, Wild",Zizania aquatica,Secondary,,,NA,
+"Rice, Wild",Zizania aquatica var. aquatica,Secondary,,,NA,
+"Rice, Wild",Zizania aquatica var. brevis,Secondary,,,NA,
+"Rice, Wild",Zizania palustris var. palustris,Primary,,,NA,
+"Rice, Wild",Zizania palustris var. interior,Primary,,,NA,
+Rosinweed,Silphium integrifolium,,,,NA,
+Rosinweed,Silphium perfoliatum,,,,NA,
+Spiderwort,Tradescantia virginiana,Progenitor,,Agronomic,NA,Ornamental Features (AG)
+Spinach,Blitum capitatum,Tertiary,,,NA,
+Spinach,Blitum nuttallianum,Tertiary,,,NA,
+Strawberry,Fragaria x ananassa,,,,NA,
+Strawberry,Fragaria chiloensis,Primary,,Abiotic,NA,Cold Tolerance (AB)
+Strawberry,Fragaria vesca,Tertiary,,Biotic,NA,Disease Resistance (B)
+Strawberry,Fragaria virginiana,Primary,,Agronomic,NA,Crop Quality (AG)
+Strawberry,Fragaria chiloensis subsp. pacifica,Primary,,,NA,
+Strawberry,Fragaria virginiana subsp. glauca,Primary,,,NA,
+Strawberry,Fragaria vesca subsp. americana,Tertiary,,,NA,
+Strawberry,Fragaria virginiana subsp. platypetala,Primary,,,NA,
+Strawberry,Fragaria vesca subsp. bracteata,Tertiary,,,NA,
+Strawberry,Fragaria virginiana subsp. virginiana,Primary,,,NA,
+Strawberry,Fragaria chiloensis subsp. lucida,Primary,,,NA,
+Strawberry,Dasiphora fruticosa,Tertiary,,,NA,
+Strawberry,Fragaria vesca subsp. bracteata f. bracteata,Tertiary,,,NA,
+Strawberry,Fragaria vesca subsp. bracteata f. helleri,Tertiary,,,NA,
+Strawberry,Fragaria x ananassa subsp. cuneifolia,Primary,,,NA,
+Strawberry,Comarum palustre,Tertiary,,,NA,
+Strawberry,Drymocallis glandulosa,Tertiary,,,NA,
+Sunflower,Helianthus annuus,,,Abiotic,NA,Salt Tolerance (AB)
+Sunflower,Helianthus decapetalus,Tertiary,,Biotic,NA,Disease Resistance (B)
+Sunflower,Helianthus giganteus,Tertiary,,Abiotic,NA,Waterlogging Tolerance (AB)
+Sunflower,Helianthus x laetiflorus,Tertiary,,Agronomic,NA,Crop Quality (AG)
+Sunflower,Helianthus maximiliani,Tertiary,,Abiotic,NA,Cold Tolerance (AB)
+Sunflower,Helianthus nuttallii,Tertiary,,Agronomic,NA,Crop Quality (AG)
+Sunflower,Helianthus petiolaris,Secondary,,Agronomic,NA,Crop Quality (AG)
+Sunflower,Helianthus petiolaris subsp. petiolaris,Secondary,,Abiotic,NA,Cold Tolerance (AB)
+Sunflower,Helianthus pauciflorus,Tertiary,,Agronomic,NA,Crop Quality (AG)
+Sunflower,Helianthus pauciflorus subsp. pauciflorus,Tertiary,,Agronomic,NA,Crop Quality (AG)
+Sunflower,Helianthus pauciflorus subsp. subrhomboideus,Tertiary,,Abiotic,NA,Cold Tolerance (AB)
+Tobacco,Nicotiana attenuata,Tertiary,,,NA,
+"Walnut, Black",Juglans nigra,,,,NA,
+Wheat,Elymus canadensis,Tertiary,,,NA,
+Wheat,Elymus glaucus,Tertiary,,,NA,
+Wheat,Elymus virginicus,Tertiary,,,NA,
+Wheat,Leymus innovatus,Tertiary,,,NA,
+Wheat,Leymus triticoides,Tertiary,,Abiotic,NA,Salt Tolerance (AB)
+Wheat,Leymus cinereus,Tertiary,,,NA,
+Wheat,Elymus elymoides,Tertiary,,,NA,
+Wheat,Elymus hystrix,Tertiary,,,NA,
+Wheat,Elymus trachycaulus,Tertiary,,Biotic,NA,Disease Resistance (B)
+Wheat,Elymus macrourus,Tertiary,,,NA,
+Wheat,Elymus trachycaulus subsp. trachycaulus,Tertiary,,,NA,
+Wheat,Elymus curvatus,Tertiary,,,NA,
+Wheat,Elymus lanceolatus,Tertiary,,,NA,
+Wheat,Elymus scribneri,Tertiary,,,NA,
+Wheat,Elymus wiegandii,Tertiary,,,NA,
+Wheat,Elymus trachycaulus subsp. subsecundus,Tertiary,,,NA,
+Wheat,Elymus lanceolatus subsp. lanceolatus,Tertiary,,,NA,
+Wheat,Elymus glaucus subsp. glaucus,Tertiary,,,NA,
+Wheat,Elymus lanceolatus subsp. psammophilus,Tertiary,,,NA,
+Wheat,Elymus glaucus subsp. virescens,Tertiary,,,NA,
+Wheat,Elymus lanceolatus subsp. riparius,Tertiary,,,NA,
+Wheat,Elymus riparius,Tertiary,,,NA,
+Wheat,Elymus hirsutus,Tertiary,,,NA,
+Wheat,Elymus violaceus,Tertiary,,,NA,
+Wheat,Elymus albicans,Tertiary,,,NA,
+Wheat,Leymus mollis subsp. mollis,Tertiary,,,NA,
+Wheat,Leymus mollis subsp. villosissimus,Tertiary,,,NA,
+Wheat,Elymus alaskanus,Tertiary,,,NA,
+Witch-Hazel,Hamamelis virginiana,,Graftstock,,NA,
