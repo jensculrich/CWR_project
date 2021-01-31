@@ -13,12 +13,5 @@ nrow(US_inventory) # 656 rows
 # Is this the only reason the length is longer, or are there any species that 
 # were not covered in the PNAS inventory?
 
-# remove duplicates in the GRIN filter
-str(US_GRIN) # the column for species name is X
-US_GRIN2 <- subset(US_GRIN, !duplicated(subset(US_GRIN, select=c(CROP.WILD.RELATIVE))))
-nrow(US_GRIN2)
-write.csv(US_GRIN2, "GRIN_filter_no_duplicates.csv")
-
-
 # are there any species in the GRIN US filter that are not in the PNAS supp?
 # any in the PNAS supp that are not in the GRIN filter?
