@@ -1,6 +1,12 @@
 # CWR_project
 
 ## Metadata
+### CWR_Canadian_species_filter.R
+  working file for data exploration. Initial goals are 
+  1) identify all Canadian CWR.
+  2) identify Canadian endemic CWR.
+  3) cross check GRIN US CWR filter with PNAS CWR US inventory to see if either source is missing species. 
+
 ### GRIN_data_US_raw_data.csv
   table downloaded from https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomysearchcwr, 
   with filter setting "Country=United States" and "Primary, Secondary, Tertiary, Graftstock" all selected
