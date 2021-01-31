@@ -7,19 +7,19 @@
   2) identify Canadian endemic CWR.
   3) cross check GRIN US CWR filter with PNAS CWR US inventory to see if either source is missing species. 
 
-### GRIN_data_US_raw_data.csv
+### GRIN_US_raw_data.csv
   table downloaded from https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomysearchcwr, 
   with filter setting "Country=United States" and "Primary, Secondary, Tertiary, Graftstock" all selected
 
-### GRIN_data_Canada_raw_data.csv
+### GRIN_Canada_raw_data.csv
   table downloaded from https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomysearchcwr, 
   with filter setting "Country=Canada" and "Primary, Secondary, Tertiary, Graftstock" all selected
   
-### GRIN_data_US_cleaned_data.csv
+### GRIN_US_cleaned_data.csv
   to match the format for crossreferencing with the PNAS USA CWR inventory, I removed species author names and duplicate rows 
   for each CWR (e.g. Prunus pumila is a CWR of apricot and cherry, I removed rows so that there is only one row containing unique species name Prunus pumila)
 
-### GRIN_data_Canada_cleaned_data.csv
+### GRIN_Canada_cleaned_data.csv
   to match the format for crossreferencing with the PNAS USA CWR inventory, I removed species author names and duplicate rows 
   for each CWR (e.g. Prunus pumila is a CWR of apricot and cherry, I removed rows so that there is only one row containing unique species name Prunus pumila)
 
