@@ -262,7 +262,7 @@ Rye,Hordeum jubatum L.,Tertiary,,,,
 Spiderwort,Tradescantia virginiana L.,Progenitor,,Agronomic,,Ornamental Features (AG)
 Spinach,Blitum capitatum L.,Tertiary,,,,
 Spinach,Blitum nuttallianum Schult.,Tertiary,,,,
-Strawberry,Fragaria ×ananassa Duchesne ex Rozier,,,,,
+Strawberry,Fragaria Ã—ananassa Duchesne ex Rozier,,,,,
 Strawberry,Fragaria chiloensis (L.) Mill.,Primary,,Abiotic,,Cold Tolerance (AB)
 Strawberry,Fragaria chiloensis (L.) Mill.,Primary,,Agronomic,,Crop Quality (AG)
 Strawberry,Fragaria chiloensis (L.) Mill.,Primary,,Agronomic,,High Yield (AG)
@@ -282,7 +282,7 @@ Strawberry,Fragaria chiloensis (L.) Mill. subsp. lucida (E. Vilm. ex Gay) Staudt
 Strawberry,Dasiphora fruticosa (L.) Rydb.,Tertiary,,,,
 Strawberry,Fragaria vesca L. subsp. bracteata (A. Heller) Staudt f. bracteata (A. Heller) Staudt,Tertiary,,,,
 Strawberry,Fragaria vesca L. subsp. bracteata (A. Heller) Staudt f. helleri (Holz.) Staudt,Tertiary,,,,
-Strawberry,Fragaria ×ananassa Duchesne ex Rozier subsp. cuneifolia (Nutt. ex Howell) Staudt,Primary,,,,
+Strawberry,Fragaria Ã—ananassa Duchesne ex Rozier subsp. cuneifolia (Nutt. ex Howell) Staudt,Primary,,,,
 Strawberry,Comarum palustre L.,Tertiary,,,,
 Strawberry,Drymocallis glandulosa (Lindl.) Rydb.,Tertiary,,,,
 Sunflower,Helianthus annuus L.,,,Abiotic,,Salt Tolerance (AB)
@@ -309,10 +309,10 @@ Sunflower,Helianthus hirsutus Raf.,Tertiary,,Agronomic,,Crop Quality (AG)
 Sunflower,Helianthus hirsutus Raf.,Tertiary,,Biotic,,Disease Resistance (B)
 Sunflower,Helianthus hirsutus Raf.,Tertiary,,Biotic,,Pest Resistance (B)
 Sunflower,Helianthus hirsutus Raf.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
-Sunflower,Helianthus ×laetiflorus Pers.,Tertiary,,Agronomic,,Crop Quality (AG)
-Sunflower,Helianthus ×laetiflorus Pers.,Tertiary,,Biotic,,Disease Resistance (B)
-Sunflower,Helianthus ×laetiflorus Pers.,Tertiary,,Biotic,,Pest Resistance (B)
-Sunflower,Helianthus ×laetiflorus Pers.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
+Sunflower,Helianthus Ã—laetiflorus Pers.,Tertiary,,Agronomic,,Crop Quality (AG)
+Sunflower,Helianthus Ã—laetiflorus Pers.,Tertiary,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus Ã—laetiflorus Pers.,Tertiary,,Biotic,,Pest Resistance (B)
+Sunflower,Helianthus Ã—laetiflorus Pers.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
 Sunflower,Helianthus maximiliani Schrad.,Tertiary,,Abiotic,,Cold Tolerance (AB)
 Sunflower,Helianthus maximiliani Schrad.,Tertiary,,Biotic,,Disease Resistance (B)
 Sunflower,Helianthus maximiliani Schrad.,Tertiary,,Biotic,,Pest Resistance (B)
@@ -371,7 +371,7 @@ Wheat,Leymus mollis (Trin.) Pilg.,Tertiary,,Abiotic,,Salt Tolerance (AB)
 Wheat,Leymus mollis (Trin.) Pilg.,Tertiary,,Biotic,,Disease Resistance (B)
 Wheat,Leymus innovatus (Beal) Pilg.,Tertiary,,,,
 Wheat,Leymus triticoides (Buckley) Pilg.,Tertiary,,Abiotic,,Salt Tolerance (AB)
-Wheat,Leymus cinereus (Scribn. & Merr.) Á. Löve,Tertiary,,,,
+Wheat,Leymus cinereus (Scribn. & Merr.) Ã. LÃ¶ve,Tertiary,,,,
 Wheat,Elymus elymoides (Raf.) Swezey,Tertiary,,,,
 Wheat,Elymus hystrix L.,Tertiary,,,,
 Wheat,Elymus trachycaulus (Link) Gould ex Shinners,Tertiary,,Biotic,,Disease Resistance (B)
@@ -381,17 +381,17 @@ Wheat,Elymus curvatus Piper,Tertiary,,,,
 Wheat,Elymus lanceolatus (Scribn. & J. G. Sm.) Gould,Tertiary,,,,
 Wheat,Elymus scribneri (Vasey) M. E. Jones,Tertiary,,,,
 Wheat,Elymus wiegandii Fernald,Tertiary,,,,
-Wheat,Elymus trachycaulus (Link) Gould ex Shinners subsp. subsecundus (Link) Á. Löve & D. Löve,Tertiary,,,,
+Wheat,Elymus trachycaulus (Link) Gould ex Shinners subsp. subsecundus (Link) Ã. LÃ¶ve & D. LÃ¶ve,Tertiary,,,,
 Wheat,Elymus lanceolatus (Scribn. & J. G. Sm.) Gould subsp. lanceolatus,Tertiary,,,,
 Wheat,Elymus glaucus Buckley subsp. glaucus,Tertiary,,,,
-Wheat,Elymus lanceolatus (Scribn. & J. G. Sm.) Gould subsp. psammophilus (J. M. Gillett & H. Senn) Á. Löve,Tertiary,,,,
+Wheat,Elymus lanceolatus (Scribn. & J. G. Sm.) Gould subsp. psammophilus (J. M. Gillett & H. Senn) Ã. LÃ¶ve,Tertiary,,,,
 Wheat,Elymus glaucus Buckley subsp. virescens (Piper) Gould,Tertiary,,,,
 Wheat,Elymus lanceolatus (Scribn. & J. G. Sm.) Gould subsp. riparius (Scribn. & J. G. Sm.) Barkworth,Tertiary,,,,
 Wheat,Elymus riparius Wiegand,Tertiary,,,,
 Wheat,Elymus hirsutus J. Presl,Tertiary,,,,
 Wheat,Elymus violaceus (Hornem.) Feilberg,Tertiary,,,,
-Wheat,Elymus albicans (Scribn. & J. G. Sm.) Á. Löve,Tertiary,,,,
+Wheat,Elymus albicans (Scribn. & J. G. Sm.) Ã. LÃ¶ve,Tertiary,,,,
 Wheat,Leymus mollis (Trin.) Pilg. subsp. mollis,Tertiary,,,,
-Wheat,Leymus mollis (Trin.) Pilg. subsp. villosissimus (Scribn.) Á. Löve & D. Löve,Tertiary,,,,
-Wheat,Elymus alaskanus (Scribn. & Merr.) Á. Löve,Tertiary,,,,
+Wheat,Leymus mollis (Trin.) Pilg. subsp. villosissimus (Scribn.) Ã. LÃ¶ve & D. LÃ¶ve,Tertiary,,,,
+Wheat,Elymus alaskanus (Scribn. & Merr.) Ã. LÃ¶ve,Tertiary,,,,
 Witch-Hazel,Hamamelis virginiana L.,,Graftstock,,,
