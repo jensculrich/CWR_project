@@ -22,3 +22,10 @@ US_GRIN$CROP.WILD.RELATIVE <- trimws(US_GRIN$CROP.WILD.RELATIVE, which = c("righ
 
 unmatched_records_from_US_GRIN <- anti_join(US_GRIN, US_inventory, by="CROP.WILD.RELATIVE")
 unmatched_records_from_US_Inventory <- anti_join(US_inventory, US_GRIN, by="CROP.WILD.RELATIVE")
+
+# generate a list of endemic Canadian CWR
+# are there any species in the GRIN US filter that are not in the PNAS supp?
+# any in the PNAS supp that are not in the GRIN filter?
+Canada_GRIN$CROP.WILD.RELATIVE <- trimws(Canada_GRIN$CROP.WILD.RELATIVE, which = c("right")) # remove trailing white space on species names
+Canadian_endemic_CWR <- anti_join(Canada_GRIN, US_GRIN, by="CROP.WILD.RELATIVE")
+
