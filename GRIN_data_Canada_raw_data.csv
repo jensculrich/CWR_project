@@ -1,0 +1,397 @@
+CROP,CROP WILD RELATIVE,GENEPOOL,GRAFTSTOCK,TRAIT,ONTOLOGY,BREEDING TYPE
+"Amaranth, Purple",Amaranthus hybridus L.,Tertiary,,,,
+"Amaranth, Purple",Amaranthus retroflexus L.,Secondary,,,,
+Apple,Malus coronaria (L.) Mill.,Tertiary,,,,
+Apple,Malus fusca (Raf.) C. K. Schneid.,,Graftstock,Abiotic,,Waterlogging Tolerance (AB)
+Apple,Malus fusca (Raf.) C. K. Schneid.,,Graftstock,Biotic,,Disease Resistance (B)
+Apple,Malus fusca (Raf.) C. K. Schneid.,Tertiary,,Biotic,,Disease Resistance (B)
+Apple,Malus fusca (Raf.) C. K. Schneid.,Tertiary,,Fertility,,Gene Transfer (F)
+Apricot,Prunus americana Marshall,Progenitor,Graftstock,,,
+Apricot,Prunus americana Marshall,Tertiary,,,,
+Apricot,Prunus maritima Marshall,Tertiary,,,,
+Apricot,Prunus nigra Aiton,Tertiary,,,,
+Apricot,Prunus pumila L.,Tertiary,,,,
+Apricot,Prunus pumila L. var. besseyi (L. H. Bailey) Waugh,Progenitor,Graftstock,,,
+Apricot,Prunus pumila L. var. besseyi (L. H. Bailey) Waugh,Tertiary,,,,
+Barley,Hordeum brachyantherum Nevski,Tertiary,,,,
+Barley,Hordeum depressum (Scribn. & J. G. Sm.) Rydb.,Tertiary,,,,
+Barley,Hordeum jubatum L.,Tertiary,,Abiotic,,Salt Tolerance (AB)
+Barley,Hordeum pusillum Nutt.,Tertiary,,,,
+Barley,Leymus mollis (Trin.) Pilg.,Tertiary,,Biotic,,Disease Resistance (B)
+Barley,Hordeum brachyantherum Nevski subsp. brachyantherum,Tertiary,,,,
+Barley,Hordeum jubatum L. subsp. jubatum,Tertiary,,,,
+Barley,Hordeum jubatum L. subsp. intermedium Bowden,Tertiary,,,,
+Bilberry,Vaccinium cespitosum Michx.,Primary,,,,
+Bilberry,Vaccinium corymbosum L.,Tertiary,,,,
+Bilberry,Vaccinium deliciosum Piper,Secondary,,,,
+Bilberry,Vaccinium membranaceum Douglas ex Torr.,Secondary,,,,
+Bilberry,Vaccinium myrtillus L.,,,,,
+Bilberry,Vaccinium myrtillus L.,Primary,,,,
+Bilberry,Vaccinium myrtillus L.,Tertiary,,,,
+Bilberry,Vaccinium ovalifolium Sm.,Secondary,,,,
+Bilberry,Vaccinium parvifolium Sm.,Secondary,,,,
+Bilberry,Vaccinium scoparium Leiberg ex Coville,Secondary,,,,
+Bilberry,Vaccinium vitis-idaea L.,Secondary,,,,
+Blackberry,Rubus allegheniensis Porter,Primary,,Agronomic,,Crop Quality (AG)
+Blackberry,Rubus allegheniensis Porter,Progenitor,,Agronomic,,Growth Habit (AG)
+Blackberry,Rubus canadensis L.,Primary,,Agronomic,,Crop Quality (AG)
+Blackberry,Rubus ursinus Cham. & Schltdl.,Primary,,Agronomic,,Crop Quality (AG)
+Blackberry,Rubus ursinus Cham. & Schltdl.,Primary,,Phenological,,Early Maturity (P)
+Blackberry,Rubus ursinus Cham. & Schltdl.,Progenitor,,,,
+Blackberry,Rubus frondosus Bigelow,Primary,,Abiotic,,Heat Tolerance (AB)
+Blackberry,Rubus frondosus Bigelow,Primary,,Agronomic,,Growth Habit (AG)
+Blackberry,Rubus frondosus Bigelow,Primary,,Phenological,,Late Maturity (P)
+Blanket-Flower,Gaillardia aristata Pursh,Progenitor,,Agronomic,,Ornamental Features (AG)
+Bleeding-Heart,Dicentra formosa (Andrews) Walp.,Progenitor,,Agronomic,,Ornamental Features (AG)
+"Blueberry, Highbush",Vaccinium angustifolium Aiton,Primary,,Agronomic,,Crop Quality (AG)
+"Blueberry, Highbush",Vaccinium angustifolium Aiton,Primary,,Biotic,,Disease Resistance (B)
+"Blueberry, Highbush",Vaccinium angustifolium Aiton,Primary,,Phenological,,Early Maturity (P)
+"Blueberry, Highbush",Vaccinium cespitosum Michx.,Tertiary,,Abiotic,,Cold Tolerance (AB)
+"Blueberry, Highbush",Vaccinium corymbosum L.,,,,,
+"Blueberry, Highbush",Vaccinium corymbosum L.,Primary,,,,
+"Blueberry, Highbush",Vaccinium deliciosum Piper,Tertiary,,,,
+"Blueberry, Highbush",Vaccinium fuscatum Aiton,Secondary,,Abiotic,,Cold Tolerance (AB)
+"Blueberry, Highbush",Vaccinium membranaceum Douglas ex Torr.,Tertiary,,,,
+"Blueberry, Highbush",Vaccinium myrtilloides Michx.,Tertiary,,,,
+"Blueberry, Highbush",Vaccinium myrtillus L.,Tertiary,,,,
+"Blueberry, Highbush",Vaccinium ovalifolium Sm.,Tertiary,,Agronomic,,Crop Quality (AG)
+"Blueberry, Highbush",Vaccinium ovatum Pursh,Tertiary,,,,
+"Blueberry, Highbush",Vaccinium pallidum Aiton,Secondary,,Abiotic,,Drought Resistance (AB)
+"Blueberry, Highbush",Vaccinium pallidum Aiton,Secondary,,Abiotic,,Edaphic (AB)
+"Blueberry, Highbush",Vaccinium pallidum Aiton,Secondary,,Agronomic,,Crop Quality (AG)
+"Blueberry, Highbush",Vaccinium pallidum Aiton,Secondary,,Phenological,,Early Maturity (P)
+"Blueberry, Highbush",Vaccinium parvifolium Sm.,Tertiary,,,,
+"Blueberry, Highbush",Vaccinium scoparium Leiberg ex Coville,Tertiary,,,,
+"Blueberry, Highbush",Vaccinium uliginosum L.,Tertiary,,Abiotic,,Cold Tolerance (AB)
+"Blueberry, Highbush",Vaccinium boreale I. V. Hall & Aalders,Secondary,,Abiotic,,Cold Tolerance (AB)
+"Blueberry, Lowbush",Vaccinium angustifolium Aiton,,,,,
+"Blueberry, Lowbush",Vaccinium angustifolium Aiton,Primary,,,,
+"Blueberry, Lowbush",Vaccinium corymbosum L.,Primary,,,,
+"Blueberry, Lowbush",Vaccinium myrtilloides Michx.,,,,,
+"Blueberry, Lowbush",Vaccinium myrtilloides Michx.,Primary,,Abiotic,,Cold Tolerance (AB)
+"Blueberry, Lowbush",Vaccinium myrtilloides Michx.,Primary,,Agronomic,,Crop Quality (AG)
+"Blueberry, Lowbush",Vaccinium pallidum Aiton,Secondary,,,,
+"Blueberry, Lowbush",Vaccinium boreale I. V. Hall & Aalders,,,,,
+"Blueberry, Lowbush",Vaccinium boreale I. V. Hall & Aalders,Primary,,,,
+"Blueberry, Rabbiteye",Vaccinium angustifolium Aiton,Secondary,,,,
+"Blueberry, Rabbiteye",Vaccinium corymbosum L.,Secondary,,,,
+"Blueberry, Rabbiteye",Vaccinium fuscatum Aiton,Secondary,,,,
+"Blueberry, Rabbiteye",Vaccinium pallidum Aiton,Secondary,,,,
+Bluejoint,Calamagrostis canadensis (Michx.) P. Beauv.,,,,,
+Bromegrass,Bromus carinatus Hook. & Arn. var. marginatus (Steud.) Barkworth & Anderton,Secondary,,Biotic,,Disease Resistance (B)
+Butternut,Juglans cinerea L.,,,,,
+Carrot,Daucus pusillus Michx.,Tertiary,,,,
+"Cherry, Ornamental",Prunus virginiana L.,Tertiary,,Biotic,,Disease Resistance (B)
+"Cherry, Sour",Prunus pensylvanica L. f.,Progenitor,Graftstock,Agronomic,,Cold Tolerance (AB)
+"Cherry, Sour",Prunus virginiana L.,Tertiary,,Abiotic,,Cold Tolerance (AB)
+"Cherry, Sweet",Prunus emarginata (Douglas) Eaton,,Graftstock,,,
+"Cherry, Sweet",Prunus emarginata (Douglas) Eaton,Secondary,,Biotic,,Disease Resistance (B)
+"Cherry, Sweet",Prunus serotina Ehrh.,Tertiary,,Abiotic,,Cold Tolerance (AB)
+"Cherry, Sweet",Prunus serotina Ehrh.,Tertiary,,Biotic,,Disease Resistance (B)
+Chestnut,Castanea dentata (Marshall) Borkh.,Secondary,,,,
+"Chestnut, American",Castanea dentata (Marshall) Borkh.,,,,,
+"Chestnut, American",Castanea dentata (Marshall) Borkh.,Primary,,,,
+"Chestnut, Chinese",Castanea dentata (Marshall) Borkh.,Secondary,,,,
+"Chestnut, Japanese",Castanea dentata (Marshall) Borkh.,Secondary,,,,
+Cranberry,Vaccinium macrocarpon Aiton,,,,,
+Cranberry,Vaccinium macrocarpon Aiton,Primary,,,,
+Cranberry,Vaccinium oxycoccos L.,Secondary,,Agronomic,,Crop Quality (AG)
+Cranberry,Vaccinium microcarpum (Turcz. ex Rupr.) Schmalh.,Primary,,Abiotic,,Cold Tolerance (AB)
+"Currant, Black",Ribes americanum Mill.,Secondary,,Biotic,,Disease Resistance (B)
+"Currant, Black",Ribes aureum Pursh,Tertiary,,,,
+"Currant, Black",Ribes cereum Douglas,Tertiary,,,,
+"Currant, Black",Ribes divaricatum Douglas,,Graftstock,,,
+"Currant, Black",Ribes divaricatum Douglas,Tertiary,,,,
+"Currant, Black",Ribes hudsonianum Richardson,Secondary,,Agronomic,,Crop Quality (AG)
+"Currant, Black",Ribes oxyacanthoides L.,Tertiary,,,,
+"Currant, Black",Ribes sanguineum Pursh,Secondary,,Agronomic,,Growth Habit (AG)
+"Currant, Black",Ribes bracteosum Douglas,Secondary,,Agronomic,,Growth Habit (AG)
+"Currant, Black",Ribes bracteosum Douglas,Secondary,,Agronomic,,High Yield (AG)
+"Currant, Black",Ribes bracteosum Douglas,Secondary,,Phenological,,Late Maturity (P)
+"Currant, Black",Ribes hudsonianum Richardson var. petiolare (Douglas) Jancz.,Secondary,,Biotic,,Disease Resistance (B)
+"Currant, Black",Ribes hudsonianum Richardson var. hudsonianum,Secondary,,,,
+"Currant, Red",Ribes aureum Pursh,,Graftstock,,,
+"Currant, Red",Ribes triste Pall.,Tertiary,,Abiotic,,Cold Tolerance (AB)
+Fawn-Lily,Erythronium oregonum Applegate,Progenitor,,Agronomic,,Ornamental Features (AG)
+"Filbert, European",Corylus cornuta Marshall,Tertiary,,Biotic,,Disease Resistance (B)
+"Filbert, European",Corylus americana Marshall,Secondary,,Biotic,,Disease Resistance (B)
+"Filbert, European",Corylus americana Marshall,Secondary,,Fertility,,Gene Transfer (F)
+"Filbert, European",Corylus californica (A. DC.) Rose,Secondary,,Fertility,,Gene Transfer (F)
+"Filbert, Turkish",Corylus californica (A. DC.) Rose,Secondary,,Fertility,,Gene Transfer (F)
+Flax,Linum lewisii Pursh,Tertiary,,,,
+Gooseberry,Ribes aureum Pursh,,Graftstock,,,
+Gooseberry,Ribes cynosbati L.,Secondary,,Agronomic,,Crop Quality (AG)
+Gooseberry,Ribes cynosbati L.,Secondary,,Agronomic,,Growth Habit (AG)
+Gooseberry,Ribes cynosbati L.,Secondary,,Biotic,,Disease Resistance (B)
+Gooseberry,Ribes divaricatum Douglas,,Graftstock,,,
+Gooseberry,Ribes divaricatum Douglas,Secondary,,Agronomic,,High Yield (AG)
+Gooseberry,Ribes divaricatum Douglas,Secondary,,Biotic,,Disease Resistance (B)
+Gooseberry,Ribes hirtellum Michx.,Progenitor,,,,
+Gooseberry,Ribes hirtellum Michx.,Secondary,,Biotic,,Disease Resistance (B)
+Gooseberry,Ribes inerme Rydb.,Secondary,,Agronomic,,Growth Habit (AG)
+Gooseberry,Ribes oxyacanthoides L.,Secondary,,Biotic,,Disease Resistance (B)
+Gooseberry,Ribes oxyacanthoides L. subsp. irriguum (Douglas) Q. P. Sinnott,Secondary,,,,
+Gooseberry,Ribes oxyacanthoides L. subsp. setosum (Lindl.) Q. P. Sinnott,Secondary,,,,
+Gooseberry,Ribes oxyacanthoides L. subsp. oxyacanthoides,Progenitor,,,,
+Gooseberry,Ribes oxyacanthoides L. subsp. oxyacanthoides,Secondary,,,,
+Gooseberry,Ribes oxyacanthoides L. subsp. cognatum (Greene) Q. P. Sinnott,Secondary,,,,
+"Grape, Wine",Vitis riparia Michx.,,Graftstock,,,
+"Grape, Wine",Vitis riparia Michx.,Progenitor,Graftstock,,,
+"Grape, Wine",Vitis riparia Michx.,Tertiary,,Abiotic,,Cold Tolerance (AB)
+"Grape, Wine",Vitis riparia Michx.,Tertiary,,Biotic,,Disease Resistance (B)
+"Grape, Wine",Vitis riparia Michx.,Tertiary,,Biotic,,Pest Resistance (B)
+"Grape, Wine",Vitis aestivalis Michx.,,Graftstock,Biotic,,Disease Resistance (B)
+"Grape, Wine",Vitis aestivalis Michx.,Progenitor,Graftstock,,,
+"Grape, Wine",Vitis aestivalis Michx.,Tertiary,,Biotic,,Disease Resistance (B)
+"Grape, Wine",Vitis aestivalis Michx.,Tertiary,,Biotic,,Pest Resistance (B)
+"Grape, Wine",Vitis aestivalis Michx. var. bicolor Deam,Tertiary,,,,
+"Grass, Switch",Panicum virgatum L.,,,,,
+"Hackberry, Ornamental",Celtis occidentalis L.,,Graftstock,,,
+Heal-All,Prunella vulgaris L.,,,,,
+Hop,Humulus lupulus L.,,,,,
+Hop,Humulus lupulus L. var. neomexicanus A. Nelson & Cockerell,Primary,,,,
+Hop,Humulus lupulus L. var. lupuloides E. Small,Primary,,Agronomic,,Crop Quality (AG)
+Hop,Humulus lupulus L. var. lupuloides E. Small,Primary,,Biotic,,Disease Resistance (B)
+Inca-Wheat,Amaranthus hybridus L.,Progenitor,,,,
+Inca-Wheat,Amaranthus hybridus L.,Secondary,,,,
+Inca-Wheat,Amaranthus retroflexus L.,Tertiary,,,,
+Jerusalem-Artichoke,Helianthus hirsutus Raf.,Progenitor,,,,
+Jerusalem-Artichoke,Helianthus hirsutus Raf.,Tertiary,,,,
+Jerusalem-Artichoke,Helianthus strumosus L.,Tertiary,,,,
+Jerusalem-Artichoke,Helianthus tuberosus L.,,,,,
+Jerusalem-Artichoke,Helianthus divaricatus L.,Tertiary,,,,
+Leek,Allium schoenoprasum L.,Tertiary,,,,
+Lettuce,Lactuca tatarica (L.) C. A. Mey.,Tertiary,,,,
+Lettuce,Lactuca tatarica (L.) C. A. Mey. subsp. pulchella (Pursh) Stebbins,Tertiary,,,,
+"Lily, Water-",Nymphaea tetragona Georgi,Progenitor,,Agronomic,,Ornamental Features (AG)
+Lingonberry,Vaccinium myrtillus L.,Secondary,,,,
+Lingonberry,Vaccinium uliginosum L.,Secondary,,,,
+Lingonberry,Vaccinium vitis-idaea L.,,,,,
+Lingonberry,Vaccinium vitis-idaea L.,Primary,,,,
+Lupin,Lupinus polyphyllus Lindl.,Progenitor,,Agronomic,,Ornamental Features (AG)
+"Lupine, Andean",Lupinus polyphyllus Lindl.,Tertiary,,Abiotic,,Cold Tolerance (AB)
+"Lupine, Andean",Lupinus polyphyllus Lindl.,Tertiary,,Agronomic,,Crop Quality (AG)
+"Lupine, Andean",Lupinus polyphyllus Lindl.,Tertiary,,Agronomic,,High Yield (AG)
+"Lupine, Andean",Lupinus polyphyllus Lindl.,Tertiary,,Fertility,,Gene Transfer (F)
+Magnolia,Magnolia acuminata (L.) L.,Progenitor,,Agronomic,,Ornamental Features (AG)
+Magnolia,Magnolia acuminata (L.) L.,Progenitor,Graftstock,,,
+"Millet, Proso",Panicum capillare L.,ProbProg,,,,
+"Millet, Proso",Panicum capillare L.,Tertiary,,,,
+"Mint, Corn",Mentha canadensis L.,Secondary,,,,
+"Mint, Japanese Corn",Mentha canadensis L.,,,,,
+"Mint, Japanese Corn",Mentha canadensis L.,Primary,,,,
+"Mint, Mountain-",Pycnanthemum virginianum (L.) T. Durand & B. D. Jacks. ex B. L. Rob. & Fernald,,,,,
+"Mint, Spear-",Mentha canadensis L.,Secondary,,,,
+Ohelo,Vaccinium macrocarpon Aiton,Tertiary,,,,
+Ohelo,Vaccinium vitis-idaea L.,Tertiary,,,,
+"Onion, Japanese Bunching/Welsh",Allium schoenoprasum L.,Tertiary,,,,
+Peach,Prunus americana Marshall,,Graftstock,Agronomic,,Dwarfing (AG)
+Peach,Prunus americana Marshall,Tertiary,,,,
+Peach,Prunus maritima Marshall,,Graftstock,Abiotic,,Salt Tolerance (AB)
+Peach,Prunus maritima Marshall,Tertiary,,,,
+Peach,Prunus nigra Aiton,Tertiary,,,,
+Peach,Prunus pumila L.,,Graftstock,Agronomic,,Dwarfing (AG)
+Peach,Prunus pumila L.,Secondary,,,,
+Peach,Prunus pumila L. var. besseyi (L. H. Bailey) Waugh,Secondary,,,,
+Pecan,Carya glabra (Mill.) Sweet,Secondary,,,,
+Pecan,Carya laciniosa (F. Michx.) W. P. C. Barton,Primary,,,,
+Pecan,Carya ovata (Mill.) K. Koch,Primary,,,,
+Pecan,Carya cordiformis (Wangenh.) K. Koch,Primary,,,,
+Pecan,Carya ovalis (Wangenh.) Sarg.,Secondary,,,,
+"Plum, European",Prunus americana Marshall,,Graftstock,,,
+"Plum, European",Prunus americana Marshall,Tertiary,,,,
+"Plum, European",Prunus maritima Marshall,Tertiary,,,,
+"Plum, European",Prunus nigra Aiton,Tertiary,,,,
+"Plum, European",Prunus pumila L.,Progenitor,Graftstock,,,
+"Plum, European",Prunus pumila L.,Tertiary,,,,
+"Plum, European",Prunus pumila L. var. besseyi (L. H. Bailey) Waugh,Progenitor,Graftstock,Abiotic,,Cold Tolerance (AB)
+"Plum, European",Prunus pumila L. var. besseyi (L. H. Bailey) Waugh,Tertiary,,,,
+"Plum, Japanese",Prunus americana Marshall,Secondary,,Agronomic,,Crop Quality (AG)
+"Plum, Japanese",Prunus maritima Marshall,Secondary,,Agronomic,,Crop Quality (AG)
+"Plum, Japanese",Prunus nigra Aiton,Secondary,,Abiotic,,Cold Tolerance (AB)
+"Plum, Japanese",Prunus pumila L.,Secondary,,,,
+"Plum, Japanese",Prunus pumila L. var. besseyi (L. H. Bailey) Waugh,,Graftstock,,,
+"Plum, Japanese",Prunus pumila L. var. besseyi (L. H. Bailey) Waugh,Secondary,,,,
+"Plum, Myrobalan",Prunus americana Marshall,Secondary,,,,
+"Plum, Myrobalan",Prunus maritima Marshall,Secondary,,,,
+"Plum, Myrobalan",Prunus nigra Aiton,Secondary,,,,
+"Plum, Myrobalan",Prunus pumila L.,Secondary,,,,
+"Plum, Myrobalan",Prunus pumila L. var. besseyi (L. H. Bailey) Waugh,Secondary,,,,
+Prince's-Feather,Amaranthus hybridus L.,Secondary,,,,
+Prince's-Feather,Amaranthus retroflexus L.,Tertiary,,,,
+Quinoa,Chenopodium berlandieri Moq.,Secondary,,,,
+Quinoa,Chenopodium berlandieri Moq. subsp. berlandieri var. bushianum (Aellen) Cronquist,Secondary,,,,
+Quinoa,Chenopodium berlandieri Moq. subsp. berlandieri var. macrocalycium (Aellen) Cronquist,Secondary,,,,
+Quinoa,Chenopodium berlandieri Moq. subsp. berlandieri var. zschackei (Murr) Murr,Secondary,,,,
+Quinoa,Chenopodium desiccatum A. Nelson,Tertiary,,,,
+Quinoa,Chenopodium watsonii A. Nelson,Tertiary,,,,
+Quinoa,Chenopodium standleyanum Aellen,Tertiary,,,,
+Quinoa,Chenopodium hians Standl.,Tertiary,,,,
+"Raspberry, Black",Rubus leucodermis Douglas ex Torr. & A. Gray,Primary,,,,
+"Raspberry, Black",Rubus occidentalis L.,,,,,
+"Raspberry, Black",Rubus occidentalis L.,Primary,,,,
+"Raspberry, Black",Rubus flagellaris Willd.,Secondary,,,,
+"Raspberry, Black",Rubus idaeus L.,Secondary,,,,
+"Raspberry, Red",Rubus arcticus L.,Tertiary,,Agronomic,,High Yield (AG)
+"Raspberry, Red",Rubus chamaemorus L.,Tertiary,,,,
+"Raspberry, Red",Rubus leucodermis Douglas ex Torr. & A. Gray,Primary,,,,
+"Raspberry, Red",Rubus nutkanus Moc. ex Ser.,Secondary,,,,
+"Raspberry, Red",Rubus occidentalis L.,Secondary,,,,
+"Raspberry, Red",Rubus odoratus L.,Secondary,,Agronomic,,High Yield (AG)
+"Raspberry, Red",Rubus odoratus L.,Secondary,,Biotic,,Disease Resistance (B)
+"Raspberry, Red",Rubus spectabilis Pursh,Primary,,Agronomic,,Crop Quality (AG)
+"Raspberry, Red",Rubus ursinus Cham. & Schltdl.,Primary,,,,
+"Raspberry, Red",Rubus idaeus L.,,,,,
+"Raspberry, Red",Rubus idaeus L. subsp. strigosus (Michx.) Focke,,,,,
+"Raspberry, Red",Rubus idaeus L. subsp. strigosus (Michx.) Focke,Primary,,,,
+Rice,Zizania palustris L.,Tertiary,,,,
+"Rice, Wild",Zizania aquatica L.,Secondary,,,,
+"Rice, Wild",Zizania palustris L.,,,,,
+"Rice, Wild",Zizania aquatica L. var. aquatica,Secondary,,,,
+"Rice, Wild",Zizania aquatica L. var. brevis Fassett,Secondary,,,,
+"Rice, Wild",Zizania palustris L. var. palustris,Primary,,,,
+"Rice, Wild",Zizania palustris L. var. interior (Fassett) Dore,Primary,,,,
+Rosinweed,Silphium integrifolium Michx.,,,,,
+Rosinweed,Silphium integrifolium Michx.,Primary,,,,
+Rosinweed,Silphium integrifolium Michx.,Secondary,,,,
+Rosinweed,Silphium perfoliatum L.,,,,,
+Rosinweed,Silphium perfoliatum L.,Secondary,,,,
+Rye,Hordeum brachyantherum Nevski,Tertiary,,,,
+Rye,Hordeum depressum (Scribn. & J. G. Sm.) Rydb.,Tertiary,,,,
+Rye,Hordeum jubatum L.,Tertiary,,,,
+Spiderwort,Tradescantia virginiana L.,Progenitor,,Agronomic,,Ornamental Features (AG)
+Spinach,Blitum capitatum L.,Tertiary,,,,
+Spinach,Blitum nuttallianum Schult.,Tertiary,,,,
+Strawberry,Fragaria ×ananassa Duchesne ex Rozier,,,,,
+Strawberry,Fragaria chiloensis (L.) Mill.,Primary,,Abiotic,,Cold Tolerance (AB)
+Strawberry,Fragaria chiloensis (L.) Mill.,Primary,,Agronomic,,Crop Quality (AG)
+Strawberry,Fragaria chiloensis (L.) Mill.,Primary,,Agronomic,,High Yield (AG)
+Strawberry,Fragaria chiloensis (L.) Mill.,Primary,,Fertility,,Gene Transfer (F)
+Strawberry,Fragaria vesca L.,Tertiary,,Biotic,,Disease Resistance (B)
+Strawberry,Fragaria virginiana Mill.,Primary,,Agronomic,,Crop Quality (AG)
+Strawberry,Fragaria virginiana Mill.,Primary,,Agronomic,,Growth Habit (AG)
+Strawberry,Fragaria virginiana Mill.,Primary,,Agronomic,,High Yield (AG)
+Strawberry,Fragaria virginiana Mill.,Primary,,Biotic,,Disease Resistance (B)
+Strawberry,Fragaria chiloensis (L.) Mill. subsp. pacifica Staudt,Primary,,,,
+Strawberry,Fragaria virginiana Mill. subsp. glauca (S. Watson) Staudt,Primary,,,,
+Strawberry,Fragaria vesca L. subsp. americana (Porter) Staudt,Tertiary,,,,
+Strawberry,Fragaria virginiana Mill. subsp. platypetala (Rydb.) Staudt,Primary,,,,
+Strawberry,Fragaria vesca L. subsp. bracteata (A. Heller) Staudt,Tertiary,,,,
+Strawberry,Fragaria virginiana Mill. subsp. virginiana,Primary,,,,
+Strawberry,Fragaria chiloensis (L.) Mill. subsp. lucida (E. Vilm. ex Gay) Staudt,Primary,,,,
+Strawberry,Dasiphora fruticosa (L.) Rydb.,Tertiary,,,,
+Strawberry,Fragaria vesca L. subsp. bracteata (A. Heller) Staudt f. bracteata (A. Heller) Staudt,Tertiary,,,,
+Strawberry,Fragaria vesca L. subsp. bracteata (A. Heller) Staudt f. helleri (Holz.) Staudt,Tertiary,,,,
+Strawberry,Fragaria ×ananassa Duchesne ex Rozier subsp. cuneifolia (Nutt. ex Howell) Staudt,Primary,,,,
+Strawberry,Comarum palustre L.,Tertiary,,,,
+Strawberry,Drymocallis glandulosa (Lindl.) Rydb.,Tertiary,,,,
+Sunflower,Helianthus annuus L.,,,Abiotic,,Salt Tolerance (AB)
+Sunflower,Helianthus annuus L.,,,Agronomic,,Crop Quality (AG)
+Sunflower,Helianthus annuus L.,,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus annuus L.,,,Biotic,,Pest Resistance (B)
+Sunflower,Helianthus annuus L.,,,Fertility,,Cytoplasmic Male Sterility (F)
+Sunflower,Helianthus annuus L.,,,Phenological,,Early Maturity (P)
+Sunflower,Helianthus annuus L.,Primary,,,,
+Sunflower,Helianthus decapetalus L.,Tertiary,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus decapetalus L.,Tertiary,,Biotic,,Pest Resistance (B)
+Sunflower,Helianthus decapetalus L.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
+Sunflower,Helianthus giganteus L.,Tertiary,,Abiotic,,Waterlogging Tolerance (AB)
+Sunflower,Helianthus giganteus L.,Tertiary,,Agronomic,,Crop Quality (AG)
+Sunflower,Helianthus giganteus L.,Tertiary,,Agronomic,,Growth Habit (AG)
+Sunflower,Helianthus giganteus L.,Tertiary,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus giganteus L.,Tertiary,,Biotic,,Pest Resistance (B)
+Sunflower,Helianthus giganteus L.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
+Sunflower,Helianthus giganteus L.,Tertiary,,Fertility,,Gene Transfer (F)
+Sunflower,Helianthus giganteus L.,Tertiary,,Phenological,,Early Maturity (P)
+Sunflower,Helianthus hirsutus Raf.,Tertiary,,Abiotic,,Drought Resistance (AB)
+Sunflower,Helianthus hirsutus Raf.,Tertiary,,Abiotic,,Edaphic (AB)
+Sunflower,Helianthus hirsutus Raf.,Tertiary,,Agronomic,,Crop Quality (AG)
+Sunflower,Helianthus hirsutus Raf.,Tertiary,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus hirsutus Raf.,Tertiary,,Biotic,,Pest Resistance (B)
+Sunflower,Helianthus hirsutus Raf.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
+Sunflower,Helianthus ×laetiflorus Pers.,Tertiary,,Agronomic,,Crop Quality (AG)
+Sunflower,Helianthus ×laetiflorus Pers.,Tertiary,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus ×laetiflorus Pers.,Tertiary,,Biotic,,Pest Resistance (B)
+Sunflower,Helianthus ×laetiflorus Pers.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
+Sunflower,Helianthus maximiliani Schrad.,Tertiary,,Abiotic,,Cold Tolerance (AB)
+Sunflower,Helianthus maximiliani Schrad.,Tertiary,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus maximiliani Schrad.,Tertiary,,Biotic,,Pest Resistance (B)
+Sunflower,Helianthus maximiliani Schrad.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
+Sunflower,Helianthus nuttallii Torr. & A. Gray,Tertiary,,Agronomic,,Crop Quality (AG)
+Sunflower,Helianthus nuttallii Torr. & A. Gray,Tertiary,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus nuttallii Torr. & A. Gray,Tertiary,,Biotic,,Pest Resistance (B)
+Sunflower,Helianthus nuttallii Torr. & A. Gray,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
+Sunflower,Helianthus nuttallii Torr. & A. Gray,Tertiary,,Phenological,,Early Maturity (P)
+Sunflower,Helianthus petiolaris Nutt.,Secondary,,Agronomic,,Crop Quality (AG)
+Sunflower,Helianthus petiolaris Nutt.,Secondary,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus petiolaris Nutt.,Secondary,,Biotic,,Pest Resistance (B)
+Sunflower,Helianthus petiolaris Nutt.,Secondary,,Fertility,,Cytoplasmic Male Sterility (F)
+Sunflower,Helianthus strumosus L.,Tertiary,,Abiotic,,Waterlogging Tolerance (AB)
+Sunflower,Helianthus strumosus L.,Tertiary,,Agronomic,,Crop Quality (AG)
+Sunflower,Helianthus strumosus L.,Tertiary,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus strumosus L.,Tertiary,,Biotic,,Pest Resistance (B)
+Sunflower,Helianthus strumosus L.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
+Sunflower,Helianthus tuberosus L.,Tertiary,,Abiotic,,Cold Tolerance (AB)
+Sunflower,Helianthus tuberosus L.,Tertiary,,Abiotic,,Drought Resistance (AB)
+Sunflower,Helianthus tuberosus L.,Tertiary,,Agronomic,,Crop Quality (AG)
+Sunflower,Helianthus tuberosus L.,Tertiary,,Agronomic,,Growth Habit (AG)
+Sunflower,Helianthus tuberosus L.,Tertiary,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus tuberosus L.,Tertiary,,Biotic,,Pest Resistance (B)
+Sunflower,Helianthus tuberosus L.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
+Sunflower,Helianthus divaricatus L.,Tertiary,,Abiotic,,Edaphic (AB)
+Sunflower,Helianthus divaricatus L.,Tertiary,,Agronomic,,Growth Habit (AG)
+Sunflower,Helianthus divaricatus L.,Tertiary,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus divaricatus L.,Tertiary,,Biotic,,Pest Resistance (B)
+Sunflower,Helianthus divaricatus L.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
+Sunflower,Helianthus petiolaris Nutt. subsp. petiolaris,Secondary,,Abiotic,,Cold Tolerance (AB)
+Sunflower,Helianthus petiolaris Nutt. subsp. petiolaris,Secondary,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus pauciflorus Nutt.,Tertiary,,Agronomic,,Crop Quality (AG)
+Sunflower,Helianthus pauciflorus Nutt.,Tertiary,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus pauciflorus Nutt.,Tertiary,,Biotic,,Pest Resistance (B)
+Sunflower,Helianthus pauciflorus Nutt.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
+Sunflower,Helianthus pauciflorus Nutt. subsp. pauciflorus,Tertiary,,Agronomic,,Crop Quality (AG)
+Sunflower,Helianthus pauciflorus Nutt. subsp. pauciflorus,Tertiary,,Biotic,,Disease Resistance (B)
+Sunflower,Helianthus pauciflorus Nutt. subsp. pauciflorus,Tertiary,,Phenological,,Early Maturity (P)
+Sunflower,Helianthus pauciflorus Nutt. subsp. subrhomboideus (Rydb.) O. Spring & E. E. Schill.,Tertiary,,Abiotic,,Cold Tolerance (AB)
+Sunflower,Helianthus pauciflorus Nutt. subsp. subrhomboideus (Rydb.) O. Spring & E. E. Schill.,Tertiary,,Fertility,,Cytoplasmic Male Sterility (F)
+Tobacco,Nicotiana attenuata Torr. ex S. Watson,Tertiary,,,,
+"Walnut, Black",Juglans cinerea L.,Tertiary,,,,
+"Walnut, Black",Juglans nigra L.,,,,,
+"Walnut, Black",Juglans nigra L.,Primary,,,,
+"Walnut, English",Juglans cinerea L.,Tertiary,,Abiotic,,Cold Tolerance (AB)
+"Walnut, English",Juglans nigra L.,Progenitor,Graftstock,,,
+"Walnut, English",Juglans nigra L.,Tertiary,,Biotic,,Disease Resistance (B)
+"Walnut, Japanese",Juglans nigra L.,Secondary,,Biotic,,Disease Resistance (B)
+Wheat,Elymus canadensis L.,Tertiary,,,,
+Wheat,Elymus glaucus Buckley,Tertiary,,,,
+Wheat,Elymus virginicus L.,Tertiary,,,,
+Wheat,Leymus mollis (Trin.) Pilg.,Tertiary,,Abiotic,,Drought Resistance (AB)
+Wheat,Leymus mollis (Trin.) Pilg.,Tertiary,,Abiotic,,Heat Tolerance (AB)
+Wheat,Leymus mollis (Trin.) Pilg.,Tertiary,,Abiotic,,Salt Tolerance (AB)
+Wheat,Leymus mollis (Trin.) Pilg.,Tertiary,,Biotic,,Disease Resistance (B)
+Wheat,Leymus innovatus (Beal) Pilg.,Tertiary,,,,
+Wheat,Leymus triticoides (Buckley) Pilg.,Tertiary,,Abiotic,,Salt Tolerance (AB)
+Wheat,Leymus cinereus (Scribn. & Merr.) Á. Löve,Tertiary,,,,
+Wheat,Elymus elymoides (Raf.) Swezey,Tertiary,,,,
+Wheat,Elymus hystrix L.,Tertiary,,,,
+Wheat,Elymus trachycaulus (Link) Gould ex Shinners,Tertiary,,Biotic,,Disease Resistance (B)
+Wheat,Elymus macrourus (Turcz. ex Steud.) Tzvelev,Tertiary,,,,
+Wheat,Elymus trachycaulus (Link) Gould ex Shinners subsp. trachycaulus,Tertiary,,,,
+Wheat,Elymus curvatus Piper,Tertiary,,,,
+Wheat,Elymus lanceolatus (Scribn. & J. G. Sm.) Gould,Tertiary,,,,
+Wheat,Elymus scribneri (Vasey) M. E. Jones,Tertiary,,,,
+Wheat,Elymus wiegandii Fernald,Tertiary,,,,
+Wheat,Elymus trachycaulus (Link) Gould ex Shinners subsp. subsecundus (Link) Á. Löve & D. Löve,Tertiary,,,,
+Wheat,Elymus lanceolatus (Scribn. & J. G. Sm.) Gould subsp. lanceolatus,Tertiary,,,,
+Wheat,Elymus glaucus Buckley subsp. glaucus,Tertiary,,,,
+Wheat,Elymus lanceolatus (Scribn. & J. G. Sm.) Gould subsp. psammophilus (J. M. Gillett & H. Senn) Á. Löve,Tertiary,,,,
+Wheat,Elymus glaucus Buckley subsp. virescens (Piper) Gould,Tertiary,,,,
+Wheat,Elymus lanceolatus (Scribn. & J. G. Sm.) Gould subsp. riparius (Scribn. & J. G. Sm.) Barkworth,Tertiary,,,,
+Wheat,Elymus riparius Wiegand,Tertiary,,,,
+Wheat,Elymus hirsutus J. Presl,Tertiary,,,,
+Wheat,Elymus violaceus (Hornem.) Feilberg,Tertiary,,,,
+Wheat,Elymus albicans (Scribn. & J. G. Sm.) Á. Löve,Tertiary,,,,
+Wheat,Leymus mollis (Trin.) Pilg. subsp. mollis,Tertiary,,,,
+Wheat,Leymus mollis (Trin.) Pilg. subsp. villosissimus (Scribn.) Á. Löve & D. Löve,Tertiary,,,,
+Wheat,Elymus alaskanus (Scribn. & Merr.) Á. Löve,Tertiary,,,,
+Witch-Hazel,Hamamelis virginiana L.,,Graftstock,,,
