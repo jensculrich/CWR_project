@@ -20,11 +20,11 @@ str(US_inventory) # # species name column is "Taxon"
 US_inventory <- rename(US_inventory, CROP.WILD.RELATIVE = Taxon) # change "Taxon" to ""
 US_GRIN$CROP.WILD.RELATIVE <- trimws(US_GRIN$CROP.WILD.RELATIVE, which = c("right")) # remove trailing white space on species names
 
-unmatched_records_from_US_GRIN <- anti_join(US_GRIN, US_inventory, by="CROP.WILD.RELATIVE")
-unmatched_records_from_US_Inventory <- anti_join(US_inventory, US_GRIN, by="CROP.WILD.RELATIVE")
+unmatched_records_from_US_GRIN <- anti_join(US_GRIN, US_inventory, by="CROP.WILD.RELATIVE") # all taxa that are in the US GRIN but not the PNAS US Inventory
+unmatched_records_from_US_Inventory <- anti_join(US_inventory, US_GRIN, by="CROP.WILD.RELATIVE") # all taxa that are in the PNAS US Inventory but not the US GRIN
 
 # generate a list of endemic Canadian CWR
 # are there any species in the GRIN Canadian filter that are not in the GRIN US filter?
 Canada_GRIN$CROP.WILD.RELATIVE <- trimws(Canada_GRIN$CROP.WILD.RELATIVE, which = c("right")) # remove trailing white space on species names
-Canadian_endemic_CWR <- anti_join(Canada_GRIN, US_GRIN, by="CROP.WILD.RELATIVE")
+Canadian_endemic_CWR <- anti_join(Canada_GRIN, US_GRIN, by="CROP.WILD.RELATIVE") # all taxa that are in the Canada GRIN but not the US GRIN
 
