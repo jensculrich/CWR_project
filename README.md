@@ -6,6 +6,12 @@
   1) identify all Canadian CWR.
   2) identify Canadian endemic CWR.
   3) cross check GRIN US CWR filter with PNAS CWR US inventory to see if either source is missing species. 
+  
+### CWR_Canada_Davidson_and_GRIN_taxa.csv
+  Script for compiling Canadian CWR taxa from Davidson 1995 and GRIN 2021 into one master list of taxa
+
+### Davidson_Canada_raw_data.csv
+  list of native Canadian CWR taxa from Campbell Davidson 1995 "Canadian wild plant germplasm of economic significance"
 
 ### GRIN_US_raw_data.csv
   table downloaded from https://npgsweb.ars-grin.gov/gringlobal/taxon/taxonomysearchcwr, 
