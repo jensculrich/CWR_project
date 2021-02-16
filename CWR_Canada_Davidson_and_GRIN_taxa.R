@@ -27,3 +27,4 @@ CWR_Master_list <- full_join(Canada_Davidson, Canada_GRIN, by = "CROP.WILD.RELAT
 
 # Next Remove duplicates caused by subspecies discrepancies. Will do this 
 # manually to be able to see where this occurs
+write.csv(CWR_Master_list, "CWR_Master_list.csv")
