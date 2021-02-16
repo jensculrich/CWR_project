@@ -28,17 +28,28 @@ CWR_Master_list <- full_join(Canada_Davidson, Canada_GRIN, by = "CROP.WILD.RELAT
 df2 <- read.csv("CWR_Master_list.csv")
 
 # Things to do:
-# 1) Join with PNAS full data set to see if we can get category 1A, 1B statuses for taxa from 
+# 1) figure out what to do with subspecies, varieties, and hybrids. 
+# collapse all to one species?
+# keep each subspecies and remove the full species row?
+# keep each subspecies and KEEP the full species row?
+
+# 2) Join with PNAS full data set to see if we can get category 1A, 1B statuses for taxa from 
 # Davidson list that were not in the GRIN list. Assign rest to category 1C? Need to 
 # check that they are indeed in same genus as crop?
 
-# 2) Join with PNAS full data set to see if we can add multiple crops when applicable for 
+# 3) Join with PNAS full data set to see if we can add multiple crops when applicable for 
 # each CWR. E.g. if a species is a CWR of peach and plum, we want the column "Crop" to include both
 
-# 3) Begin adding additional info for each CWR for filtering and back-end data summary,
+# 4) Begin adding additional info for each CWR for filtering and back-end data summary,
 # e.g. category for food crop specific, tree, ornamental, wild-utilized.
 # e.g. conservation status when applicable.
 # e.g. nut, fruit, vegetable, flower
 # Look to PNAS inventory and Tara's UBC summary for ideas.
 
-# 4) eventually intergate with geographic range data, and accession data from gardens/repository.
+# 5) Decide formatting for crop name. Does it matter if we have "Raspberry, Red" or do
+# we want to change to "Red Raspberry" To be consistent with Davidson should we circumscribe 
+# crop broadly, as in change "Raspberry, Red" to "Raspberry". We can go broader for the GRIN 
+# data but I'm not sure how we could go more specific for the Davidson data. That is,
+# I'm not sure how we would separate a Davidson "Raspberry" into "Raspberry, Red" or "Raspberry, Black".
+
+# 6) eventually intergate with geographic range data, and accession data from gardens/repository.
