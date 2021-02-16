@@ -1,7 +1,7 @@
 library(tidyverse)
 library(stringr)
 
-df <- read.csv("C:/Users/jensj/Documents/UBC2/Classes/ConservationScience/Project/Davidson_Canada_raw_data.csv")
+df <- read.csv("Davidson_Canada_raw_data.csv")
 
 Canada_Davidson <- df %>% 
   unite("X", 
