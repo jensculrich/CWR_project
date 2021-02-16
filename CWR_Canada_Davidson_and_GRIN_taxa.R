@@ -15,3 +15,5 @@ Canada_GRIN$CROP.WILD.RELATIVE <- trimws(Canada_GRIN$CROP.WILD.RELATIVE, which =
 
 # Identify species listed in the GRIN that are not in the Davidson Canadian CWR taxon list
 Canadian_GRIN_Unique_CWR <- anti_join(Canada_GRIN, Canada_Davidson, by="CROP.WILD.RELATIVE")
+# About half of these simply don't match because GRIN has subspecies/variety info in the names
+# Add this to the Davidson list?
