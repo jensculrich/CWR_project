@@ -23,3 +23,7 @@ Canada_GRIN$CROP.WILD.RELATIVE <- trimws(Canada_GRIN$CROP.WILD.RELATIVE, which =
 # Don't want to collapse Cop/CROP yet because sometimes the label is the same plant 
 # just different way of using the common name eg "raspberry" v "raspberry, red"
 CWR_Master_list <- full_join(Canada_Davidson, Canada_GRIN, by = "CROP.WILD.RELATIVE")
+
+
+# Next Remove duplicates caused by subspecies discrepancies. Will do this 
+# manually to be able to see where this occurs

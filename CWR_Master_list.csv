@@ -1,0 +1,565 @@
+"","Crop","CROP.WILD.RELATIVE","CROP","GENEPOOL","GRAFTSTOCK","TRAIT","ONTOLOGY","BREEDING.TYPE"
+"1","Barley","Hordeum depressum","Barley","Tertiary","","",NA,""
+"2","Barley","Hordeum jubatum","Barley","Tertiary","","Abiotic",NA,"Salt Tolerance (AB)"
+"3","Barley","Hordeum pusillum","Barley","Tertiary","","",NA,""
+"4","Flax","Linum medium",NA,NA,NA,NA,NA,NA
+"5","Flax","Linum perenne",NA,NA,NA,NA,NA,NA
+"6","Flax","Linum rigidum",NA,NA,NA,NA,NA,NA
+"7","Flax","Linum sulcatum",NA,NA,NA,NA,NA,NA
+"8","Flax","Linum virginianum",NA,NA,NA,NA,NA,NA
+"9","Sunflower","Helianthus decapetalus","Sunflower","Tertiary","","Biotic",NA,"Disease Resistance (B)"
+"10","Sunflower","Helianthus divaricatus","Jerusalem-Artichoke","Tertiary","","",NA,""
+"11","Sunflower","Helianthus giganteus","Sunflower","Tertiary","","Abiotic",NA,"Waterlogging Tolerance (AB)"
+"12","Sunflower","Helianthus hirsutus","Jerusalem-Artichoke","Progenitor","","",NA,""
+"13","Sunflower","Helianthus laetiflorus",NA,NA,NA,NA,NA,NA
+"14","Sunflower","Helianthus maximiliani","Sunflower","Tertiary","","Abiotic",NA,"Cold Tolerance (AB)"
+"15","Sunflower","Helianthus nuttallii","Sunflower","Tertiary","","Agronomic",NA,"Crop Quality (AG)"
+"16","Sunflower","Helianthus petiolaris","Sunflower","Secondary","","Agronomic",NA,"Crop Quality (AG)"
+"17","Sunflower","Helianthus strumosus","Jerusalem-Artichoke","Tertiary","","",NA,""
+"18","Sunflower","Helianthus tuberosus","Jerusalem-Artichoke","","","",NA,""
+"19","Apple","Malus coronaria","Apple","Tertiary","","",NA,""
+"20","Apple","Malus fusca","Apple","","Graftstock","Abiotic",NA,"Waterlogging Tolerance (AB)"
+"21","Blueberry","Vaccinium alaskaense",NA,NA,NA,NA,NA,NA
+"22","Blueberry","Vaccinium angustifolium","Blueberry, Highbush","Primary","","Agronomic",NA,"Crop Quality (AG)"
+"23","Blueberry","Vaccinium atrococcum",NA,NA,NA,NA,NA,NA
+"24","Blueberry","Vaccinium caespitosum",NA,NA,NA,NA,NA,NA
+"25","Blueberry","Vaccinium corymbsum",NA,NA,NA,NA,NA,NA
+"26","Blueberry","Vaccinium deliciosum","Bilberry","Secondary","","",NA,""
+"27","Blueberry","Vaccinium membranaceum","Bilberry","Secondary","","",NA,""
+"28","Blueberry","Vaccinium myrtilloides","Blueberry, Highbush","Tertiary","","",NA,""
+"29","Blueberry","Vaccinium myrtillus","Bilberry","","","",NA,""
+"30","Blueberry","Vaccinium nubigeum",NA,NA,NA,NA,NA,NA
+"31","Blueberry","Vaccinium ovalifolium","Bilberry","Secondary","","",NA,""
+"32","Blueberry","Vaccinium ovatum","Blueberry, Highbush","Tertiary","","",NA,""
+"33","Blueberry","Vaccinium parvifolium","Bilberry","Secondary","","",NA,""
+"34","Blueberry","Vaccinium scoparium","Bilberry","Secondary","","",NA,""
+"35","Blueberry","Vaccinium stamineum",NA,NA,NA,NA,NA,NA
+"36","Blueberry","Vaccinium uliginosum","Blueberry, Highbush","Tertiary","","Abiotic",NA,"Cold Tolerance (AB)"
+"37","Blueberry","Vaccinium vacillans",NA,NA,NA,NA,NA,NA
+"38","Buffaloberry","Sherpherdia argetea",NA,NA,NA,NA,NA,NA
+"39","Buffaloberry","Sherpherdia canadensis",NA,NA,NA,NA,NA,NA
+"40","Cherry","Prunus besseyi",NA,NA,NA,NA,NA,NA
+"41","Cherry","Prunus emarginata","Cherry, Sweet","","Graftstock","",NA,""
+"42","Cherry","Prunus pensylvanica","Cherry, Sour","Progenitor","Graftstock","Agronomic",NA,"Cold Tolerance (AB)"
+"43","Cherry","Prunus pumila","Apricot","Tertiary","","",NA,""
+"44","Cherry","Prunus serotina","Cherry, Sweet","Tertiary","","Abiotic",NA,"Cold Tolerance (AB)"
+"45","Cherry","Prunus virginiana","Cherry, Ornamental","Tertiary","","Biotic",NA,"Disease Resistance (B)"
+"46","Cranberry","Oxycoccus macrocarpus",NA,NA,NA,NA,NA,NA
+"47","Cranberry","Oxycoccus microcarpus",NA,NA,NA,NA,NA,NA
+"48","Cranberry","Oxycoccus ovalifolius",NA,NA,NA,NA,NA,NA
+"49","Cranberry","Oxycoccus quadripetalus",NA,NA,NA,NA,NA,NA
+"50","Currant","Ribes americanum","Currant, Black","Secondary","","Biotic",NA,"Disease Resistance (B)"
+"51","Currant","Ribes aureum","Currant, Black","Tertiary","","",NA,""
+"52","Currant","Ribes bracteosum","Currant, Black","Secondary","","Agronomic",NA,"Growth Habit (AG)"
+"53","Currant","Ribes cereum","Currant, Black","Tertiary","","",NA,""
+"54","Currant","Ribes cynosbati","Gooseberry","Secondary","","Agronomic",NA,"Crop Quality (AG)"
+"55","Currant","Ribes divaricatum","Currant, Black","","Graftstock","",NA,""
+"56","Currant","Ribes glandulosum",NA,NA,NA,NA,NA,NA
+"57","Currant","Ribes howellii",NA,NA,NA,NA,NA,NA
+"58","Currant","Ribes hudsonianum","Currant, Black","Secondary","","Agronomic",NA,"Crop Quality (AG)"
+"59","Currant","Ribes irriguum",NA,NA,NA,NA,NA,NA
+"60","Currant","Ribes lacustre",NA,NA,NA,NA,NA,NA
+"61","Currant","Ribes laxiflorum",NA,NA,NA,NA,NA,NA
+"62","Currant","Ribes lobbii",NA,NA,NA,NA,NA,NA
+"63","Currant","Ribes sanguineum","Currant, Black","Secondary","","Agronomic",NA,"Growth Habit (AG)"
+"64","Currant","Ribes setosum",NA,NA,NA,NA,NA,NA
+"65","Currant","Ribes triste","Currant, Red","Tertiary","","Abiotic",NA,"Cold Tolerance (AB)"
+"66","Currant","Ribes viscosissiumum",NA,NA,NA,NA,NA,NA
+"67","Currant","Ribes watsonianum",NA,NA,NA,NA,NA,NA
+"68","Elderberry","Sambucus canadensis",NA,NA,NA,NA,NA,NA
+"69","Elderberry","Sambucus cerulea",NA,NA,NA,NA,NA,NA
+"70","Elderberry","Sambucus racemosa",NA,NA,NA,NA,NA,NA
+"71","Grape","Vitis aestivalis","Grape, Wine","","Graftstock","Biotic",NA,"Disease Resistance (B)"
+"72","Grape","Vitis riparia","Grape, Wine","","Graftstock","",NA,""
+"73","Highbush cranberry","Viburnum acerifolium",NA,NA,NA,NA,NA,NA
+"74","Highbush cranberry","Viburnum alnifolium",NA,NA,NA,NA,NA,NA
+"75","Highbush cranberry","Viburnum cassinoides",NA,NA,NA,NA,NA,NA
+"76","Highbush cranberry","Viburnum dentatum",NA,NA,NA,NA,NA,NA
+"77","Highbush cranberry","Viburnum edule",NA,NA,NA,NA,NA,NA
+"78","Highbush cranberry","Viburnum lantana",NA,NA,NA,NA,NA,NA
+"79","Highbush cranberry","Viburnum lentago",NA,NA,NA,NA,NA,NA
+"80","Highbush cranberry","Viburnum rafinesquianum",NA,NA,NA,NA,NA,NA
+"81","Highbush cranberry","Viburnum trilobum",NA,NA,NA,NA,NA,NA
+"82","Lingonberry","Vaccinium vitis-idaea","Bilberry","Secondary","","",NA,""
+"83","Pawpaw","Asimina triloba",NA,NA,NA,NA,NA,NA
+"84","Plum","Prunus americana","Apricot","Progenitor","Graftstock","",NA,""
+"85","Plum","Prunus nigra","Apricot","Tertiary","","",NA,""
+"86","Raspberry","Rubus acualis",NA,NA,NA,NA,NA,NA
+"87","Raspberry","Rubus allegheniensis","Blackberry","Primary","","Agronomic",NA,"Crop Quality (AG)"
+"88","Raspberry","Rubus articus",NA,NA,NA,NA,NA,NA
+"89","Raspberry","Rubus canadensis","Blackberry","Primary","","Agronomic",NA,"Crop Quality (AG)"
+"90","Raspberry","Rubus chamaemorus","Raspberry, Red","Tertiary","","",NA,""
+"91","Raspberry","Rubus enslenii",NA,NA,NA,NA,NA,NA
+"92","Raspberry","Rubus glagellaris",NA,NA,NA,NA,NA,NA
+"93","Raspberry","Rubus hispidus",NA,NA,NA,NA,NA,NA
+"94","Raspberry","Rubus idaeus","Raspberry, Black","Secondary","","",NA,""
+"95","Raspberry","Rubus laciniatus",NA,NA,NA,NA,NA,NA
+"96","Raspberry","Rubus lasiococcus",NA,NA,NA,NA,NA,NA
+"97","Raspberry","Rubus leucodermis","Raspberry, Black","Primary","","",NA,""
+"98","Raspberry","Rubus nivalis",NA,NA,NA,NA,NA,NA
+"99","Raspberry","Rubus occidentalis","Raspberry, Black","","","",NA,""
+"100","Raspberry","Rubus odoratus","Raspberry, Red","Secondary","","Agronomic",NA,"High Yield (AG)"
+"101","Raspberry","Rubus parviflorus",NA,NA,NA,NA,NA,NA
+"102","Raspberry","Rubus paracaulis",NA,NA,NA,NA,NA,NA
+"103","Raspberry","Rubus pedatus",NA,NA,NA,NA,NA,NA
+"104","Raspberry","Rubus pensilvanicus",NA,NA,NA,NA,NA,NA
+"105","Raspberry","Rubus procerus",NA,NA,NA,NA,NA,NA
+"106","Raspberry","Rubus pubescens",NA,NA,NA,NA,NA,NA
+"107","Raspberry","Rubus recurvicaulis",NA,NA,NA,NA,NA,NA
+"108","Raspberry","Rubus spectabilis","Raspberry, Red","Primary","","Agronomic",NA,"Crop Quality (AG)"
+"109","Raspberry","Rubus stellatus",NA,NA,NA,NA,NA,NA
+"110","Raspberry","Rubus ursinus","Blackberry","Primary","","Agronomic",NA,"Crop Quality (AG)"
+"111","Raspberry","Rubus vermontanus",NA,NA,NA,NA,NA,NA
+"112","Saskatoon","Amelanchier alnifolia",NA,NA,NA,NA,NA,NA
+"113","Saskatoon","Amelanchier arborea",NA,NA,NA,NA,NA,NA
+"114","Saskatoon","Amelanchier bartramiana",NA,NA,NA,NA,NA,NA
+"115","Saskatoon","Amelanchier canadensis",NA,NA,NA,NA,NA,NA
+"116","Saskatoon","Amelanchier fernaldii",NA,NA,NA,NA,NA,NA
+"117","Saskatoon","Amelanchier gaspensis",NA,NA,NA,NA,NA,NA
+"118","Saskatoon","Amelanchier humilis",NA,NA,NA,NA,NA,NA
+"119","Saskatoon","Amelanchier huronensis",NA,NA,NA,NA,NA,NA
+"120","Saskatoon","Amelanchier intermedia",NA,NA,NA,NA,NA,NA
+"121","Saskatoon","Amelanchier laevis",NA,NA,NA,NA,NA,NA
+"122","Saskatoon","Amelanchier lucida",NA,NA,NA,NA,NA,NA
+"123","Saskatoon","Amelanchier mucronata",NA,NA,NA,NA,NA,NA
+"124","Saskatoon","Amelanchier sanguinea",NA,NA,NA,NA,NA,NA
+"125","Saskatoon","Amelanchier stolonifera",NA,NA,NA,NA,NA,NA
+"126","Saskatoon","Amelanchier wiegandii",NA,NA,NA,NA,NA,NA
+"127","Strawberry","Fragaria chiloensis","Strawberry","Primary","","Abiotic",NA,"Cold Tolerance (AB)"
+"128","Strawberry","Fragaria vesca","Strawberry","Tertiary","","Biotic",NA,"Disease Resistance (B)"
+"129","Strawberry","Fragaria virginiana","Strawberry","Primary","","Agronomic",NA,"Crop Quality (AG)"
+"130","Chestnut","Castanea dentata","Chestnut","Secondary","","",NA,""
+"131","Hazelnut","Corylus americana","Filbert, European","Secondary","","Biotic",NA,"Disease Resistance (B)"
+"132","Hazelnut","Corylus cornuta","Filbert, European","Tertiary","","Biotic",NA,"Disease Resistance (B)"
+"133","Pecan/hickory","Carya cordiformis","Pecan","Primary","","",NA,""
+"134","Pecan/hickory","Carya glabra","Pecan","Secondary","","",NA,""
+"135","Pecan/hickory","Carya laciniosa","Pecan","Primary","","",NA,""
+"136","Pecan/hickory","Carya ovalis","Pecan","Secondary","","",NA,""
+"137","Pecan/hickory","Carya ovata","Pecan","Primary","","",NA,""
+"138","Pecan/hickory","Carya tomentosa",NA,NA,NA,NA,NA,NA
+"139","Walnut","Juglans cinerea","Butternut","","","",NA,""
+"140","Walnut","Juglans nigra","Walnut, Black","","","",NA,""
+"141","Bengrass","Agrostis borealis",NA,NA,NA,NA,NA,NA
+"142","Bengrass","Agrostis diegoensis",NA,NA,NA,NA,NA,NA
+"143","Bengrass","Agrostis exarata",NA,NA,NA,NA,NA,NA
+"144","Bengrass","Agrostis hyemalis",NA,NA,NA,NA,NA,NA
+"145","Bengrass","Agrostis perennans",NA,NA,NA,NA,NA,NA
+"146","Bluegrass","Poa abbreviata",NA,NA,NA,NA,NA,NA
+"147","Bluegrass","Poa alpina",NA,NA,NA,NA,NA,NA
+"148","Bluegrass","Poa alsodes",NA,NA,NA,NA,NA,NA
+"149","Bluegrass","Poa ampla",NA,NA,NA,NA,NA,NA
+"150","Bluegrass","Poa artica",NA,NA,NA,NA,NA,NA
+"151","Bluegrass","Poa arida",NA,NA,NA,NA,NA,NA
+"152","Bluegrass","Poa canbyi",NA,NA,NA,NA,NA,NA
+"153","Bluegrass","Poa confinis",NA,NA,NA,NA,NA,NA
+"154","Bluegrass","Poa cusickii",NA,NA,NA,NA,NA,NA
+"155","Bluegrass","Poa eminens",NA,NA,NA,NA,NA,NA
+"156","Bluegrass","Poa epilis",NA,NA,NA,NA,NA,NA
+"157","Bluegrass","Poa gaspensis",NA,NA,NA,NA,NA,NA
+"158","Bluegrass","Poa gluaca",NA,NA,NA,NA,NA,NA
+"159","Bluegrass","Poa hartzii",NA,NA,NA,NA,NA,NA
+"160","Bluegrass","Poa howellii",NA,NA,NA,NA,NA,NA
+"161","Bluegrass","Poa juncifolia",NA,NA,NA,NA,NA,NA
+"162","Bluegrass","Poa labrodorica",NA,NA,NA,NA,NA,NA
+"163","Bluegrass","Poa laxa",NA,NA,NA,NA,NA,NA
+"164","Bluegrass","Poa leptocoma",NA,NA,NA,NA,NA,NA
+"165","Bluegrass","Poa lettermannii",NA,NA,NA,NA,NA,NA
+"166","Bluegrass","Poa macrantha",NA,NA,NA,NA,NA,NA
+"167","Bluegrass","Poa marcida",NA,NA,NA,NA,NA,NA
+"168","Bluegrass","Poa nemoralis",NA,NA,NA,NA,NA,NA
+"169","Bluegrass","Poa nervosa",NA,NA,NA,NA,NA,NA
+"170","Bluegrass","Poa nevadensis",NA,NA,NA,NA,NA,NA
+"171","Bluegrass","Poa occidentalis",NA,NA,NA,NA,NA,NA
+"172","Bluegrass","Poa palustris",NA,NA,NA,NA,NA,NA
+"173","Bluegrass","Poa pattersonii",NA,NA,NA,NA,NA,NA
+"174","Bluegrass","Poa pratensis",NA,NA,NA,NA,NA,NA
+"175","Bluegrass","Poa saltuensis",NA,NA,NA,NA,NA,NA
+"176","Bluegrass","Poa sandbergii",NA,NA,NA,NA,NA,NA
+"177","Bluegrass","Poa stenantha",NA,NA,NA,NA,NA,NA
+"178","Bluegrass","Poa trivialis",NA,NA,NA,NA,NA,NA
+"179","Bluegrass","Poa vaseyochloa",NA,NA,NA,NA,NA,NA
+"180","Bluestem","Andropogon gerardii",NA,NA,NA,NA,NA,NA
+"181","Bluestem","Andropogon hallii",NA,NA,NA,NA,NA,NA
+"182","Bluestem","Andropogon scoparius",NA,NA,NA,NA,NA,NA
+"183","Bromegrass","Bromus anomalus",NA,NA,NA,NA,NA,NA
+"184","Bromegrass","Bromus canadensis",NA,NA,NA,NA,NA,NA
+"185","Bromegrass","Bromus carinatus",NA,NA,NA,NA,NA,NA
+"186","Bromegrass","Bromus cartharticus",NA,NA,NA,NA,NA,NA
+"187","Bromegrass","Bromus ciliatus",NA,NA,NA,NA,NA,NA
+"188","Bromegrass","Bromus inermis",NA,NA,NA,NA,NA,NA
+"189","Bromegrass","Bromus pacificus",NA,NA,NA,NA,NA,NA
+"190","Bromegrass","Bromus porteri",NA,NA,NA,NA,NA,NA
+"191","Bromegrass","Bromus pubescens",NA,NA,NA,NA,NA,NA
+"192","Bromegrass","Bromus purgans",NA,NA,NA,NA,NA,NA
+"193","Bromegrass","Bromus sitchensis",NA,NA,NA,NA,NA,NA
+"194","Bromegrass","Bromus vulgaris",NA,NA,NA,NA,NA,NA
+"195","Canary Grass","Phalaris arundinacea",NA,NA,NA,NA,NA,NA
+"196","Clover","Trifolium bifidum",NA,NA,NA,NA,NA,NA
+"197","Clover","Trifolium cyathiferum",NA,NA,NA,NA,NA,NA
+"198","Clover","Trifolium depauperatum",NA,NA,NA,NA,NA,NA
+"199","Clover","Trifolium microcephalum",NA,NA,NA,NA,NA,NA
+"200","Clover","Trifolium microdon",NA,NA,NA,NA,NA,NA
+"201","Clover","Trifolium oliganthum",NA,NA,NA,NA,NA,NA
+"202","Clover","Trifolium reflexum",NA,NA,NA,NA,NA,NA
+"203","Clover","Trifolium tridentatum",NA,NA,NA,NA,NA,NA
+"204","Clover","Trifolium varigatum",NA,NA,NA,NA,NA,NA
+"205","Clover","Trifolium wormskjoldii",NA,NA,NA,NA,NA,NA
+"206","Fescue","Festuca altaica",NA,NA,NA,NA,NA,NA
+"207","Fescue","Festuca obtusa",NA,NA,NA,NA,NA,NA
+"208","Fescue","Festuca occidentalis",NA,NA,NA,NA,NA,NA
+"209","Fescue","Festuca ovina",NA,NA,NA,NA,NA,NA
+"210","Fescue","Festuca rubra",NA,NA,NA,NA,NA,NA
+"211","Fescue","Festuca subulata",NA,NA,NA,NA,NA,NA
+"212","Fescue","Festuca subuliflora",NA,NA,NA,NA,NA,NA
+"213","Fescue","Festuca viridula",NA,NA,NA,NA,NA,NA
+"214","Milk-vetch","Astragalus adsurgens",NA,NA,NA,NA,NA,NA
+"215","Milk-vetch","Astragalus agrestis",NA,NA,NA,NA,NA,NA
+"216","Milk-vetch","Astragalus alpinus",NA,NA,NA,NA,NA,NA
+"217","Milk-vetch","Astragalus americanus",NA,NA,NA,NA,NA,NA
+"218","Milk-vetch","Astragalus beckwithii",NA,NA,NA,NA,NA,NA
+"219","Milk-vetch","Astragalus bisulcatus",NA,NA,NA,NA,NA,NA
+"220","Milk-vetch","Astragalus bodinii",NA,NA,NA,NA,NA,NA
+"221","Milk-vetch","Astragalus bourgovii",NA,NA,NA,NA,NA,NA
+"222","Milk-vetch","Astragalus canadensis",NA,NA,NA,NA,NA,NA
+"223","Milk-vetch","Astragalus collinus",NA,NA,NA,NA,NA,NA
+"224","Milk-vetch","Astragalus crassicarpus",NA,NA,NA,NA,NA,NA
+"225","Milk-vetch","Astragalus drummondii",NA,NA,NA,NA,NA,NA
+"226","Milk-vetch","Astragalus eucosmus",NA,NA,NA,NA,NA,NA
+"227","Milk-vetch","Astragalus filipes",NA,NA,NA,NA,NA,NA
+"228","Milk-vetch","Astragalus flexuosus",NA,NA,NA,NA,NA,NA
+"229","Milk-vetch","Astragalus gilviflorus",NA,NA,NA,NA,NA,NA
+"230","Milk-vetch","Astragalus gracilis",NA,NA,NA,NA,NA,NA
+"231","Milk-vetch","Astragalus gilviflorus",NA,NA,NA,NA,NA,NA
+"232","Milk-vetch","Astragalus gracilis",NA,NA,NA,NA,NA,NA
+"233","Milk-vetch","Astragalus kentrophyta",NA,NA,NA,NA,NA,NA
+"234","Milk-vetch","Astragalus lentiginosus",NA,NA,NA,NA,NA,NA
+"235","Milk-vetch","Astragalus gracilis",NA,NA,NA,NA,NA,NA
+"236","Milk-vetch","Astragalus kentrophyta",NA,NA,NA,NA,NA,NA
+"237","Milk-vetch","Astragalus lentiginosus",NA,NA,NA,NA,NA,NA
+"238","Milk-vetch","Astragalus lotiflorus",NA,NA,NA,NA,NA,NA
+"239","Milk-vetch","Astragalus microcystis",NA,NA,NA,NA,NA,NA
+"240","Milk-vetch","Astragalus miser",NA,NA,NA,NA,NA,NA
+"241","Milk-vetch","Astragalus missouriensis",NA,NA,NA,NA,NA,NA
+"242","Milk-vetch","Astragalus neglectus",NA,NA,NA,NA,NA,NA
+"243","Milk-vetch","Astragalus pectinatus",NA,NA,NA,NA,NA,NA
+"244","Milk-vetch","Astragalus purshii",NA,NA,NA,NA,NA,NA
+"245","Milk-vetch","Astragalus racemosus",NA,NA,NA,NA,NA,NA
+"246","Milk-vetch","Astragalus robbinsii",NA,NA,NA,NA,NA,NA
+"247","Milk-vetch","Astragalus sclerocarpus",NA,NA,NA,NA,NA,NA
+"248","Milk-vetch","Astragalus spatulatus",NA,NA,NA,NA,NA,NA
+"249","Milk-vetch","Astragalus tenellus",NA,NA,NA,NA,NA,NA
+"250","Milk-vetch","Astragalus umbellatus",NA,NA,NA,NA,NA,NA
+"251","Milk-vetch","Astragalus vexilliflexus",NA,NA,NA,NA,NA,NA
+"252","Milk-vetch","Astragalus williamsii",NA,NA,NA,NA,NA,NA
+"253","Sainfoin","Hedysarum alpinum",NA,NA,NA,NA,NA,NA
+"254","Sainfoin","Hedysarum boreale",NA,NA,NA,NA,NA,NA
+"255","Sainfoin","Hedysarum occidentale",NA,NA,NA,NA,NA,NA
+"256","Sainfoin","Hedysarum sulphurescens",NA,NA,NA,NA,NA,NA
+"257","Timothy","Phleum alpinum",NA,NA,NA,NA,NA,NA
+"258","Trefoil","Lotus denticulatus",NA,NA,NA,NA,NA,NA
+"259","Trefoil","Lotus formosissimus",NA,NA,NA,NA,NA,NA
+"260","Trefoil","Lotus micranthus",NA,NA,NA,NA,NA,NA
+"261","Trefoil","Lotus pinnatus",NA,NA,NA,NA,NA,NA
+"262","Trefoil","Lotus purshianus",NA,NA,NA,NA,NA,NA
+"263","Vetch","Vicia americana",NA,NA,NA,NA,NA,NA
+"264","Vetch","Vicia carolinia",NA,NA,NA,NA,NA,NA
+"265","Vetch","Vicia gigantea",NA,NA,NA,NA,NA,NA
+"266","Wheatgrass","Agropyron albicans",NA,NA,NA,NA,NA,NA
+"267","Wheatgrass","Agropyron dasystachyum",NA,NA,NA,NA,NA,NA
+"268","Wheatgrass","Agropyron scribneri",NA,NA,NA,NA,NA,NA
+"269","Wheatgrass","Agropyron smithii",NA,NA,NA,NA,NA,NA
+"270","Wheatgrass","Agropyron spicatum",NA,NA,NA,NA,NA,NA
+"271","Wheatgrass","Agropyron trachycaulum",NA,NA,NA,NA,NA,NA
+"272","Wild Rye","Elymus canadensis","Wheat","Tertiary","","",NA,""
+"273","Wild Rye","Elymus diversiglumis",NA,NA,NA,NA,NA,NA
+"274","Wild Rye","Elymus glaucus","Wheat","Tertiary","","",NA,""
+"275","Wild Rye","Elymus hirsutus","Wheat","Tertiary","","",NA,""
+"276","Wild Rye","Elymus hystrix","Wheat","Tertiary","","",NA,""
+"277","Wild Rye","Elymus innovatus",NA,NA,NA,NA,NA,NA
+"278","Wild Rye","Elymus mollis",NA,NA,NA,NA,NA,NA
+"279","Wild Rye","Elymus piperi",NA,NA,NA,NA,NA,NA
+"280","Wild Rye","Elymus riparius","Wheat","Tertiary","","",NA,""
+"281","Wild Rye","Elymus sibiricus",NA,NA,NA,NA,NA,NA
+"282","Wild Rye","Elymus villosus",NA,NA,NA,NA,NA,NA
+"283","Wild Rye","Elymus virginicus","Wheat","Tertiary","","",NA,""
+"284","Amaranth","Amaranthus albus",NA,NA,NA,NA,NA,NA
+"285","Amaranth","Amaranthus californicus",NA,NA,NA,NA,NA,NA
+"286","Amaranth","Amaranthus graecizans",NA,NA,NA,NA,NA,NA
+"287","Amaranth","Amaranthus tuberculatus",NA,NA,NA,NA,NA,NA
+"288","Evening primrose","Oenothera andina",NA,NA,NA,NA,NA,NA
+"289","Evening primrose","Oenothera biennis",NA,NA,NA,NA,NA,NA
+"290","Evening primrose","Oenothera breviflora",NA,NA,NA,NA,NA,NA
+"291","Evening primrose","Oenothera caespitosa",NA,NA,NA,NA,NA,NA
+"292","Evening primrose","Oenothera contorta",NA,NA,NA,NA,NA,NA
+"293","Evening primrose","Oenothera cruciata",NA,NA,NA,NA,NA,NA
+"294","Evening primrose","Oenothera flava",NA,NA,NA,NA,NA,NA
+"295","Evening primrose","Oenothera nuttallii",NA,NA,NA,NA,NA,NA
+"296","Evening primrose","Oenothera pallida",NA,NA,NA,NA,NA,NA
+"297","Evening primrose","Oenothera parviflora",NA,NA,NA,NA,NA,NA
+"298","Evening primrose","Oenothera pernnis",NA,NA,NA,NA,NA,NA
+"299","Evening primrose","Oenothera pilosella",NA,NA,NA,NA,NA,NA
+"300","Evening primrose","Oenothera serrulata",NA,NA,NA,NA,NA,NA
+"301","Fern","Matteuccia struthipteris",NA,NA,NA,NA,NA,NA
+"302","Horseradish","Armoracia aquatica",NA,NA,NA,NA,NA,NA
+"303","Hyssop","Agastache foeniculum",NA,NA,NA,NA,NA,NA
+"304","Hyssop","Agastache neptoides",NA,NA,NA,NA,NA,NA
+"305","Hyssop","Agastache scrop hulariaefolia",NA,NA,NA,NA,NA,NA
+"306","Hyssop","Agastache urticifolia",NA,NA,NA,NA,NA,NA
+"307","Lathyrus","Lathyrus bijugatus",NA,NA,NA,NA,NA,NA
+"308","Lathyrus","Lathyrus japonicus",NA,NA,NA,NA,NA,NA
+"309","Lathyrus","Lathyrus littoralis",NA,NA,NA,NA,NA,NA
+"310","Lathyrus","Lathyrus nevadensis",NA,NA,NA,NA,NA,NA
+"311","Lathyrus","Lathyrus ochrolucus",NA,NA,NA,NA,NA,NA
+"312","Lathyrus","Lathyrus palustris",NA,NA,NA,NA,NA,NA
+"313","Lathyrus","Lathyrus venosus",NA,NA,NA,NA,NA,NA
+"314","Lesquerella","Lesquerella alpina",NA,NA,NA,NA,NA,NA
+"315","Lesquerella","Lesquerella arctica",NA,NA,NA,NA,NA,NA
+"316","Lesquerella","Lesquerella douglasii",NA,NA,NA,NA,NA,NA
+"317","Lesquerella","Lesquerella ludoviciana",NA,NA,NA,NA,NA,NA
+"318","Mint","Mentha arvensis",NA,NA,NA,NA,NA,NA
+"319","Monarda","Monarda fistulosa",NA,NA,NA,NA,NA,NA
+"320","Onion","Allium acuminatum",NA,NA,NA,NA,NA,NA
+"321","Onion","Allium amplectens",NA,NA,NA,NA,NA,NA
+"322","Onion","Allium canadense",NA,NA,NA,NA,NA,NA
+"323","Onion","Allium cernuum",NA,NA,NA,NA,NA,NA
+"324","Onion","Allium crenulatum",NA,NA,NA,NA,NA,NA
+"325","Onion","Allium geyeri",NA,NA,NA,NA,NA,NA
+"326","Onion","Allium schoenoprasum","Leek","Tertiary","","",NA,""
+"327","Onion","Allium stellatum",NA,NA,NA,NA,NA,NA
+"328","Onion","Allium textile",NA,NA,NA,NA,NA,NA
+"329","Onion","Allium tricoccum",NA,NA,NA,NA,NA,NA
+"330","Onosmodium","Onosmodium hipiddissimum",NA,NA,NA,NA,NA,NA
+"331","Onosmodium","Onosmodium occidentale",NA,NA,NA,NA,NA,NA
+"332","Proso millet","Panicum bicknellii",NA,NA,NA,NA,NA,NA
+"333","Proso millet","Panicum boreale",NA,NA,NA,NA,NA,NA
+"334","Proso millet","Panicum capillare","Millet, Proso","ProbProg","","",NA,""
+"335","Proso millet","Panicum clandestinum",NA,NA,NA,NA,NA,NA
+"336","Proso millet","Panicum colombianum",NA,NA,NA,NA,NA,NA
+"337","Proso millet","Panicum depauperatum",NA,NA,NA,NA,NA,NA
+"338","Proso millet","Panicum dichotomiflorum",NA,NA,NA,NA,NA,NA
+"339","Proso millet","Panicum dichotomum",NA,NA,NA,NA,NA,NA
+"340","Proso millet","Panicum flexile",NA,NA,NA,NA,NA,NA
+"341","Proso millet","Panicum lanuginosum",NA,NA,NA,NA,NA,NA
+"342","Proso millet","Panicum leibergii",NA,NA,NA,NA,NA,NA
+"343","Proso millet","Panicum linearifolium",NA,NA,NA,NA,NA,NA
+"344","Proso millet","Panicum longifolium",NA,NA,NA,NA,NA,NA
+"345","Proso millet","Panicum macrocarpon",NA,NA,NA,NA,NA,NA
+"346","Proso millet","Panicum meridionale",NA,NA,NA,NA,NA,NA
+"347","Proso millet","Panicum occidentale",NA,NA,NA,NA,NA,NA
+"348","Proso millet","Panicum oligosanther",NA,NA,NA,NA,NA,NA
+"349","Proso millet","Panicum pacificum",NA,NA,NA,NA,NA,NA
+"350","Proso millet","Panicum perlongum",NA,NA,NA,NA,NA,NA
+"351","Proso millet","Panicum philadelphicum",NA,NA,NA,NA,NA,NA
+"352","Proso millet","Panicum praecocius",NA,NA,NA,NA,NA,NA
+"353","Proso millet","Panicum rigidulum",NA,NA,NA,NA,NA,NA
+"354","Proso millet","Panicum sphaerocarpon",NA,NA,NA,NA,NA,NA
+"355","Proso millet","Panicum sprentum",NA,NA,NA,NA,NA,NA
+"356","Proso millet","Panicum subvillosum",NA,NA,NA,NA,NA,NA
+"357","Proso millet","Panicum thermale",NA,NA,NA,NA,NA,NA
+"358","Proso millet","Panicum villosissimum",NA,NA,NA,NA,NA,NA
+"359","Proso millet","Panicum virgatum","Grass, Switch","","","",NA,""
+"360","Proso millet","Panicum wilcoxianum",NA,NA,NA,NA,NA,NA
+"361","Proso millet","Panicum xanthophysum",NA,NA,NA,NA,NA,NA
+"362","Quinoa","Chenopodium capitatum",NA,NA,NA,NA,NA,NA
+"363","Quinoa","Chenopodium fremontii",NA,NA,NA,NA,NA,NA
+"364","Quinoa","Chenopodium hybridum",NA,NA,NA,NA,NA,NA
+"365","Quinoa","Chenopodium leptophyllum",NA,NA,NA,NA,NA,NA
+"366","Quinoa","Chenopodium rubrum",NA,NA,NA,NA,NA,NA
+"367","Taxus","Taxus brevifolia",NA,NA,NA,NA,NA,NA
+"368","Taxus","Taxus canadensis",NA,NA,NA,NA,NA,NA
+"369","Wild Rice","Zizania aquatica","Rice, Wild","Secondary","","",NA,""
+"370","Fir","Abies amabilis",NA,NA,NA,NA,NA,NA
+"371","Fir","Abies balsamea",NA,NA,NA,NA,NA,NA
+"372","Fir","Abies grandis",NA,NA,NA,NA,NA,NA
+"373","Fir","Abies lasiocarpa",NA,NA,NA,NA,NA,NA
+"374","Cypress","Chamaecyparis nootkatensis",NA,NA,NA,NA,NA,NA
+"375","Larch","Larix laricina",NA,NA,NA,NA,NA,NA
+"376","Larch","Larix lyallii",NA,NA,NA,NA,NA,NA
+"377","Larch","Larix occidentalis",NA,NA,NA,NA,NA,NA
+"378","Spruce","Picea engelmanii",NA,NA,NA,NA,NA,NA
+"379","Spruce","Picea glauca",NA,NA,NA,NA,NA,NA
+"380","Spruce","Picea mariana",NA,NA,NA,NA,NA,NA
+"381","Spruce","Picea rubens",NA,NA,NA,NA,NA,NA
+"382","Spruce","Picea sitchensis",NA,NA,NA,NA,NA,NA
+"383","Pine","Pinus albicaulis",NA,NA,NA,NA,NA,NA
+"384","Pine","Pinus banksiana",NA,NA,NA,NA,NA,NA
+"385","Pine","Pinus contorta",NA,NA,NA,NA,NA,NA
+"386","Pine","Pinus flexilis",NA,NA,NA,NA,NA,NA
+"387","Pine","Pinus monticola",NA,NA,NA,NA,NA,NA
+"388","Pine","Pinus ponderosa",NA,NA,NA,NA,NA,NA
+"389","Pine","Pinus resinosa",NA,NA,NA,NA,NA,NA
+"390","Pine","Pinus rigida",NA,NA,NA,NA,NA,NA
+"391","Pine","Pinus strobus",NA,NA,NA,NA,NA,NA
+"392","Douglas fir","Pseudotsuga menziesii",NA,NA,NA,NA,NA,NA
+"393","Cedar","Thuja occidentalis",NA,NA,NA,NA,NA,NA
+"394","Cedar","Thuja plicata",NA,NA,NA,NA,NA,NA
+"395","Hemlock","Tsuga canadensis",NA,NA,NA,NA,NA,NA
+"396","Hemlock","Tsuga heterophylla",NA,NA,NA,NA,NA,NA
+"397","Hemlock","Tsuga mertesiana",NA,NA,NA,NA,NA,NA
+"398","Alder","Alnus crispa",NA,NA,NA,NA,NA,NA
+"399","Alder","Alnus rubra",NA,NA,NA,NA,NA,NA
+"400","Alder","Alnus rugosa",NA,NA,NA,NA,NA,NA
+"401","Alder","Alnus sinuata",NA,NA,NA,NA,NA,NA
+"402","Ash","Fraxinus americana",NA,NA,NA,NA,NA,NA
+"403","Ash","Fraxinus nigra",NA,NA,NA,NA,NA,NA
+"404","Ash","Fraxinus pennsylvanica",NA,NA,NA,NA,NA,NA
+"405","Ash","Fraxinus quadrangulata",NA,NA,NA,NA,NA,NA
+"406","Beech","Fagus grandifolia",NA,NA,NA,NA,NA,NA
+"407","Birch","Betula lenta",NA,NA,NA,NA,NA,NA
+"408","Birch","Betula lutea",NA,NA,NA,NA,NA,NA
+"409","Birch","Betula neoalaskana",NA,NA,NA,NA,NA,NA
+"410","Birch","Betula occidentalis",NA,NA,NA,NA,NA,NA
+"411","Birch","Betula papyrifera",NA,NA,NA,NA,NA,NA
+"412","Birch","Betula populifolia",NA,NA,NA,NA,NA,NA
+"413","Butternut","Julans cinera",NA,NA,NA,NA,NA,NA
+"414","Butternut","Julans nigra",NA,NA,NA,NA,NA,NA
+"415","Chestnut","Castanea dentata","Chestnut","Secondary","","",NA,""
+"416","Elm","Ulmus americana",NA,NA,NA,NA,NA,NA
+"417","Elm","Ulmus rubra",NA,NA,NA,NA,NA,NA
+"418","Elm","Ulmus thomasii",NA,NA,NA,NA,NA,NA
+"419","Hickory","Carya cordiformis","Pecan","Primary","","",NA,""
+"420","Hickory","Carya glabra","Pecan","Secondary","","",NA,""
+"421","Hickory","Carya laciniosa","Pecan","Primary","","",NA,""
+"422","Hickory","Carya ovata","Pecan","Primary","","",NA,""
+"423","Linden","Tilia americana",NA,NA,NA,NA,NA,NA
+"424","Maple","Acer circinnatum",NA,NA,NA,NA,NA,NA
+"425","Maple","Acer glabrum",NA,NA,NA,NA,NA,NA
+"426","Maple","Acer macrophyllum",NA,NA,NA,NA,NA,NA
+"427","Maple","Acer negundo",NA,NA,NA,NA,NA,NA
+"428","Maple","Acer nigrum",NA,NA,NA,NA,NA,NA
+"429","Maple","Acer rubrum",NA,NA,NA,NA,NA,NA
+"430","Maple","Acer pensylvanicum",NA,NA,NA,NA,NA,NA
+"431","Maple","Acer saccharinum",NA,NA,NA,NA,NA,NA
+"432","Maple","Acer saccharum",NA,NA,NA,NA,NA,NA
+"433","Maple","Acer spicatum",NA,NA,NA,NA,NA,NA
+"434","Mulberry","Morus rubra",NA,NA,NA,NA,NA,NA
+"435","Oak","Quercus alba",NA,NA,NA,NA,NA,NA
+"436","Oak","Quercus bicolor",NA,NA,NA,NA,NA,NA
+"437","Oak","Quercus garryana",NA,NA,NA,NA,NA,NA
+"438","Oak","Quercus marcrocarpa",NA,NA,NA,NA,NA,NA
+"439","Oak","Quercus muehlenbergii",NA,NA,NA,NA,NA,NA
+"440","Oak","Quercus palustris",NA,NA,NA,NA,NA,NA
+"441","Oak","Quercus prinoides",NA,NA,NA,NA,NA,NA
+"442","Oak","Quercus prinus",NA,NA,NA,NA,NA,NA
+"443","Oak","Quercus rubra",NA,NA,NA,NA,NA,NA
+"444","Oak","Quercus velutina",NA,NA,NA,NA,NA,NA
+"445","Poplar","Populus angustifolia",NA,NA,NA,NA,NA,NA
+"446","Poplar","Populus balsamifera",NA,NA,NA,NA,NA,NA
+"447","Poplar","Populus deltoides",NA,NA,NA,NA,NA,NA
+"448","Poplar","Populus grandidentata",NA,NA,NA,NA,NA,NA
+"449","Poplar","Populus tremuloides",NA,NA,NA,NA,NA,NA
+"450","Poplar","Populus trichocarpa",NA,NA,NA,NA,NA,NA
+"451",NA,"Amaranthus hybridus","Amaranth, Purple","Tertiary","","",NA,""
+"452",NA,"Amaranthus retroflexus","Amaranth, Purple","Secondary","","",NA,""
+"453",NA,"Prunus maritima","Apricot","Tertiary","","",NA,""
+"454",NA,"Prunus pumila var. besseyi","Apricot","Progenitor","Graftstock","",NA,""
+"455",NA,"Hordeum brachyantherum","Barley","Tertiary","","",NA,""
+"456",NA,"Leymus mollis","Barley","Tertiary","","Biotic",NA,"Disease Resistance (B)"
+"457",NA,"Hordeum brachyantherum subsp. brachyantherum","Barley","Tertiary","","",NA,""
+"458",NA,"Hordeum jubatum subsp. jubatum","Barley","Tertiary","","",NA,""
+"459",NA,"Hordeum jubatum subsp. intermedium","Barley","Tertiary","","",NA,""
+"460",NA,"Vaccinium cespitosum","Bilberry","Primary","","",NA,""
+"461",NA,"Vaccinium corymbosum","Bilberry","Tertiary","","",NA,""
+"462",NA,"Rubus frondosus","Blackberry","Primary","","Abiotic",NA,"Heat Tolerance (AB)"
+"463",NA,"Gaillardia aristata","Blanket-Flower","Progenitor","","Agronomic",NA,"Ornamental Features (AG)"
+"464",NA,"Dicentra formosa","Bleeding-Heart","Progenitor","","Agronomic",NA,"Ornamental Features (AG)"
+"465",NA,"Vaccinium fuscatum","Blueberry, Highbush","Secondary","","Abiotic",NA,"Cold Tolerance (AB)"
+"466",NA,"Vaccinium pallidum","Blueberry, Highbush","Secondary","","Abiotic",NA,"Drought Resistance (AB)"
+"467",NA,"Vaccinium boreale","Blueberry, Highbush","Secondary","","Abiotic",NA,"Cold Tolerance (AB)"
+"468",NA,"Calamagrostis canadensis","Bluejoint","","","",NA,""
+"469",NA,"Bromus carinatus var. marginatus","Bromegrass","Secondary","","Biotic",NA,"Disease Resistance (B)"
+"470",NA,"Daucus pusillus","Carrot","Tertiary","","",NA,""
+"471",NA,"Vaccinium macrocarpon","Cranberry","","","",NA,""
+"472",NA,"Vaccinium oxycoccos","Cranberry","Secondary","","Agronomic",NA,"Crop Quality (AG)"
+"473",NA,"Vaccinium microcarpum","Cranberry","Primary","","Abiotic",NA,"Cold Tolerance (AB)"
+"474",NA,"Ribes oxyacanthoides","Currant, Black","Tertiary","","",NA,""
+"475",NA,"Ribes hudsonianum var. petiolare","Currant, Black","Secondary","","Biotic",NA,"Disease Resistance (B)"
+"476",NA,"Ribes hudsonianum var. hudsonianum","Currant, Black","Secondary","","",NA,""
+"477",NA,"Erythronium oregonum","Fawn-Lily","Progenitor","","Agronomic",NA,"Ornamental Features (AG)"
+"478",NA,"Corylus californica","Filbert, European","Secondary","","Fertility",NA,"Gene Transfer (F)"
+"479",NA,"Linum lewisii","Flax","Tertiary","","",NA,""
+"480",NA,"Ribes hirtellum","Gooseberry","Progenitor","","",NA,""
+"481",NA,"Ribes inerme","Gooseberry","Secondary","","Agronomic",NA,"Growth Habit (AG)"
+"482",NA,"Ribes oxyacanthoides subsp. irriguum","Gooseberry","Secondary","","",NA,""
+"483",NA,"Ribes oxyacanthoides subsp. setosum","Gooseberry","Secondary","","",NA,""
+"484",NA,"Ribes oxyacanthoides subsp. oxyacanthoides","Gooseberry","Progenitor","","",NA,""
+"485",NA,"Ribes oxyacanthoides subsp. cognatum","Gooseberry","Secondary","","",NA,""
+"486",NA,"Vitis aestivalis var. bicolor","Grape, Wine","Tertiary","","",NA,""
+"487",NA,"Celtis occidentalis","Hackberry, Ornamental","","Graftstock","",NA,""
+"488",NA,"Prunella vulgaris","Heal-All","","","",NA,""
+"489",NA,"Humulus lupulus","Hop","","","",NA,""
+"490",NA,"Humulus lupulus var. neomexicanus","Hop","Primary","","",NA,""
+"491",NA,"Humulus lupulus var. lupuloides","Hop","Primary","","Agronomic",NA,"Crop Quality (AG)"
+"492",NA,"Lactuca tatarica","Lettuce","Tertiary","","",NA,""
+"493",NA,"Lactuca tatarica subsp. pulchella","Lettuce","Tertiary","","",NA,""
+"494",NA,"Nymphaea tetragona","Lily, Water-","Progenitor","","Agronomic",NA,"Ornamental Features (AG)"
+"495",NA,"Lupinus polyphyllus","Lupin","Progenitor","","Agronomic",NA,"Ornamental Features (AG)"
+"496",NA,"Magnolia acuminata","Magnolia","Progenitor","","Agronomic",NA,"Ornamental Features (AG)"
+"497",NA,"Mentha canadensis","Mint, Corn","Secondary","","",NA,""
+"498",NA,"Pycnanthemum virginianum","Mint, Mountain-","","","",NA,""
+"499",NA,"Chenopodium berlandieri","Quinoa","Secondary","","",NA,""
+"500",NA,"Chenopodium berlandieri subsp. berlandieri var. bushianum","Quinoa","Secondary","","",NA,""
+"501",NA,"Chenopodium berlandieri subsp. berlandieri var. macrocalycium","Quinoa","Secondary","","",NA,""
+"502",NA,"Chenopodium berlandieri subsp. berlandieri var. zschackei","Quinoa","Secondary","","",NA,""
+"503",NA,"Chenopodium desiccatum","Quinoa","Tertiary","","",NA,""
+"504",NA,"Chenopodium watsonii","Quinoa","Tertiary","","",NA,""
+"505",NA,"Chenopodium standleyanum","Quinoa","Tertiary","","",NA,""
+"506",NA,"Chenopodium hians","Quinoa","Tertiary","","",NA,""
+"507",NA,"Rubus flagellaris","Raspberry, Black","Secondary","","",NA,""
+"508",NA,"Rubus arcticus","Raspberry, Red","Tertiary","","Agronomic",NA,"High Yield (AG)"
+"509",NA,"Rubus nutkanus","Raspberry, Red","Secondary","","",NA,""
+"510",NA,"Rubus idaeus subsp. strigosus","Raspberry, Red","","","",NA,""
+"511",NA,"Zizania palustris","Rice","Tertiary","","",NA,""
+"512",NA,"Zizania aquatica var. aquatica","Rice, Wild","Secondary","","",NA,""
+"513",NA,"Zizania aquatica var. brevis","Rice, Wild","Secondary","","",NA,""
+"514",NA,"Zizania palustris var. palustris","Rice, Wild","Primary","","",NA,""
+"515",NA,"Zizania palustris var. interior","Rice, Wild","Primary","","",NA,""
+"516",NA,"Silphium integrifolium","Rosinweed","","","",NA,""
+"517",NA,"Silphium perfoliatum","Rosinweed","","","",NA,""
+"518",NA,"Tradescantia virginiana","Spiderwort","Progenitor","","Agronomic",NA,"Ornamental Features (AG)"
+"519",NA,"Blitum capitatum","Spinach","Tertiary","","",NA,""
+"520",NA,"Blitum nuttallianum","Spinach","Tertiary","","",NA,""
+"521",NA,"Fragaria x ananassa","Strawberry","","","",NA,""
+"522",NA,"Fragaria chiloensis subsp. pacifica","Strawberry","Primary","","",NA,""
+"523",NA,"Fragaria virginiana subsp. glauca","Strawberry","Primary","","",NA,""
+"524",NA,"Fragaria vesca subsp. americana","Strawberry","Tertiary","","",NA,""
+"525",NA,"Fragaria virginiana subsp. platypetala","Strawberry","Primary","","",NA,""
+"526",NA,"Fragaria vesca subsp. bracteata","Strawberry","Tertiary","","",NA,""
+"527",NA,"Fragaria virginiana subsp. virginiana","Strawberry","Primary","","",NA,""
+"528",NA,"Fragaria chiloensis subsp. lucida","Strawberry","Primary","","",NA,""
+"529",NA,"Dasiphora fruticosa","Strawberry","Tertiary","","",NA,""
+"530",NA,"Fragaria vesca subsp. bracteata f. bracteata","Strawberry","Tertiary","","",NA,""
+"531",NA,"Fragaria vesca subsp. bracteata f. helleri","Strawberry","Tertiary","","",NA,""
+"532",NA,"Fragaria x ananassa subsp. cuneifolia","Strawberry","Primary","","",NA,""
+"533",NA,"Comarum palustre","Strawberry","Tertiary","","",NA,""
+"534",NA,"Drymocallis glandulosa","Strawberry","Tertiary","","",NA,""
+"535",NA,"Helianthus annuus","Sunflower","","","Abiotic",NA,"Salt Tolerance (AB)"
+"536",NA,"Helianthus x laetiflorus","Sunflower","Tertiary","","Agronomic",NA,"Crop Quality (AG)"
+"537",NA,"Helianthus petiolaris subsp. petiolaris","Sunflower","Secondary","","Abiotic",NA,"Cold Tolerance (AB)"
+"538",NA,"Helianthus pauciflorus","Sunflower","Tertiary","","Agronomic",NA,"Crop Quality (AG)"
+"539",NA,"Helianthus pauciflorus subsp. pauciflorus","Sunflower","Tertiary","","Agronomic",NA,"Crop Quality (AG)"
+"540",NA,"Helianthus pauciflorus subsp. subrhomboideus","Sunflower","Tertiary","","Abiotic",NA,"Cold Tolerance (AB)"
+"541",NA,"Nicotiana attenuata","Tobacco","Tertiary","","",NA,""
+"542",NA,"Leymus innovatus","Wheat","Tertiary","","",NA,""
+"543",NA,"Leymus triticoides","Wheat","Tertiary","","Abiotic",NA,"Salt Tolerance (AB)"
+"544",NA,"Leymus cinereus","Wheat","Tertiary","","",NA,""
+"545",NA,"Elymus elymoides","Wheat","Tertiary","","",NA,""
+"546",NA,"Elymus trachycaulus","Wheat","Tertiary","","Biotic",NA,"Disease Resistance (B)"
+"547",NA,"Elymus macrourus","Wheat","Tertiary","","",NA,""
+"548",NA,"Elymus trachycaulus subsp. trachycaulus","Wheat","Tertiary","","",NA,""
+"549",NA,"Elymus curvatus","Wheat","Tertiary","","",NA,""
+"550",NA,"Elymus lanceolatus","Wheat","Tertiary","","",NA,""
+"551",NA,"Elymus scribneri","Wheat","Tertiary","","",NA,""
+"552",NA,"Elymus wiegandii","Wheat","Tertiary","","",NA,""
+"553",NA,"Elymus trachycaulus subsp. subsecundus","Wheat","Tertiary","","",NA,""
+"554",NA,"Elymus lanceolatus subsp. lanceolatus","Wheat","Tertiary","","",NA,""
+"555",NA,"Elymus glaucus subsp. glaucus","Wheat","Tertiary","","",NA,""
+"556",NA,"Elymus lanceolatus subsp. psammophilus","Wheat","Tertiary","","",NA,""
+"557",NA,"Elymus glaucus subsp. virescens","Wheat","Tertiary","","",NA,""
+"558",NA,"Elymus lanceolatus subsp. riparius","Wheat","Tertiary","","",NA,""
+"559",NA,"Elymus violaceus","Wheat","Tertiary","","",NA,""
+"560",NA,"Elymus albicans","Wheat","Tertiary","","",NA,""
+"561",NA,"Leymus mollis subsp. mollis","Wheat","Tertiary","","",NA,""
+"562",NA,"Leymus mollis subsp. villosissimus","Wheat","Tertiary","","",NA,""
+"563",NA,"Elymus alaskanus","Wheat","Tertiary","","",NA,""
+"564",NA,"Hamamelis virginiana","Witch-Hazel","","Graftstock","",NA,""
