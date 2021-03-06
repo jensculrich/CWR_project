@@ -1,6 +1,6 @@
 library(tidyverse)
 library(stringr)
-library(Rfast)
+library(ggplot2)
 
 # compile garden data
 df <- read.csv("GBIF_by_Province.csv")
@@ -21,11 +21,33 @@ str(df3)
 # ecoregion with the most CWRs
 df4 <- df3 %>%
   group_by(ECO_NAME) %>%
-  add_tally()
+  distinct(sci_nam, .keep_all = TRUE) %>%
+  add_tally() %>%
+  rename(num_CWRs_in_Ecoregion = "n") 
 
+# province with the most CWRs
+df5 <- df3 %>%
+  group_by(PRENAME) %>%
+  distinct(sci_nam, .keep_all = TRUE) %>%
+  add_tally() %>%
+  rename(num_CWRs_in_Province = "n") 
 
-names(nth(table(df3$ECO_NAME, 1, descending = T)))
-names(which.max(table(df3$ECO_NAME)))
+# ecoregion with the most Amelanchier CWRs
+df6 <- df3 %>%
+  group_by(ECO_NAME) %>%
+  filter(grepl('Amelanchier', sci_nam)) %>%
+  distinct(sci_nam, .keep_all = TRUE) %>%
+  add_tally() %>%
+  rename(num_Amelanchier_relatives_in_Ecoregion = "n") 
+
+# province with the most Amelanchier CWRs
+df7 <- df3 %>%
+  group_by(PRENAME) %>%
+  filter(grepl('Amelanchier', sci_nam)) %>%
+  distinct(sci_nam, .keep_all = TRUE) %>%
+  add_tally() %>%
+  rename(num_Amelanchier_relatives_in_Province = "n") 
+
 
 plot(df3$long, df3$lat)
 
