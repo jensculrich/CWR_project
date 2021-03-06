@@ -1,11 +1,5 @@
 library(tidyverse)
 
-setwd("C:/Users/jensj/Documents/UBC2/Classes/ConservationScience/Project/CWR of the USA occurrences by genus 2020_7_30")
-
-# full.names = T reads in full file path. Important when files are not in working
-# directory 
-filelist <- list.files("C:/Users/jensj/Documents/UBC2/Classes/ConservationScience/Project/CWR of the USA occurrences by genus 2020_7_30",
-                       full.names = T)
 
 #create one csv out of all the csvs in CWR folder
 final_sheet <- data.frame()
