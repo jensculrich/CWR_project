@@ -1,6 +1,7 @@
 library(tidyverse)
 library(stringr)
-library(ggplot2)
+# library(ggplot2)
+library(pmr)
 
 # compile garden data
 df <- read.csv("GBIF_by_Province.csv")
@@ -23,14 +24,23 @@ df4 <- df3 %>%
   group_by(ECO_NAME) %>%
   distinct(sci_nam, .keep_all = TRUE) %>%
   add_tally() %>%
-  rename(num_CWRs_in_Ecoregion = "n") 
+  rename(num_CWRs_in_Ecoregion = "n")
+  # group_by %>% top_n(5) to filter out top five ecoregions 
+# maybe also look for number endemic CWRs?
+  
 
 # province with the most CWRs
 df5 <- df3 %>%
   group_by(PRENAME) %>%
   distinct(sci_nam, .keep_all = TRUE) %>%
   add_tally() %>%
-  rename(num_CWRs_in_Province = "n") 
+  rename(num_CWRs_in_Province = "n") #%>%
+
+df5$PRENAME <- factor(df5$PRENAME, 
+                      levels = df5$PRENAME[order(df5$num_CWRs_in_Province)])
+q <- ggplot(df5, aes(x=PRENAME, y=num_CWRs_in_Province)) + 
+  geom_boxplot()
+q
 
 # ecoregion with the most Amelanchier CWRs
 df6 <- df3 %>%
@@ -47,6 +57,11 @@ df7 <- df3 %>%
   distinct(sci_nam, .keep_all = TRUE) %>%
   add_tally() %>%
   rename(num_Amelanchier_relatives_in_Province = "n") 
+
+# Basic box plot
+s <- ggplot(df7, aes(x=PRENAME, y=num_Amelanchier_relatives_in_Province)) + 
+  geom_boxplot()
+s
 
 
 plot(df3$long, df3$lat)
