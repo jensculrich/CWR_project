@@ -2,8 +2,7 @@ library(tidyverse)
 library(stringr)
 library(ggplot2)
 
-
-# compile garden data
+# full CWR table summary stats
 df <- read.csv("GBIF_by_Province.csv")
 
 df2 <- df %>%
@@ -121,6 +120,62 @@ s <- ggplot(Amelanchier_group_by_Province, aes(x = PRENAME, y = Amelanchier_rela
   geom_bar(stat = "identity") + theme(axis.text.x=element_text(angle=45, hjust=1))
 s
 
-# lat/long of a single 
+# lat/long of one GBIF occurrence per species per ecoregion
 plot(df3$long, df3$lat)
 
+############################################################
+# compile garden data
+
+library(sf) # the base package manipulating shapes
+library(rgeos)
+library(rgdal) # geo data abstraction library
+library(geojsonio) # geo json input and output
+library(spdplyr) # the `dplyr` counterpart for shapes
+library(rmapshaper) # the package that allows geo shape transformation
+library(magrittr) # data wrangling
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+
+
+# data from gardens (already filtered to only CWRs)
+ubc_cwr <- read.csv("CWR_of_UBC.csv")
+rbg_cwr <- read.csv("CWR_of_RBG.csv")
+mbg_cwr <- read.csv("CWR_of_montreal.csv")
+
+ubc_cwr2 <- ubc_cwr %>%
+  select(Crop, CROP.WILD.RELATIVE, CoordLatDD, CoordLongDD, IUCNRedListCode, LifeForm, CountryName)
+
+str(ubc_cwr2)
+
+# translate lat and long into province (later ecoregion)
+
+# shape files must be transformed to Geo JSON format to be consumed and utilized by R. 
+dsn <- getwd()
+canada_raw <- readOGR(dsn = dsn, layer = "gpr_000b11a_e", 
+                      encoding = 'latin1')
+ggplot() +
+  geom_polygon(data = canada_raw, aes( x = long, y = lat, group = group), fill="#69b3a2", color="white") +
+  theme_void()
+
+canada_raw_sim <- ms_simplify(canada_raw)
+
+canada_raw_json <- geojson_json(canada_raw) # takes a really long time?
+
+canada_raw_sim <- ms_simplify(canada_raw_json) # 3
+geojson_write(canada_raw_sim, file = "data/canada_cd_sim.geojson") # 4
+
+
+
+
+
+
+
+
+
+
+
+
+# join with df3
+
+# want a row for each accession where Crop.wild.relative matches
