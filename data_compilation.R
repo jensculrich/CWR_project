@@ -126,7 +126,7 @@ plot(df3$long, df3$lat)
 ############################################################
 # compile garden data
 
-library(sf) # the base package manipulating shapes
+library(sp) # the base package manipulating shapes
 library(rgeos)
 library(rgdal) # geo data abstraction library
 library(geojsonio) # geo json input and output
@@ -160,10 +160,10 @@ ggplot() +
 
 canada_raw_sim <- ms_simplify(canada_raw)
 
-canada_raw_json <- geojson_json(canada_raw) # takes a really long time?
+canada_raw_json <- geojson_json(canada_raw_sim) # takes a really long time?
 
-canada_raw_sim <- ms_simplify(canada_raw_json) # 3
-geojson_write(canada_raw_sim, file = "data/canada_cd_sim.geojson") # 4
+canada_raw_json_sim <- ms_simplify(canada_raw_json) # 3
+geojson_write(canada_raw_json_sim, file = "data/canada_cd_sim.geojson") # 4
 
 
 
