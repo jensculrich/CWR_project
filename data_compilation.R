@@ -136,6 +136,7 @@ library(magrittr) # data wrangling
 library(dplyr)
 library(tidyverse)
 library(ggplot2)
+library(viridis)
 
 
 # data from gardens (already filtered to only CWRs)
@@ -148,17 +149,20 @@ ubc_cwr2 <- ubc_cwr %>%
 
 str(ubc_cwr2)
 
+rbg_cwr2 <- rbg_cwr %>%
+  select()
+
+str(rbg_cwr2)
+
+mbg_cwr2 <- mbg_cwr %>%
+  select()
+
+str(mbg_cwr2)
+
+
 # translate lat and long into province (later ecoregion)
 
-# shape files must be transformed to Geo JSON format to be consumed and utilized by R. 
-#dsn <- getwd()
-#canada_raw <- readOGR(dsn = dsn, layer = "gpr_000b11a_e", 
-#                      encoding = 'latin1')
-
-#ggplot() +
-#  geom_polygon(data = canada_raw, aes( x = long, y = lat, group = group), fill="#69b3a2", color="white") +
-#  theme_void()
-
+# add geojson map with province boundaries 
 canada_cd <- st_read("canada_provinces.geojson", quiet = TRUE) # 1
 crs_string = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs" # 2
 
@@ -180,7 +184,7 @@ theme_map <- function(base_size=9, base_family="") { # 3
     )
 }
 # Define the filling colors for each province; max allowed is 9 but good enough for the 13 provinces + territories
-map_colors <- RColorBrewer::brewer.pal(9, "Pastel1") %>% rep(37) # 4
+map_colors <- RColorBrewer::brewer.pal(9, "Greens") %>% rep(37) # 4
 
 # Plot the maps
 ggplot() +
@@ -192,6 +196,27 @@ ggplot() +
   theme(panel.grid.major = element_line(color = "white"),
         legend.key = element_rect(color = "gray40", size = 0.1))
 
+# Conforming the data frame (lat and long of wild origin accession) to shape objects
+sf_cwr_origins = ubc_cwr2 %>%
+  select(CoordLongDD, CoordLatDD) %>% # 1
+  drop_na()  %>%
+  as.matrix() %>% # 2
+  st_multipoint(dim = 'XY') %>% # 3
+  st_sfc() %>% # 4
+  st_set_crs(4269) # 5
+
+ggplot() +
+  geom_sf(aes(fill = name), color = "gray60", size = 0.1, data = canada_cd) +
+  geom_sf(data = sf_cwr_origins, color = '#001e73', alpha = 0.5, size = 3) + # 17
+  coord_sf(crs = crs_string) +
+  scale_fill_manual(values = map_colors) +
+  guides(fill = FALSE) +
+  theme_map() +
+  theme(panel.grid.major = element_line(color = "white"),
+        legend.key = element_rect(color = "gray40", size = 0.1))
+
 # join with df3
+
+
 
 # want a row for each accession where Crop.wild.relative matches
