@@ -28,9 +28,29 @@ df4 <- df3 %>%
   group_by(ECO_NAME) %>%
   distinct(sci_nam, .keep_all = TRUE) %>%
   add_tally() %>%
-  rename(num_CWRs_in_Ecoregion = "n")
-  # group_by %>% top_n(5) to filter out top five ecoregions 
-# maybe also look for number endemic CWRs?
+  rename(num_CWRs_in_Ecoregion = "n") %>%
+  mutate(num_CWRs_in_Ecoregion = as.numeric(num_CWRs_in_Ecoregion))
+
+CWRs_group_by_ecoregion <- df4 %>% # all I want for a graph is number of CWRS in each province
+  group_by(ECO_NAME) %>%
+  summarise(CWRs_per_Ecoregion = mean(num_CWRs_in_Ecoregion))
+
+CWRs_group_by_ecoregion$ECO_NAME <- # order provinces by number of  CWRs 
+  factor(CWRs_group_by_ecoregion$ECO_NAME,
+         levels = CWRs_group_by_ecoregion$ECO_NAME[
+           order(CWRs_group_by_ecoregion$CWRs_per_Ecoregion)])
+
+# Plot number CWRs in each province (as a histogram)
+p <- ggplot(CWRs_group_by_ecoregion, aes(x = CWRs_per_Ecoregion)) + theme_bw() + 
+  geom_histogram()
+p
+
+# show five ecoregions with most CWRs
+top_n(CWRs_group_by_ecoregion, 5, wt = CWRs_per_Ecoregion)
+# show five ecoregions with least CWRs
+top_n(CWRs_group_by_ecoregion, -5, wt = CWRs_per_Ecoregion) 
+
+# maybe also look for number eco-endemic CWRs using df4?
   
 
 # province with the most CWRs
@@ -43,14 +63,15 @@ df5 <- df3 %>%
 
 CWRS_group_by_province <- df5 %>% # all I want for a graph is number of CWRS in each province
   group_by(PRENAME) %>%
-  summarise(mean = mean(num_CWRs_in_Province))
+  summarise(CWRs = mean(num_CWRs_in_Province))
 
 CWRS_group_by_province$PRENAME <- # order provinces by number of  CWRs 
   factor(CWRS_group_by_province$PRENAME,
          levels = CWRS_group_by_province$PRENAME[
-           order(CWRS_group_by_province$mean)])
+           order(CWRS_group_by_province$CWRs)])
+
 # Plot number CWRs in each province
-q <- ggplot(CWRS_group_by_province, aes(x = PRENAME, y = mean)) + theme_bw() + 
+q <- ggplot(CWRS_group_by_province, aes(x = PRENAME, y = CWRs)) + theme_bw() + 
   geom_bar(stat = "identity") + theme(axis.text.x=element_text(angle=45, hjust=1))
 q
 
@@ -60,7 +81,22 @@ df6 <- df3 %>%
   filter(grepl('Amelanchier', sci_nam)) %>%
   distinct(sci_nam, .keep_all = TRUE) %>%
   add_tally() %>%
-  rename(num_Amelanchier_relatives_in_Ecoregion = "n") 
+  rename(num_Amelanchier_relatives_in_Ecoregion = "n") %>%
+  mutate(num_Amelanchier_relatives_in_Ecoregion = as.numeric(num_Amelanchier_relatives_in_Ecoregion))
+
+Amelanchier_group_by_ecoregion <- df6 %>% # all I want for a graph is number of CWRS in each province
+  group_by(ECO_CODE) %>%
+  summarise(Amelanchier_relatives = mean(num_Amelanchier_relatives_in_Ecoregion))
+
+Amelanchier_group_by_ecoregion$ECO_CODE <- # order provinces by number of  CWRs 
+  factor(Amelanchier_group_by_ecoregion$ECO_CODE,
+         levels = Amelanchier_group_by_ecoregion$ECO_CODE[
+           order(Amelanchier_group_by_ecoregion$Amelanchier_relatives)])
+
+# Plot number CWRs in each province
+r <- ggplot(Amelanchier_group_by_ecoregion, aes(x = ECO_CODE, y = Amelanchier_relatives)) + theme_bw() + 
+  geom_bar(stat = "identity") + theme(axis.text.x=element_text(angle=45, hjust=1))
+r
 
 # province with the most Amelanchier CWRs
 df7 <- df3 %>%
@@ -68,12 +104,23 @@ df7 <- df3 %>%
   filter(grepl('Amelanchier', sci_nam)) %>%
   distinct(sci_nam, .keep_all = TRUE) %>%
   add_tally() %>%
-  rename(num_Amelanchier_relatives_in_Province = "n") 
+  rename(num_Amelanchier_relatives_in_Province = "n") %>%
+  mutate(num_Amelanchier_relatives_in_Province = as.numeric(num_Amelanchier_relatives_in_Province))
 
-# Basic box plot
-s <- ggplot(df7, aes(x = PRENAME, y = num_Amelanchier_relatives_in_Province)) + theme_bw() + geom_bar(stat = "identity")
+Amelanchier_group_by_Province <- df7 %>% # all I want for a graph is number of CWRS in each province
+  group_by(PRENAME) %>%
+  summarise(Amelanchier_relatives = mean(num_Amelanchier_relatives_in_Province))
+
+Amelanchier_group_by_Province$PRENAME <- # order provinces by number of  CWRs 
+  factor(Amelanchier_group_by_Province$PRENAME,
+         levels = Amelanchier_group_by_Province$PRENAME[
+           order(Amelanchier_group_by_Province$Amelanchier_relatives)])
+
+# Plot number CWRs in each province
+s <- ggplot(Amelanchier_group_by_Province, aes(x = PRENAME, y = Amelanchier_relatives)) + theme_bw() + 
+  geom_bar(stat = "identity") + theme(axis.text.x=element_text(angle=45, hjust=1))
 s
 
-
+# lat/long of a single 
 plot(df3$long, df3$lat)
 
