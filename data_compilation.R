@@ -126,7 +126,7 @@ plot(df3$long, df3$lat)
 ############################################################
 # compile garden data
 
-library(sp) # the base package manipulating shapes
+library(sf) # the base package manipulating shapes
 library(rgeos)
 library(rgdal) # geo data abstraction library
 library(geojsonio) # geo json input and output
@@ -151,30 +151,46 @@ str(ubc_cwr2)
 # translate lat and long into province (later ecoregion)
 
 # shape files must be transformed to Geo JSON format to be consumed and utilized by R. 
-dsn <- getwd()
-canada_raw <- readOGR(dsn = dsn, layer = "gpr_000b11a_e", 
-                      encoding = 'latin1')
+#dsn <- getwd()
+#canada_raw <- readOGR(dsn = dsn, layer = "gpr_000b11a_e", 
+#                      encoding = 'latin1')
+
+#ggplot() +
+#  geom_polygon(data = canada_raw, aes( x = long, y = lat, group = group), fill="#69b3a2", color="white") +
+#  theme_void()
+
+canada_cd <- st_read("canada_provinces.geojson", quiet = TRUE) # 1
+crs_string = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs" # 2
+
+# Define the maps' theme -- remove axes, ticks, borders, legends, etc.
+theme_map <- function(base_size=9, base_family="") { # 3
+  require(grid)
+  theme_bw(base_size=base_size, base_family=base_family) %+replace%
+    theme(axis.line=element_blank(),
+          axis.text=element_blank(),
+          axis.ticks=element_blank(),
+          axis.title=element_blank(),
+          panel.background=element_blank(),
+          panel.border=element_blank(),
+          panel.grid=element_blank(),
+          panel.spacing=unit(0, "lines"),
+          plot.background=element_blank(),
+          legend.justification = c(0,0),
+          legend.position = c(0,0)
+    )
+}
+# Define the filling colors for each province; max allowed is 9 but good enough for the 13 provinces + territories
+map_colors <- RColorBrewer::brewer.pal(9, "Pastel1") %>% rep(37) # 4
+
+# Plot the maps
 ggplot() +
-  geom_polygon(data = canada_raw, aes( x = long, y = lat, group = group), fill="#69b3a2", color="white") +
-  theme_void()
-
-canada_raw_sim <- ms_simplify(canada_raw)
-
-canada_raw_json <- geojson_json(canada_raw_sim) # takes a really long time?
-
-canada_raw_json_sim <- ms_simplify(canada_raw_json) # 3
-geojson_write(canada_raw_json_sim, file = "data/canada_cd_sim.geojson") # 4
-
-
-
-
-
-
-
-
-
-
-
+  geom_sf(aes(fill = name), color = "gray60", size = 0.1, data = canada_cd) + # 5
+  coord_sf(crs = crs_string) + # 6
+  scale_fill_manual(values = map_colors) +
+  guides(fill = FALSE) +
+  theme_map() +
+  theme(panel.grid.major = element_line(color = "white"),
+        legend.key = element_rect(color = "gray40", size = 0.1))
 
 # join with df3
 
