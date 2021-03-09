@@ -215,6 +215,18 @@ ggplot() +
   theme(panel.grid.major = element_line(color = "white"),
         legend.key = element_rect(color = "gray40", size = 0.1))
 
+# Append Province to accession using lat and longitude
+
+#make a data frame
+sf_cwr_origins2 = ubc_cwr2 %>%
+  drop_na(CoordLongDD, CoordLatDD) # drop rows that don't have lat long data
+
+# compare points
+canada_cd <- st_transform(st_as_sf(canada_cd), 4326)
+points_sf = st_transform( st_as_sf(sf_cwr_origins), coords = c("CoordLongDD", "CoordLatDD"), crs = 4326, agr = "constant")
+result <- as.data.frame( st_join(points_sf, canada_cd, join = st_intersects) )
+# fix this ?
+
 # join with df3
 
 
