@@ -217,15 +217,14 @@ ggplot() +
 
 # Append Province to accession using lat and longitude
 
-#make a data frame
-sf_cwr_origins2 = ubc_cwr2 %>%
-  drop_na(CoordLongDD, CoordLatDD) # drop rows that don't have lat long data
-
 # compare points
 canada_cd <- st_transform(st_as_sf(canada_cd), 4326)
 points_sf = st_transform( st_as_sf(sf_cwr_origins), coords = c("CoordLongDD", "CoordLatDD"), crs = 4326, agr = "constant")
 result <- as.data.frame( st_join(points_sf, canada_cd, join = st_intersects) )
-# fix this ?
+# fix this ? what I want is to attach province name to each coordinate,
+# not list of coordinates in each province
+
+# https://www.r-graph-gallery.com/choropleth-map.html
 
 # join with df3
 
