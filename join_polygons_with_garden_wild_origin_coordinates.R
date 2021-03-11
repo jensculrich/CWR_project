@@ -35,32 +35,40 @@ df3 <- df2 %>% # drop unformatted columns, change chr to factor data class
 str(df3)
 
 # data from gardens (already filtered to only CWRs)
-ubc_cwr <- read.csv("CWR_of_UBC.csv")
-rbg_cwr <- read.csv("CWR_of_RBG.csv")
-mbg_cwr <- read.csv("CWR_of_montreal.csv")
+cwr_ubc <- read.csv("CWR_of_UBC.csv")
+cwr_rbg <- read.csv("CWR_of_RBG.csv")
+cwr_montreal <- read.csv("CWR_of_MontrealBG.csv")
+cwr_guelph <- read.csv("CWR_of_UofGuelph.csv")
+cwr_mountp <- read.csv("CWR_of_MountPleasantGroup.csv")
+cwr_vandusen <- read.csv("CWR_of_VanDusenBG.csv")
+cwr_pgrc <- read.csv("Amelanchier_PGRC.csv")
+cwr_usask <- read.csv("Amelanchier_UofSask.csv")
 
-ubc_cwr2 <- ubc_cwr %>%
-  select(Crop, CROP.WILD.RELATIVE, CoordLatDD, CoordLongDD, IUCNRedListCode, LifeForm, CountryName)
+# join all garden data into one long table
+garden_accessions <- rbind(cwr_ubc, cwr_rbg, cwr_montreal, cwr_guelph, cwr_mountp, cwr_vandusen,
+      cwr_pgrc, cwr_usask)
 
-str(ubc_cwr2)
-
-rbg_cwr2 <- rbg_cwr %>%
-  select()
-
-str(rbg_cwr2)
-
-mbg_cwr2 <- mbg_cwr %>%
-  select()
-
-str(mbg_cwr2)
-
+str(garden_accessions)
+garden_accessions <- garden_accessions %>% # format columns
+  mutate(latitude = as.numeric(latitude), longitude = as.numeric(longitude)) %>%
+  select(-province)
 
 # translate lat and long into province (later ecoregion)
+
+
+# Transform garden data into a projected shape file
+sf_garden_accessions <- garden_accessions %>%
+  drop_na(longitude, latitude) %>% # can we do this and keep NA's?
+  st_as_sf(coords = c("longitude", "latitude"), crs = 4326)
 
 # add geojson map with province boundaries 
 canada_cd <- st_read("canada_provinces.geojson", quiet = TRUE) # 1
 crs_string = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs" # 2
 
+# add geojson map with ecoregion boundaries
+# to do
+
+# Plot the maps
 # Define the maps' theme -- remove axes, ticks, borders, legends, etc.
 theme_map <- function(base_size=9, base_family="") { # 3
   require(grid)
@@ -78,27 +86,13 @@ theme_map <- function(base_size=9, base_family="") { # 3
           legend.position = c(0,0)
     )
 }
+
 # Define the filling colors for each province; max allowed is 9 but good enough for the 13 provinces + territories
 map_colors <- RColorBrewer::brewer.pal(9, "Greens") %>% rep(37) # 4
 
-# Plot the maps
-ggplot() +
-  geom_sf(aes(fill = name), color = "gray60", size = 0.1, data = canada_cd) + # 5
-  coord_sf(crs = crs_string) + # 6
-  scale_fill_manual(values = map_colors) +
-  guides(fill = FALSE) +
-  theme_map() +
-  theme(panel.grid.major = element_line(color = "white"),
-        legend.key = element_rect(color = "gray40", size = 0.1))
-
-# Transform garden data into a projected shape file
-sf_cwr_origins <- ubc_cwr2 %>%
-  drop_na(CoordLongDD, CoordLatDD)  %>%
-  st_as_sf(coords = c("CoordLongDD", "CoordLatDD"), crs = 4326)
-
 ggplot() +
   geom_sf(aes(fill = name), color = "gray60", size = 0.1, data = canada_cd) +
-  geom_sf(data = sf_cwr_origins, color = '#001e73', alpha = 0.5, size = 3) + # 17
+  geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
   coord_sf(crs = crs_string) +
   scale_fill_manual(values = map_colors) +
   guides(fill = FALSE) +
@@ -107,8 +101,17 @@ ggplot() +
         legend.key = element_rect(color = "gray40", size = 0.1))
 
 # Append Province to accession using lat and longitudecanada_cd <- st_transform(st_as_sf(canada_cd), 4326)
-points_sf = st_transform( st_as_sf(sf_cwr_origins), coords = c("CoordLongDD", "CoordLatDD"), crs = 4326, agr = "constant")
-points_polygon <- st_join(sf_cwr_origins_2, canada_cd, left = TRUE)
+points_sf = st_transform( st_as_sf(sf_garden_accessions), 
+                          coords = c("longitude", "latitude"), 
+                          crs = 4326, agr = "constant")
+points_polygon <- st_join(sf_garden_accessions, canada_cd, left = TRUE)
+
+# merge these data back with the garden accessions, since I had to drop 
+# all with lat/long = na
+points_polygon2 <- points_polygon %>%
+  # select columns that match garden accessions
+  select()
+  # merge but replace rows 
 
 # fix this ? what I want is to attach province name to each coordinate,
 # not list of coordinates in each province

@@ -1,401 +1,401 @@
-"","garden","crop","species","variant","latitude","longitude","country","province","IUCNRedList"
-"1","VanDusen Botanical Garden","Fir","Abies amabilis",""," "," ","NA","NA","NA"
-"2","VanDusen Botanical Garden","Fir","Abies balsamea",""," "," ","NA","NA","NA"
-"3","VanDusen Botanical Garden","Fir","Abies grandis",""," "," ","NA","NA","NA"
-"4","VanDusen Botanical Garden","Fir","Abies grandis",""," "," ","NA","NA","NA"
-"5","VanDusen Botanical Garden","Fir","Abies lasiocarpa",""," "," ","NA","NA","NA"
-"6","VanDusen Botanical Garden","Fir","Abies lasiocarpa",""," "," ","NA","NA","NA"
-"7","VanDusen Botanical Garden","Maple","Acer glabrum",""," "," ","NA","NA","NA"
-"8","VanDusen Botanical Garden","Maple","Acer glabrum","douglasii"," "," ","NA","NA","NA"
-"9","VanDusen Botanical Garden","Maple","Acer glabrum","douglasii"," "," ","NA","NA","NA"
-"10","VanDusen Botanical Garden","Maple","Acer macrophyllum",""," "," ","NA","NA","NA"
-"11","VanDusen Botanical Garden","Maple","Acer negundo",""," "," ","NA","NA","NA"
-"12","VanDusen Botanical Garden","Maple","Acer negundo","Flamingo'"," "," ","NA","NA","NA"
-"13","VanDusen Botanical Garden","Maple","Acer pensylvanicum",""," "," ","NA","NA","NA"
-"14","VanDusen Botanical Garden","Maple","Acer rubrum","Red Sunset'"," "," ","NA","NA","NA"
-"15","VanDusen Botanical Garden","Maple","Acer rubrum","Autumn Flame'"," "," ","NA","NA","NA"
-"16","VanDusen Botanical Garden","Maple","Acer rubrum","Scanlon'"," "," ","NA","NA","NA"
-"17","VanDusen Botanical Garden","Maple","Acer rubrum","Bowhall'"," "," ","NA","NA","NA"
-"18","VanDusen Botanical Garden","Maple","Acer rubrum","Autumn Flame'"," "," ","NA","NA","NA"
-"19","VanDusen Botanical Garden","Maple","Acer rubrum","Red Sunset'"," "," ","NA","NA","NA"
-"20","VanDusen Botanical Garden","Maple","Acer rubrum","Morgan'"," "," ","NA","NA","NA"
-"21","VanDusen Botanical Garden","Maple","Acer rubrum","Armstrong'"," "," ","NA","NA","NA"
-"22","VanDusen Botanical Garden","Maple","Acer rubrum","October Glory'"," "," ","NA","NA","NA"
-"23","VanDusen Botanical Garden","Maple","Acer rubrum",""," "," ","NA","NA","NA"
-"24","VanDusen Botanical Garden","Maple","Acer rubrum",""," "," ","NA","NA","NA"
-"25","VanDusen Botanical Garden","Maple","Acer rubrum",""," "," ","NA","NA","NA"
-"26","VanDusen Botanical Garden","Maple","Acer saccharinum",""," "," ","NA","NA","NA"
-"27","VanDusen Botanical Garden","Maple","Acer saccharum",""," "," ","NA","NA","NA"
-"28","VanDusen Botanical Garden","Maple","Acer saccharum","Legacy'"," "," ","NA","NA","NA"
-"29","VanDusen Botanical Garden","Maple","Acer saccharum",""," "," ","NA","NA","NA"
-"30","VanDusen Botanical Garden","Maple","Acer saccharum","","43°32'  N","80°13'  W","NA","NA","NA"
-"31","VanDusen Botanical Garden","Maple","Acer saccharum","","47°  N","71°  W","NA","NA","NA"
-"32","VanDusen Botanical Garden","Maple","Acer saccharum",""," "," ","NA","NA","NA"
-"33","VanDusen Botanical Garden","Maple","Acer saccharum","Legacy'"," "," ","NA","NA","NA"
-"34","VanDusen Botanical Garden","Maple","Acer saccharum",""," "," ","NA","NA","NA"
-"35","VanDusen Botanical Garden","Maple","Acer saccharum",""," "," ","NA","NA","NA"
-"36","VanDusen Botanical Garden","Maple","Acer saccharum"," nigrum"," "," ","NA","NA","NA"
-"37","VanDusen Botanical Garden","Maple","Acer saccharum",""," "," ","NA","NA","NA"
-"38","VanDusen Botanical Garden","Maple","Acer saccharum",""," "," ","NA","NA","NA"
-"39","VanDusen Botanical Garden","Maple","Acer saccharum",""," "," ","NA","NA","NA"
-"40","VanDusen Botanical Garden","Maple","Acer saccharum",""," "," ","NA","NA","NA"
-"41","VanDusen Botanical Garden","Onion","Allium cernuum",""," "," ","NA","NA","NA"
-"42","VanDusen Botanical Garden","Onion","Allium cernuum",""," "," ","NA","NA","NA"
-"43","VanDusen Botanical Garden","Onion","Allium cernuum",""," "," ","NA","NA","NA"
-"44","VanDusen Botanical Garden","Onion","Allium cernuum",""," "," ","NA","NA","NA"
-"45","VanDusen Botanical Garden","Onion","Allium cernuum",""," "," ","NA","NA","NA"
-"46","VanDusen Botanical Garden","Onion","Allium cernuum",""," "," ","NA","NA","NA"
-"47","VanDusen Botanical Garden","Onion","Allium cernuum",""," "," ","NA","NA","NA"
-"48","VanDusen Botanical Garden","Onion","Allium cernuum",""," "," ","NA","NA","NA"
-"49","VanDusen Botanical Garden","Onion","Allium schoenoprasum",""," "," ","NA","NA","NA"
-"50","VanDusen Botanical Garden","Onion","Allium schoenoprasum","Forescate'"," "," ","NA","NA","NA"
-"51","VanDusen Botanical Garden","Onion","Allium schoenoprasum",""," "," ","NA","NA","NA"
-"52","VanDusen Botanical Garden","Onion","Allium schoenoprasum","Forescate'"," "," ","NA","NA","NA"
-"53","VanDusen Botanical Garden","Onion","Allium stellatum",""," "," ","NA","NA","NA"
-"54","VanDusen Botanical Garden","Alder","Alnus rubra",""," "," ","NA","NA","NA"
-"55","VanDusen Botanical Garden","Alder","Alnus rubra",""," "," ","NA","NA","NA"
-"56","VanDusen Botanical Garden","Alder","Alnus sinuata",""," "," ","NA","NA","NA"
-"57","VanDusen Botanical Garden","Saskatoon","Amelanchier arborea",""," "," ","NA","NA","NA"
-"58","VanDusen Botanical Garden","Saskatoon","Amelanchier canadensis",""," "," ","NA","NA","NA"
-"59","VanDusen Botanical Garden","Bluestem","Andropogon gerardii",""," "," ","NA","NA","NA"
-"60","VanDusen Botanical Garden","Pawpaw","Asimina triloba",""," "," ","NA","NA","NA"
-"61","VanDusen Botanical Garden","Pawpaw","Asimina triloba",""," "," ","NA","NA","NA"
-"62","VanDusen Botanical Garden","Birch","Betula lenta",""," "," ","NA","NA","NA"
-"63","VanDusen Botanical Garden","Birch","Betula lenta",""," "," ","NA","NA","NA"
-"64","VanDusen Botanical Garden","Bromegrass","Bromus vulgaris",""," "," ","NA","NA","NA"
-"65","VanDusen Botanical Garden","Hickory","Carya ovata",""," "," ","NA","NA","NA"
-"66","VanDusen Botanical Garden","Chestnut","Castanea dentata",""," "," ","NA","NA","NA"
-"67","VanDusen Botanical Garden","Ornamental Hackberry","Celtis occidentalis",""," "," ","NA","NA","NA"
-"68","VanDusen Botanical Garden","Wild Rye","Elymus canadensis",""," "," ","NA","NA","NA"
-"69","VanDusen Botanical Garden","Fawn Lily","Erythronium oregonum",""," "," ","NA","NA","NA"
-"70","VanDusen Botanical Garden","Fawn Lily","Erythronium oregonum",""," "," ","NA","NA","NA"
-"71","VanDusen Botanical Garden","Fawn Lily","Erythronium oregonum",""," "," ","NA","NA","NA"
-"72","VanDusen Botanical Garden","Fawn Lily","Erythronium oregonum",""," "," ","NA","NA","NA"
-"73","VanDusen Botanical Garden","Fawn Lily","Erythronium oregonum",""," "," ","NA","NA","NA"
-"74","VanDusen Botanical Garden","Fawn Lily","Erythronium oregonum",""," "," ","NA","NA","NA"
-"75","VanDusen Botanical Garden","Fawn Lily","Erythronium oregonum",""," "," ","NA","NA","NA"
-"76","VanDusen Botanical Garden","Fawn Lily","Erythronium oregonum",""," "," ","NA","NA","NA"
-"77","VanDusen Botanical Garden","Fescue","Festuca ovina",""," "," ","NA","NA","NA"
-"78","VanDusen Botanical Garden","Fescue","Festuca ovina",""," "," ","NA","NA","NA"
-"79","VanDusen Botanical Garden","Strawberry","Fragaria chiloensis",""," "," ","NA","NA","NA"
-"80","VanDusen Botanical Garden","Strawberry","Fragaria chiloensis",""," "," ","NA","NA","NA"
-"81","VanDusen Botanical Garden","Strawberry","Fragaria chiloensis",""," "," ","NA","NA","NA"
-"82","VanDusen Botanical Garden","Strawberry","Fragaria chiloensis",""," "," ","NA","NA","NA"
-"83","VanDusen Botanical Garden","Strawberry","Fragaria vesca",""," "," ","NA","NA","NA"
-"84","VanDusen Botanical Garden","Strawberry","Fragaria x ananassa","Sumas'"," "," ","NA","NA","NA"
-"85","VanDusen Botanical Garden","Ash","Fraxinus americana",""," "," ","NA","NA","NA"
-"86","VanDusen Botanical Garden","Ash","Fraxinus americana","Autumn Applause'"," "," ","NA","NA","NA"
-"87","VanDusen Botanical Garden","Ash","Fraxinus americana","Autumn Purple'"," "," ","NA","NA","NA"
-"88","VanDusen Botanical Garden","Ash","Fraxinus americana","Autumn Applause'"," "," ","NA","NA","NA"
-"89","VanDusen Botanical Garden","Ash","Fraxinus nigra",""," "," ","NA","NA","NA"
-"90","VanDusen Botanical Garden","Ash","Fraxinus nigra","Fallgold'"," "," ","NA","NA","NA"
-"91","VanDusen Botanical Garden","Ash","Fraxinus pennsylvanica","Patmore'"," "," ","NA","NA","NA"
-"92","VanDusen Botanical Garden","Ash","Fraxinus pennsylvanica","Cimmaron'"," "," ","NA","NA","NA"
-"93","VanDusen Botanical Garden","Ash","Fraxinus pennsylvanica","Bergeson'"," "," ","NA","NA","NA"
-"94","VanDusen Botanical Garden","Ash","Fraxinus pennsylvanica","Variegata'"," "," ","NA","NA","NA"
-"95","VanDusen Botanical Garden","Ash","Fraxinus pennsylvanica",""," "," ","NA","NA","NA"
-"96","VanDusen Botanical Garden","Ash","Fraxinus quadrangulata",""," "," ","NA","NA","NA"
-"97","VanDusen Botanical Garden","Blanket Flower","Gaillardia aristata",""," "," ","NA","NA","NA"
-"98","VanDusen Botanical Garden","Blanket Flower","Gaillardia aristata",""," "," ","NA","NA","NA"
-"99","VanDusen Botanical Garden","Witch Hazel","Hamamelis virginiana",""," "," ","NA","NA","NA"
-"100","VanDusen Botanical Garden","Witch Hazel","Hamamelis virginiana",""," "," ","NA","NA","NA"
-"101","VanDusen Botanical Garden","Witch Hazel","Hamamelis virginiana",""," "," ","NA","NA","NA"
-"102","VanDusen Botanical Garden","Sunflower","Helianthus divaricatus",""," "," ","NA","NA","NA"
-"103","VanDusen Botanical Garden","Walnut","Juglans cinerea",""," "," ","NA","NA","NA"
-"104","VanDusen Botanical Garden","Larch","Larix laricina",""," "," ","NA","NA","NA"
-"105","VanDusen Botanical Garden","Larch","Larix laricina",""," "," ","NA","NA","NA"
-"106","VanDusen Botanical Garden","Larch","Larix laricina","Newport Dwarf #7'"," "," ","NA","NA","NA"
-"107","VanDusen Botanical Garden","Larch","Larix occidentalis",""," "," ","NA","NA","NA"
-"108","VanDusen Botanical Garden","Wheat","Leymus cinereus",""," "," ","NA","NA","NA"
-"109","VanDusen Botanical Garden","Flax","Linum perenne"," alpinum"," "," ","NA","NA","NA"
-"110","VanDusen Botanical Garden","Lupin","Lupinus polyphyllus",""," "," ","NA","NA","NA"
-"111","VanDusen Botanical Garden","Lupin","Lupinus polyphyllus",""," "," ","NA","NA","NA"
-"112","VanDusen Botanical Garden","Lupin","Lupinus polyphyllus",""," "," ","NA","NA","NA"
-"113","VanDusen Botanical Garden","Magnolia","Magnolia acuminata",""," "," ","NA","NA","NA"
-"114","VanDusen Botanical Garden","Mint","Mentha arvensis",""," "," ","NA","NA","NA"
-"115","VanDusen Botanical Garden","Water Lily","Nymphaea tetragona",""," "," ","NA","NA","NA"
-"116","VanDusen Botanical Garden","Water Lily","Nymphaea tetragona",""," "," ","NA","NA","NA"
-"117","VanDusen Botanical Garden","Proso millet","Panicum clandestinum",""," "," ","NA","NA","NA"
-"118","VanDusen Botanical Garden","Proso millet","Panicum virgatum","Prairie Sky'"," "," ","NA","NA","NA"
-"119","VanDusen Botanical Garden","Proso millet","Panicum virgatum","Shenandoah'"," "," ","NA","NA","NA"
-"120","VanDusen Botanical Garden","Proso millet","Panicum virgatum","Shenandoah'"," "," ","NA","NA","NA"
-"121","VanDusen Botanical Garden","Proso millet","Panicum virgatum","Rotstrahlbusch'"," "," ","NA","NA","NA"
-"122","VanDusen Botanical Garden","Proso millet","Panicum virgatum","Rotstrahlbusch'"," "," ","NA","NA","NA"
-"123","VanDusen Botanical Garden","Proso millet","Panicum virgatum","Rotstrahlbusch'"," "," ","NA","NA","NA"
-"124","VanDusen Botanical Garden","Canary Grass","Phalaris arundinacea","Feesey'"," "," ","NA","NA","NA"
-"125","VanDusen Botanical Garden","Spruce","Picea glauca","Cy's Wonder'"," "," ","NA","NA","NA"
-"126","VanDusen Botanical Garden","Spruce","Picea glauca","Echiniformis'"," "," ","NA","NA","NA"
-"127","VanDusen Botanical Garden","Spruce","Picea glauca","Coerulea'"," "," ","NA","NA","NA"
-"128","VanDusen Botanical Garden","Spruce","Picea glauca","albertiana 'Conica'"," "," ","NA","NA","NA"
-"129","VanDusen Botanical Garden","Spruce","Picea glauca","albertiana 'Conica'"," "," ","NA","NA","NA"
-"130","VanDusen Botanical Garden","Spruce","Picea glauca","albertiana 'Conica'"," "," ","NA","NA","NA"
-"131","VanDusen Botanical Garden","Spruce","Picea glauca","albertiana 'Conica'"," "," ","NA","NA","NA"
-"132","VanDusen Botanical Garden","Spruce","Picea glauca","Pixie'"," "," ","NA","NA","NA"
-"133","VanDusen Botanical Garden","Spruce","Picea mariana","Aurea'"," "," ","NA","NA","NA"
-"134","VanDusen Botanical Garden","Spruce","Picea mariana",""," "," ","NA","NA","NA"
-"135","VanDusen Botanical Garden","Spruce","Picea mariana","Nana'"," "," ","NA","NA","NA"
-"136","VanDusen Botanical Garden","Spruce","Picea mariana",""," "," ","NA","NA","NA"
-"137","VanDusen Botanical Garden","Spruce","Picea rubens",""," "," ","NA","NA","NA"
-"138","VanDusen Botanical Garden","Spruce","Picea rubens",""," "," ","NA","NA","NA"
-"139","VanDusen Botanical Garden","Spruce","Picea sitchensis",""," "," ","NA","NA","NA"
-"140","VanDusen Botanical Garden","Spruce","Picea sitchensis",""," "," ","NA","NA","NA"
-"141","VanDusen Botanical Garden","Spruce","Picea sitchensis","Tenas'"," "," ","NA","NA","NA"
-"142","VanDusen Botanical Garden","Spruce","Picea sitchensis",""," "," ","NA","NA","NA"
-"143","VanDusen Botanical Garden","Pine","Pinus albicaulis","Algonquin Pillar'"," "," ","NA","NA","NA"
-"144","VanDusen Botanical Garden","Pine","Pinus banksiana",""," "," ","NA","NA","NA"
-"145","VanDusen Botanical Garden","Pine","Pinus contorta",""," "," ","NA","NA","NA"
-"146","VanDusen Botanical Garden","Pine","Pinus contorta",""," "," ","NA","NA","NA"
-"147","VanDusen Botanical Garden","Pine","Pinus contorta",""," "," ","NA","NA","NA"
-"148","VanDusen Botanical Garden","Pine","Pinus contorta","Spaan's Dwarf'"," "," ","NA","NA","NA"
-"149","VanDusen Botanical Garden","Pine","Pinus contorta",""," "," ","NA","NA","NA"
-"150","VanDusen Botanical Garden","Pine","Pinus contorta",""," "," ","NA","NA","NA"
-"151","VanDusen Botanical Garden","Pine","Pinus contorta",""," "," ","NA","NA","NA"
-"152","VanDusen Botanical Garden","Pine","Pinus ponderosa",""," "," ","NA","NA","NA"
-"153","VanDusen Botanical Garden","Pine","Pinus ponderosa",""," "," ","NA","NA","NA"
-"154","VanDusen Botanical Garden","Pine","Pinus ponderosa",""," "," ","NA","NA","NA"
-"155","VanDusen Botanical Garden","Pine","Pinus ponderosa",""," "," ","NA","NA","NA"
-"156","VanDusen Botanical Garden","Pine","Pinus ponderosa",""," "," ","NA","NA","NA"
-"157","VanDusen Botanical Garden","Pine","Pinus rigida",""," "," ","NA","NA","NA"
-"158","VanDusen Botanical Garden","Pine","Pinus rigida",""," "," ","NA","NA","NA"
-"159","VanDusen Botanical Garden","Pine","Pinus strobus","Pendula'"," "," ","NA","NA","NA"
-"160","VanDusen Botanical Garden","Pine","Pinus strobus","Contorta'"," "," ","NA","NA","NA"
-"161","VanDusen Botanical Garden","Pine","Pinus strobus","Horsford'"," "," ","NA","NA","NA"
-"162","VanDusen Botanical Garden","Pine","Pinus strobus","Radiata'"," "," ","NA","NA","NA"
-"163","VanDusen Botanical Garden","Pine","Pinus strobus","Pendula'"," "," ","NA","NA","NA"
-"164","VanDusen Botanical Garden","Pine","Pinus strobus","Pendula'"," "," ","NA","NA","NA"
-"165","VanDusen Botanical Garden","Pine","Pinus strobus",""," "," ","NA","NA","NA"
-"166","VanDusen Botanical Garden","Pine","Pinus strobus",""," "," ","NA","NA","NA"
-"167","VanDusen Botanical Garden","Pine","Pinus strobus","Horsford'"," "," ","NA","NA","NA"
-"168","VanDusen Botanical Garden","Bluegrass","Poa alpina",""," "," ","NA","NA","NA"
-"169","VanDusen Botanical Garden","Poplar","Populus tremuloides",""," "," ","NA","NA","NA"
-"170","VanDusen Botanical Garden","Poplar","Populus tremuloides",""," "," ","NA","NA","NA"
-"171","VanDusen Botanical Garden","Poplar","Populus tremuloides",""," "," ","NA","NA","NA"
-"172","VanDusen Botanical Garden","Poplar","Populus tremuloides",""," "," ","NA","NA","NA"
-"173","VanDusen Botanical Garden","Poplar","Populus tremuloides",""," "," ","NA","NA","NA"
-"174","VanDusen Botanical Garden","Heal All","Prunella vulgaris",""," "," ","NA","NA","NA"
-"175","VanDusen Botanical Garden","Heal All","Prunella vulgaris",""," "," ","NA","NA","NA"
-"176","VanDusen Botanical Garden","Cherry","Prunus besseyi",""," "," ","NA","NA","NA"
-"177","VanDusen Botanical Garden","Cherry","Prunus serotina",""," "," ","NA","NA","NA"
-"178","VanDusen Botanical Garden","Cherry","Prunus serotina","red-leaf selection)"," "," ","NA","NA","NA"
-"179","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"180","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"181","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"182","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"183","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"184","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"185","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"186","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"187","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"188","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"189","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"190","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"191","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"192","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"193","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"194","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"195","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"196","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"197","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii","Pendula'"," "," ","NA","NA","NA"
-"198","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii","dwarf selection)"," "," ","NA","NA","NA"
-"199","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"200","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"201","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"202","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"203","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"204","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"205","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"206","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"207","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"208","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"209","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"210","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"211","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"212","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"213","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"214","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"215","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"216","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"217","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"218","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"219","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"220","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"221","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"222","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii","glauca"," "," ","NA","NA","NA"
-"223","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"224","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"225","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"226","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"227","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"228","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"229","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"230","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"231","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"232","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"233","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"234","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"235","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"236","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"237","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"238","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"239","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"240","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"241","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"242","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"243","VanDusen Botanical Garden","Douglas fir","Pseudotsuga menziesii",""," "," ","NA","NA","NA"
-"244","VanDusen Botanical Garden","Oak","Quercus alba",""," "," ","NA","NA","NA"
-"245","VanDusen Botanical Garden","Oak","Quercus bicolor",""," "," ","NA","NA","NA"
-"246","VanDusen Botanical Garden","Oak","Quercus garryana",""," "," ","NA","NA","NA"
-"247","VanDusen Botanical Garden","Oak","Quercus garryana",""," "," ","NA","NA","NA"
-"248","VanDusen Botanical Garden","Oak","Quercus garryana",""," "," ","NA","NA","NA"
-"249","VanDusen Botanical Garden","Oak","Quercus garryana",""," "," ","NA","NA","NA"
-"250","VanDusen Botanical Garden","Oak","Quercus garryana",""," "," ","NA","NA","NA"
-"251","VanDusen Botanical Garden","Oak","Quercus garryana",""," "," ","NA","NA","NA"
-"252","VanDusen Botanical Garden","Oak","Quercus garryana",""," "," ","NA","NA","NA"
-"253","VanDusen Botanical Garden","Oak","Quercus palustris",""," "," ","NA","NA","NA"
-"254","VanDusen Botanical Garden","Oak","Quercus palustris",""," "," ","NA","NA","NA"
-"255","VanDusen Botanical Garden","Oak","Quercus palustris",""," "," ","NA","NA","NA"
-"256","VanDusen Botanical Garden","Oak","Quercus palustris",""," "," ","NA","NA","NA"
-"257","VanDusen Botanical Garden","Oak","Quercus rubra",""," "," ","NA","NA","NA"
-"258","VanDusen Botanical Garden","Oak","Quercus rubra",""," "," ","NA","NA","NA"
-"259","VanDusen Botanical Garden","Oak","Quercus rubra",""," "," ","NA","NA","NA"
-"260","VanDusen Botanical Garden","Oak","Quercus rubra",""," "," ","NA","NA","NA"
-"261","VanDusen Botanical Garden","Oak","Quercus rubra",""," "," ","NA","NA","NA"
-"262","VanDusen Botanical Garden","Oak","Quercus rubra","Aurea'"," "," ","NA","NA","NA"
-"263","VanDusen Botanical Garden","Currant","Ribes aureum",""," "," ","NA","NA","NA"
-"264","VanDusen Botanical Garden","Currant","Ribes divaricatum",""," "," ","NA","NA","NA"
-"265","VanDusen Botanical Garden","Currant","Ribes lacustre",""," "," ","NA","NA","NA"
-"266","VanDusen Botanical Garden","Currant","Ribes lacustre",""," "," ","NA","NA","NA"
-"267","VanDusen Botanical Garden","Currant","Ribes sanguineum","White Icicle'"," "," ","NA","NA","NA"
-"268","VanDusen Botanical Garden","Currant","Ribes sanguineum","Pulborough Scarlet'"," "," ","NA","NA","NA"
-"269","VanDusen Botanical Garden","Currant","Ribes sanguineum",""," "," ","NA","NA","NA"
-"270","VanDusen Botanical Garden","Currant","Ribes sanguineum","Pulborough Scarlet'"," "," ","NA","NA","NA"
-"271","VanDusen Botanical Garden","Currant","Ribes sanguineum","White Icicle'"," "," ","NA","NA","NA"
-"272","VanDusen Botanical Garden","Currant","Ribes sanguineum",""," "," ","NA","NA","NA"
-"273","VanDusen Botanical Garden","Currant","Ribes sanguineum",""," "," ","NA","NA","NA"
-"274","VanDusen Botanical Garden","Currant","Ribes sanguineum","Diamonds and Rubies'"," "," ","NA","NA","NA"
-"275","VanDusen Botanical Garden","Currant","Ribes sanguineum",""," "," ","NA","NA","NA"
-"276","VanDusen Botanical Garden","Currant","Ribes sanguineum","King Edward VII'"," "," ","NA","NA","NA"
-"277","VanDusen Botanical Garden","Currant","Ribes sanguineum",""," "," ","NA","NA","NA"
-"278","VanDusen Botanical Garden","Currant","Ribes sanguineum","King Edward VII'"," "," ","NA","NA","NA"
-"279","VanDusen Botanical Garden","Currant","Ribes sanguineum","Elk River Red'"," "," ","NA","NA","NA"
-"280","VanDusen Botanical Garden","Currant","Ribes sanguineum",""," "," ","NA","NA","NA"
-"281","VanDusen Botanical Garden","Currant","Ribes sanguineum",""," "," ","NA","NA","NA"
-"282","VanDusen Botanical Garden","Currant","Ribes sanguineum",""," "," ","NA","NA","NA"
-"283","VanDusen Botanical Garden","Currant","Ribes sanguineum",""," "," ","NA","NA","NA"
-"284","VanDusen Botanical Garden","Currant","Ribes sanguineum","Pink Tails'"," "," ","NA","NA","NA"
-"285","VanDusen Botanical Garden","Currant","Ribes sanguineum","Henry Henneman'"," "," ","NA","NA","NA"
-"286","VanDusen Botanical Garden","Currant","Ribes sanguineum","Henry Henneman'"," "," ","NA","NA","NA"
-"287","VanDusen Botanical Garden","Raspberry","Rubus idaeus","Aureus'"," "," ","NA","NA","NA"
-"288","VanDusen Botanical Garden","Raspberry","Rubus idaeus"," strigosus"," "," ","NA","NA","NA"
-"289","VanDusen Botanical Garden","Raspberry","Rubus leucodermis",""," "," ","NA","NA","NA"
-"290","VanDusen Botanical Garden","Raspberry","Rubus pedatus",""," "," ","NA","NA","NA"
-"291","VanDusen Botanical Garden","Raspberry","Rubus pedatus",""," "," ","NA","NA","NA"
-"292","VanDusen Botanical Garden","Elderberry","Sambucus canadensis",""," "," ","NA","NA","NA"
-"293","VanDusen Botanical Garden","Elderberry","Sambucus racemosa",""," "," ","NA","NA","NA"
-"294","VanDusen Botanical Garden","Elderberry","Sambucus racemosa","arborescens"," "," ","NA","NA","NA"
-"295","VanDusen Botanical Garden","Elderberry","Sambucus racemosa","Plumosa Aurea'"," "," ","NA","NA","NA"
-"296","VanDusen Botanical Garden","Cedar","Thuja occidentalis",""," "," ","NA","NA","NA"
-"297","VanDusen Botanical Garden","Cedar","Thuja occidentalis","Little Gem'"," "," ","NA","NA","NA"
-"298","VanDusen Botanical Garden","Cedar","Thuja occidentalis",""," "," ","NA","NA","NA"
-"299","VanDusen Botanical Garden","Cedar","Thuja occidentalis","Harvest Moon'"," "," ","NA","NA","NA"
-"300","VanDusen Botanical Garden","Cedar","Thuja occidentalis","Brandon'"," "," ","NA","NA","NA"
-"301","VanDusen Botanical Garden","Cedar","Thuja occidentalis","Fastigiata'"," "," ","NA","NA","NA"
-"302","VanDusen Botanical Garden","Cedar","Thuja occidentalis","Mastersii'"," "," ","NA","NA","NA"
-"303","VanDusen Botanical Garden","Cedar","Thuja occidentalis","Golden Tuffet'"," "," ","NA","NA","NA"
-"304","VanDusen Botanical Garden","Cedar","Thuja occidentalis","Fastigiata'"," "," ","NA","NA","NA"
-"305","VanDusen Botanical Garden","Cedar","Thuja occidentalis","Ohlendorffii'"," "," ","NA","NA","NA"
-"306","VanDusen Botanical Garden","Cedar","Thuja occidentalis","Little Gem'"," "," ","NA","NA","NA"
-"307","VanDusen Botanical Garden","Cedar","Thuja occidentalis","Brandon'"," "," ","NA","NA","NA"
-"308","VanDusen Botanical Garden","Cedar","Thuja occidentalis","Brandon'"," "," ","NA","NA","NA"
-"309","VanDusen Botanical Garden","Cedar","Thuja occidentalis","Fastigiata'"," "," ","NA","NA","NA"
-"310","VanDusen Botanical Garden","Cedar","Thuja occidentalis","Fastigiata'"," "," ","NA","NA","NA"
-"311","VanDusen Botanical Garden","Cedar","Thuja occidentalis","Rheingold'"," "," ","NA","NA","NA"
-"312","VanDusen Botanical Garden","Cedar","Thuja occidentalis",""," "," ","NA","NA","NA"
-"313","VanDusen Botanical Garden","Cedar","Thuja occidentalis",""," "," ","NA","NA","NA"
-"314","VanDusen Botanical Garden","Cedar","Thuja occidentalis","Fastigiata'"," "," ","NA","NA","NA"
-"315","VanDusen Botanical Garden","Cedar","Thuja plicata",""," "," ","NA","NA","NA"
-"316","VanDusen Botanical Garden","Cedar","Thuja plicata",""," "," ","NA","NA","NA"
-"317","VanDusen Botanical Garden","Cedar","Thuja plicata","Emerald Giant'"," "," ","NA","NA","NA"
-"318","VanDusen Botanical Garden","Cedar","Thuja plicata",""," "," ","NA","NA","NA"
-"319","VanDusen Botanical Garden","Cedar","Thuja plicata",""," "," ","NA","NA","NA"
-"320","VanDusen Botanical Garden","Cedar","Thuja plicata","Filiformis'"," "," ","NA","NA","NA"
-"321","VanDusen Botanical Garden","Cedar","Thuja plicata","Whipcord'"," "," ","NA","NA","NA"
-"322","VanDusen Botanical Garden","Cedar","Thuja plicata","Zebrina'"," "," ","NA","NA","NA"
-"323","VanDusen Botanical Garden","Cedar","Thuja plicata",""," "," ","NA","NA","NA"
-"324","VanDusen Botanical Garden","Cedar","Thuja plicata",""," "," ","NA","NA","NA"
-"325","VanDusen Botanical Garden","Cedar","Thuja plicata",""," "," ","NA","NA","NA"
-"326","VanDusen Botanical Garden","Cedar","Thuja plicata","Atrovirens'"," "," ","NA","NA","NA"
-"327","VanDusen Botanical Garden","Cedar","Thuja plicata",""," "," ","NA","NA","NA"
-"328","VanDusen Botanical Garden","Cedar","Thuja plicata","Aurea'"," "," ","NA","NA","NA"
-"329","VanDusen Botanical Garden","Cedar","Thuja plicata","Filiformis'"," "," ","NA","NA","NA"
-"330","VanDusen Botanical Garden","Cedar","Thuja plicata","Rogersii'"," "," ","NA","NA","NA"
-"331","VanDusen Botanical Garden","Cedar","Thuja plicata","Rogersii'"," "," ","NA","NA","NA"
-"332","VanDusen Botanical Garden","Cedar","Thuja plicata",""," "," ","NA","NA","NA"
-"333","VanDusen Botanical Garden","Cedar","Thuja plicata",""," "," ","NA","NA","NA"
-"334","VanDusen Botanical Garden","Cedar","Thuja plicata",""," "," ","NA","NA","NA"
-"335","VanDusen Botanical Garden","Cedar","Thuja plicata",""," "," ","NA","NA","NA"
-"336","VanDusen Botanical Garden","Cedar","Thuja plicata",""," "," ","NA","NA","NA"
-"337","VanDusen Botanical Garden","Cedar","Thuja plicata",""," "," ","NA","NA","NA"
-"338","VanDusen Botanical Garden","Linden","Tilia americana","heterophylla"," "," ","NA","NA","NA"
-"339","VanDusen Botanical Garden","Spiderwort","Tradescantia virginiana","Caerulea Plena'"," "," ","NA","NA","NA"
-"340","VanDusen Botanical Garden","Hemlock","Tsuga canadensis","Curley'"," "," ","NA","NA","NA"
-"341","VanDusen Botanical Garden","Hemlock","Tsuga canadensis","Pendula'"," "," ","NA","NA","NA"
-"342","VanDusen Botanical Garden","Hemlock","Tsuga canadensis","Pendula'"," "," ","NA","NA","NA"
-"343","VanDusen Botanical Garden","Hemlock","Tsuga canadensis","Pendula'"," "," ","NA","NA","NA"
-"344","VanDusen Botanical Garden","Hemlock","Tsuga canadensis","Pendula'"," "," ","NA","NA","NA"
-"345","VanDusen Botanical Garden","Hemlock","Tsuga canadensis","Curley'"," "," ","NA","NA","NA"
-"346","VanDusen Botanical Garden","Hemlock","Tsuga canadensis",""," "," ","NA","NA","NA"
-"347","VanDusen Botanical Garden","Hemlock","Tsuga canadensis","Horsford Contorted'"," "," ","NA","NA","NA"
-"348","VanDusen Botanical Garden","Hemlock","Tsuga canadensis","Minuta'"," "," ","NA","NA","NA"
-"349","VanDusen Botanical Garden","Hemlock","Tsuga canadensis","Little Joe'"," "," ","NA","NA","NA"
-"350","VanDusen Botanical Garden","Hemlock","Tsuga canadensis","Gentsch White'"," "," ","NA","NA","NA"
-"351","VanDusen Botanical Garden","Hemlock","Tsuga canadensis","Pendula'"," "," ","NA","NA","NA"
-"352","VanDusen Botanical Garden","Hemlock","Tsuga canadensis","Jeddeloh'"," "," ","NA","NA","NA"
-"353","VanDusen Botanical Garden","Hemlock","Tsuga canadensis","Hussii'"," "," ","NA","NA","NA"
-"354","VanDusen Botanical Garden","Hemlock","Tsuga canadensis","Minuta'"," "," ","NA","NA","NA"
-"355","VanDusen Botanical Garden","Hemlock","Tsuga canadensis","Jeddeloh'"," "," ","NA","NA","NA"
-"356","VanDusen Botanical Garden","Hemlock","Tsuga heterophylla",""," "," ","NA","NA","NA"
-"357","VanDusen Botanical Garden","Hemlock","Tsuga heterophylla",""," "," ","NA","NA","NA"
-"358","VanDusen Botanical Garden","Hemlock","Tsuga heterophylla",""," "," ","NA","NA","NA"
-"359","VanDusen Botanical Garden","Hemlock","Tsuga heterophylla",""," "," ","NA","NA","NA"
-"360","VanDusen Botanical Garden","Hemlock","Tsuga heterophylla",""," "," ","NA","NA","NA"
-"361","VanDusen Botanical Garden","Hemlock","Tsuga heterophylla","Lewisii'"," "," ","NA","NA","NA"
-"362","VanDusen Botanical Garden","Hemlock","Tsuga heterophylla",""," "," ","NA","NA","NA"
-"363","VanDusen Botanical Garden","Hemlock","Tsuga heterophylla",""," "," ","NA","NA","NA"
-"364","VanDusen Botanical Garden","Elm","Ulmus americana",""," "," ","NA","NA","NA"
-"365","VanDusen Botanical Garden","Blueberry","Vaccinium alaskaense",""," "," ","NA","NA","NA"
-"366","VanDusen Botanical Garden","Bilberry","Vaccinium corymbosum",""," "," ","NA","NA","NA"
-"367","VanDusen Botanical Garden","Bilberry","Vaccinium corymbosum","Bluecrop'"," "," ","NA","NA","NA"
-"368","VanDusen Botanical Garden","Blueberry","Vaccinium membranaceum",""," "," ","NA","NA","NA"
-"369","VanDusen Botanical Garden","Blueberry","Vaccinium membranaceum",""," "," ","NA","NA","NA"
-"370","VanDusen Botanical Garden","Blueberry","Vaccinium membranaceum",""," "," ","NA","NA","NA"
-"371","VanDusen Botanical Garden","Blueberry","Vaccinium membranaceum",""," "," ","NA","NA","NA"
-"372","VanDusen Botanical Garden","Blueberry","Vaccinium myrtilloides",""," "," ","NA","NA","NA"
-"373","VanDusen Botanical Garden","Blueberry","Vaccinium myrtilloides",""," "," ","NA","NA","NA"
-"374","VanDusen Botanical Garden","Blueberry","Vaccinium ovatum",""," "," ","NA","NA","NA"
-"375","VanDusen Botanical Garden","Blueberry","Vaccinium ovatum",""," "," ","NA","NA","NA"
-"376","VanDusen Botanical Garden","Blueberry","Vaccinium ovatum","Thunderbird'"," "," ","NA","NA","NA"
-"377","VanDusen Botanical Garden","Blueberry","Vaccinium ovatum","Thunderbird'"," "," ","NA","NA","NA"
-"378","VanDusen Botanical Garden","Blueberry","Vaccinium ovatum",""," "," ","NA","NA","NA"
-"379","VanDusen Botanical Garden","Blueberry","Vaccinium ovatum",""," "," ","NA","NA","NA"
-"380","VanDusen Botanical Garden","Blueberry","Vaccinium ovatum",""," "," ","NA","NA","NA"
-"381","VanDusen Botanical Garden","Cranberry","Vaccinium oxycoccos",""," "," ","NA","NA","NA"
-"382","VanDusen Botanical Garden","Blueberry","Vaccinium uliginosum",""," "," ","NA","NA","NA"
-"383","VanDusen Botanical Garden","Lingonberry","Vaccinium vitis-idaea",""," "," ","NA","NA","NA"
-"384","VanDusen Botanical Garden","Lingonberry","Vaccinium vitis-idaea",""," "," ","NA","NA","NA"
-"385","VanDusen Botanical Garden","Lingonberry","Vaccinium vitis-idaea",""," "," ","NA","NA","NA"
-"386","VanDusen Botanical Garden","Lingonberry","Vaccinium vitis-idaea",""," "," ","NA","NA","NA"
-"387","VanDusen Botanical Garden","Lingonberry","Vaccinium vitis-idaea"," minus"," "," ","NA","NA","NA"
-"388","VanDusen Botanical Garden","Lingonberry","Vaccinium vitis-idaea",""," "," ","NA","NA","NA"
-"389","VanDusen Botanical Garden","Lingonberry","Vaccinium vitis-idaea",""," "," ","NA","NA","NA"
-"390","VanDusen Botanical Garden","Cranberry","Viburnum cassinoides",""," "," ","NA","NA","NA"
-"391","VanDusen Botanical Garden","Cranberry","Viburnum cassinoides",""," "," ","NA","NA","NA"
-"392","VanDusen Botanical Garden","Cranberry","Viburnum dentatum",""," "," ","NA","NA","NA"
-"393","VanDusen Botanical Garden","Cranberry","Viburnum edule",""," "," ","NA","NA","NA"
-"394","VanDusen Botanical Garden","Cranberry","Viburnum lentago",""," "," ","NA","NA","NA"
-"395","VanDusen Botanical Garden","Cranberry","Viburnum trilobum","Alfredo'"," "," ","NA","NA","NA"
-"396","VanDusen Botanical Garden","Cranberry","Viburnum trilobum",""," "," ","NA","NA","NA"
-"397","VanDusen Botanical Garden","Cranberry","Viburnum trilobum",""," "," ","NA","NA","NA"
-"398","VanDusen Botanical Garden","Cranberry","Viburnum trilobum","Bailey Compact'"," "," ","NA","NA","NA"
-"399","VanDusen Botanical Garden","Cranberry","Viburnum trilobum",""," "," ","NA","NA","NA"
-"400","VanDusen Botanical Garden","Grape","Vitis riparia","Gloire'"," "," ","NA","NA","NA"
+,garden,crop,species,variant,latitude,longitude,country,province,IUCNRedList
+1,VanDusen Botanical Garden,Fir,Abies amabilis,, , ,NA,NA,NA
+2,VanDusen Botanical Garden,Fir,Abies balsamea,, , ,NA,NA,NA
+3,VanDusen Botanical Garden,Fir,Abies grandis,, , ,NA,NA,NA
+4,VanDusen Botanical Garden,Fir,Abies grandis,, , ,NA,NA,NA
+5,VanDusen Botanical Garden,Fir,Abies lasiocarpa,, , ,NA,NA,NA
+6,VanDusen Botanical Garden,Fir,Abies lasiocarpa,, , ,NA,NA,NA
+7,VanDusen Botanical Garden,Maple,Acer glabrum,, , ,NA,NA,NA
+8,VanDusen Botanical Garden,Maple,Acer glabrum,douglasii, , ,NA,NA,NA
+9,VanDusen Botanical Garden,Maple,Acer glabrum,douglasii, , ,NA,NA,NA
+10,VanDusen Botanical Garden,Maple,Acer macrophyllum,, , ,NA,NA,NA
+11,VanDusen Botanical Garden,Maple,Acer negundo,, , ,NA,NA,NA
+12,VanDusen Botanical Garden,Maple,Acer negundo,Flamingo', , ,NA,NA,NA
+13,VanDusen Botanical Garden,Maple,Acer pensylvanicum,, , ,NA,NA,NA
+14,VanDusen Botanical Garden,Maple,Acer rubrum,Red Sunset', , ,NA,NA,NA
+15,VanDusen Botanical Garden,Maple,Acer rubrum,Autumn Flame', , ,NA,NA,NA
+16,VanDusen Botanical Garden,Maple,Acer rubrum,Scanlon', , ,NA,NA,NA
+17,VanDusen Botanical Garden,Maple,Acer rubrum,Bowhall', , ,NA,NA,NA
+18,VanDusen Botanical Garden,Maple,Acer rubrum,Autumn Flame', , ,NA,NA,NA
+19,VanDusen Botanical Garden,Maple,Acer rubrum,Red Sunset', , ,NA,NA,NA
+20,VanDusen Botanical Garden,Maple,Acer rubrum,Morgan', , ,NA,NA,NA
+21,VanDusen Botanical Garden,Maple,Acer rubrum,Armstrong', , ,NA,NA,NA
+22,VanDusen Botanical Garden,Maple,Acer rubrum,October Glory', , ,NA,NA,NA
+23,VanDusen Botanical Garden,Maple,Acer rubrum,, , ,NA,NA,NA
+24,VanDusen Botanical Garden,Maple,Acer rubrum,, , ,NA,NA,NA
+25,VanDusen Botanical Garden,Maple,Acer rubrum,, , ,NA,NA,NA
+26,VanDusen Botanical Garden,Maple,Acer saccharinum,, , ,NA,NA,NA
+27,VanDusen Botanical Garden,Maple,Acer saccharum,, , ,NA,NA,NA
+28,VanDusen Botanical Garden,Maple,Acer saccharum,Legacy', , ,NA,NA,NA
+29,VanDusen Botanical Garden,Maple,Acer saccharum,, , ,NA,NA,NA
+30,VanDusen Botanical Garden,Maple,Acer saccharum,,,,NA,NA,NA
+31,VanDusen Botanical Garden,Maple,Acer saccharum,,,,NA,NA,NA
+32,VanDusen Botanical Garden,Maple,Acer saccharum,,,,NA,NA,NA
+33,VanDusen Botanical Garden,Maple,Acer saccharum,Legacy', , ,NA,NA,NA
+34,VanDusen Botanical Garden,Maple,Acer saccharum,, , ,NA,NA,NA
+35,VanDusen Botanical Garden,Maple,Acer saccharum,, , ,NA,NA,NA
+36,VanDusen Botanical Garden,Maple,Acer saccharum, nigrum, , ,NA,NA,NA
+37,VanDusen Botanical Garden,Maple,Acer saccharum,, , ,NA,NA,NA
+38,VanDusen Botanical Garden,Maple,Acer saccharum,, , ,NA,NA,NA
+39,VanDusen Botanical Garden,Maple,Acer saccharum,, , ,NA,NA,NA
+40,VanDusen Botanical Garden,Maple,Acer saccharum,, , ,NA,NA,NA
+41,VanDusen Botanical Garden,Onion,Allium cernuum,, , ,NA,NA,NA
+42,VanDusen Botanical Garden,Onion,Allium cernuum,, , ,NA,NA,NA
+43,VanDusen Botanical Garden,Onion,Allium cernuum,, , ,NA,NA,NA
+44,VanDusen Botanical Garden,Onion,Allium cernuum,, , ,NA,NA,NA
+45,VanDusen Botanical Garden,Onion,Allium cernuum,, , ,NA,NA,NA
+46,VanDusen Botanical Garden,Onion,Allium cernuum,, , ,NA,NA,NA
+47,VanDusen Botanical Garden,Onion,Allium cernuum,, , ,NA,NA,NA
+48,VanDusen Botanical Garden,Onion,Allium cernuum,, , ,NA,NA,NA
+49,VanDusen Botanical Garden,Onion,Allium schoenoprasum,, , ,NA,NA,NA
+50,VanDusen Botanical Garden,Onion,Allium schoenoprasum,Forescate', , ,NA,NA,NA
+51,VanDusen Botanical Garden,Onion,Allium schoenoprasum,, , ,NA,NA,NA
+52,VanDusen Botanical Garden,Onion,Allium schoenoprasum,Forescate', , ,NA,NA,NA
+53,VanDusen Botanical Garden,Onion,Allium stellatum,, , ,NA,NA,NA
+54,VanDusen Botanical Garden,Alder,Alnus rubra,, , ,NA,NA,NA
+55,VanDusen Botanical Garden,Alder,Alnus rubra,, , ,NA,NA,NA
+56,VanDusen Botanical Garden,Alder,Alnus sinuata,, , ,NA,NA,NA
+57,VanDusen Botanical Garden,Saskatoon,Amelanchier arborea,, , ,NA,NA,NA
+58,VanDusen Botanical Garden,Saskatoon,Amelanchier canadensis,, , ,NA,NA,NA
+59,VanDusen Botanical Garden,Bluestem,Andropogon gerardii,, , ,NA,NA,NA
+60,VanDusen Botanical Garden,Pawpaw,Asimina triloba,, , ,NA,NA,NA
+61,VanDusen Botanical Garden,Pawpaw,Asimina triloba,, , ,NA,NA,NA
+62,VanDusen Botanical Garden,Birch,Betula lenta,, , ,NA,NA,NA
+63,VanDusen Botanical Garden,Birch,Betula lenta,, , ,NA,NA,NA
+64,VanDusen Botanical Garden,Bromegrass,Bromus vulgaris,, , ,NA,NA,NA
+65,VanDusen Botanical Garden,Hickory,Carya ovata,, , ,NA,NA,NA
+66,VanDusen Botanical Garden,Chestnut,Castanea dentata,, , ,NA,NA,NA
+67,VanDusen Botanical Garden,Ornamental Hackberry,Celtis occidentalis,, , ,NA,NA,NA
+68,VanDusen Botanical Garden,Wild Rye,Elymus canadensis,, , ,NA,NA,NA
+69,VanDusen Botanical Garden,Fawn Lily,Erythronium oregonum,, , ,NA,NA,NA
+70,VanDusen Botanical Garden,Fawn Lily,Erythronium oregonum,, , ,NA,NA,NA
+71,VanDusen Botanical Garden,Fawn Lily,Erythronium oregonum,, , ,NA,NA,NA
+72,VanDusen Botanical Garden,Fawn Lily,Erythronium oregonum,, , ,NA,NA,NA
+73,VanDusen Botanical Garden,Fawn Lily,Erythronium oregonum,, , ,NA,NA,NA
+74,VanDusen Botanical Garden,Fawn Lily,Erythronium oregonum,, , ,NA,NA,NA
+75,VanDusen Botanical Garden,Fawn Lily,Erythronium oregonum,, , ,NA,NA,NA
+76,VanDusen Botanical Garden,Fawn Lily,Erythronium oregonum,, , ,NA,NA,NA
+77,VanDusen Botanical Garden,Fescue,Festuca ovina,, , ,NA,NA,NA
+78,VanDusen Botanical Garden,Fescue,Festuca ovina,, , ,NA,NA,NA
+79,VanDusen Botanical Garden,Strawberry,Fragaria chiloensis,, , ,NA,NA,NA
+80,VanDusen Botanical Garden,Strawberry,Fragaria chiloensis,, , ,NA,NA,NA
+81,VanDusen Botanical Garden,Strawberry,Fragaria chiloensis,, , ,NA,NA,NA
+82,VanDusen Botanical Garden,Strawberry,Fragaria chiloensis,, , ,NA,NA,NA
+83,VanDusen Botanical Garden,Strawberry,Fragaria vesca,, , ,NA,NA,NA
+84,VanDusen Botanical Garden,Strawberry,Fragaria x ananassa,Sumas', , ,NA,NA,NA
+85,VanDusen Botanical Garden,Ash,Fraxinus americana,, , ,NA,NA,NA
+86,VanDusen Botanical Garden,Ash,Fraxinus americana,Autumn Applause', , ,NA,NA,NA
+87,VanDusen Botanical Garden,Ash,Fraxinus americana,Autumn Purple', , ,NA,NA,NA
+88,VanDusen Botanical Garden,Ash,Fraxinus americana,Autumn Applause', , ,NA,NA,NA
+89,VanDusen Botanical Garden,Ash,Fraxinus nigra,, , ,NA,NA,NA
+90,VanDusen Botanical Garden,Ash,Fraxinus nigra,Fallgold', , ,NA,NA,NA
+91,VanDusen Botanical Garden,Ash,Fraxinus pennsylvanica,Patmore', , ,NA,NA,NA
+92,VanDusen Botanical Garden,Ash,Fraxinus pennsylvanica,Cimmaron', , ,NA,NA,NA
+93,VanDusen Botanical Garden,Ash,Fraxinus pennsylvanica,Bergeson', , ,NA,NA,NA
+94,VanDusen Botanical Garden,Ash,Fraxinus pennsylvanica,Variegata', , ,NA,NA,NA
+95,VanDusen Botanical Garden,Ash,Fraxinus pennsylvanica,, , ,NA,NA,NA
+96,VanDusen Botanical Garden,Ash,Fraxinus quadrangulata,, , ,NA,NA,NA
+97,VanDusen Botanical Garden,Blanket Flower,Gaillardia aristata,, , ,NA,NA,NA
+98,VanDusen Botanical Garden,Blanket Flower,Gaillardia aristata,, , ,NA,NA,NA
+99,VanDusen Botanical Garden,Witch Hazel,Hamamelis virginiana,, , ,NA,NA,NA
+100,VanDusen Botanical Garden,Witch Hazel,Hamamelis virginiana,, , ,NA,NA,NA
+101,VanDusen Botanical Garden,Witch Hazel,Hamamelis virginiana,, , ,NA,NA,NA
+102,VanDusen Botanical Garden,Sunflower,Helianthus divaricatus,, , ,NA,NA,NA
+103,VanDusen Botanical Garden,Walnut,Juglans cinerea,, , ,NA,NA,NA
+104,VanDusen Botanical Garden,Larch,Larix laricina,, , ,NA,NA,NA
+105,VanDusen Botanical Garden,Larch,Larix laricina,, , ,NA,NA,NA
+106,VanDusen Botanical Garden,Larch,Larix laricina,Newport Dwarf #7', , ,NA,NA,NA
+107,VanDusen Botanical Garden,Larch,Larix occidentalis,, , ,NA,NA,NA
+108,VanDusen Botanical Garden,Wheat,Leymus cinereus,, , ,NA,NA,NA
+109,VanDusen Botanical Garden,Flax,Linum perenne, alpinum, , ,NA,NA,NA
+110,VanDusen Botanical Garden,Lupin,Lupinus polyphyllus,, , ,NA,NA,NA
+111,VanDusen Botanical Garden,Lupin,Lupinus polyphyllus,, , ,NA,NA,NA
+112,VanDusen Botanical Garden,Lupin,Lupinus polyphyllus,, , ,NA,NA,NA
+113,VanDusen Botanical Garden,Magnolia,Magnolia acuminata,, , ,NA,NA,NA
+114,VanDusen Botanical Garden,Mint,Mentha arvensis,, , ,NA,NA,NA
+115,VanDusen Botanical Garden,Water Lily,Nymphaea tetragona,, , ,NA,NA,NA
+116,VanDusen Botanical Garden,Water Lily,Nymphaea tetragona,, , ,NA,NA,NA
+117,VanDusen Botanical Garden,Proso millet,Panicum clandestinum,, , ,NA,NA,NA
+118,VanDusen Botanical Garden,Proso millet,Panicum virgatum,Prairie Sky', , ,NA,NA,NA
+119,VanDusen Botanical Garden,Proso millet,Panicum virgatum,Shenandoah', , ,NA,NA,NA
+120,VanDusen Botanical Garden,Proso millet,Panicum virgatum,Shenandoah', , ,NA,NA,NA
+121,VanDusen Botanical Garden,Proso millet,Panicum virgatum,Rotstrahlbusch', , ,NA,NA,NA
+122,VanDusen Botanical Garden,Proso millet,Panicum virgatum,Rotstrahlbusch', , ,NA,NA,NA
+123,VanDusen Botanical Garden,Proso millet,Panicum virgatum,Rotstrahlbusch', , ,NA,NA,NA
+124,VanDusen Botanical Garden,Canary Grass,Phalaris arundinacea,Feesey', , ,NA,NA,NA
+125,VanDusen Botanical Garden,Spruce,Picea glauca,Cy's Wonder', , ,NA,NA,NA
+126,VanDusen Botanical Garden,Spruce,Picea glauca,Echiniformis', , ,NA,NA,NA
+127,VanDusen Botanical Garden,Spruce,Picea glauca,Coerulea', , ,NA,NA,NA
+128,VanDusen Botanical Garden,Spruce,Picea glauca,albertiana 'Conica', , ,NA,NA,NA
+129,VanDusen Botanical Garden,Spruce,Picea glauca,albertiana 'Conica', , ,NA,NA,NA
+130,VanDusen Botanical Garden,Spruce,Picea glauca,albertiana 'Conica', , ,NA,NA,NA
+131,VanDusen Botanical Garden,Spruce,Picea glauca,albertiana 'Conica', , ,NA,NA,NA
+132,VanDusen Botanical Garden,Spruce,Picea glauca,Pixie', , ,NA,NA,NA
+133,VanDusen Botanical Garden,Spruce,Picea mariana,Aurea', , ,NA,NA,NA
+134,VanDusen Botanical Garden,Spruce,Picea mariana,, , ,NA,NA,NA
+135,VanDusen Botanical Garden,Spruce,Picea mariana,Nana', , ,NA,NA,NA
+136,VanDusen Botanical Garden,Spruce,Picea mariana,, , ,NA,NA,NA
+137,VanDusen Botanical Garden,Spruce,Picea rubens,, , ,NA,NA,NA
+138,VanDusen Botanical Garden,Spruce,Picea rubens,, , ,NA,NA,NA
+139,VanDusen Botanical Garden,Spruce,Picea sitchensis,, , ,NA,NA,NA
+140,VanDusen Botanical Garden,Spruce,Picea sitchensis,, , ,NA,NA,NA
+141,VanDusen Botanical Garden,Spruce,Picea sitchensis,Tenas', , ,NA,NA,NA
+142,VanDusen Botanical Garden,Spruce,Picea sitchensis,, , ,NA,NA,NA
+143,VanDusen Botanical Garden,Pine,Pinus albicaulis,Algonquin Pillar', , ,NA,NA,NA
+144,VanDusen Botanical Garden,Pine,Pinus banksiana,, , ,NA,NA,NA
+145,VanDusen Botanical Garden,Pine,Pinus contorta,, , ,NA,NA,NA
+146,VanDusen Botanical Garden,Pine,Pinus contorta,, , ,NA,NA,NA
+147,VanDusen Botanical Garden,Pine,Pinus contorta,, , ,NA,NA,NA
+148,VanDusen Botanical Garden,Pine,Pinus contorta,Spaan's Dwarf', , ,NA,NA,NA
+149,VanDusen Botanical Garden,Pine,Pinus contorta,, , ,NA,NA,NA
+150,VanDusen Botanical Garden,Pine,Pinus contorta,, , ,NA,NA,NA
+151,VanDusen Botanical Garden,Pine,Pinus contorta,, , ,NA,NA,NA
+152,VanDusen Botanical Garden,Pine,Pinus ponderosa,, , ,NA,NA,NA
+153,VanDusen Botanical Garden,Pine,Pinus ponderosa,, , ,NA,NA,NA
+154,VanDusen Botanical Garden,Pine,Pinus ponderosa,, , ,NA,NA,NA
+155,VanDusen Botanical Garden,Pine,Pinus ponderosa,, , ,NA,NA,NA
+156,VanDusen Botanical Garden,Pine,Pinus ponderosa,, , ,NA,NA,NA
+157,VanDusen Botanical Garden,Pine,Pinus rigida,, , ,NA,NA,NA
+158,VanDusen Botanical Garden,Pine,Pinus rigida,, , ,NA,NA,NA
+159,VanDusen Botanical Garden,Pine,Pinus strobus,Pendula', , ,NA,NA,NA
+160,VanDusen Botanical Garden,Pine,Pinus strobus,Contorta', , ,NA,NA,NA
+161,VanDusen Botanical Garden,Pine,Pinus strobus,Horsford', , ,NA,NA,NA
+162,VanDusen Botanical Garden,Pine,Pinus strobus,Radiata', , ,NA,NA,NA
+163,VanDusen Botanical Garden,Pine,Pinus strobus,Pendula', , ,NA,NA,NA
+164,VanDusen Botanical Garden,Pine,Pinus strobus,Pendula', , ,NA,NA,NA
+165,VanDusen Botanical Garden,Pine,Pinus strobus,, , ,NA,NA,NA
+166,VanDusen Botanical Garden,Pine,Pinus strobus,, , ,NA,NA,NA
+167,VanDusen Botanical Garden,Pine,Pinus strobus,Horsford', , ,NA,NA,NA
+168,VanDusen Botanical Garden,Bluegrass,Poa alpina,, , ,NA,NA,NA
+169,VanDusen Botanical Garden,Poplar,Populus tremuloides,, , ,NA,NA,NA
+170,VanDusen Botanical Garden,Poplar,Populus tremuloides,, , ,NA,NA,NA
+171,VanDusen Botanical Garden,Poplar,Populus tremuloides,, , ,NA,NA,NA
+172,VanDusen Botanical Garden,Poplar,Populus tremuloides,, , ,NA,NA,NA
+173,VanDusen Botanical Garden,Poplar,Populus tremuloides,, , ,NA,NA,NA
+174,VanDusen Botanical Garden,Heal All,Prunella vulgaris,, , ,NA,NA,NA
+175,VanDusen Botanical Garden,Heal All,Prunella vulgaris,, , ,NA,NA,NA
+176,VanDusen Botanical Garden,Cherry,Prunus besseyi,, , ,NA,NA,NA
+177,VanDusen Botanical Garden,Cherry,Prunus serotina,, , ,NA,NA,NA
+178,VanDusen Botanical Garden,Cherry,Prunus serotina,red-leaf selection), , ,NA,NA,NA
+179,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+180,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+181,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+182,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+183,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+184,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+185,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+186,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+187,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+188,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+189,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+190,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+191,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+192,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+193,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+194,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+195,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+196,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+197,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,Pendula', , ,NA,NA,NA
+198,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,dwarf selection), , ,NA,NA,NA
+199,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+200,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+201,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+202,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+203,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+204,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+205,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+206,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+207,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+208,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+209,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+210,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+211,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+212,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+213,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+214,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+215,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+216,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+217,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+218,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+219,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+220,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+221,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+222,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,glauca, , ,NA,NA,NA
+223,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+224,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+225,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+226,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+227,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+228,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+229,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+230,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+231,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+232,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+233,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+234,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+235,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+236,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+237,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+238,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+239,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+240,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+241,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+242,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+243,VanDusen Botanical Garden,Douglas fir,Pseudotsuga menziesii,, , ,NA,NA,NA
+244,VanDusen Botanical Garden,Oak,Quercus alba,, , ,NA,NA,NA
+245,VanDusen Botanical Garden,Oak,Quercus bicolor,, , ,NA,NA,NA
+246,VanDusen Botanical Garden,Oak,Quercus garryana,, , ,NA,NA,NA
+247,VanDusen Botanical Garden,Oak,Quercus garryana,, , ,NA,NA,NA
+248,VanDusen Botanical Garden,Oak,Quercus garryana,, , ,NA,NA,NA
+249,VanDusen Botanical Garden,Oak,Quercus garryana,, , ,NA,NA,NA
+250,VanDusen Botanical Garden,Oak,Quercus garryana,, , ,NA,NA,NA
+251,VanDusen Botanical Garden,Oak,Quercus garryana,, , ,NA,NA,NA
+252,VanDusen Botanical Garden,Oak,Quercus garryana,, , ,NA,NA,NA
+253,VanDusen Botanical Garden,Oak,Quercus palustris,, , ,NA,NA,NA
+254,VanDusen Botanical Garden,Oak,Quercus palustris,, , ,NA,NA,NA
+255,VanDusen Botanical Garden,Oak,Quercus palustris,, , ,NA,NA,NA
+256,VanDusen Botanical Garden,Oak,Quercus palustris,, , ,NA,NA,NA
+257,VanDusen Botanical Garden,Oak,Quercus rubra,, , ,NA,NA,NA
+258,VanDusen Botanical Garden,Oak,Quercus rubra,, , ,NA,NA,NA
+259,VanDusen Botanical Garden,Oak,Quercus rubra,, , ,NA,NA,NA
+260,VanDusen Botanical Garden,Oak,Quercus rubra,, , ,NA,NA,NA
+261,VanDusen Botanical Garden,Oak,Quercus rubra,, , ,NA,NA,NA
+262,VanDusen Botanical Garden,Oak,Quercus rubra,Aurea', , ,NA,NA,NA
+263,VanDusen Botanical Garden,Currant,Ribes aureum,, , ,NA,NA,NA
+264,VanDusen Botanical Garden,Currant,Ribes divaricatum,, , ,NA,NA,NA
+265,VanDusen Botanical Garden,Currant,Ribes lacustre,, , ,NA,NA,NA
+266,VanDusen Botanical Garden,Currant,Ribes lacustre,, , ,NA,NA,NA
+267,VanDusen Botanical Garden,Currant,Ribes sanguineum,White Icicle', , ,NA,NA,NA
+268,VanDusen Botanical Garden,Currant,Ribes sanguineum,Pulborough Scarlet', , ,NA,NA,NA
+269,VanDusen Botanical Garden,Currant,Ribes sanguineum,, , ,NA,NA,NA
+270,VanDusen Botanical Garden,Currant,Ribes sanguineum,Pulborough Scarlet', , ,NA,NA,NA
+271,VanDusen Botanical Garden,Currant,Ribes sanguineum,White Icicle', , ,NA,NA,NA
+272,VanDusen Botanical Garden,Currant,Ribes sanguineum,, , ,NA,NA,NA
+273,VanDusen Botanical Garden,Currant,Ribes sanguineum,, , ,NA,NA,NA
+274,VanDusen Botanical Garden,Currant,Ribes sanguineum,Diamonds and Rubies', , ,NA,NA,NA
+275,VanDusen Botanical Garden,Currant,Ribes sanguineum,, , ,NA,NA,NA
+276,VanDusen Botanical Garden,Currant,Ribes sanguineum,King Edward VII', , ,NA,NA,NA
+277,VanDusen Botanical Garden,Currant,Ribes sanguineum,, , ,NA,NA,NA
+278,VanDusen Botanical Garden,Currant,Ribes sanguineum,King Edward VII', , ,NA,NA,NA
+279,VanDusen Botanical Garden,Currant,Ribes sanguineum,Elk River Red', , ,NA,NA,NA
+280,VanDusen Botanical Garden,Currant,Ribes sanguineum,, , ,NA,NA,NA
+281,VanDusen Botanical Garden,Currant,Ribes sanguineum,, , ,NA,NA,NA
+282,VanDusen Botanical Garden,Currant,Ribes sanguineum,, , ,NA,NA,NA
+283,VanDusen Botanical Garden,Currant,Ribes sanguineum,, , ,NA,NA,NA
+284,VanDusen Botanical Garden,Currant,Ribes sanguineum,Pink Tails', , ,NA,NA,NA
+285,VanDusen Botanical Garden,Currant,Ribes sanguineum,Henry Henneman', , ,NA,NA,NA
+286,VanDusen Botanical Garden,Currant,Ribes sanguineum,Henry Henneman', , ,NA,NA,NA
+287,VanDusen Botanical Garden,Raspberry,Rubus idaeus,Aureus', , ,NA,NA,NA
+288,VanDusen Botanical Garden,Raspberry,Rubus idaeus, strigosus, , ,NA,NA,NA
+289,VanDusen Botanical Garden,Raspberry,Rubus leucodermis,, , ,NA,NA,NA
+290,VanDusen Botanical Garden,Raspberry,Rubus pedatus,, , ,NA,NA,NA
+291,VanDusen Botanical Garden,Raspberry,Rubus pedatus,, , ,NA,NA,NA
+292,VanDusen Botanical Garden,Elderberry,Sambucus canadensis,, , ,NA,NA,NA
+293,VanDusen Botanical Garden,Elderberry,Sambucus racemosa,, , ,NA,NA,NA
+294,VanDusen Botanical Garden,Elderberry,Sambucus racemosa,arborescens, , ,NA,NA,NA
+295,VanDusen Botanical Garden,Elderberry,Sambucus racemosa,Plumosa Aurea', , ,NA,NA,NA
+296,VanDusen Botanical Garden,Cedar,Thuja occidentalis,, , ,NA,NA,NA
+297,VanDusen Botanical Garden,Cedar,Thuja occidentalis,Little Gem', , ,NA,NA,NA
+298,VanDusen Botanical Garden,Cedar,Thuja occidentalis,, , ,NA,NA,NA
+299,VanDusen Botanical Garden,Cedar,Thuja occidentalis,Harvest Moon', , ,NA,NA,NA
+300,VanDusen Botanical Garden,Cedar,Thuja occidentalis,Brandon', , ,NA,NA,NA
+301,VanDusen Botanical Garden,Cedar,Thuja occidentalis,Fastigiata', , ,NA,NA,NA
+302,VanDusen Botanical Garden,Cedar,Thuja occidentalis,Mastersii', , ,NA,NA,NA
+303,VanDusen Botanical Garden,Cedar,Thuja occidentalis,Golden Tuffet', , ,NA,NA,NA
+304,VanDusen Botanical Garden,Cedar,Thuja occidentalis,Fastigiata', , ,NA,NA,NA
+305,VanDusen Botanical Garden,Cedar,Thuja occidentalis,Ohlendorffii', , ,NA,NA,NA
+306,VanDusen Botanical Garden,Cedar,Thuja occidentalis,Little Gem', , ,NA,NA,NA
+307,VanDusen Botanical Garden,Cedar,Thuja occidentalis,Brandon', , ,NA,NA,NA
+308,VanDusen Botanical Garden,Cedar,Thuja occidentalis,Brandon', , ,NA,NA,NA
+309,VanDusen Botanical Garden,Cedar,Thuja occidentalis,Fastigiata', , ,NA,NA,NA
+310,VanDusen Botanical Garden,Cedar,Thuja occidentalis,Fastigiata', , ,NA,NA,NA
+311,VanDusen Botanical Garden,Cedar,Thuja occidentalis,Rheingold', , ,NA,NA,NA
+312,VanDusen Botanical Garden,Cedar,Thuja occidentalis,, , ,NA,NA,NA
+313,VanDusen Botanical Garden,Cedar,Thuja occidentalis,, , ,NA,NA,NA
+314,VanDusen Botanical Garden,Cedar,Thuja occidentalis,Fastigiata', , ,NA,NA,NA
+315,VanDusen Botanical Garden,Cedar,Thuja plicata,, , ,NA,NA,NA
+316,VanDusen Botanical Garden,Cedar,Thuja plicata,, , ,NA,NA,NA
+317,VanDusen Botanical Garden,Cedar,Thuja plicata,Emerald Giant', , ,NA,NA,NA
+318,VanDusen Botanical Garden,Cedar,Thuja plicata,, , ,NA,NA,NA
+319,VanDusen Botanical Garden,Cedar,Thuja plicata,, , ,NA,NA,NA
+320,VanDusen Botanical Garden,Cedar,Thuja plicata,Filiformis', , ,NA,NA,NA
+321,VanDusen Botanical Garden,Cedar,Thuja plicata,Whipcord', , ,NA,NA,NA
+322,VanDusen Botanical Garden,Cedar,Thuja plicata,Zebrina', , ,NA,NA,NA
+323,VanDusen Botanical Garden,Cedar,Thuja plicata,, , ,NA,NA,NA
+324,VanDusen Botanical Garden,Cedar,Thuja plicata,, , ,NA,NA,NA
+325,VanDusen Botanical Garden,Cedar,Thuja plicata,, , ,NA,NA,NA
+326,VanDusen Botanical Garden,Cedar,Thuja plicata,Atrovirens', , ,NA,NA,NA
+327,VanDusen Botanical Garden,Cedar,Thuja plicata,, , ,NA,NA,NA
+328,VanDusen Botanical Garden,Cedar,Thuja plicata,Aurea', , ,NA,NA,NA
+329,VanDusen Botanical Garden,Cedar,Thuja plicata,Filiformis', , ,NA,NA,NA
+330,VanDusen Botanical Garden,Cedar,Thuja plicata,Rogersii', , ,NA,NA,NA
+331,VanDusen Botanical Garden,Cedar,Thuja plicata,Rogersii', , ,NA,NA,NA
+332,VanDusen Botanical Garden,Cedar,Thuja plicata,, , ,NA,NA,NA
+333,VanDusen Botanical Garden,Cedar,Thuja plicata,, , ,NA,NA,NA
+334,VanDusen Botanical Garden,Cedar,Thuja plicata,, , ,NA,NA,NA
+335,VanDusen Botanical Garden,Cedar,Thuja plicata,, , ,NA,NA,NA
+336,VanDusen Botanical Garden,Cedar,Thuja plicata,, , ,NA,NA,NA
+337,VanDusen Botanical Garden,Cedar,Thuja plicata,, , ,NA,NA,NA
+338,VanDusen Botanical Garden,Linden,Tilia americana,heterophylla, , ,NA,NA,NA
+339,VanDusen Botanical Garden,Spiderwort,Tradescantia virginiana,Caerulea Plena', , ,NA,NA,NA
+340,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,Curley', , ,NA,NA,NA
+341,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,Pendula', , ,NA,NA,NA
+342,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,Pendula', , ,NA,NA,NA
+343,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,Pendula', , ,NA,NA,NA
+344,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,Pendula', , ,NA,NA,NA
+345,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,Curley', , ,NA,NA,NA
+346,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,, , ,NA,NA,NA
+347,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,Horsford Contorted', , ,NA,NA,NA
+348,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,Minuta', , ,NA,NA,NA
+349,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,Little Joe', , ,NA,NA,NA
+350,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,Gentsch White', , ,NA,NA,NA
+351,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,Pendula', , ,NA,NA,NA
+352,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,Jeddeloh', , ,NA,NA,NA
+353,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,Hussii', , ,NA,NA,NA
+354,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,Minuta', , ,NA,NA,NA
+355,VanDusen Botanical Garden,Hemlock,Tsuga canadensis,Jeddeloh', , ,NA,NA,NA
+356,VanDusen Botanical Garden,Hemlock,Tsuga heterophylla,, , ,NA,NA,NA
+357,VanDusen Botanical Garden,Hemlock,Tsuga heterophylla,, , ,NA,NA,NA
+358,VanDusen Botanical Garden,Hemlock,Tsuga heterophylla,, , ,NA,NA,NA
+359,VanDusen Botanical Garden,Hemlock,Tsuga heterophylla,, , ,NA,NA,NA
+360,VanDusen Botanical Garden,Hemlock,Tsuga heterophylla,, , ,NA,NA,NA
+361,VanDusen Botanical Garden,Hemlock,Tsuga heterophylla,Lewisii', , ,NA,NA,NA
+362,VanDusen Botanical Garden,Hemlock,Tsuga heterophylla,, , ,NA,NA,NA
+363,VanDusen Botanical Garden,Hemlock,Tsuga heterophylla,, , ,NA,NA,NA
+364,VanDusen Botanical Garden,Elm,Ulmus americana,, , ,NA,NA,NA
+365,VanDusen Botanical Garden,Blueberry,Vaccinium alaskaense,, , ,NA,NA,NA
+366,VanDusen Botanical Garden,Bilberry,Vaccinium corymbosum,, , ,NA,NA,NA
+367,VanDusen Botanical Garden,Bilberry,Vaccinium corymbosum,Bluecrop', , ,NA,NA,NA
+368,VanDusen Botanical Garden,Blueberry,Vaccinium membranaceum,, , ,NA,NA,NA
+369,VanDusen Botanical Garden,Blueberry,Vaccinium membranaceum,, , ,NA,NA,NA
+370,VanDusen Botanical Garden,Blueberry,Vaccinium membranaceum,, , ,NA,NA,NA
+371,VanDusen Botanical Garden,Blueberry,Vaccinium membranaceum,, , ,NA,NA,NA
+372,VanDusen Botanical Garden,Blueberry,Vaccinium myrtilloides,, , ,NA,NA,NA
+373,VanDusen Botanical Garden,Blueberry,Vaccinium myrtilloides,, , ,NA,NA,NA
+374,VanDusen Botanical Garden,Blueberry,Vaccinium ovatum,, , ,NA,NA,NA
+375,VanDusen Botanical Garden,Blueberry,Vaccinium ovatum,, , ,NA,NA,NA
+376,VanDusen Botanical Garden,Blueberry,Vaccinium ovatum,Thunderbird', , ,NA,NA,NA
+377,VanDusen Botanical Garden,Blueberry,Vaccinium ovatum,Thunderbird', , ,NA,NA,NA
+378,VanDusen Botanical Garden,Blueberry,Vaccinium ovatum,, , ,NA,NA,NA
+379,VanDusen Botanical Garden,Blueberry,Vaccinium ovatum,, , ,NA,NA,NA
+380,VanDusen Botanical Garden,Blueberry,Vaccinium ovatum,, , ,NA,NA,NA
+381,VanDusen Botanical Garden,Cranberry,Vaccinium oxycoccos,, , ,NA,NA,NA
+382,VanDusen Botanical Garden,Blueberry,Vaccinium uliginosum,, , ,NA,NA,NA
+383,VanDusen Botanical Garden,Lingonberry,Vaccinium vitis-idaea,, , ,NA,NA,NA
+384,VanDusen Botanical Garden,Lingonberry,Vaccinium vitis-idaea,, , ,NA,NA,NA
+385,VanDusen Botanical Garden,Lingonberry,Vaccinium vitis-idaea,, , ,NA,NA,NA
+386,VanDusen Botanical Garden,Lingonberry,Vaccinium vitis-idaea,, , ,NA,NA,NA
+387,VanDusen Botanical Garden,Lingonberry,Vaccinium vitis-idaea, minus, , ,NA,NA,NA
+388,VanDusen Botanical Garden,Lingonberry,Vaccinium vitis-idaea,, , ,NA,NA,NA
+389,VanDusen Botanical Garden,Lingonberry,Vaccinium vitis-idaea,, , ,NA,NA,NA
+390,VanDusen Botanical Garden,Cranberry,Viburnum cassinoides,, , ,NA,NA,NA
+391,VanDusen Botanical Garden,Cranberry,Viburnum cassinoides,, , ,NA,NA,NA
+392,VanDusen Botanical Garden,Cranberry,Viburnum dentatum,, , ,NA,NA,NA
+393,VanDusen Botanical Garden,Cranberry,Viburnum edule,, , ,NA,NA,NA
+394,VanDusen Botanical Garden,Cranberry,Viburnum lentago,, , ,NA,NA,NA
+395,VanDusen Botanical Garden,Cranberry,Viburnum trilobum,Alfredo', , ,NA,NA,NA
+396,VanDusen Botanical Garden,Cranberry,Viburnum trilobum,, , ,NA,NA,NA
+397,VanDusen Botanical Garden,Cranberry,Viburnum trilobum,, , ,NA,NA,NA
+398,VanDusen Botanical Garden,Cranberry,Viburnum trilobum,Bailey Compact', , ,NA,NA,NA
+399,VanDusen Botanical Garden,Cranberry,Viburnum trilobum,, , ,NA,NA,NA
+400,VanDusen Botanical Garden,Grape,Vitis riparia,Gloire', , ,NA,NA,NA
