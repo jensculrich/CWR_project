@@ -97,6 +97,12 @@ r <- ggplot(Amelanchier_group_by_ecoregion, aes(x = ECO_CODE, y = Amelanchier_re
   geom_bar(stat = "identity") + theme(axis.text.x=element_text(angle=45, hjust=1))
 r
 
+# show five ecoregions with most CWRs
+top_n(Amelanchier_group_by_ecoregion, 5, wt = Amelanchier_relatives)
+# show five ecoregions with least CWRs
+top_n(Amelanchier_group_by_ecoregion, -5, wt = Amelanchier_relatives) 
+
+
 # province with the most Amelanchier CWRs
 df7 <- df3 %>%
   group_by(PRENAME) %>%
