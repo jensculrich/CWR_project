@@ -109,8 +109,10 @@ points_polygon <- st_join(sf_garden_accessions, canada_cd, left = TRUE)
 # merge these data back with the garden accessions, since I had to drop 
 # all with lat/long = na
 points_polygon2 <- points_polygon %>%
+  # break coordinates into lat/long
   # select columns that match garden accessions
-  select()
+  select(X, garden, crop, species, variant, latitude, longitude, country,
+         IUCNRedList)
   # merge but replace rows 
 
 # fix this ? what I want is to attach province name to each coordinate,
