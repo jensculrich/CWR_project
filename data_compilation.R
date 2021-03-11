@@ -202,14 +202,10 @@ ggplot() +
   theme(panel.grid.major = element_line(color = "white"),
         legend.key = element_rect(color = "gray40", size = 0.1))
 
-# Conforming the data frame (lat and long of wild origin accession) to shape objects
-sf_cwr_origins = ubc_cwr2 %>%
-  select(CoordLongDD, CoordLatDD) %>% # 1
-  drop_na()  %>%
-  as.matrix() %>% # 2
-  st_multipoint(dim = 'XY') %>% # 3
-  st_sfc() %>% # 4
-  st_set_crs(4269) # 5
+# Transform garden data into a projected shape file
+sf_cwr_origins <- ubc_cwr2 %>%
+  drop_na(CoordLongDD, CoordLatDD)  %>%
+  st_as_sf(coords = c("CoordLongDD", "CoordLatDD"), crs = 4326)
 
 ggplot() +
   geom_sf(aes(fill = name), color = "gray60", size = 0.1, data = canada_cd) +
@@ -221,12 +217,10 @@ ggplot() +
   theme(panel.grid.major = element_line(color = "white"),
         legend.key = element_rect(color = "gray40", size = 0.1))
 
-# Append Province to accession using lat and longitude
-
-# compare points
-canada_cd <- st_transform(st_as_sf(canada_cd), 4326)
+# Append Province to accession using lat and longitudecanada_cd <- st_transform(st_as_sf(canada_cd), 4326)
 points_sf = st_transform( st_as_sf(sf_cwr_origins), coords = c("CoordLongDD", "CoordLatDD"), crs = 4326, agr = "constant")
-result <- as.data.frame( st_join(points_sf, canada_cd, join = st_intersects) )
+points_polygon <- st_join(sf_cwr_origins_2, canada_cd, left = TRUE)
+
 # fix this ? what I want is to attach province name to each coordinate,
 # not list of coordinates in each province
 
