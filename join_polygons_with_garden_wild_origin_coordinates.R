@@ -13,26 +13,7 @@ library(magrittr) # data wrangling
 library(dplyr)
 library(tidyverse)
 library(ggplot2)
-library(viridis)
-
-# full CWR table summary stats
-df <- read.csv("GBIF_by_Province.csv")
-
-df2 <- df %>%
-  select(Crop, sci_nam, ECO_CODE, ECO_NAME, PRENAME, geometry, X.1)
-
-# remove "()" and "c" from geometry and X.1, rename as longitude and latitude
-# change from chr to numeric
-df2$longitude <- as.numeric(str_sub(df2$geometry, 3))  
-df2$latitude <- as.numeric(str_remove(df2$X.1, "[)]"))
-df3 <- df2 %>% # drop unformatted columns, change chr to factor data class
-  select(-geometry, -X.1) %>%
-  mutate(sci_nam = as.factor(sci_nam), Crop = as.factor(Crop), 
-         PRENAME = as.factor(PRENAME), ECO_NAME = as.factor(ECO_NAME), 
-         ECO_CODE = as.factor(ECO_CODE))
-
-
-str(df3)
+library(raster)
 
 # data from gardens (already filtered to only CWRs)
 cwr_ubc <- read.csv("CWR_of_UBC.csv")
@@ -99,6 +80,7 @@ ggplot() +
   theme_map() +
   theme(panel.grid.major = element_line(color = "white"),
         legend.key = element_rect(color = "gray40", size = 0.1))
+# where is the weird very far north point coming from????
 
 # Append Province to accession using lat and longitudecanada_cd <- st_transform(st_as_sf(canada_cd), 4326)
 points_sf = st_transform( st_as_sf(sf_garden_accessions), 
@@ -117,16 +99,39 @@ points_polygon <- points_polygon %>%
   mutate(latitude = as.numeric(str_remove(latitude, "[)]"))) %>% 
   # select columns that match garden accessions
   select(X, garden, crop, species, variant, latitude, longitude, country,
-         IUCNRedList, province, name)
+         IUCNRedList, province, name) %>%
+  rename(new = province) %>% # add a dummy name for province 
+  mutate(province = ifelse(is.na(new), name, new)) %>%
+  select(-new, - name)
+
+write.csv(points_polygon, "all_garden_accessions_with_geo_data.csv")
 
 
-# fix this ? what I want is to attach province name to each coordinate,
-# not list of coordinates in each province
+
+#################
+# what to do next?
 
 # https://www.r-graph-gallery.com/choropleth-map.html
 
 # join with df3
 
-which.max(garden_accessions$latitude)
-
 # want a row for each accession where Crop.wild.relative matches
+
+# full CWR table summary stats
+df <- read.csv("GBIF_by_Province.csv")
+
+df2 <- df %>%
+  select(Crop, sci_nam, ECO_CODE, ECO_NAME, PRENAME, geometry, X.1)
+
+# remove "()" and "c" from geometry and X.1, rename as longitude and latitude
+# change from chr to numeric
+df2$longitude <- as.numeric(str_sub(df2$geometry, 3))  
+df2$latitude <- as.numeric(str_remove(df2$X.1, "[)]"))
+df3 <- df2 %>% # drop unformatted columns, change chr to factor data class
+  select(-geometry, -X.1) %>%
+  mutate(sci_nam = as.factor(sci_nam), Crop = as.factor(Crop), 
+         PRENAME = as.factor(PRENAME), ECO_NAME = as.factor(ECO_NAME), 
+         ECO_CODE = as.factor(ECO_CODE))
+
+
+str(df3)
