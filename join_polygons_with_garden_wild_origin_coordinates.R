@@ -50,16 +50,16 @@ garden_accessions <- rbind(cwr_ubc, cwr_rbg, cwr_montreal, cwr_guelph, cwr_mount
 
 str(garden_accessions)
 garden_accessions <- garden_accessions %>% # format columns
-  mutate(latitude = as.numeric(latitude), longitude = as.numeric(longitude)) %>%
-  select(-province)
+  mutate(latitude = as.numeric(latitude), longitude = as.numeric(longitude))
 
 # translate lat and long into province (later ecoregion)
 
 
 # Transform garden data into a projected shape file
 sf_garden_accessions <- garden_accessions %>%
-  drop_na(longitude, latitude) %>% # can we do this and keep NA's?
-  st_as_sf(coords = c("longitude", "latitude"), crs = 4326)
+  # na.fail = FALSE to keep all of the accessions (about 80% don't have lat long,
+  # but many of these have province at least)
+  st_as_sf(coords = c("longitude", "latitude"), crs = 4326, na.fail = FALSE)
 
 # add geojson map with province boundaries 
 canada_cd <- st_read("canada_provinces.geojson", quiet = TRUE) # 1
@@ -108,12 +108,17 @@ points_polygon <- st_join(sf_garden_accessions, canada_cd, left = TRUE)
 
 # merge these data back with the garden accessions, since I had to drop 
 # all with lat/long = na
-points_polygon2 <- points_polygon %>%
+points_polygon <- points_polygon %>%
   # break coordinates into lat/long
+  mutate(longitude=gsub("\\,.*","", geometry)) %>%
+  mutate(latitude=gsub(".*,","",geometry)) %>%
+  # format to remove "c(" and  ")"
+  mutate(longitude = as.numeric(str_sub(longitude, 3)))  %>% 
+  mutate(latitude = as.numeric(str_remove(latitude, "[)]"))) %>% 
   # select columns that match garden accessions
   select(X, garden, crop, species, variant, latitude, longitude, country,
-         IUCNRedList)
-  # merge but replace rows 
+         IUCNRedList, province, name)
+
 
 # fix this ? what I want is to attach province name to each coordinate,
 # not list of coordinates in each province
@@ -122,6 +127,6 @@ points_polygon2 <- points_polygon %>%
 
 # join with df3
 
-
+which.max(garden_accessions$latitude)
 
 # want a row for each accession where Crop.wild.relative matches
