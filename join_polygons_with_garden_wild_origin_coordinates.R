@@ -123,7 +123,7 @@ points_polygon_3 <- points_polygon_2 %>%
   mutate(province = ifelse(is.na(new), name, new)) %>%
   dplyr::select(-new, - name)
 
-write.csv(points_polygon_3, "all_garden_accessions_with_geo_data.csv")
+# write.csv(points_polygon_3, "all_garden_accessions_with_geo_data.csv")
 
 
 
