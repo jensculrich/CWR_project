@@ -33,8 +33,22 @@ str(garden_accessions)
 garden_accessions <- garden_accessions %>% # format columns
   mutate(latitude = as.numeric(latitude), longitude = as.numeric(longitude))
 
-# translate lat and long into province (later ecoregion)
+# load GBIF occurrence data
+df <- read.csv("GBIF_by_Province.csv")
 
+df2 <- df %>%
+  dplyr::select(Crop, sci_nam, ECO_CODE, ECO_NAME, PRENAME, geometry, X.1)
+
+# remove "()" and "c" from geometry and X.1, rename as longitude and latitude
+# change from chr to numeric
+df2$longitude <- as.numeric(str_sub(df2$geometry, 3))  
+df2$latitude <- as.numeric(str_remove(df2$X.1, "[)]"))
+df3 <- df2 %>% # drop unformatted columns, change chr to factor data class
+  dplyr::select(-geometry, -X.1) %>%
+  mutate(sci_nam = as.factor(sci_nam), Crop = as.factor(Crop), 
+         PRENAME = as.factor(PRENAME), ECO_NAME = as.factor(ECO_NAME), 
+         ECO_CODE = as.factor(ECO_CODE))
+str(df3)
 
 # Transform garden data into a projected shape file
 sf_garden_accessions <- garden_accessions %>%
@@ -47,7 +61,9 @@ canada_cd <- st_read("canada_provinces.geojson", quiet = TRUE) # 1
 crs_string = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs" # 2
 
 # add geojson map with ecoregion boundaries
-# to do
+world_eco <- st_read("world_ecoregions.geojson", quiet = TRUE)
+# Trim geojson world map to canada ecoregions from df3
+canada_eco <- semi_join(world_eco, df3, by=("ECO_CODE")) 
 
 # Plot the maps
 # Define the maps' theme -- remove axes, ticks, borders, legends, etc.
@@ -72,7 +88,7 @@ theme_map <- function(base_size=9, base_family="") { # 3
 map_colors <- RColorBrewer::brewer.pal(9, "Greens") %>% rep(37) # 4
 
 ggplot() +
-  geom_sf(aes(fill = name), color = "gray60", size = 0.1, data = canada_cd) +
+  geom_sf(aes(fill = ECO_NAME), color = "gray60", size = 0.1, data = canada_eco) +
   geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
   coord_sf(crs = crs_string) +
   scale_fill_manual(values = map_colors) +
