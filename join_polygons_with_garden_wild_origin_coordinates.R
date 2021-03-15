@@ -98,15 +98,17 @@ ggplot() +
         legend.key = element_rect(color = "gray40", size = 0.1))
 # where is the weird very far north point coming from????
 
-# Append Province to accession using lat and longitudecanada_cd <- st_transform(st_as_sf(canada_cd), 4326)
+# Append Province to accession using lat and longitude
 points_sf = st_transform( st_as_sf(sf_garden_accessions), 
                           coords = c("longitude", "latitude"), 
                           crs = 4326, agr = "constant")
+# spatial join to add accession province
 points_polygon <- st_join(sf_garden_accessions, canada_cd, left = TRUE)
+# spatial join to add accession ecoregion
+points_polygon_2 <- st_join(points_polygon, canada_eco, left = TRUE)
 
-# merge these data back with the garden accessions, since I had to drop 
-# all with lat/long = na
-points_polygon <- points_polygon %>%
+# break out new latitude and longitude columns
+points_polygon_3 <- points_polygon_2 %>%
   # break coordinates into lat/long
   mutate(longitude=gsub("\\,.*","", geometry)) %>%
   mutate(latitude=gsub(".*,","",geometry)) %>%
@@ -114,13 +116,14 @@ points_polygon <- points_polygon %>%
   mutate(longitude = as.numeric(str_sub(longitude, 3)))  %>% 
   mutate(latitude = as.numeric(str_remove(latitude, "[)]"))) %>% 
   # select columns that match garden accessions
-  select(X, garden, crop, species, variant, latitude, longitude, country,
-         IUCNRedList, province, name) %>%
+  dplyr::select(X, garden, crop, species, variant, latitude, longitude, country,
+         IUCNRedList, province, name, ECO_CODE, ECO_NAME) %>%
   rename(new = province) %>% # add a dummy name for province 
+  # take province from cd_canada unless was already provided by garden (just want one column)
   mutate(province = ifelse(is.na(new), name, new)) %>%
-  select(-new, - name)
+  dplyr::select(-new, - name)
 
-# write.csv(points_polygon, "all_garden_accessions_with_geo_data.csv")
+write.csv(points_polygon_3, "all_garden_accessions_with_geo_data.csv")
 
 
 
@@ -129,25 +132,3 @@ points_polygon <- points_polygon %>%
 
 # https://www.r-graph-gallery.com/choropleth-map.html
 
-# join with df3
-
-# want a row for each accession where Crop.wild.relative matches
-
-# full CWR table summary stats
-df <- read.csv("GBIF_by_Province.csv")
-
-df2 <- df %>%
-  select(Crop, sci_nam, ECO_CODE, ECO_NAME, PRENAME, geometry, X.1)
-
-# remove "()" and "c" from geometry and X.1, rename as longitude and latitude
-# change from chr to numeric
-df2$longitude <- as.numeric(str_sub(df2$geometry, 3))  
-df2$latitude <- as.numeric(str_remove(df2$X.1, "[)]"))
-df3 <- df2 %>% # drop unformatted columns, change chr to factor data class
-  select(-geometry, -X.1) %>%
-  mutate(sci_nam = as.factor(sci_nam), Crop = as.factor(Crop), 
-         PRENAME = as.factor(PRENAME), ECO_NAME = as.factor(ECO_NAME), 
-         ECO_CODE = as.factor(ECO_CODE))
-
-
-str(df3)
