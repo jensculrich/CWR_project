@@ -14,6 +14,7 @@ library(dplyr)
 library(tidyverse)
 library(ggplot2)
 library(raster)
+library(cartography)
 
 # data from gardens (already filtered to only CWRs)
 cwr_ubc <- read.csv("CWR_of_UBC.csv")
@@ -96,7 +97,7 @@ ggplot() +
   theme_map() +
   theme(panel.grid.major = element_line(color = "white"),
         legend.key = element_rect(color = "gray40", size = 0.1))
-# where is the weird very far north point coming from????
+
 
 # Append Province to accession using lat and longitude
 points_sf = st_transform( st_as_sf(sf_garden_accessions), 
@@ -124,11 +125,76 @@ points_polygon_3 <- points_polygon_2 %>%
   dplyr::select(-new, - name)
 
 # write.csv(points_polygon_3, "all_garden_accessions_with_geo_data.csv")
-
+# write as geojson?
 
 
 #################
 # what to do next?
+# Choropleth map, provinces by num of accessions 
+# calculate accession density by province
+accessions_summarized_by_province <- points_polygon_3 %>%
+  filter(!is.na(province)) %>%
+  filter(province != "") %>% # figure out where these blank rows are coming from. 
+  # They're NA in the original garden data sets
+  group_by(province) %>%
+  add_tally
 
+join <- st_join(canada_cd, accessions_summarized_by_province, left = TRUE)
+
+join2 <- join %>%
+  group_by(name) %>%
+  filter(row_number() == 1)  %>%
+  mutate("logn" = log(n))
+
+join2$n[is.na(join2$n)] <- 0
+
+
+choroLayer(spdf = join2, 
+           #df = join@data, 
+           var = "logn")
+title("CWR Accessions Per Province")
+
+# Choropleth map, ecoregions by num of accessions 
+# calculate accession density by province
+accessions_summarized_by_eco <- points_polygon_3 %>%
+  filter(!is.na(ECO_CODE)) %>%
+  # They're NA in the original garden data sets
+  group_by(ECO_CODE) %>%
+  add_tally
+
+join_eco <- st_join(canada_eco, accessions_summarized_by_eco, left = TRUE)
+
+join2_eco <- join_eco %>%
+  group_by(ECO_CODE.x) %>%
+  filter(row_number() == 1)  %>%
+  mutate("logn" = log(n))
+
+join2_eco$n[is.na(join2_eco$n)] <- 0
+
+
+choroLayer(spdf = join2_eco, 
+           var = "logn")
+title("CWR Accessions Per Ecoregion")
 # https://www.r-graph-gallery.com/choropleth-map.html
 
+# crop to canada
+# reproject
+# 
+
+
+##### 
+# some summary stats about garden accessions
+# number of unique CWR taxa in gardens
+n_accessions_by_taxa <- garden_accessions %>%
+  group_by(species) %>%
+  summarise(count=n())
+nrow(n_accessions_by_taxa)
+(mean(n_accessions_by_taxa$count))
+(sd(n_accessions_by_taxa$count))
+# number of unique crops in gardens
+n_accessions_by_crop <- garden_accessions %>%
+  group_by(crop) %>%
+  summarise(count=n())
+nrow(n_accessions_by_crop)
+(mean(n_accessions_by_crop$count))
+(sd(n_accessions_by_crop$count))
