@@ -66,6 +66,9 @@ world_eco <- st_read("world_ecoregions.geojson", quiet = TRUE)
 # Trim geojson world map to canada ecoregions from df3
 canada_eco <- semi_join(world_eco, df3, by=("ECO_CODE")) 
 
+# clip ecoregions to canada boundary
+canada_eco_subset <- st_intersection(canada_eco, canada_cd)
+
 # Plot the maps
 # Define the maps' theme -- remove axes, ticks, borders, legends, etc.
 theme_map <- function(base_size=9, base_family="") { # 3
@@ -89,7 +92,7 @@ theme_map <- function(base_size=9, base_family="") { # 3
 map_colors <- RColorBrewer::brewer.pal(9, "Greens") %>% rep(37) # 4
 
 ggplot() +
-  geom_sf(aes(fill = ECO_NAME), color = "gray60", size = 0.1, data = canada_eco) +
+  geom_sf(aes(fill = ECO_NAME), color = "gray60", size = 0.1, data = canada_eco_subset) +
   geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
   coord_sf(crs = crs_string) +
   scale_fill_manual(values = map_colors) +
@@ -106,7 +109,7 @@ points_sf = st_transform( st_as_sf(sf_garden_accessions),
 # spatial join to add accession province
 points_polygon <- st_join(sf_garden_accessions, canada_cd, left = TRUE)
 # spatial join to add accession ecoregion
-points_polygon_2 <- st_join(points_polygon, canada_eco, left = TRUE)
+points_polygon_2 <- st_join(points_polygon, canada_eco_subset, left = TRUE)
 
 # break out new latitude and longitude columns
 points_polygon_3 <- points_polygon_2 %>%
@@ -118,13 +121,22 @@ points_polygon_3 <- points_polygon_2 %>%
   mutate(latitude = as.numeric(str_remove(latitude, "[)]"))) %>% 
   # select columns that match garden accessions
   dplyr::select(X, garden, crop, species, variant, latitude, longitude, country,
-         IUCNRedList, province, name, ECO_CODE, ECO_NAME) %>%
+         IUCNRedList, province, name.x, ECO_CODE, ECO_NAME) %>%
   rename(new = province) %>% # add a dummy name for province 
   # take province from cd_canada unless was already provided by garden (just want one column)
-  mutate(province = ifelse(is.na(new), name, new)) %>%
-  dplyr::select(-new, - name)
+  mutate(province = ifelse(is.na(new), name.x, new)) %>%
+  dplyr::select(-new, - name.x)
 
-# write.csv(points_polygon_3, "all_garden_accessions_with_geo_data.csv")
+# remove points that come from lat/long outside of Canada
+# accessions that have latitude and longitude or province
+points_polygon_4 <- points_polygon_3 %>%
+  filter(province != "") %>%
+  filter(country == "Canada")
+# accessions that have province but not lat/long
+points_polygon_5 <- points_polygon_4 %>%
+  filter(is.na(latitude))
+
+write.csv(points_polygon_3, "all_garden_accessions_with_geo_data.csv")
 # write as geojson?
 
 
@@ -132,7 +144,7 @@ points_polygon_3 <- points_polygon_2 %>%
 # what to do next?
 # Choropleth map, provinces by num of accessions 
 # calculate accession density by province
-accessions_summarized_by_province <- points_polygon_3 %>%
+accessions_summarized_by_province <- points_polygon_4 %>%
   filter(!is.na(province)) %>%
   filter(province != "") %>% # figure out where these blank rows are coming from. 
   # They're NA in the original garden data sets
