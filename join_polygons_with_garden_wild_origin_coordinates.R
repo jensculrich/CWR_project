@@ -109,14 +109,15 @@ theme_map <- function(base_size=9, base_family="") { # 3
 # Define the filling colors for each province; max allowed is 9 but good enough for the 13 provinces + territories
 # color is random and not assoicated with CWR accession density
 # see data manipulation and choropleth mapping below where this is considered
-map_colors <- RColorBrewer::brewer.pal(9, "Greens") %>% rep(37) # 4
+# map_colors <- RColorBrewer::brewer.pal(1, "Greens") %>% rep(37) # 4
+# one colour instead
 
 # Plot Ecoregions
 P <- ggplot() +
   geom_sf(aes(fill = ECO_NAME), color = "gray60", size = 0.1, data = canada_eco_subset) +
   geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
   coord_sf(crs = crs_string) +
-  scale_fill_manual(values = map_colors) +
+  # scale_fill_manual(values = map_colors) +
   guides(fill = FALSE) +
   theme_map() +
   theme(panel.grid.major = element_line(color = "white"),
@@ -124,15 +125,20 @@ P <- ggplot() +
 
 # Plot By province
 Q <- ggplot() +
-  geom_sf(aes(fill = name), color = "gray60", size = 0.1, data = canada_cd) +
-  geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
+  geom_sf(
+    # aes(fill = name), 
+    color = "gray60", size = 0.1, data = canada_cd) +
+  geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 1, size = 3) + # 17
   coord_sf(crs = crs_string) +
-  scale_fill_manual(values = map_colors) +
+  # scale_fill_manual(values = map_colors) +
   guides(fill = FALSE) +
   theme_map() +
+  ggtitle("Geographic Origin of Native CWRs Conserved in Canadian Botanic Gardens") +
   theme(panel.grid.major = element_line(color = "white"),
-        legend.key = element_rect(color = "gray40", size = 0.1))
-
+        legend.key = element_rect(color = "gray40", size = 0.1),
+        plot.title = element_text(color="black", size=12, face="bold.italic")
+        )
+Q
 
 # Append Province to accession using lat and longitude
 points_sf = st_transform( st_as_sf(sf_garden_accessions), 
@@ -255,7 +261,19 @@ nrow(n_accessions_by_crop)
 (sd(n_accessions_by_crop$count))
 
 # bar plot with total CWR taxa versus CWR taxa with >= 1 accession 
+Category <- c("CWR taxa in Canada", "Canadian CWR taxa conserved in BG's")
+CWRs <- as.numeric(c("509", "159")) 
+bar_df <- as.data.frame(CWRs, Category) 
 
+R <- ggplot(bar_df, aes(x = Category, y = CWRs)) + 
+  geom_bar(stat = "identity") +
+  theme_bw() +
+  theme(axis.title.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.title.y=element_blank(),
+        axis.text.x = element_text(size = 12)
+  )
+R
 
 ##################################
 # Part Two
