@@ -168,23 +168,24 @@ points_polygon_5 <- points_polygon_4 %>%
 # Choropleth map, provinces by num of accessions 
 # calculate accession density by province
 accessions_summarized_by_province <- points_polygon_3 %>%
-  filter(!is.na(province)) %>%  # remove all accessions with no ecoregion (lat/long) data
+  # remove all accessions with no ecoregion (lat/long) data
   # could add a filter here for crop category, crop or CWR taxon
+  filter(!is.na(province)) %>% 
   group_by(province) %>%
-  add_tally
-
+  add_tally # sum the number of accessions from each province
+# join the acession data with the province shapefile
 join <- st_join(canada_cd, accessions_summarized_by_province, left = TRUE)
-
+# format for choropleth map
 join2 <- join %>%
-  group_by(name) %>%
+  group_by(name) %>% # only want one row representing each province (since every row in same
+  # province has the same value for the tally, n)
   filter(row_number() == 1)  %>%
+  # transform to a log scale since Ontario is orders of magnitude greater than other provinces
   mutate("logn" = log(n))
+# Replace ecoregions with no accessions so that the value is "0" rather than NA
+# join2$logn[is.na(join2$logn)] <- 0
 
-join2$n[is.na(join2$n)] <- 0
-
-
-choroLayer(spdf = join2, 
-           #df = join@data, 
+choroLayer(x = join2, 
            var = "logn")
 title("CWR Accessions Per Province")
 
@@ -192,37 +193,35 @@ title("CWR Accessions Per Province")
 # Choropleth map, ecoregions by num of accessions 
 # calculate accession density by ecoregion
 accessions_summarized_by_eco <- points_polygon_3 %>%
-  filter(!is.na(ECO_CODE)) %>% # remove all accessions with no ecoregion (lat/long) data
+  # remove all accessions with no ecoregion (lat/long) data
   # could add a filter here for crop category, crop or CWR taxon
+  # currently this is for number of accessions rather than unique accessions,
+  # e.g. 2 accessions of the same CWR from the same eco = 2 accessions, not 1
+  filter(!is.na(ECO_CODE)) %>% 
   group_by(ECO_CODE) %>%
   add_tally # sum the number of accessions from each ecoregion
-
 # join the acession data with the ecoregion shapefile
 join_eco <- st_join(canada_eco_subset, accessions_summarized_by_eco, left = TRUE)
-# dissolve canada_cd first?
-# canada_cd_union <- unionSpatialPolygons(canada_cd, IDs, avoidGEOS=TRUE)
-# join_eco <- st_intersection(join_eco, canada_cd_union)
-
 # format for choropleth map
 join2_eco <- join_eco %>%
-  # only want one row representing each ecoregion (since every row in an
+  # only want one row representing each ecoregion (since every row in same
   # ecoregion has the same value for the tally, n)
   group_by(ECO_CODE.x) %>%
   filter(row_number() == 1)  %>% 
   # transform to a log scale since Ontario is orders of magnitude greater than other provinces
   mutate("logn" = log(n))
 # Replace ecoregions with no accessions so that the value is "0" rather than NA
-join2_eco$n[is.na(join2_eco$n)] <- 0
+# join2_eco$logn[is.na(join2_eco$logn)] <- 0
 
 
-choroLayer(spdf = join2_eco, 
+choroLayer(x = join2_eco, 
            var = "logn")
 title("CWR Accessions Per Ecoregion")
 # https://www.r-graph-gallery.com/choropleth-map.html
 
-# crop to canada
 # reproject
-# 
+
+# repeat for natural occurrences in ecoregions 
 
 
 ##### 
