@@ -88,7 +88,6 @@ canada_eco <- semi_join(world_eco, native_occurrence_df, by=("ECO_CODE"))
 canada_eco_subset <- st_intersection(canada_eco, canada)
 
 # Plot the maps
-# copy paste this and replace ecoregion fill and data with province fill and data to reproduce for admin districts
 # Define the maps' theme -- remove axes, ticks, borders, legends, etc.
 theme_map <- function(base_size=9, base_family="") { # 3
   require(grid)
@@ -112,8 +111,20 @@ theme_map <- function(base_size=9, base_family="") { # 3
 # see data manipulation and choropleth mapping below where this is considered
 map_colors <- RColorBrewer::brewer.pal(9, "Greens") %>% rep(37) # 4
 
-ggplot() +
+# Plot Ecoregions
+P <- ggplot() +
   geom_sf(aes(fill = ECO_NAME), color = "gray60", size = 0.1, data = canada_eco_subset) +
+  geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
+  coord_sf(crs = crs_string) +
+  scale_fill_manual(values = map_colors) +
+  guides(fill = FALSE) +
+  theme_map() +
+  theme(panel.grid.major = element_line(color = "white"),
+        legend.key = element_rect(color = "gray40", size = 0.1))
+
+# Plot By province
+Q <- ggplot() +
+  geom_sf(aes(fill = name), color = "gray60", size = 0.1, data = canada_cd) +
   geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
   coord_sf(crs = crs_string) +
   scale_fill_manual(values = map_colors) +
@@ -231,6 +242,7 @@ n_accessions_by_taxa <- garden_accessions %>%
   group_by(species) %>%
   summarise(count=n())
 nrow(n_accessions_by_taxa)
+# mean number of accessions per taxa (with at least one accession)
 (mean(n_accessions_by_taxa$count))
 (sd(n_accessions_by_taxa$count))
 # number of unique crops with relatives in gardens
@@ -238,8 +250,11 @@ n_accessions_by_crop <- garden_accessions %>%
   group_by(crop) %>%
   summarise(count=n())
 nrow(n_accessions_by_crop)
+# mean number of accessions per crop (with at least one accession)
 (mean(n_accessions_by_crop$count))
 (sd(n_accessions_by_crop$count))
+
+# bar plot with total CWR taxa versus CWR taxa with >= 1 accession 
 
 
 ##################################
