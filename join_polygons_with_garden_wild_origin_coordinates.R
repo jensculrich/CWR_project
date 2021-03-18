@@ -22,12 +22,13 @@ library(ggplot2)
 library(raster)
 library(cartography)
 
-# load natural occurrence occurrence dataset
+# load natural occurrence dataset
 df <- read.csv("GBIF_by_Province.csv")
 
 df2 <- df %>%
   dplyr::select(Crop, sci_nam, ECO_CODE, ECO_NAME, PRENAME, geometry, X.1)
 
+# format natural occurrence dataset...
 # remove "()" and "c" from geometry and X.1, rename as longitude and latitude
 # change from chr to numeric
 df2$longitude <- as.numeric(str_sub(df2$geometry, 3))  
@@ -37,6 +38,10 @@ native_occurrence_df <- df2 %>% # drop unformatted columns, change chr to factor
   mutate(sci_nam = as.factor(sci_nam), Crop = as.factor(Crop), 
          PRENAME = as.factor(PRENAME), ECO_NAME = as.factor(ECO_NAME), 
          ECO_CODE = as.factor(ECO_CODE))
+
+##########
+# Part 1A compile garden data and append ecoregion or province
+# when lat/long was given
 
 # load data from garden collections (already filtered to only CWRs)
 # update and add new gardens as we receive additional datasets
@@ -70,15 +75,20 @@ sf_garden_accessions <- garden_accessions %>%
 canada_cd <- st_read("canada_provinces.geojson", quiet = TRUE) # 1
 crs_string = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs" # 2
 
+# add geojson map with all of canada (no inner boundaries)
+# we will use this as a boundary for trimming all the ecoregion maps
+canada <- st_read("canada.geojson", quiet = TRUE) # 1
+
 # add geojson map with ecoregion boundaries
 world_eco <- st_read("world_ecoregions.geojson", quiet = TRUE)
 # Trim geojson world map to canada ecoregions from native_occurrence_df
 canada_eco <- semi_join(world_eco, native_occurrence_df, by=("ECO_CODE")) 
 
-# clip ecoregions to canada boundary
-canada_eco_subset <- st_intersection(canada_eco, canada_cd)
+# clip ecoregions to canada national border
+canada_eco_subset <- st_intersection(canada_eco, canada)
 
 # Plot the maps
+# copy paste this and replace ecoregion fill and data with province fill and data to reproduce for admin districts
 # Define the maps' theme -- remove axes, ticks, borders, legends, etc.
 theme_map <- function(base_size=9, base_family="") { # 3
   require(grid)
@@ -98,6 +108,8 @@ theme_map <- function(base_size=9, base_family="") { # 3
 }
 
 # Define the filling colors for each province; max allowed is 9 but good enough for the 13 provinces + territories
+# color is random and not assoicated with CWR accession density
+# see data manipulation and choropleth mapping below where this is considered
 map_colors <- RColorBrewer::brewer.pal(9, "Greens") %>% rep(37) # 4
 
 ggplot() +
@@ -120,7 +132,7 @@ points_polygon <- st_join(sf_garden_accessions, canada_cd, left = TRUE)
 # spatial join to add accession ecoregion
 points_polygon_2 <- st_join(points_polygon, canada_eco_subset, left = TRUE)
 
-# break out new latitude and longitude columns
+# break out new latitude and longitude columns and reformat
 points_polygon_3 <- points_polygon_2 %>%
   # break coordinates into lat/long
   mutate(longitude=gsub("\\,.*","", geometry)) %>%
@@ -148,15 +160,16 @@ points_polygon_5 <- points_polygon_4 %>%
 # write.csv(points_polygon_3, "all_garden_accessions_with_geo_data.csv")
 # write as geojson?
 
+##########
+# Part 1B determine density of all accessions with geo data,
+# by province and by ecoregion
 
 #################
-# what to do next?
 # Choropleth map, provinces by num of accessions 
 # calculate accession density by province
 accessions_summarized_by_province <- points_polygon_3 %>%
-  filter(!is.na(province)) %>%
-  filter(province != "") %>% # points that have lat/long but are outside of canade
-  filter(country == "Canada") %>% # points with country name outside canada
+  filter(!is.na(province)) %>%  # remove all accessions with no ecoregion (lat/long) data
+  # could add a filter here for crop category, crop or CWR taxon
   group_by(province) %>%
   add_tally
 
@@ -175,21 +188,30 @@ choroLayer(spdf = join2,
            var = "logn")
 title("CWR Accessions Per Province")
 
+##############
 # Choropleth map, ecoregions by num of accessions 
-# calculate accession density by province
+# calculate accession density by ecoregion
 accessions_summarized_by_eco <- points_polygon_3 %>%
-  filter(!is.na(ECO_CODE)) %>%
-  filter(country == "Canada") %>% # will this remove all exterior points or should I clip
+  filter(!is.na(ECO_CODE)) %>% # remove all accessions with no ecoregion (lat/long) data
+  # could add a filter here for crop category, crop or CWR taxon
   group_by(ECO_CODE) %>%
-  add_tally
+  add_tally # sum the number of accessions from each ecoregion
 
-join_eco <- st_join(canada_eco, accessions_summarized_by_eco, left = TRUE)
+# join the acession data with the ecoregion shapefile
+join_eco <- st_join(canada_eco_subset, accessions_summarized_by_eco, left = TRUE)
+# dissolve canada_cd first?
+# canada_cd_union <- unionSpatialPolygons(canada_cd, IDs, avoidGEOS=TRUE)
+# join_eco <- st_intersection(join_eco, canada_cd_union)
 
+# format for choropleth map
 join2_eco <- join_eco %>%
+  # only want one row representing each ecoregion (since every row in an
+  # ecoregion has the same value for the tally, n)
   group_by(ECO_CODE.x) %>%
-  filter(row_number() == 1)  %>%
+  filter(row_number() == 1)  %>% 
+  # transform to a log scale since Ontario is orders of magnitude greater than other provinces
   mutate("logn" = log(n))
-
+# Replace ecoregions with no accessions so that the value is "0" rather than NA
 join2_eco$n[is.na(join2_eco$n)] <- 0
 
 
