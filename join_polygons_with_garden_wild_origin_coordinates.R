@@ -1,8 +1,14 @@
 ############################################################
-# join province/ecoregion with gardens based on lat/long data
-# some gardens only have lat/long, others will have province.
+# in order to conduct a GAP ANALYSIS, we need to determine the ecoregion and province
+# represented by each of the CWR ex situ accessions in our gardens data sets.
+# then this ex situ conservation coverage must be compared against the native range.
 
+# PART ONE: 
+# join province/ecoregion with each accession from garden collection data based on 
+# lat/long they provided us. some gardens only have lat/long, 
+# others will have province. Most accessions (about 80%, see below) have neither lat/long or province.
 
+# load required packages
 library(sf) # the base package manipulating shapes
 library(rgeos)
 library(rgdal) # geo data abstraction library
@@ -16,7 +22,24 @@ library(ggplot2)
 library(raster)
 library(cartography)
 
-# data from gardens (already filtered to only CWRs)
+# load natural occurrence occurrence dataset
+df <- read.csv("GBIF_by_Province.csv")
+
+df2 <- df %>%
+  dplyr::select(Crop, sci_nam, ECO_CODE, ECO_NAME, PRENAME, geometry, X.1)
+
+# remove "()" and "c" from geometry and X.1, rename as longitude and latitude
+# change from chr to numeric
+df2$longitude <- as.numeric(str_sub(df2$geometry, 3))  
+df2$latitude <- as.numeric(str_remove(df2$X.1, "[)]"))
+native_occurrence_df <- df2 %>% # drop unformatted columns, change chr to factor data class
+  dplyr::select(-geometry, -X.1) %>%
+  mutate(sci_nam = as.factor(sci_nam), Crop = as.factor(Crop), 
+         PRENAME = as.factor(PRENAME), ECO_NAME = as.factor(ECO_NAME), 
+         ECO_CODE = as.factor(ECO_CODE))
+
+# load data from garden collections (already filtered to only CWRs)
+# update and add new gardens as we receive additional datasets
 cwr_ubc <- read.csv("CWR_of_UBC.csv")
 cwr_rbg <- read.csv("CWR_of_RBG.csv")
 cwr_montreal <- read.csv("CWR_of_MontrealBG.csv")
@@ -27,29 +50,15 @@ cwr_pgrc <- read.csv("Amelanchier_PGRC.csv")
 cwr_usask <- read.csv("Amelanchier_UofSask.csv")
 
 # join all garden data into one long table
+# update and add new gardens as we receive additional datasets
 garden_accessions <- rbind(cwr_ubc, cwr_rbg, cwr_montreal, cwr_guelph, cwr_mountp, cwr_vandusen,
       cwr_pgrc, cwr_usask)
-
-str(garden_accessions)
 garden_accessions <- garden_accessions %>% # format columns
-  mutate(latitude = as.numeric(latitude), longitude = as.numeric(longitude))
-
-# load GBIF occurrence data
-df <- read.csv("GBIF_by_Province.csv")
-
-df2 <- df %>%
-  dplyr::select(Crop, sci_nam, ECO_CODE, ECO_NAME, PRENAME, geometry, X.1)
-
-# remove "()" and "c" from geometry and X.1, rename as longitude and latitude
-# change from chr to numeric
-df2$longitude <- as.numeric(str_sub(df2$geometry, 3))  
-df2$latitude <- as.numeric(str_remove(df2$X.1, "[)]"))
-df3 <- df2 %>% # drop unformatted columns, change chr to factor data class
-  dplyr::select(-geometry, -X.1) %>%
-  mutate(sci_nam = as.factor(sci_nam), Crop = as.factor(Crop), 
-         PRENAME = as.factor(PRENAME), ECO_NAME = as.factor(ECO_NAME), 
-         ECO_CODE = as.factor(ECO_CODE))
-str(df3)
+  mutate(latitude = as.numeric(latitude), 
+         longitude = as.numeric(longitude)) %>%
+  # for now, we want to filter our data for coverage of ONLY CANADIAN ecoregions/admin districts
+  # delete the follwoing line of code if the focus expands to North America or world
+  filter(country == "Canada")
 
 # Transform garden data into a projected shape file
 sf_garden_accessions <- garden_accessions %>%
@@ -63,8 +72,8 @@ crs_string = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=N
 
 # add geojson map with ecoregion boundaries
 world_eco <- st_read("world_ecoregions.geojson", quiet = TRUE)
-# Trim geojson world map to canada ecoregions from df3
-canada_eco <- semi_join(world_eco, df3, by=("ECO_CODE")) 
+# Trim geojson world map to canada ecoregions from native_occurrence_df
+canada_eco <- semi_join(world_eco, native_occurrence_df, by=("ECO_CODE")) 
 
 # clip ecoregions to canada boundary
 canada_eco_subset <- st_intersection(canada_eco, canada_cd)
@@ -136,7 +145,7 @@ points_polygon_4 <- points_polygon_3 %>%
 points_polygon_5 <- points_polygon_4 %>%
   filter(is.na(latitude))
 
-write.csv(points_polygon_3, "all_garden_accessions_with_geo_data.csv")
+# write.csv(points_polygon_3, "all_garden_accessions_with_geo_data.csv")
 # write as geojson?
 
 
@@ -144,10 +153,10 @@ write.csv(points_polygon_3, "all_garden_accessions_with_geo_data.csv")
 # what to do next?
 # Choropleth map, provinces by num of accessions 
 # calculate accession density by province
-accessions_summarized_by_province <- points_polygon_4 %>%
+accessions_summarized_by_province <- points_polygon_3 %>%
   filter(!is.na(province)) %>%
-  filter(province != "") %>% # figure out where these blank rows are coming from. 
-  # They're NA in the original garden data sets
+  filter(province != "") %>% # points that have lat/long but are outside of canade
+  filter(country == "Canada") %>% # points with country name outside canada
   group_by(province) %>%
   add_tally
 
@@ -170,7 +179,7 @@ title("CWR Accessions Per Province")
 # calculate accession density by province
 accessions_summarized_by_eco <- points_polygon_3 %>%
   filter(!is.na(ECO_CODE)) %>%
-  # They're NA in the original garden data sets
+  filter(country == "Canada") %>% # will this remove all exterior points or should I clip
   group_by(ECO_CODE) %>%
   add_tally
 
@@ -203,10 +212,18 @@ n_accessions_by_taxa <- garden_accessions %>%
 nrow(n_accessions_by_taxa)
 (mean(n_accessions_by_taxa$count))
 (sd(n_accessions_by_taxa$count))
-# number of unique crops in gardens
+# number of unique crops with relatives in gardens
 n_accessions_by_crop <- garden_accessions %>%
   group_by(crop) %>%
   summarise(count=n())
 nrow(n_accessions_by_crop)
 (mean(n_accessions_by_crop$count))
 (sd(n_accessions_by_crop$count))
+
+
+##################################
+# Part Two
+# conduct a GAP ANALYSIS, 
+# compare garden accession range ()
+# with natural occurrence range (native_occurrence_df)
+

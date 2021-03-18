@@ -2,7 +2,11 @@ library(tidyverse)
 library(stringr)
 library(ggplot2)
 
-# full CWR table summary stats
+# this file is for calculating some summary stats for CWR natural occurrence 
+# by operating on the "GBIF_by_province.csv" dataset, which includes a row for
+# each unique combination of ecoregion and province that a CWR naturally occurs in (given GBIF data), 
+# and one coordinate point for each of those unique ecoregion and province combinations to facilitate mapping.
+
 df <- read.csv("GBIF_by_Province.csv")
 
 df2 <- df %>%
