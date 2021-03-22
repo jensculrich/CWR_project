@@ -22,6 +22,7 @@ library(ggplot2)
 library(raster)
 library(cartography)
 library(viridis)
+library(tigris)
 
 # load natural occurrence dataset
 df <- read.csv("GBIF_by_Province.csv")
@@ -207,7 +208,7 @@ join2 <- join %>%
 # join2$logn[is.na(join2$logn)] <- 0
 
 # Plot By province
-Province_HeatMap <- ggplot() +
+Province_HeatMap <- ggplot() + 
   geom_sf(
     aes(fill = logn), size = 0.1, data = join2) +
   scale_fill_distiller(palette = "Spectral") +
@@ -266,6 +267,19 @@ Ecoregion_HeatMap <- ggplot() +
 #plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5)
 #)
 Ecoregion_HeatMap
+
+
+#Natural_Occurrence_Ecoregion_Heatmap <- ggplot() +
+  #geom_sf(
+  #aes(fill = ), size = 0.1, data = all_garden_accessions_shapefile) +
+  #scale_fill_distiller(palette = "Spectral") +
+  #geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
+  #coord_sf(crs = crs_string) +
+  # scale_fill_manual(values = map_colors) +
+  #guides(fill = FALSE) +
+  #theme_map() +
+  #theme()
+#Natural_Occurrence_Ecoregion_Heatmap
 
 
 # choroLayer(x = join2_eco, 
@@ -327,6 +341,7 @@ native_occurrence_df_formatted <- native_occurrence_df %>%
   dplyr::select(-latitude, -longitude)
 
 full_gap_table <- full_join(native_occurrence_df_formatted, all_garden_accessions_shapefile)
+# write.csv(full_gap_table, "full_gap_table.csv")
 
 full_gap_table_analysis <- full_gap_table %>%
   group_by(ECO_CODE) %>%
@@ -338,6 +353,7 @@ full_gap_table_analysis <- full_gap_table %>%
   add_tally(!is.na(garden)) %>%
   rename("accessions_in_province" = "n") 
 
+# in the shiny app, allow user to select this function for province or the ecoregion function for ecoregion
 species_gap_analyis_by_province <- full_gap_table %>%
   # in the shiny app, this filter will be the user input
   filter(species == "Amelanchier alnifolia") %>%
@@ -362,19 +378,72 @@ species_gap_analyis_by_province <- full_gap_table %>%
   mutate(num_covered_provinces = sum(binary)) %>%
   mutate(perc_provincial_range_covered = 
            num_covered_provinces / num_native_provinces) %>%
-  dplyr::select(-country, -geometry, -latitude, -longitude, -garden, -X, -ECO_CODE, -ECO_NAME)
+  dplyr::select(-country, -geometry, -latitude, -longitude, 
+                -garden, -X, -ECO_CODE, -ECO_NAME)
 
-write.csv(full_gap_table, "full_gap_table.csv")
-write.csv(species_gap_analyis_by_province, "species_gap_analyis_by_province.csv")
+species_gap_analyis_by_province_sf <- tigris::geo_join(canada_cd, species_gap_analyis_by_province, by = "province")
 
-species_gap_table <- full_gap_table %>%
+Z <- ggplot() +
+  geom_sf(
+    aes(fill = binary), 
+    color = "gray60", size = 0.1, data = species_gap_analyis_by_province_sf) +
+  coord_sf(crs = crs_string) +
+  scale_fill_distiller(palette = "Spectral") +
+  guides(fill = FALSE) +
+  theme_map() +
+  ggtitle("Conservation of Species X Across Native Range in Canadian Botanic Gardens") +
+  theme(panel.grid.major = element_line(color = "white"),
+        legend.key = element_rect(color = "gray40", size = 0.1),
+        plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5)
+  )
+Z
+
+
+# example df
+# write.csv(species_gap_analyis_by_province, "species_gap_analyis_by_province.csv")
+
+species_gap_analyis_by_ecoregion <- full_gap_table %>%
   # in the shiny app, this filter will be the user input
   filter(species == "Amelanchier alnifolia") %>%
-  group_by(ECO_CODE) %>%
+  group_by(ECO_NAME) %>%
   # tally the number of rows in each ecoregion with an existing accession (garden is not NA)
   add_tally(!is.na(garden)) %>%
-  rename("accessions_in_ecoregion" = "n") %>%
+  rename("accessions_in_ecoregion" = "n")  %>%
+  ungroup() %>%
+  # maybe add an if else statement here, so if there's either zero accessions or at least 1?
+  mutate(total_accessions_for_species = sum(!is.na(garden))) %>%
+  mutate(accessions_no_geo_data = sum(is.na(ECO_NAME))) %>%
+  mutate(accessions_with_geo_data = sum(!is.na(ECO_NAME))) %>%
+  group_by(ECO_NAME) %>%
+  filter(row_number() == 1) %>%
+  filter(!is.na(ECO_NAME)) %>%
+  # find number of accessions where ECO_NAME = NA and add this as a universal col
+  # drop rows where ECO_NAME = NA
+  mutate(binary = ifelse(
+    accessions_in_ecoregion > 0, 1, 0)) %>%
+  ungroup() %>%
+  mutate(num_native_ecoregions = sum(!duplicated(ECO_NAME))) %>%
+  mutate(num_covered_ecoregions = sum(binary)) %>%
+  mutate(perc_ecoregion_range_covered = 
+           num_covered_ecoregions / num_native_ecoregions) %>%
+  dplyr::select(-country, -geometry, -latitude, -longitude, 
+                -garden, -X, -province)
 
-  # st_join to plot?
+species_gap_analyis_by_ecoregion_sf <- tigris::geo_join(canada_eco_subset, species_gap_analyis_by_ecoregion, by = "ECO_NAME")
 
-str(species_gap_table)
+ZZ <- ggplot() +
+  geom_sf(
+    aes(fill = binary), 
+    color = "gray60", size = 0.1, data = species_gap_analyis_by_ecoregion_sf) +
+  coord_sf(crs = crs_string) +
+  scale_fill_distiller(palette = "Spectral") +
+  guides(fill = FALSE) +
+  theme_map() +
+  ggtitle("Conservation of Species X Across Native Range in Canadian Botanic Gardens") +
+  theme(panel.grid.major = element_line(color = "white"),
+        legend.key = element_rect(color = "gray40", size = 0.1),
+        plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5)
+  )
+ZZ
+
+
