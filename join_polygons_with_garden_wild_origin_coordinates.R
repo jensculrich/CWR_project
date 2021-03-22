@@ -133,10 +133,10 @@ Q <- ggplot() +
   # scale_fill_manual(values = map_colors) +
   guides(fill = FALSE) +
   theme_map() +
-  ggtitle("Geographic Origin of Native CWRs Conserved in Canadian Botanic Gardens") +
+  ggtitle("Known Geographic Origins of Native CWR's in Surveyed Canadian Botanic Gardens") +
   theme(panel.grid.major = element_line(color = "white"),
         legend.key = element_rect(color = "gray40", size = 0.1),
-        plot.title = element_text(color="black", size=12, face="bold.italic")
+        plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5)
         )
 Q
 
@@ -261,7 +261,7 @@ nrow(n_accessions_by_crop)
 (sd(n_accessions_by_crop$count))
 
 # bar plot with total CWR taxa versus CWR taxa with >= 1 accession 
-Category <- c("CWR taxa in Canada", "Canadian CWR taxa conserved in BG's")
+Category <- c("Native CWR's", "Native CWR's conserved in surveyed BG's")
 CWRs <- as.numeric(c("509", "159")) 
 bar_df <- as.data.frame(CWRs, Category) 
 
