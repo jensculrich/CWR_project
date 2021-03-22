@@ -21,6 +21,7 @@ library(tidyverse)
 library(ggplot2)
 library(raster)
 library(cartography)
+library(viridis)
 
 # load natural occurrence dataset
 df <- read.csv("GBIF_by_Province.csv")
@@ -87,6 +88,9 @@ canada_eco <- semi_join(world_eco, native_occurrence_df, by=("ECO_CODE"))
 # clip ecoregions to canada national border
 canada_eco_subset <- st_intersection(canada_eco, canada)
 
+canada_cd <- canada_cd %>%
+  rename("province" = "name")
+
 # Plot the maps
 # Define the maps' theme -- remove axes, ticks, borders, legends, etc.
 theme_map <- function(base_size=9, base_family="") { # 3
@@ -106,29 +110,30 @@ theme_map <- function(base_size=9, base_family="") { # 3
     )
 }
 
-# Define the filling colors for each province; max allowed is 9 but good enough for the 13 provinces + territories
-# color is random and not assoicated with CWR accession density
-# see data manipulation and choropleth mapping below where this is considered
-# map_colors <- RColorBrewer::brewer.pal(1, "Greens") %>% rep(37) # 4
-# one colour instead
-
 # Plot Ecoregions
 P <- ggplot() +
-  geom_sf(aes(fill = ECO_NAME), color = "gray60", size = 0.1, data = canada_eco_subset) +
+  geom_sf(
+    # aes(fill = name), 
+    color = "gray60", size = 0.1, data = canada_eco_subset) +
   geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
   coord_sf(crs = crs_string) +
   # scale_fill_manual(values = map_colors) +
   guides(fill = FALSE) +
   theme_map() +
+  ggtitle("Known Geographic Origins of Native CWR's in Surveyed Canadian Botanic Gardens") +
   theme(panel.grid.major = element_line(color = "white"),
-        legend.key = element_rect(color = "gray40", size = 0.1))
+        legend.key = element_rect(color = "gray40", size = 0.1),
+        plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5)
+  )
+P
+
 
 # Plot By province
 Q <- ggplot() +
   geom_sf(
     # aes(fill = name), 
     color = "gray60", size = 0.1, data = canada_cd) +
-  geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 1, size = 3) + # 17
+  geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
   coord_sf(crs = crs_string) +
   # scale_fill_manual(values = map_colors) +
   guides(fill = FALSE) +
@@ -182,32 +187,51 @@ points_polygon_5 <- points_polygon_4 %>%
 # by province and by ecoregion
 
 #################
-# Choropleth map, provinces by num of accessions 
+# heat map, provinces with density/ number of accessions 
 # calculate accession density by province
 accessions_summarized_by_province <- points_polygon_3 %>%
-  # remove all accessions with no ecoregion (lat/long) data
+  # remove all accessions with no associated province data
   # could add a filter here for crop category, crop or CWR taxon
   filter(!is.na(province)) %>% 
   group_by(province) %>%
   add_tally # sum the number of accessions from each province
 # join the acession data with the province shapefile
-join <- st_join(canada_cd, accessions_summarized_by_province, left = TRUE)
+# do this but keep when lat/lomg is NA but still has province name 
+# (nrows of join should be same as accessions_summarized_by_province)
+# join <- st_join(canada_cd, accessions_summarized_by_province, left = TRUE)
+join <- left_join(canada_cd, accessions_summarized_by_province, by = "province")
+
 # format for choropleth map
 join2 <- join %>%
   group_by(name) %>% # only want one row representing each province (since every row in same
   # province has the same value for the tally, n)
-  filter(row_number() == 1)  %>%
+  filter(row_number() == 1) %>%
   # transform to a log scale since Ontario is orders of magnitude greater than other provinces
   mutate("logn" = log(n))
-# Replace ecoregions with no accessions so that the value is "0" rather than NA
+# Replace provinces with no accessions so that the value is "0" rather than NA
 # join2$logn[is.na(join2$logn)] <- 0
 
-choroLayer(x = join2, 
-           var = "logn")
-title("CWR Accessions Per Province")
+# Plot By province
+Province_HeatMap <- ggplot() +
+  geom_sf(
+    aes(fill = logn), size = 0.1, data = join2) +
+  scale_fill_distiller(palette = "Spectral") +
+  #geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
+  coord_sf(crs = crs_string) +
+  # scale_fill_manual(values = map_colors) +
+  guides(fill = FALSE) +
+  theme_map() +
+  theme()
+  #ggtitle("Known Geographic Origins of Native CWR's in Surveyed Canadian Botanic Gardens") +
+  #theme(panel.grid.major = element_line(color = "white"),
+        #legend.key = element_rect(color = "gray40", size = 0.1),
+        #plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5)
+  #)
+# add a legend?
+Province_HeatMap
 
 ##############
-# Choropleth map, ecoregions by num of accessions 
+# heat map, ecoregioins with density/ number of accessions  
 # calculate accession density by ecoregion
 accessions_summarized_by_eco <- points_polygon_3 %>%
   # remove all accessions with no ecoregion (lat/long) data
@@ -219,7 +243,7 @@ accessions_summarized_by_eco <- points_polygon_3 %>%
   add_tally # sum the number of accessions from each ecoregion
 # join the acession data with the ecoregion shapefile
 join_eco <- st_join(canada_eco_subset, accessions_summarized_by_eco, left = TRUE)
-# format for choropleth map
+# format for heat map
 join2_eco <- join_eco %>%
   # only want one row representing each ecoregion (since every row in same
   # ecoregion has the same value for the tally, n)
@@ -230,13 +254,30 @@ join2_eco <- join_eco %>%
 # Replace ecoregions with no accessions so that the value is "0" rather than NA
 # join2_eco$logn[is.na(join2_eco$logn)] <- 0
 
+# Plot By ecoregion
+Ecoregion_HeatMap <- ggplot() +
+  geom_sf(
+    aes(fill = logn), size = 0.1, data = join2_eco) +
+  scale_fill_distiller(palette = "Spectral") +
+  #geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
+  coord_sf(crs = crs_string) +
+  # scale_fill_manual(values = map_colors) +
+  guides(fill = FALSE) +
+  theme_map() +
+  theme()
+#ggtitle("Known Geographic Origins of Native CWR's in Surveyed Canadian Botanic Gardens") +
+#theme(panel.grid.major = element_line(color = "white"),
+#legend.key = element_rect(color = "gray40", size = 0.1),
+#plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5)
+#)
+Ecoregion_HeatMap
 
-choroLayer(x = join2_eco, 
-           var = "logn")
-title("CWR Accessions Per Ecoregion")
+
+# choroLayer(x = join2_eco, 
+#           var = "logn")
+# title("CWR Accessions Per Ecoregion")
 # https://www.r-graph-gallery.com/choropleth-map.html
 
-# reproject
 
 # repeat for natural occurrences in ecoregions 
 
