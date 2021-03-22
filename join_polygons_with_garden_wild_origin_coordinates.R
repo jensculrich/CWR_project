@@ -88,6 +88,7 @@ canada_eco <- semi_join(world_eco, native_occurrence_df, by=("ECO_CODE"))
 
 # clip ecoregions to canada national border
 canada_eco_subset <- st_intersection(canada_eco, canada)
+#geojsonio::geojson_write(canada_eco_subset, file = "canada_ecoregions_clipped.geojson")
 
 canada_cd <- canada_cd %>%
   rename("province" = "name")
