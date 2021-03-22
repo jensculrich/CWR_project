@@ -155,7 +155,7 @@ points_polygon <- st_join(sf_garden_accessions, canada_cd, left = TRUE)
 points_polygon_2 <- st_join(points_polygon, canada_eco_subset, left = TRUE)
 
 # break out new latitude and longitude columns and reformat
-points_polygon_3 <- points_polygon_2 %>%
+all_garden_accessions_shapefile <- points_polygon_2 %>%
   # break coordinates into lat/long
   mutate(longitude=gsub("\\,.*","", geometry)) %>%
   mutate(latitude=gsub(".*,","",geometry)) %>%
@@ -164,22 +164,18 @@ points_polygon_3 <- points_polygon_2 %>%
   mutate(latitude = as.numeric(str_remove(latitude, "[)]"))) %>% 
   # select columns that match garden accessions
   dplyr::select(X, garden, crop, species, variant, latitude, longitude, country,
-         IUCNRedList, province, name.x, ECO_CODE, ECO_NAME) %>%
-  rename(new = province) %>% # add a dummy name for province 
+         IUCNRedList, province.x, province.y, ECO_CODE, ECO_NAME) %>%
+  #rename(new = province) %>% # add a dummy name for province 
   # take province from cd_canada unless was already provided by garden (just want one column)
-  mutate(province = ifelse(is.na(new), name.x, new)) %>%
-  dplyr::select(-new, - name.x)
+  mutate(province = ifelse(is.na(province.x), province.y, province.x)) %>%
+  dplyr::select(-province.y, - province.x)
 
-# remove points that come from lat/long outside of Canada
-# accessions that have latitude and longitude or province
-points_polygon_4 <- points_polygon_3 %>%
-  filter(province != "") %>%
-  filter(country == "Canada")
 # accessions that have province but not lat/long
-points_polygon_5 <- points_polygon_4 %>%
+accessions_w_province_but_no_geo_data <- all_garden_accessions_shapefile %>%
+  filter(!is.na(province)) %>%
   filter(is.na(latitude))
 
-# write.csv(points_polygon_3, "all_garden_accessions_with_geo_data.csv")
+# write.csv(all_garden_accessions_shapefile, "all_garden_accessions_with_geo_data.csv")
 # write as geojson?
 
 ##########
@@ -189,7 +185,7 @@ points_polygon_5 <- points_polygon_4 %>%
 #################
 # heat map, provinces with density/ number of accessions 
 # calculate accession density by province
-accessions_summarized_by_province <- points_polygon_3 %>%
+accessions_summarized_by_province <- all_garden_accessions_shapefile %>%
   # remove all accessions with no associated province data
   # could add a filter here for crop category, crop or CWR taxon
   filter(!is.na(province)) %>% 
@@ -198,12 +194,11 @@ accessions_summarized_by_province <- points_polygon_3 %>%
 # join the acession data with the province shapefile
 # do this but keep when lat/lomg is NA but still has province name 
 # (nrows of join should be same as accessions_summarized_by_province)
-# join <- st_join(canada_cd, accessions_summarized_by_province, left = TRUE)
-join <- left_join(canada_cd, accessions_summarized_by_province, by = "province")
+join <- st_join(canada_cd, accessions_summarized_by_province, left = TRUE)
 
 # format for choropleth map
 join2 <- join %>%
-  group_by(name) %>% # only want one row representing each province (since every row in same
+  group_by(province.x) %>% # only want one row representing each province (since every row in same
   # province has the same value for the tally, n)
   filter(row_number() == 1) %>%
   # transform to a log scale since Ontario is orders of magnitude greater than other provinces
@@ -233,7 +228,7 @@ Province_HeatMap
 ##############
 # heat map, ecoregioins with density/ number of accessions  
 # calculate accession density by ecoregion
-accessions_summarized_by_eco <- points_polygon_3 %>%
+accessions_summarized_by_eco <- all_garden_accessions_shapefile %>%
   # remove all accessions with no ecoregion (lat/long) data
   # could add a filter here for crop category, crop or CWR taxon
   # currently this is for number of accessions rather than unique accessions,
@@ -322,3 +317,11 @@ R
 # compare garden accession range ()
 # with natural occurrence range (native_occurrence_df)
 
+# change shapefile to data frame format for join (not sure if I want df or shapefile)
+df_all_accessions_with_provinces_and_eco <- as.data.frame(all_garden_accessions_shapefile)
+all_garden_accessions_shapefile
+# join all_accessions with native provinces
+
+
+all_accessions_with_provinces_df
+native_occurrence_df
