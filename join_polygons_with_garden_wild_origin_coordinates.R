@@ -322,6 +322,31 @@ df_all_accessions_with_provinces_and_eco <- as.data.frame(all_garden_accessions_
 all_garden_accessions_shapefile
 # join all_accessions with native provinces
 
+native_occurrence_df_formatted <- native_occurrence_df %>%
+  rename("province" = "PRENAME", "crop" = "Crop", "species" = "sci_nam") %>%
+  dplyr::select(-latitude, -longitude)
 
-all_accessions_with_provinces_df
-native_occurrence_df
+full_gap_table <- full_join(native_occurrence_df_formatted, all_garden_accessions_shapefile)
+
+full_gap_analysis <- full_gap_table %>%
+  group_by(ECO_CODE) %>%
+  # tally the number of rows in each ecoregion with an existing accession (garden is not NA)
+  add_tally(!is.na(garden)) %>%
+  rename("accessions_in_ecoregion" = "n") %>%
+  group_by(province) %>%
+  # tally the number of rows in each ecoregion with an existing accession (garden is not NA)
+  add_tally(!is.na(garden)) %>%
+  rename("accessions_in_province" = "n") 
+
+species_gap_analysis <- full_gap_table %>%
+  # in the shiny app, this filter will be the user input
+  filter(species == "Amelanchier alnifolia") %>%
+  group_by(ECO_CODE) %>%
+  # tally the number of rows in each ecoregion with an existing accession (garden is not NA)
+  add_tally(!is.na(garden)) %>%
+  rename("accessions_in_ecoregion" = "n") %>%
+  group_by(province) %>%
+  # tally the number of rows in each ecoregion with an existing accession (garden is not NA)
+  add_tally(!is.na(garden)) %>%
+  rename("accessions_in_province" = "n") 
+
