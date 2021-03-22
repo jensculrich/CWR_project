@@ -328,7 +328,7 @@ native_occurrence_df_formatted <- native_occurrence_df %>%
 
 full_gap_table <- full_join(native_occurrence_df_formatted, all_garden_accessions_shapefile)
 
-full_gap_analysis <- full_gap_table %>%
+full_gap_table_analysis <- full_gap_table %>%
   group_by(ECO_CODE) %>%
   # tally the number of rows in each ecoregion with an existing accession (garden is not NA)
   add_tally(!is.na(garden)) %>%
@@ -338,15 +338,43 @@ full_gap_analysis <- full_gap_table %>%
   add_tally(!is.na(garden)) %>%
   rename("accessions_in_province" = "n") 
 
-species_gap_analysis <- full_gap_table %>%
+species_gap_analyis_by_province <- full_gap_table %>%
+  # in the shiny app, this filter will be the user input
+  filter(species == "Amelanchier alnifolia") %>%
+  group_by(province) %>%
+  # tally the number of rows in each ecoregion with an existing accession (garden is not NA)
+  add_tally(!is.na(garden)) %>%
+  rename("accessions_in_province" = "n")  %>%
+  ungroup() %>%
+  # maybe add an if else statement here, so if there's either zero accessions or at least 1?
+  mutate(total_accessions_for_species = sum(!is.na(garden))) %>%
+  mutate(accessions_no_geo_data = sum(is.na(province))) %>%
+  mutate(accessions_with_geo_data = sum(!is.na(province))) %>%
+  group_by(province) %>%
+  filter(row_number() == 1) %>%
+  filter(!is.na(province)) %>%
+  # find number of accessions where province = NA and add this as a universal col
+  # drop rows where province = NA
+  mutate(binary = ifelse(
+    accessions_in_province > 0, 1, 0)) %>%
+  ungroup() %>%
+  mutate(num_native_provinces = sum(!duplicated(province))) %>%
+  mutate(num_covered_provinces = sum(binary)) %>%
+  mutate(perc_provincial_range_covered = 
+           num_covered_provinces / num_native_provinces) %>%
+  dplyr::select(-country, -geometry, -latitude, -longitude, -garden, -X, -ECO_CODE, -ECO_NAME)
+
+write.csv(full_gap_table, "full_gap_table.csv")
+write.csv(species_gap_analyis_by_province, "species_gap_analyis_by_province.csv")
+
+species_gap_table <- full_gap_table %>%
   # in the shiny app, this filter will be the user input
   filter(species == "Amelanchier alnifolia") %>%
   group_by(ECO_CODE) %>%
   # tally the number of rows in each ecoregion with an existing accession (garden is not NA)
   add_tally(!is.na(garden)) %>%
   rename("accessions_in_ecoregion" = "n") %>%
-  group_by(province) %>%
-  # tally the number of rows in each ecoregion with an existing accession (garden is not NA)
-  add_tally(!is.na(garden)) %>%
-  rename("accessions_in_province" = "n") 
 
+  # st_join to plot?
+
+str(species_gap_table)
