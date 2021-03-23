@@ -258,7 +258,6 @@ Ecoregion_HeatMap <- ggplot() +
   scale_fill_distiller(palette = "Spectral") +
   #geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
   coord_sf(crs = crs_string) +
-  # scale_fill_manual(values = map_colors) +
   guides(fill = FALSE) +
   theme_map() +
   theme()
@@ -269,18 +268,17 @@ Ecoregion_HeatMap <- ggplot() +
 #)
 Ecoregion_HeatMap
 
+native_occurrence_sf <- tigris::geo_join(canada_eco_subset, native_occurrence_df, by = "ECO_NAME")
 
-#Natural_Occurrence_Ecoregion_Heatmap <- ggplot() +
-  #geom_sf(
-  #aes(fill = ), size = 0.1, data = all_garden_accessions_shapefile) +
-  #scale_fill_distiller(palette = "Spectral") +
-  #geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
-  #coord_sf(crs = crs_string) +
-  # scale_fill_manual(values = map_colors) +
-  #guides(fill = FALSE) +
-  #theme_map() +
-  #theme()
-#Natural_Occurrence_Ecoregion_Heatmap
+Natural_Occurrence_Ecoregion_Heatmap <- ggplot() +
+  geom_sf(
+  aes(fill = ), size = 0.1, data = native_occurrence_sf) +
+  scale_fill_distiller(palette = "Spectral") +
+  coord_sf(crs = crs_string) +
+  guides(fill = FALSE) +
+  theme_map() +
+  theme()
+Natural_Occurrence_Ecoregion_Heatmap
 
 
 # choroLayer(x = join2_eco, 
