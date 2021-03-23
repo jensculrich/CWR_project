@@ -341,6 +341,8 @@ native_occurrence_df_formatted <- native_occurrence_df %>%
 
 full_gap_table <- full_join(native_occurrence_df_formatted, all_garden_accessions_shapefile)
 # write.csv(full_gap_table, "full_gap_table.csv")
+# full_gap_table_geojson <- tigris::geo_join( , full_gap_table, by = "province")
+# geojsonio::geojson_write(full_gap_table_geojson, file = "full_gap_table.geojson")
 
 full_gap_table_analysis <- full_gap_table %>%
   group_by(ECO_CODE) %>%
