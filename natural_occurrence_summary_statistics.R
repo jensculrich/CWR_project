@@ -10,14 +10,14 @@ library(ggplot2)
 df <- read.csv("GBIF_by_Province.csv")
 
 df2 <- df %>%
-  select(Crop, sci_nam, ECO_CODE, ECO_NAME, PRENAME, geometry, X.1)
+  dplyr::select(Crop, sci_nam, ECO_CODE, ECO_NAME, PRENAME, geometry, X.1)
   
 # remove "()" and "c" from geometry and X.1, rename as longitude and latitude
 # change from chr to numeric
 df2$longitude <- as.numeric(str_sub(df2$geometry, 3))  
 df2$latitude <- as.numeric(str_remove(df2$X.1, "[)]"))
 df3 <- df2 %>% # drop unformatted columns, change chr to factor data class
-  select(-geometry, -X.1) %>%
+  dplyr::select(-geometry, -X.1) %>%
   mutate(sci_nam = as.factor(sci_nam), Crop = as.factor(Crop), 
          PRENAME = as.factor(PRENAME), ECO_NAME = as.factor(ECO_NAME), 
          ECO_CODE = as.factor(ECO_CODE))

@@ -112,6 +112,7 @@ theme_map <- function(base_size=9, base_family="") { # 3
     )
 }
 
+# For P and Q Maybe Also add points that represent our surveyed gardens?
 # Plot Ecoregions
 P <- ggplot() +
   geom_sf(
@@ -339,6 +340,10 @@ native_occurrence_df_formatted <- native_occurrence_df %>%
   rename("province" = "PRENAME", "crop" = "Crop", "species" = "sci_nam") %>%
   dplyr::select(-latitude, -longitude)
 
+
+# maybe need to do a full gap table by ecoregion and by province
+full_gap_table_test <- tigris::geo_join(all_garden_accessions_shapefile, native_occurrence_df_formatted, by = "species")
+
 full_gap_table <- full_join(native_occurrence_df_formatted, all_garden_accessions_shapefile)
 # write.csv(full_gap_table, "full_gap_table.csv")
 # full_gap_table_geojson <- tigris::geo_join( , full_gap_table, by = "province")
@@ -354,6 +359,9 @@ full_gap_table_analysis <- full_gap_table %>%
   add_tally(!is.na(garden)) %>%
   rename("accessions_in_province" = "n") 
 
+
+##############################
+# example code for a single species gap analysis
 # in the shiny app, allow user to select this function for province or the ecoregion function for ecoregion
 species_gap_analyis_by_province <- full_gap_table %>%
   # in the shiny app, this filter will be the user input
