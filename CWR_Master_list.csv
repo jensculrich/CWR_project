@@ -1,510 +1,507 @@
-"","Crop","sci_name"
-"1","Barley","Hordeum depressum"
-"2","Barley","Hordeum jubatum"
-"3","Barley","Hordeum pusillum"
-"4","Flax","Linum medium"
-"5","Flax","Linum perenne"
-"6","Flax","Linum rigidum"
-"7","Flax","Linum sulcatum"
-"8","Flax","Linum virginianum"
-"9","Sunflower","Helianthus decapetalus"
-"10","Sunflower","Helianthus divaricatus"
-"11","Sunflower","Helianthus giganteus"
-"12","Sunflower","Helianthus hirsutus"
-"13","Sunflower","Helianthus laetiflorus"
-"14","Sunflower","Helianthus maximiliani"
-"15","Sunflower","Helianthus nuttallii"
-"16","Sunflower","Helianthus petiolaris"
-"17","Sunflower","Helianthus strumosus"
-"18","Sunflower","Helianthus tuberosus"
-"19","Apple","Malus coronaria"
-"20","Apple","Malus fusca"
-"21","Blueberry","Vaccinium alaskaense"
-"22","Blueberry","Vaccinium angustifolium"
-"23","Blueberry","Vaccinium atrococcum"
-"24","Blueberry","Vaccinium caespitosum"
-"25","Blueberry","Vaccinium corymbsum"
-"26","Blueberry","Vaccinium deliciosum"
-"27","Blueberry","Vaccinium membranaceum"
-"28","Blueberry","Vaccinium myrtilloides"
-"29","Blueberry","Vaccinium myrtillus"
-"30","Blueberry","Vaccinium nubigeum"
-"31","Blueberry","Vaccinium ovalifolium"
-"32","Blueberry","Vaccinium ovatum"
-"33","Blueberry","Vaccinium parvifolium"
-"34","Blueberry","Vaccinium scoparium"
-"35","Blueberry","Vaccinium stamineum"
-"36","Blueberry","Vaccinium uliginosum"
-"37","Blueberry","Vaccinium vacillans"
-"38","Buffaloberry","Sherpherdia argetea"
-"39","Buffaloberry","Sherpherdia canadensis"
-"40","Cherry","Prunus besseyi"
-"41","Cherry","Prunus emarginata"
-"42","Cherry","Prunus pensylvanica"
-"43","Cherry","Prunus pumila"
-"44","Cherry","Prunus serotina"
-"45","Cherry","Prunus virginiana"
-"46","Cranberry","Oxycoccus macrocarpus"
-"47","Cranberry","Oxycoccus microcarpus"
-"48","Cranberry","Oxycoccus ovalifolius"
-"49","Cranberry","Oxycoccus quadripetalus"
-"50","Currant","Ribes americanum"
-"51","Currant","Ribes aureum"
-"52","Currant","Ribes bracteosum"
-"53","Currant","Ribes cereum"
-"54","Currant","Ribes cynosbati"
-"55","Currant","Ribes divaricatum"
-"56","Currant","Ribes glandulosum"
-"57","Currant","Ribes howellii"
-"58","Currant","Ribes hudsonianum"
-"59","Currant","Ribes irriguum"
-"60","Currant","Ribes lacustre"
-"61","Currant","Ribes laxiflorum"
-"62","Currant","Ribes lobbii"
-"63","Currant","Ribes sanguineum"
-"64","Currant","Ribes setosum"
-"65","Currant","Ribes triste"
-"66","Currant","Ribes viscosissiumum"
-"67","Currant","Ribes watsonianum"
-"68","Elderberry","Sambucus canadensis"
-"69","Elderberry","Sambucus cerulea"
-"70","Elderberry","Sambucus racemosa"
-"71","Grape","Vitis aestivalis"
-"72","Grape","Vitis riparia"
-"73","Highbush cranberry","Viburnum acerifolium"
-"74","Highbush cranberry","Viburnum alnifolium"
-"75","Highbush cranberry","Viburnum cassinoides"
-"76","Highbush cranberry","Viburnum dentatum"
-"77","Highbush cranberry","Viburnum edule"
-"78","Highbush cranberry","Viburnum lantana"
-"79","Highbush cranberry","Viburnum lentago"
-"80","Highbush cranberry","Viburnum rafinesquianum"
-"81","Highbush cranberry","Viburnum trilobum"
-"82","Lingonberry","Vaccinium vitis-idaea"
-"83","Pawpaw","Asimina triloba"
-"84","Plum","Prunus americana"
-"85","Plum","Prunus nigra"
-"86","Raspberry","Rubus acualis"
-"87","Raspberry","Rubus allegheniensis"
-"88","Raspberry","Rubus articus"
-"89","Raspberry","Rubus canadensis"
-"90","Raspberry","Rubus chamaemorus"
-"91","Raspberry","Rubus enslenii"
-"92","Raspberry","Rubus glagellaris"
-"93","Raspberry","Rubus hispidus"
-"94","Raspberry","Rubus idaeus"
-"95","Raspberry","Rubus laciniatus"
-"96","Raspberry","Rubus lasiococcus"
-"97","Raspberry","Rubus leucodermis"
-"98","Raspberry","Rubus nivalis"
-"99","Raspberry","Rubus occidentalis"
-"100","Raspberry","Rubus odoratus"
-"101","Raspberry","Rubus parviflorus"
-"102","Raspberry","Rubus paracaulis"
-"103","Raspberry","Rubus pedatus"
-"104","Raspberry","Rubus pensilvanicus"
-"105","Raspberry","Rubus procerus"
-"106","Raspberry","Rubus pubescens"
-"107","Raspberry","Rubus recurvicaulis"
-"108","Raspberry","Rubus spectabilis"
-"109","Raspberry","Rubus stellatus"
-"110","Raspberry","Rubus ursinus"
-"111","Raspberry","Rubus vermontanus"
-"112","Saskatoon","Amelanchier alnifolia"
-"113","Saskatoon","Amelanchier arborea"
-"114","Saskatoon","Amelanchier bartramiana"
-"115","Saskatoon","Amelanchier canadensis"
-"116","Saskatoon","Amelanchier fernaldii"
-"117","Saskatoon","Amelanchier gaspensis"
-"118","Saskatoon","Amelanchier humilis"
-"119","Saskatoon","Amelanchier huronensis"
-"120","Saskatoon","Amelanchier intermedia"
-"121","Saskatoon","Amelanchier laevis"
-"122","Saskatoon","Amelanchier lucida"
-"123","Saskatoon","Amelanchier mucronata"
-"124","Saskatoon","Amelanchier sanguinea"
-"125","Saskatoon","Amelanchier stolonifera"
-"126","Saskatoon","Amelanchier wiegandii"
-"127","Strawberry","Fragaria chiloensis"
-"128","Strawberry","Fragaria vesca"
-"129","Strawberry","Fragaria virginiana"
-"130","Chestnut","Castanea dentata"
-"131","Hazelnut","Corylus americana"
-"132","Hazelnut","Corylus cornuta"
-"133","Pecan/hickory","Carya cordiformis"
-"134","Pecan/hickory","Carya glabra"
-"135","Pecan/hickory","Carya laciniosa"
-"136","Pecan/hickory","Carya ovalis"
-"137","Pecan/hickory","Carya ovata"
-"138","Pecan/hickory","Carya tomentosa"
-"139","Walnut","Juglans cinerea"
-"140","Walnut","Juglans nigra"
-"141","Bengrass","Agrostis borealis"
-"142","Bengrass","Agrostis diegoensis"
-"143","Bengrass","Agrostis exarata"
-"144","Bengrass","Agrostis hyemalis"
-"145","Bengrass","Agrostis perennans"
-"146","Bluegrass","Poa abbreviata"
-"147","Bluegrass","Poa alpina"
-"148","Bluegrass","Poa alsodes"
-"149","Bluegrass","Poa ampla"
-"150","Bluegrass","Poa artica"
-"151","Bluegrass","Poa arida"
-"152","Bluegrass","Poa canbyi"
-"153","Bluegrass","Poa confinis"
-"154","Bluegrass","Poa cusickii"
-"155","Bluegrass","Poa eminens"
-"156","Bluegrass","Poa epilis"
-"157","Bluegrass","Poa gaspensis"
-"158","Bluegrass","Poa gluaca"
-"159","Bluegrass","Poa hartzii"
-"160","Bluegrass","Poa howellii"
-"161","Bluegrass","Poa juncifolia"
-"162","Bluegrass","Poa labrodorica"
-"163","Bluegrass","Poa laxa"
-"164","Bluegrass","Poa leptocoma"
-"165","Bluegrass","Poa lettermannii"
-"166","Bluegrass","Poa macrantha"
-"167","Bluegrass","Poa marcida"
-"168","Bluegrass","Poa nemoralis"
-"169","Bluegrass","Poa nervosa"
-"170","Bluegrass","Poa nevadensis"
-"171","Bluegrass","Poa occidentalis"
-"172","Bluegrass","Poa palustris"
-"173","Bluegrass","Poa pattersonii"
-"174","Bluegrass","Poa pratensis"
-"175","Bluegrass","Poa saltuensis"
-"176","Bluegrass","Poa sandbergii"
-"177","Bluegrass","Poa stenantha"
-"178","Bluegrass","Poa trivialis"
-"179","Bluegrass","Poa vaseyochloa"
-"180","Bluestem","Andropogon gerardii"
-"181","Bluestem","Andropogon hallii"
-"182","Bluestem","Andropogon scoparius"
-"183","Bromegrass","Bromus anomalus"
-"184","Bromegrass","Bromus canadensis"
-"185","Bromegrass","Bromus carinatus"
-"186","Bromegrass","Bromus cartharticus"
-"187","Bromegrass","Bromus ciliatus"
-"188","Bromegrass","Bromus inermis"
-"189","Bromegrass","Bromus pacificus"
-"190","Bromegrass","Bromus porteri"
-"191","Bromegrass","Bromus pubescens"
-"192","Bromegrass","Bromus purgans"
-"193","Bromegrass","Bromus sitchensis"
-"194","Bromegrass","Bromus vulgaris"
-"195","Canary Grass","Phalaris arundinacea"
-"196","Clover","Trifolium bifidum"
-"197","Clover","Trifolium cyathiferum"
-"198","Clover","Trifolium depauperatum"
-"199","Clover","Trifolium microcephalum"
-"200","Clover","Trifolium microdon"
-"201","Clover","Trifolium oliganthum"
-"202","Clover","Trifolium reflexum"
-"203","Clover","Trifolium tridentatum"
-"204","Clover","Trifolium varigatum"
-"205","Clover","Trifolium wormskjoldii"
-"206","Fescue","Festuca altaica"
-"207","Fescue","Festuca obtusa"
-"208","Fescue","Festuca occidentalis"
-"209","Fescue","Festuca ovina"
-"210","Fescue","Festuca rubra"
-"211","Fescue","Festuca subulata"
-"212","Fescue","Festuca subuliflora"
-"213","Fescue","Festuca viridula"
-"214","Milk-vetch","Astragalus adsurgens"
-"215","Milk-vetch","Astragalus agrestis"
-"216","Milk-vetch","Astragalus alpinus"
-"217","Milk-vetch","Astragalus americanus"
-"218","Milk-vetch","Astragalus beckwithii"
-"219","Milk-vetch","Astragalus bisulcatus"
-"220","Milk-vetch","Astragalus bodinii"
-"221","Milk-vetch","Astragalus bourgovii"
-"222","Milk-vetch","Astragalus canadensis"
-"223","Milk-vetch","Astragalus collinus"
-"224","Milk-vetch","Astragalus crassicarpus"
-"225","Milk-vetch","Astragalus drummondii"
-"226","Milk-vetch","Astragalus eucosmus"
-"227","Milk-vetch","Astragalus filipes"
-"228","Milk-vetch","Astragalus flexuosus"
-"229","Milk-vetch","Astragalus gilviflorus"
-"230","Milk-vetch","Astragalus gracilis"
-"231","Milk-vetch","Astragalus kentrophyta"
-"232","Milk-vetch","Astragalus lentiginosus"
-"233","Milk-vetch","Astragalus lotiflorus"
-"234","Milk-vetch","Astragalus microcystis"
-"235","Milk-vetch","Astragalus miser"
-"236","Milk-vetch","Astragalus missouriensis"
-"237","Milk-vetch","Astragalus neglectus"
-"238","Milk-vetch","Astragalus pectinatus"
-"239","Milk-vetch","Astragalus purshii"
-"240","Milk-vetch","Astragalus racemosus"
-"241","Milk-vetch","Astragalus robbinsii"
-"242","Milk-vetch","Astragalus sclerocarpus"
-"243","Milk-vetch","Astragalus spatulatus"
-"244","Milk-vetch","Astragalus tenellus"
-"245","Milk-vetch","Astragalus umbellatus"
-"246","Milk-vetch","Astragalus vexilliflexus"
-"247","Milk-vetch","Astragalus williamsii"
-"248","Sainfoin","Hedysarum alpinum"
-"249","Sainfoin","Hedysarum boreale"
-"250","Sainfoin","Hedysarum occidentale"
-"251","Sainfoin","Hedysarum sulphurescens"
-"252","Timothy","Phleum alpinum"
-"253","Trefoil","Lotus denticulatus"
-"254","Trefoil","Lotus formosissimus"
-"255","Trefoil","Lotus micranthus"
-"256","Trefoil","Lotus pinnatus"
-"257","Trefoil","Lotus purshianus"
-"258","Vetch","Vicia americana"
-"259","Vetch","Vicia carolinia"
-"260","Vetch","Vicia gigantea"
-"261","Wheatgrass","Agropyron albicans"
-"262","Wheatgrass","Agropyron dasystachyum"
-"263","Wheatgrass","Agropyron scribneri"
-"264","Wheatgrass","Agropyron smithii"
-"265","Wheatgrass","Agropyron spicatum"
-"266","Wheatgrass","Agropyron trachycaulum"
-"267","Wild Rye","Elymus canadensis"
-"268","Wild Rye","Elymus diversiglumis"
-"269","Wild Rye","Elymus glaucus"
-"270","Wild Rye","Elymus hirsutus"
-"271","Wild Rye","Elymus hystrix"
-"272","Wild Rye","Elymus innovatus"
-"273","Wild Rye","Elymus mollis"
-"274","Wild Rye","Elymus piperi"
-"275","Wild Rye","Elymus riparius"
-"276","Wild Rye","Elymus sibiricus"
-"277","Wild Rye","Elymus villosus"
-"278","Wild Rye","Elymus virginicus"
-"279","Amaranth","Amaranthus albus"
-"280","Amaranth","Amaranthus californicus"
-"281","Amaranth","Amaranthus graecizans"
-"282","Amaranth","Amaranthus tuberculatus"
-"283","Evening primrose","Oenothera andina"
-"284","Evening primrose","Oenothera biennis"
-"285","Evening primrose","Oenothera breviflora"
-"286","Evening primrose","Oenothera caespitosa"
-"287","Evening primrose","Oenothera contorta"
-"288","Evening primrose","Oenothera cruciata"
-"289","Evening primrose","Oenothera flava"
-"290","Evening primrose","Oenothera nuttallii"
-"291","Evening primrose","Oenothera pallida"
-"292","Evening primrose","Oenothera parviflora"
-"293","Evening primrose","Oenothera pernnis"
-"294","Evening primrose","Oenothera pilosella"
-"295","Evening primrose","Oenothera serrulata"
-"296","Fern","Matteuccia struthipteris"
-"297","Horseradish","Armoracia aquatica"
-"298","Hyssop","Agastache foeniculum"
-"299","Hyssop","Agastache neptoides"
-"300","Hyssop","Agastache scrop hulariaefolia"
-"301","Hyssop","Agastache urticifolia"
-"302","Lathyrus","Lathyrus bijugatus"
-"303","Lathyrus","Lathyrus japonicus"
-"304","Lathyrus","Lathyrus littoralis"
-"305","Lathyrus","Lathyrus nevadensis"
-"306","Lathyrus","Lathyrus ochrolucus"
-"307","Lathyrus","Lathyrus palustris"
-"308","Lathyrus","Lathyrus venosus"
-"309","Lesquerella","Lesquerella alpina"
-"310","Lesquerella","Lesquerella arctica"
-"311","Lesquerella","Lesquerella douglasii"
-"312","Lesquerella","Lesquerella ludoviciana"
-"313","Mint","Mentha arvensis"
-"314","Monarda","Monarda fistulosa"
-"315","Onion","Allium acuminatum"
-"316","Onion","Allium amplectens"
-"317","Onion","Allium canadense"
-"318","Onion","Allium cernuum"
-"319","Onion","Allium crenulatum"
-"320","Onion","Allium geyeri"
-"321","Onion","Allium schoenoprasum"
-"322","Onion","Allium stellatum"
-"323","Onion","Allium textile"
-"324","Onion","Allium tricoccum"
-"325","Onosmodium","Onosmodium hipiddissimum"
-"326","Onosmodium","Onosmodium occidentale"
-"327","Proso millet","Panicum bicknellii"
-"328","Proso millet","Panicum boreale"
-"329","Proso millet","Panicum capillare"
-"330","Proso millet","Panicum clandestinum"
-"331","Proso millet","Panicum colombianum"
-"332","Proso millet","Panicum depauperatum"
-"333","Proso millet","Panicum dichotomiflorum"
-"334","Proso millet","Panicum dichotomum"
-"335","Proso millet","Panicum flexile"
-"336","Proso millet","Panicum lanuginosum"
-"337","Proso millet","Panicum leibergii"
-"338","Proso millet","Panicum linearifolium"
-"339","Proso millet","Panicum longifolium"
-"340","Proso millet","Panicum macrocarpon"
-"341","Proso millet","Panicum meridionale"
-"342","Proso millet","Panicum occidentale"
-"343","Proso millet","Panicum oligosanther"
-"344","Proso millet","Panicum pacificum"
-"345","Proso millet","Panicum perlongum"
-"346","Proso millet","Panicum philadelphicum"
-"347","Proso millet","Panicum praecocius"
-"348","Proso millet","Panicum rigidulum"
-"349","Proso millet","Panicum sphaerocarpon"
-"350","Proso millet","Panicum sprentum"
-"351","Proso millet","Panicum subvillosum"
-"352","Proso millet","Panicum thermale"
-"353","Proso millet","Panicum villosissimum"
-"354","Proso millet","Panicum virgatum"
-"355","Proso millet","Panicum wilcoxianum"
-"356","Proso millet","Panicum xanthophysum"
-"357","Quinoa","Chenopodium capitatum"
-"358","Quinoa","Chenopodium fremontii"
-"359","Quinoa","Chenopodium hybridum"
-"360","Quinoa","Chenopodium leptophyllum"
-"361","Quinoa","Chenopodium rubrum"
-"362","Taxus","Taxus brevifolia"
-"363","Taxus","Taxus canadensis"
-"364","Wild Rice","Zizania aquatica"
-"365","Fir","Abies amabilis"
-"366","Fir","Abies balsamea"
-"367","Fir","Abies grandis"
-"368","Fir","Abies lasiocarpa"
-"369","Cypress","Chamaecyparis nootkatensis"
-"370","Larch","Larix laricina"
-"371","Larch","Larix lyallii"
-"372","Larch","Larix occidentalis"
-"373","Spruce","Picea engelmanii"
-"374","Spruce","Picea glauca"
-"375","Spruce","Picea mariana"
-"376","Spruce","Picea rubens"
-"377","Spruce","Picea sitchensis"
-"378","Pine","Pinus albicaulis"
-"379","Pine","Pinus banksiana"
-"380","Pine","Pinus contorta"
-"381","Pine","Pinus flexilis"
-"382","Pine","Pinus monticola"
-"383","Pine","Pinus ponderosa"
-"384","Pine","Pinus resinosa"
-"385","Pine","Pinus rigida"
-"386","Pine","Pinus strobus"
-"387","Douglas fir","Pseudotsuga menziesii"
-"388","Cedar","Thuja occidentalis"
-"389","Cedar","Thuja plicata"
-"390","Hemlock","Tsuga canadensis"
-"391","Hemlock","Tsuga heterophylla"
-"392","Hemlock","Tsuga mertesiana"
-"393","Alder","Alnus crispa"
-"394","Alder","Alnus rubra"
-"395","Alder","Alnus rugosa"
-"396","Alder","Alnus sinuata"
-"397","Ash","Fraxinus americana"
-"398","Ash","Fraxinus nigra"
-"399","Ash","Fraxinus pennsylvanica"
-"400","Ash","Fraxinus quadrangulata"
-"401","Beech","Fagus grandifolia"
-"402","Birch","Betula lenta"
-"403","Birch","Betula lutea"
-"404","Birch","Betula neoalaskana"
-"405","Birch","Betula occidentalis"
-"406","Birch","Betula papyrifera"
-"407","Birch","Betula populifolia"
-"408","Butternut","Julans cinera"
-"409","Butternut","Julans nigra"
-"410","Elm","Ulmus americana"
-"411","Elm","Ulmus rubra"
-"412","Elm","Ulmus thomasii"
-"413","Linden","Tilia americana"
-"414","Maple","Acer circinnatum"
-"415","Maple","Acer glabrum"
-"416","Maple","Acer macrophyllum"
-"417","Maple","Acer negundo"
-"418","Maple","Acer nigrum"
-"419","Maple","Acer rubrum"
-"420","Maple","Acer pensylvanicum"
-"421","Maple","Acer saccharinum"
-"422","Maple","Acer saccharum"
-"423","Maple","Acer spicatum"
-"424","Mulberry","Morus rubra"
-"425","Oak","Quercus alba"
-"426","Oak","Quercus bicolor"
-"427","Oak","Quercus garryana"
-"428","Oak","Quercus marcrocarpa"
-"429","Oak","Quercus muehlenbergii"
-"430","Oak","Quercus palustris"
-"431","Oak","Quercus prinoides"
-"432","Oak","Quercus prinus"
-"433","Oak","Quercus rubra"
-"434","Oak","Quercus velutina"
-"435","Poplar","Populus angustifolia"
-"436","Poplar","Populus balsamifera"
-"437","Poplar","Populus deltoides"
-"438","Poplar","Populus grandidentata"
-"439","Poplar","Populus tremuloides"
-"440","Poplar","Populus trichocarpa"
-"441","Amaranth, Purple","Amaranthus hybridus"
-"442","Amaranth, Purple","Amaranthus retroflexus"
-"443","Apricot","Prunus maritima"
-"444","Barley","Hordeum brachyantherum"
-"445","Barley","Leymus mollis"
-"446","Bilberry","Vaccinium cespitosum"
-"447","Bilberry","Vaccinium corymbosum"
-"448","Blackberry","Rubus frondosus"
-"449","Blanket-Flower","Gaillardia aristata"
-"450","Bleeding-Heart","Dicentra formosa"
-"451","Blueberry, Highbush","Vaccinium fuscatum"
-"452","Blueberry, Highbush","Vaccinium pallidum"
-"453","Blueberry, Highbush","Vaccinium boreale"
-"454","Bluejoint","Calamagrostis canadensis"
-"455","Carrot","Daucus pusillus"
-"456","Cranberry","Vaccinium macrocarpon"
-"457","Cranberry","Vaccinium oxycoccos"
-"458","Cranberry","Vaccinium microcarpum"
-"459","Currant, Black","Ribes oxyacanthoides"
-"460","Fawn-Lily","Erythronium oregonum"
-"461","Filbert, European","Corylus californica"
-"462","Flax","Linum lewisii"
-"463","Gooseberry","Ribes hirtellum"
-"464","Gooseberry","Ribes inerme"
-"465","Hackberry, Ornamental","Celtis occidentalis"
-"466","Heal-All","Prunella vulgaris"
-"467","Hop","Humulus lupulus"
-"468","Lettuce","Lactuca tatarica"
-"469","Lily, Water-","Nymphaea tetragona"
-"470","Lupin","Lupinus polyphyllus"
-"471","Magnolia","Magnolia acuminata"
-"472","Mint, Corn","Mentha canadensis"
-"473","Mint, Mountain-","Pycnanthemum virginianum"
-"474","Quinoa","Chenopodium berlandieri"
-"475","Quinoa","Chenopodium desiccatum"
-"476","Quinoa","Chenopodium watsonii"
-"477","Quinoa","Chenopodium standleyanum"
-"478","Quinoa","Chenopodium hians"
-"479","Raspberry, Black","Rubus flagellaris"
-"480","Raspberry, Red","Rubus arcticus"
-"481","Raspberry, Red","Rubus nutkanus"
-"482","Rice","Zizania palustris"
-"483","Rosinweed","Silphium integrifolium"
-"484","Rosinweed","Silphium perfoliatum"
-"485","Spiderwort","Tradescantia virginiana"
-"486","Spinach","Blitum capitatum"
-"487","Spinach","Blitum nuttallianum"
-"488","Strawberry","Fragaria ×ananassa"
-"489","Strawberry","Dasiphora fruticosa"
-"490","Strawberry","Comarum palustre"
-"491","Strawberry","Drymocallis glandulosa"
-"492","Sunflower","Helianthus annuus"
-"493","Sunflower","Helianthus ×laetiflorus"
-"494","Sunflower","Helianthus pauciflorus"
-"495","Tobacco","Nicotiana attenuata"
-"496","Wheat","Leymus innovatus"
-"497","Wheat","Leymus triticoides"
-"498","Wheat","Leymus cinereus"
-"499","Wheat","Elymus elymoides"
-"500","Wheat","Elymus trachycaulus"
-"501","Wheat","Elymus macrourus"
-"502","Wheat","Elymus curvatus"
-"503","Wheat","Elymus lanceolatus"
-"504","Wheat","Elymus scribneri"
-"505","Wheat","Elymus wiegandii"
-"506","Wheat","Elymus violaceus"
-"507","Wheat","Elymus albicans"
-"508","Wheat","Elymus alaskanus"
-"509","Witch-Hazel","Hamamelis virginiana"
+Crop,sci_name
+Barley,Hordeum depressum
+Barley,Hordeum jubatum
+Barley,Hordeum pusillum
+Flax,Linum medium
+Flax,Linum perenne
+Flax,Linum rigidum
+Flax,Linum sulcatum
+Flax,Linum virginianum
+Sunflower,Helianthus decapetalus
+Sunflower,Helianthus divaricatus
+Sunflower,Helianthus giganteus
+Sunflower,Helianthus hirsutus
+Sunflower,Helianthus laetiflorus
+Sunflower,Helianthus maximiliani
+Sunflower,Helianthus nuttallii
+Sunflower,Helianthus petiolaris
+Sunflower,Helianthus strumosus
+Sunflower,Helianthus tuberosus
+Apple,Malus coronaria
+Apple,Malus fusca
+Blueberry,Vaccinium alaskaense
+Blueberry,Vaccinium angustifolium
+Blueberry,Vaccinium atrococcum
+Blueberry,Vaccinium caespitosum
+Blueberry,Vaccinium corymbsum
+Blueberry,Vaccinium deliciosum
+Blueberry,Vaccinium membranaceum
+Blueberry,Vaccinium myrtilloides
+Blueberry,Vaccinium myrtillus
+Blueberry,Vaccinium nubigeum
+Blueberry,Vaccinium ovalifolium
+Blueberry,Vaccinium ovatum
+Blueberry,Vaccinium parvifolium
+Blueberry,Vaccinium scoparium
+Blueberry,Vaccinium stamineum
+Blueberry,Vaccinium uliginosum
+Blueberry,Vaccinium vacillans
+Buffaloberry,Sherpherdia argetea
+Buffaloberry,Sherpherdia canadensis
+Cherry,Prunus besseyi
+Cherry,Prunus emarginata
+Cherry,Prunus pensylvanica
+Cherry,Prunus pumila
+Cherry,Prunus serotina
+Cherry,Prunus virginiana
+Cranberry,Vaccinium macrocarpus
+Cranberry,Vaccinium microcarpus
+Cranberry,Vaccinium ovalifolius
+Cranberry,Vaccinium quadripetalus
+Currant,Ribes americanum
+Currant,Ribes aureum
+Currant,Ribes bracteosum
+Currant,Ribes cereum
+Currant,Ribes cynosbati
+Currant,Ribes divaricatum
+Currant,Ribes glandulosum
+Currant,Ribes howellii
+Currant,Ribes hudsonianum
+Currant,Ribes irriguum
+Currant,Ribes lacustre
+Currant,Ribes laxiflorum
+Currant,Ribes lobbii
+Currant,Ribes sanguineum
+Currant,Ribes setosum
+Currant,Ribes triste
+Currant,Ribes viscosissiumum
+Currant,Ribes watsonianum
+Elderberry,Sambucus canadensis
+Elderberry,Sambucus cerulea
+Elderberry,Sambucus racemosa
+Grape,Vitis aestivalis
+Grape,Vitis riparia
+Highbush Cranberry,Viburnum acerifolium
+Highbush Cranberry,Viburnum alnifolium
+Highbush Cranberry,Viburnum cassinoides
+Highbush Cranberry,Viburnum dentatum
+Highbush Cranberry,Viburnum edule
+Highbush Cranberry,Viburnum lantana
+Highbush Cranberry,Viburnum lentago
+Highbush Cranberry,Viburnum rafinesquianum
+Highbush Cranberry,Viburnum trilobum
+Lingonberry,Vaccinium vitis-idaea
+Pawpaw,Asimina triloba
+Plum,Prunus americana
+Plum,Prunus nigra
+Raspberry,Rubus acualis
+Raspberry,Rubus allegheniensis
+Raspberry,Rubus articus
+Raspberry,Rubus canadensis
+Raspberry,Rubus chamaemorus
+Raspberry,Rubus enslenii
+Raspberry,Rubus glagellaris
+Raspberry,Rubus hispidus
+Raspberry,Rubus idaeus
+Raspberry,Rubus laciniatus
+Raspberry,Rubus lasiococcus
+Raspberry,Rubus leucodermis
+Raspberry,Rubus nivalis
+Raspberry,Rubus occidentalis
+Raspberry,Rubus odoratus
+Raspberry,Rubus parviflorus
+Raspberry,Rubus paracaulis
+Raspberry,Rubus pedatus
+Raspberry,Rubus pensilvanicus
+Raspberry,Rubus procerus
+Raspberry,Rubus pubescens
+Raspberry,Rubus recurvicaulis
+Raspberry,Rubus spectabilis
+Raspberry,Rubus stellatus
+Raspberry,Rubus ursinus
+Raspberry,Rubus vermontanus
+Saskatoon,Amelanchier alnifolia
+Saskatoon,Amelanchier arborea
+Saskatoon,Amelanchier bartramiana
+Saskatoon,Amelanchier canadensis
+Saskatoon,Amelanchier fernaldii
+Saskatoon,Amelanchier gaspensis
+Saskatoon,Amelanchier humilis
+Saskatoon,Amelanchier huronensis
+Saskatoon,Amelanchier intermedia
+Saskatoon,Amelanchier laevis
+Saskatoon,Amelanchier lucida
+Saskatoon,Amelanchier mucronata
+Saskatoon,Amelanchier sanguinea
+Saskatoon,Amelanchier stolonifera
+Saskatoon,Amelanchier wiegandii
+Strawberry,Fragaria chiloensis
+Strawberry,Fragaria vesca
+Strawberry,Fragaria virginiana
+Chestnut,Castanea dentata
+Hazelnut,Corylus americana
+Hazelnut,Corylus cornuta
+Hickory,Carya cordiformis
+Hickory,Carya glabra
+Hickory,Carya laciniosa
+Hickory,Carya ovalis
+Hickory,Carya ovata
+Hickory,Carya tomentosa
+Walnut,Juglans cinerea
+Walnut,Juglans nigra
+Bentgrass,Agrostis borealis
+Bentgrass,Agrostis diegoensis
+Bentgrass,Agrostis exarata
+Bentgrass,Agrostis hyemalis
+Bentgrass,Agrostis perennans
+Bluegrass,Poa abbreviata
+Bluegrass,Poa alpina
+Bluegrass,Poa alsodes
+Bluegrass,Poa ampla
+Bluegrass,Poa artica
+Bluegrass,Poa arida
+Bluegrass,Poa canbyi
+Bluegrass,Poa confinis
+Bluegrass,Poa cusickii
+Bluegrass,Poa eminens
+Bluegrass,Poa epilis
+Bluegrass,Poa gaspensis
+Bluegrass,Poa gluaca
+Bluegrass,Poa hartzii
+Bluegrass,Poa howellii
+Bluegrass,Poa juncifolia
+Bluegrass,Poa labrodorica
+Bluegrass,Poa laxa
+Bluegrass,Poa leptocoma
+Bluegrass,Poa lettermannii
+Bluegrass,Poa macrantha
+Bluegrass,Poa marcida
+Bluegrass,Poa nemoralis
+Bluegrass,Poa nervosa
+Bluegrass,Poa nevadensis
+Bluegrass,Poa occidentalis
+Bluegrass,Poa palustris
+Bluegrass,Poa pattersonii
+Bluegrass,Poa pratensis
+Bluegrass,Poa saltuensis
+Bluegrass,Poa sandbergii
+Bluegrass,Poa stenantha
+Bluegrass,Poa trivialis
+Bluegrass,Poa vaseyochloa
+Bluestem,Andropogon gerardii
+Bluestem,Andropogon hallii
+Bluestem,Andropogon scoparius
+Bromegrass,Bromus anomalus
+Bromegrass,Bromus canadensis
+Bromegrass,Bromus carinatus
+Bromegrass,Bromus cartharticus
+Bromegrass,Bromus ciliatus
+Bromegrass,Bromus inermis
+Bromegrass,Bromus pacificus
+Bromegrass,Bromus porteri
+Bromegrass,Bromus pubescens
+Bromegrass,Bromus purgans
+Bromegrass,Bromus sitchensis
+Bromegrass,Bromus vulgaris
+Canary Grass,Phalaris arundinacea
+Clover,Trifolium bifidum
+Clover,Trifolium cyathiferum
+Clover,Trifolium depauperatum
+Clover,Trifolium microcephalum
+Clover,Trifolium microdon
+Clover,Trifolium oliganthum
+Clover,Trifolium reflexum
+Clover,Trifolium tridentatum
+Clover,Trifolium varigatum
+Clover,Trifolium wormskjoldii
+Fescue,Festuca altaica
+Fescue,Festuca obtusa
+Fescue,Festuca occidentalis
+Fescue,Festuca ovina
+Fescue,Festuca rubra
+Fescue,Festuca subulata
+Fescue,Festuca subuliflora
+Fescue,Festuca viridula
+Milk vetch,Astragalus adsurgens
+Milk vetch,Astragalus agrestis
+Milk vetch,Astragalus alpinus
+Milk vetch,Astragalus americanus
+Milk vetch,Astragalus beckwithii
+Milk vetch,Astragalus bisulcatus
+Milk vetch,Astragalus bodinii
+Milk vetch,Astragalus bourgovii
+Milk vetch,Astragalus canadensis
+Milk vetch,Astragalus collinus
+Milk vetch,Astragalus crassicarpus
+Milk vetch,Astragalus drummondii
+Milk vetch,Astragalus eucosmus
+Milk vetch,Astragalus filipes
+Milk vetch,Astragalus flexuosus
+Milk vetch,Astragalus gilviflorus
+Milk vetch,Astragalus gracilis
+Milk vetch,Astragalus kentrophyta
+Milk vetch,Astragalus lentiginosus
+Milk vetch,Astragalus lotiflorus
+Milk vetch,Astragalus microcystis
+Milk vetch,Astragalus miser
+Milk vetch,Astragalus missouriensis
+Milk vetch,Astragalus neglectus
+Milk vetch,Astragalus pectinatus
+Milk vetch,Astragalus purshii
+Milk vetch,Astragalus racemosus
+Milk vetch,Astragalus robbinsii
+Milk vetch,Astragalus sclerocarpus
+Milk vetch,Astragalus spatulatus
+Milk vetch,Astragalus tenellus
+Milk vetch,Astragalus umbellatus
+Milk vetch,Astragalus vexilliflexus
+Milk vetch,Astragalus williamsii
+Sainfoin,Hedysarum alpinum
+Sainfoin,Hedysarum boreale
+Sainfoin,Hedysarum occidentale
+Sainfoin,Hedysarum sulphurescens
+Timothy,Phleum alpinum
+Trefoil,Lotus denticulatus
+Trefoil,Lotus formosissimus
+Trefoil,Lotus micranthus
+Trefoil,Lotus pinnatus
+Trefoil,Lotus purshianus
+Vetch,Vicia americana
+Vetch,Vicia carolinia
+Vetch,Vicia gigantea
+Wheatgrass,Agropyron albicans
+Wheatgrass,Agropyron dasystachyum
+Wheatgrass,Agropyron scribneri
+Wheatgrass,Agropyron smithii
+Wheatgrass,Agropyron spicatum
+Wheatgrass,Agropyron trachycaulum
+Wild Rye,Elymus canadensis
+Wild Rye,Elymus diversiglumis
+Wild Rye,Elymus glaucus
+Wild Rye,Elymus hirsutus
+Wild Rye,Elymus hystrix
+Wild Rye,Elymus innovatus
+Wild Rye,Elymus mollis
+Wild Rye,Elymus piperi
+Wild Rye,Elymus riparius
+Wild Rye,Elymus sibiricus
+Wild Rye,Elymus villosus
+Wild Rye,Elymus virginicus
+Amaranth,Amaranthus albus
+Amaranth,Amaranthus californicus
+Amaranth,Amaranthus graecizans
+Amaranth,Amaranthus tuberculatus
+Evening primrose,Oenothera andina
+Evening primrose,Oenothera biennis
+Evening primrose,Oenothera breviflora
+Evening primrose,Oenothera caespitosa
+Evening primrose,Oenothera contorta
+Evening primrose,Oenothera cruciata
+Evening primrose,Oenothera flava
+Evening primrose,Oenothera nuttallii
+Evening primrose,Oenothera pallida
+Evening primrose,Oenothera parviflora
+Evening primrose,Oenothera pernnis
+Evening primrose,Oenothera pilosella
+Evening primrose,Oenothera serrulata
+Fern,Matteuccia struthipteris
+Horseradish,Armoracia aquatica
+Hyssop,Agastache foeniculum
+Hyssop,Agastache neptoides
+Hyssop,Agastache scrop hulariaefolia
+Hyssop,Agastache urticifolia
+Lathyrus,Lathyrus bijugatus
+Lathyrus,Lathyrus japonicus
+Lathyrus,Lathyrus littoralis
+Lathyrus,Lathyrus nevadensis
+Lathyrus,Lathyrus ochrolucus
+Lathyrus,Lathyrus palustris
+Lathyrus,Lathyrus venosus
+Lesquerella,Lesquerella alpina
+Lesquerella,Lesquerella arctica
+Lesquerella,Lesquerella douglasii
+Lesquerella,Lesquerella ludoviciana
+Mint,Mentha arvensis
+Monarda,Monarda fistulosa
+Onion,Allium acuminatum
+Onion,Allium amplectens
+Onion,Allium canadense
+Onion,Allium cernuum
+Onion,Allium crenulatum
+Onion,Allium geyeri
+Onion,Allium schoenoprasum
+Onion,Allium stellatum
+Onion,Allium textile
+Onion,Allium tricoccum
+Onosmodium,Onosmodium hipiddissimum
+Onosmodium,Onosmodium occidentale
+Proso millet,Panicum bicknellii
+Proso millet,Panicum boreale
+Proso millet,Panicum capillare
+Proso millet,Panicum clandestinum
+Proso millet,Panicum colombianum
+Proso millet,Panicum depauperatum
+Proso millet,Panicum dichotomiflorum
+Proso millet,Panicum dichotomum
+Proso millet,Panicum flexile
+Proso millet,Panicum lanuginosum
+Proso millet,Panicum leibergii
+Proso millet,Panicum linearifolium
+Proso millet,Panicum longifolium
+Proso millet,Panicum macrocarpon
+Proso millet,Panicum meridionale
+Proso millet,Panicum occidentale
+Proso millet,Panicum oligosanther
+Proso millet,Panicum pacificum
+Proso millet,Panicum perlongum
+Proso millet,Panicum philadelphicum
+Proso millet,Panicum praecocius
+Proso millet,Panicum rigidulum
+Proso millet,Panicum sphaerocarpon
+Proso millet,Panicum sprentum
+Proso millet,Panicum subvillosum
+Proso millet,Panicum thermale
+Proso millet,Panicum villosissimum
+Proso millet,Panicum virgatum
+Proso millet,Panicum wilcoxianum
+Proso millet,Panicum xanthophysum
+Quinoa,Chenopodium capitatum
+Quinoa,Chenopodium fremontii
+Quinoa,Chenopodium hybridum
+Quinoa,Chenopodium leptophyllum
+Quinoa,Chenopodium rubrum
+Taxus,Taxus brevifolia
+Taxus,Taxus canadensis
+Wild Rice,Zizania aquatica
+Fir,Abies amabilis
+Fir,Abies balsamea
+Fir,Abies grandis
+Fir,Abies lasiocarpa
+Cypress,Chamaecyparis nootkatensis
+Larch,Larix laricina
+Larch,Larix lyallii
+Larch,Larix occidentalis
+Spruce,Picea engelmanii
+Spruce,Picea glauca
+Spruce,Picea mariana
+Spruce,Picea rubens
+Spruce,Picea sitchensis
+Pine,Pinus albicaulis
+Pine,Pinus banksiana
+Pine,Pinus contorta
+Pine,Pinus flexilis
+Pine,Pinus monticola
+Pine,Pinus ponderosa
+Pine,Pinus resinosa
+Pine,Pinus rigida
+Pine,Pinus strobus
+Douglas fir,Pseudotsuga menziesii
+Cedar,Thuja occidentalis
+Cedar,Thuja plicata
+Hemlock,Tsuga canadensis
+Hemlock,Tsuga heterophylla
+Hemlock,Tsuga mertesiana
+Alder,Alnus crispa
+Alder,Alnus rubra
+Alder,Alnus rugosa
+Alder,Alnus sinuata
+Ash,Fraxinus americana
+Ash,Fraxinus nigra
+Ash,Fraxinus pennsylvanica
+Ash,Fraxinus quadrangulata
+Beech,Fagus grandifolia
+Birch,Betula lenta
+Birch,Betula lutea
+Birch,Betula neoalaskana
+Birch,Betula occidentalis
+Birch,Betula papyrifera
+Birch,Betula populifolia
+Butternut,Julans cinera
+Butternut,Julans nigra
+Elm,Ulmus americana
+Elm,Ulmus rubra
+Elm,Ulmus thomasii
+Linden,Tilia americana
+Maple,Acer circinnatum
+Maple,Acer glabrum
+Maple,Acer macrophyllum
+Maple,Acer negundo
+Maple,Acer nigrum
+Maple,Acer rubrum
+Maple,Acer pensylvanicum
+Maple,Acer saccharinum
+Maple,Acer saccharum
+Maple,Acer spicatum
+Mulberry,Morus rubra
+Oak,Quercus alba
+Oak,Quercus bicolor
+Oak,Quercus garryana
+Oak,Quercus marcrocarpa
+Oak,Quercus muehlenbergii
+Oak,Quercus palustris
+Oak,Quercus prinoides
+Oak,Quercus prinus
+Oak,Quercus rubra
+Oak,Quercus velutina
+Poplar,Populus angustifolia
+Poplar,Populus balsamifera
+Poplar,Populus deltoides
+Poplar,Populus grandidentata
+Poplar,Populus tremuloides
+Poplar,Populus trichocarpa
+Amaranth,Amaranthus hybridus
+Amaranth,Amaranthus retroflexus
+Apricot,Prunus maritima
+Barley,Hordeum brachyantherum
+Barley,Leymus mollis
+Bilberry,Vaccinium cespitosum
+Bilberry,Vaccinium corymbosum
+Blackberry,Rubus frondosus
+Blanket Flower,Gaillardia aristata
+Bleeding Heart,Dicentra formosa
+Blueberry,Vaccinium fuscatum
+Blueberry,Vaccinium pallidum
+Blueberry,Vaccinium boreale
+Bluejoint,Calamagrostis canadensis
+Carrot,Daucus pusillus
+Black Currant,Ribes oxyacanthoides
+Fawn Lily,Erythronium oregonum
+European Filbert,Corylus californica
+Flax,Linum lewisii
+Gooseberry,Ribes hirtellum
+Gooseberry,Ribes inerme
+Ornamental Hackberry,Celtis occidentalis
+Heal All,Prunella vulgaris
+Hop,Humulus lupulus
+Lettuce,Lactuca tatarica
+Water Lily,Nymphaea tetragona
+Lupin,Lupinus polyphyllus
+Magnolia,Magnolia acuminata
+Corn Mint,Mentha canadensis
+Mountain Mint,Pycnanthemum virginianum
+Quinoa,Chenopodium berlandieri
+Quinoa,Chenopodium desiccatum
+Quinoa,Chenopodium watsonii
+Quinoa,Chenopodium standleyanum
+Quinoa,Chenopodium hians
+Raspberry,Rubus flagellaris
+Raspberry,Rubus arcticus
+Raspberry,Rubus nutkanus
+Rice,Zizania palustris
+Rosinweed,Silphium integrifolium
+Rosinweed,Silphium perfoliatum
+Spiderwort,Tradescantia virginiana
+Spinach,Blitum capitatum
+Spinach,Blitum nuttallianum
+Strawberry,Fragaria x ananassa
+Strawberry,Dasiphora fruticosa
+Strawberry,Comarum palustre
+Strawberry,Drymocallis glandulosa
+Sunflower,Helianthus annuus
+Sunflower,Helianthus x laetiflorus
+Sunflower,Helianthus pauciflorus
+Tobacco,Nicotiana attenuata
+Wheat,Leymus innovatus
+Wheat,Leymus triticoides
+Wheat,Leymus cinereus
+Wheat,Elymus elymoides
+Wheat,Elymus trachycaulus
+Wheat,Elymus macrourus
+Wheat,Elymus curvatus
+Wheat,Elymus lanceolatus
+Wheat,Elymus scribneri
+Wheat,Elymus wiegandii
+Wheat,Elymus violaceus
+Wheat,Elymus albicans
+Wheat,Elymus alaskanus
+Witch Hazel,Hamamelis virginiana
