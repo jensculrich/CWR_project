@@ -41,6 +41,8 @@ native_occurrence_df <- df2 %>% # drop unformatted columns, change chr to factor
          PRENAME = as.factor(PRENAME), ECO_NAME = as.factor(ECO_NAME), 
          ECO_CODE = as.factor(ECO_CODE))
 
+cwr_list <- read.csv("CWR_Master_list.csv")
+
 ##########
 # Part 1A compile garden data and append ecoregion or province
 # when lat/long was given
