@@ -42,6 +42,12 @@ native_occurrence_df <- df2 %>% # drop unformatted columns, change chr to factor
          ECO_CODE = as.factor(ECO_CODE))
 
 cwr_list <- read.csv("CWR_Master_list.csv")
+cwr_list <- cwr_list %>% rename("sci_nam" = "sci_name")
+native_occurrence_df <- left_join(native_occurrence_df, cwr_list, by = "sci_nam")
+native_occurrence_df <- native_occurrence_df %>%
+  dplyr::select(-Crop.x) %>%
+  rename("Crop" = "Crop.y")
+
 
 ##########
 # Part 1A compile garden data and append ecoregion or province
@@ -55,13 +61,14 @@ cwr_montreal <- read.csv("CWR_of_MontrealBG.csv")
 cwr_guelph <- read.csv("CWR_of_UofGuelph.csv")
 cwr_mountp <- read.csv("CWR_of_MountPleasantGroup.csv")
 cwr_vandusen <- read.csv("CWR_of_VanDusenBG.csv")
-cwr_pgrc <- read.csv("Amelanchier_PGRC.csv")
-cwr_usask <- read.csv("Amelanchier_UofSask.csv")
+# cwr_pgrc <- read.csv("Amelanchier_PGRC.csv") # removing these subsetted data sets for now
+# cwr_usask <- read.csv("Amelanchier_UofSask.csv") # removing these subsetted data sets for now
+cwr_readerrock <- read.csv("CWR_of_ReaderRock.csv")
 
 # join all garden data into one long table
 # update and add new gardens as we receive additional datasets
 garden_accessions <- rbind(cwr_ubc, cwr_rbg, cwr_montreal, cwr_guelph, cwr_mountp, cwr_vandusen,
-      cwr_pgrc, cwr_usask)
+      cwr_readerrock)
 garden_accessions <- garden_accessions %>% # format columns
   mutate(latitude = as.numeric(latitude), 
          longitude = as.numeric(longitude)) %>%
@@ -131,7 +138,7 @@ P <- ggplot() +
         plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5)
   )
 P
-
+# add garden locations
 
 # Plot By province
 Q <- ggplot() +
@@ -149,6 +156,7 @@ Q <- ggplot() +
         plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5)
         )
 Q
+# add garden locations
 
 # Append Province to accession using lat and longitude
 points_sf = st_transform( st_as_sf(sf_garden_accessions), 
@@ -271,17 +279,8 @@ Ecoregion_HeatMap <- ggplot() +
 #)
 Ecoregion_HeatMap
 
-native_occurrence_sf <- tigris::geo_join(canada_eco_subset, native_occurrence_df, by = "ECO_NAME")
 
-Natural_Occurrence_Ecoregion_Heatmap <- ggplot() +
-  geom_sf(
-  aes(fill = ), size = 0.1, data = native_occurrence_sf) +
-  scale_fill_distiller(palette = "Spectral") +
-  coord_sf(crs = crs_string) +
-  guides(fill = FALSE) +
-  theme_map() +
-  theme()
-Natural_Occurrence_Ecoregion_Heatmap
+
 
 
 # choroLayer(x = join2_eco, 
@@ -338,16 +337,28 @@ df_all_accessions_with_provinces_and_eco <- as.data.frame(all_garden_accessions_
 all_garden_accessions_shapefile
 # join all_accessions with native provinces
 
-native_occurrence_df_formatted <- native_occurrence_df %>%
+native_occurrence_df_province_formatted <- native_occurrence_df %>%
   rename("province" = "PRENAME", "crop" = "Crop", "species" = "sci_nam") %>%
-  dplyr::select(-latitude, -longitude)
+  # drop eco_name and eco_code
+  dplyr::select(-latitude, -longitude, -ECO_NAME, -ECO_CODE) %>%
+  # now delete any repeated rows within CWR (caused by multiple ecoregions in each province)
+  group_by(crop, species) %>%
+  distinct(province)
+  
+native_occurrence_df_ecoregion_formatted <- native_occurrence_df %>%
+  rename("province" = "PRENAME", "crop" = "Crop", "species" = "sci_nam") %>%
+  # drop province
+  dplyr::select(-latitude, -longitude, -province) %>%
+  # now delete any repeated rows within CWR (caused by ecoregions spanning multiple province)
+  group_by(crop, species) %>%
+  distinct(ECO_NAME)
 
 
-# maybe need to do a full gap table by ecoregion and by province
-full_gap_table_test <- tigris::geo_join(all_garden_accessions_shapefile, native_occurrence_df_formatted, by = "species")
+province_gap_table <- full_join(native_occurrence_df_province_formatted, all_garden_accessions_shapefile)
+ecoregion_gap_table <- full_join(native_occurrence_df_ecoregion_formatted, all_garden_accessions_shapefile)
+write.csv(province_gap_table, "province_gap_table.csv")
+write.csv(ecoregion_gap_table, "ecoregion_gap_table.csv")
 
-full_gap_table <- full_join(native_occurrence_df_formatted, all_garden_accessions_shapefile)
-# write.csv(full_gap_table, "full_gap_table.csv")
 # full_gap_table_geojson <- tigris::geo_join( , full_gap_table, by = "province")
 # geojsonio::geojson_write(full_gap_table_geojson, file = "full_gap_table.geojson")
 
@@ -457,4 +468,58 @@ ZZ <- ggplot() +
   )
 ZZ
 
+######################
+# Native Occurrence  #
+######################
+
+province_gap_table <- as_tibble(read.csv("province_gap_table.csv"))
+ecoregion_gap_table <- as_tibble(read.csv("ecoregion_gap_table.csv"))
+# order gap tables so that user choices are alphabetically organized
+province_gap_table <- province_gap_table[order(province_gap_table$crop),]
+ecoregion_gap_table <- ecoregion_gap_table[order(ecoregion_gap_table$crop),]
+
+# native occurrence heatmap
+# by province
+native_occurrence_heatmap_provinces <- province_gap_table %>%
+  # filter for garden = NA
+  filter(is.na(garden)) %>%
+  # group by province
+  group_by(province) %>%
+  # tally the number of species
+  add_tally() %>%
+  rename("native_crop_wild_relatives" = "n")
+
+native_occurrence_sf_provinces <- tigris::geo_join(canada_cd, native_occurrence_heatmap_provinces, by = "province")
+
+Natural_Occurrence_Province_Heatmap <- ggplot() +
+  geom_sf(
+    aes(fill = native_crop_wild_relatives), size = 0.1, data = native_occurrence_sf_provinces) +
+  scale_fill_distiller(palette = "Spectral") +
+  coord_sf(crs = crs_string) +
+  guides() +
+  theme_map() +
+  theme(legend.position = c(-.47,0))
+Natural_Occurrence_Province_Heatmap
+
+# by ecoregion
+native_occurrence_heatmap_ecoregion <- ecoregion_gap_table %>%
+  # filter for garden = NA
+  filter(is.na(garden)) %>%
+  # group by province
+  group_by(ECO_NAME) %>%
+  # tally the number of species
+  add_tally() %>%
+  rename("native_crop_wild_relatives" = "n")
+
+native_occurrence_sf_ecoregions <- tigris::geo_join(canada_eco_subset, native_occurrence_heatmap_ecoregion, by = "ECO_NAME")
+
+Natural_Occurrence_Ecoregion_Heatmap <- ggplot() +
+  geom_sf(
+    aes(fill = native_crop_wild_relatives), size = 0.1, data = native_occurrence_sf_ecoregions) +
+  scale_fill_distiller(palette = "Spectral") +
+  coord_sf(crs = crs_string) +
+  guides() +
+  theme_map() +
+  theme(legend.position = c(-.47,0))
+Natural_Occurrence_Ecoregion_Heatmap
 
