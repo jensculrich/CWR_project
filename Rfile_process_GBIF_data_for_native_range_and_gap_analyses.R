@@ -1,8 +1,12 @@
+############################################################
+# in order to conduct a GAP ANALYSIS, we need to determine the ecoregion and province
+# represented by each of the CWR ex situ accessions in our gardens data sets.
+# then this ex situ conservation coverage must be compared against the native range.
+
+
 ###################################################################
 # Section 1 Load and format GBIF native range data
 ###################################################################
-
-# 
 
 # the "GBIF_by_province.csv" dataset includes a row for each unique 
 # combination of ecoregion and province that a CWR naturally occurs in (given GBIF data), 

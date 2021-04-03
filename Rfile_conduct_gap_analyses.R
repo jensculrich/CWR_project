@@ -1,12 +1,4 @@
-############################################################
-# in order to conduct a GAP ANALYSIS, we need to determine the ecoregion and province
-# represented by each of the CWR ex situ accessions in our gardens data sets.
-# then this ex situ conservation coverage must be compared against the native range.
-
-# PART ONE: 
-# join province/ecoregion with each accession from garden collection data based on 
-# lat/long they provided us. some gardens only have lat/long, 
-# others will have province. Most accessions (about 80%, see below) have neither lat/long or province.
+# INTRO (EDIT THIS)
 
 # load required packages
 library(sf) # the base package manipulating shapes
@@ -28,26 +20,16 @@ library(tigris)
 ######################################################################################
 
 # Load required data and shapefiles for building reactive maps and data tables
-canada_ecoregions_geojson <- st_read("canada_ecoregions_clipped.geojson", quiet = TRUE)
-canada_provinces_geojson <- st_read("canada_provinces.geojson", quiet = TRUE)
-province_gap_table <- as_data_frame(read.csv("province_gap_table.csv"))
-ecoregion_gap_table <- as_data_frame(read.csv("ecoregion_gap_table.csv"))
+
+canada_ecoregions_geojson <- st_read("./Geo_Data/canada_ecoregions_clipped.geojson", quiet = TRUE)
+canada_provinces_geojson <- st_read("./Geo_Data/canada_provinces.geojson", quiet = TRUE)
+
+province_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/province_gap_table.csv"))
+ecoregion_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/ecoregion_gap_table.csv"))
 
 # CRS 
 crs_string = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs" # 2
 
-# add geojson map with province boundaries 
-canada_cd <- st_read("canada_provinces.geojson", quiet = TRUE) 
-canada_cd <- canada_cd %>%
-  rename("province" = "name")
-
-# add geojson map clipped ecoregion boundaries 
-canada_eco_subset <- st_read("canada_ecoregions_clipped.geojson", quiet = TRUE)
-
-# province gap table
-# ecoregion gap table
-
-# Plot the maps
 # Define the maps' theme -- remove axes, ticks, borders, legends, etc.
 theme_map <- function(base_size=9, base_family="") { # 3
   require(grid)
@@ -66,13 +48,52 @@ theme_map <- function(base_size=9, base_family="") { # 3
     )
 }
 
+############################################################################
+# Reformat Gap Tables So That Garden Points Can Be Projected alternates
+############################################################################
+
+province_gap_table <- province_gap_table %>%
+  dplyr::select(-geometry, -X, -X.1, -ECO_CODE, -ECO_NAME)
+  
+province_gap_table_sf <- st_as_sf(province_gap_table, 
+                                  coords = c("longitude", "latitude"), 
+                                  crs = 4326, 
+                                  na.fail = FALSE)
+
+ecoregion_gap_table <- ecoregion_gap_table %>%
+  dplyr::select(-geometry, -X, -X.1, -province)
+
+ecoregion_gap_table_sf <- st_as_sf(ecoregion_gap_table, 
+                                  coords = c("longitude", "latitude"), 
+                                  crs = 4326, 
+                                  na.fail = FALSE)
+
 # For P and Q Maybe Also add points that represent our surveyed gardens?
+
+# Plot By province
+Q <- ggplot() +
+  geom_sf(
+    # aes(fill = name), 
+    color = "gray60", size = 0.1, data = canada_provinces_geojson) +
+  geom_sf(data = province_gap_table_sf, color = '#001e73', alpha = 0.5, size = 3) + # 17
+  coord_sf(crs = crs_string) +
+  # scale_fill_manual(values = map_colors) +
+  guides(fill = FALSE) +
+  theme_map() +
+  ggtitle("Known Geographic Origins of Native CWR's in Surveyed Canadian Botanic Gardens") +
+  theme(panel.grid.major = element_line(color = "white"),
+        legend.key = element_rect(color = "gray40", size = 0.1),
+        plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5)
+  )
+Q
+
+
 # Plot Ecoregions
 P <- ggplot() +
   geom_sf(
     # aes(fill = name), 
-    color = "gray60", size = 0.1, data = canada_eco_subset) +
-  geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
+    color = "gray60", size = 0.1, data = canada_ecoregions_geojson) +
+  geom_sf(data = ecoregion_gap_table_sf, color = '#001e73', alpha = 0.5, size = 3) + # 17
   coord_sf(crs = crs_string) +
   # scale_fill_manual(values = map_colors) +
   guides(fill = FALSE) +
@@ -83,25 +104,32 @@ P <- ggplot() +
         plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5)
   )
 P
-# add garden locations
 
-# Plot By province
-Q <- ggplot() +
-  geom_sf(
-    # aes(fill = name), 
-    color = "gray60", size = 0.1, data = canada_cd) +
-  geom_sf(data = sf_garden_accessions, color = '#001e73', alpha = 0.5, size = 3) + # 17
-  coord_sf(crs = crs_string) +
-  # scale_fill_manual(values = map_colors) +
-  guides(fill = FALSE) +
-  theme_map() +
-  ggtitle("Known Geographic Origins of Native CWR's in Surveyed Canadian Botanic Gardens") +
-  theme(panel.grid.major = element_line(color = "white"),
-        legend.key = element_rect(color = "gray40", size = 0.1),
-        plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5)
-        )
-Q
-# add garden locations
+
+######################################################################################
+#
+######################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Append Province to accession using lat and longitude
 points_sf = st_transform( st_as_sf(sf_garden_accessions), 

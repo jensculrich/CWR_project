@@ -1,25 +1,83 @@
+# INTRO (EDIT THIS)
+
+# load required packages
+library(sf) # the base package manipulating shapes
+library(rgeos)
+library(rgdal) # geo data abstraction library
+library(geojsonio) # geo json input and output
+library(spdplyr) # the `dplyr` counterpart for shapes
+library(rmapshaper) # the package that allows geo shape transformation
+library(magrittr) # data wrangling
+library(dplyr)
 library(tidyverse)
-library(stringr)
 library(ggplot2)
+library(raster)
+library(viridis)
+library(tigris)
 
-# this file is for calculating some summary stats for CWR natural occurrence 
-# by operating on the "GBIF_by_province.csv" dataset, which includes a row for
-# each unique combination of ecoregion and province that a CWR naturally occurs in (given GBIF data), 
-# and one coordinate point for each of those unique ecoregion and province combinations to facilitate mapping.
+######################################################################################
 
-# Load data and format so that it can be changed into a projected shapefile
-df <- read.csv("./Input_Data_and_Files/GBIF_by_Province.csv")
-df2 <- df %>%
-  dplyr::select(Crop, sci_nam, ECO_CODE, ECO_NAME, PRENAME, geometry, X.1)
-# remove "()" and "c" from geometry and X.1, rename as longitude and latitude
-# change from chr to numeric
-df2$longitude <- as.numeric(str_sub(df2$geometry, 3))  
-df2$latitude <- as.numeric(str_remove(df2$X.1, "[)]"))
-Native_Range_DF <- df2 %>% # drop unformatted columns, change chr to factor data class
-  dplyr::select(-geometry, -X.1) %>%
-  mutate(sci_nam = as.factor(sci_nam), Crop = as.factor(Crop), 
-         PRENAME = as.factor(PRENAME), ECO_NAME = as.factor(ECO_NAME), 
-         ECO_CODE = as.factor(ECO_CODE))
+######################################################################################
+
+# Load required data and shapefiles for building reactive maps and data tables
+
+canada_ecoregions_geojson <- st_read("./Geo_Data/canada_ecoregions_clipped.geojson", quiet = TRUE)
+canada_provinces_geojson <- st_read("./Geo_Data/canada_provinces.geojson", quiet = TRUE)
+
+province_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/province_gap_table.csv"))
+ecoregion_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/ecoregion_gap_table.csv"))
+
+# CRS 
+crs_string = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs" # 2
+
+# Define the maps' theme -- remove axes, ticks, borders, legends, etc.
+theme_map <- function(base_size=9, base_family="") { # 3
+  require(grid)
+  theme_bw(base_size=base_size, base_family=base_family) %+replace%
+    theme(axis.line=element_blank(),
+          axis.text=element_blank(),
+          axis.ticks=element_blank(),
+          axis.title=element_blank(),
+          panel.background=element_blank(),
+          panel.border=element_blank(),
+          panel.grid=element_blank(),
+          panel.spacing=unit(0, "lines"),
+          plot.background=element_blank(),
+          legend.justification = c(0,0),
+          legend.position = c(0,0)
+    )
+}
+
+############################################################################
+# Reformat Gap Tables So That Garden Points Can Be Projected alternates
+############################################################################
+
+province_gap_table <- province_gap_table %>%
+  dplyr::select(-geometry, -X, -X.1, -ECO_CODE, -ECO_NAME)
+
+province_gap_table_sf <- st_as_sf(province_gap_table, 
+                                  coords = c("longitude", "latitude"), 
+                                  crs = 4326, 
+                                  na.fail = FALSE)
+
+ecoregion_gap_table <- ecoregion_gap_table %>%
+  dplyr::select(-geometry, -X, -X.1, -province)
+
+ecoregion_gap_table_sf <- st_as_sf(ecoregion_gap_table, 
+                                   coords = c("longitude", "latitude"), 
+                                   crs = 4326, 
+                                   na.fail = FALSE)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
