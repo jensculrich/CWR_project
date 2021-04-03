@@ -20,91 +20,32 @@ library(dplyr)
 library(tidyverse)
 library(ggplot2)
 library(raster)
-library(cartography)
 library(viridis)
 library(tigris)
 
-# load and format natural occurrence dataset
-df <- read.csv("GBIF_by_Province.csv")
+######################################################################################
 
-# update this to include crop group when that's added
-df2 <- df %>%
-  dplyr::select(Crop, sci_nam, ECO_CODE, ECO_NAME, PRENAME, geometry, X.1)
+######################################################################################
 
-# format natural occurrence dataset...
-# want to change this into a projected shapefile and 
-# so we need to isolate longitude and latitude
-# remove "()" and "c" from geometry and X.1, rename as longitude and latitude
-# change from chr to numeric
-df2$longitude <- as.numeric(str_sub(df2$geometry, 3))  
-df2$latitude <- as.numeric(str_remove(df2$X.1, "[)]"))
-native_occurrence_df <- df2 %>% # drop unformatted columns, change chr to factor data class
-  dplyr::select(-geometry, -X.1) %>%
-  mutate(sci_nam = as.factor(sci_nam), Crop = as.factor(Crop), 
-         PRENAME = as.factor(PRENAME), ECO_NAME = as.factor(ECO_NAME), 
-         ECO_CODE = as.factor(ECO_CODE))
+# Load required data and shapefiles for building reactive maps and data tables
+canada_ecoregions_geojson <- st_read("canada_ecoregions_clipped.geojson", quiet = TRUE)
+canada_provinces_geojson <- st_read("canada_provinces.geojson", quiet = TRUE)
+province_gap_table <- as_data_frame(read.csv("province_gap_table.csv"))
+ecoregion_gap_table <- as_data_frame(read.csv("ecoregion_gap_table.csv"))
 
-
-cwr_list <- read.csv("CWR_Master_list.csv")
-cwr_list <- cwr_list %>% rename("sci_nam" = "sci_name")
-native_occurrence_df <- left_join(native_occurrence_df, cwr_list, by = "sci_nam")
-native_occurrence_df <- native_occurrence_df %>%
-  dplyr::select(-Crop.x) %>%
-  rename("Crop" = "Crop.y")
-
-
-##########
-# Part 1A compile garden data and append ecoregion or province
-# when lat/long was given
-
-# load data from garden collections (already filtered to only CWRs)
-# update and add new gardens as we receive additional datasets
-cwr_ubc <- read.csv("CWR_of_UBC.csv")
-cwr_rbg <- read.csv("CWR_of_RBG.csv")
-cwr_montreal <- read.csv("CWR_of_MontrealBG.csv")
-cwr_guelph <- read.csv("CWR_of_UofGuelph.csv")
-cwr_mountp <- read.csv("CWR_of_MountPleasantGroup.csv")
-cwr_vandusen <- read.csv("CWR_of_VanDusenBG.csv")
-# cwr_pgrc <- read.csv("Amelanchier_PGRC.csv") # removing these subsetted data sets for now
-# cwr_usask <- read.csv("Amelanchier_UofSask.csv") # removing these subsetted data sets for now
-cwr_readerrock <- read.csv("CWR_of_ReaderRock.csv")
-
-# join all garden data into one long table
-# update and add new gardens as we receive additional datasets
-garden_accessions <- rbind(cwr_ubc, cwr_rbg, cwr_montreal, cwr_guelph, cwr_mountp, cwr_vandusen,
-      cwr_readerrock)
-garden_accessions <- garden_accessions %>% # format columns
-  mutate(latitude = as.numeric(latitude), 
-         longitude = as.numeric(longitude)) %>%
-  # for now, we want to filter our data for coverage of ONLY CANADIAN ecoregions/admin districts
-  # delete the follwoing line of code if the focus expands to North America or world
-  filter(country == "Canada")
-
-# Transform garden data into a projected shape file
-sf_garden_accessions <- garden_accessions %>%
-  # na.fail = FALSE to keep all of the accessions (about 80% don't have lat long,
-  # but many of these have province at least)
-  st_as_sf(coords = c("longitude", "latitude"), crs = 4326, na.fail = FALSE)
-
-# add geojson map with province boundaries 
-canada_cd <- st_read("canada_provinces.geojson", quiet = TRUE) # 1
+# CRS 
 crs_string = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs" # 2
 
-# add geojson map with all of canada (no inner boundaries)
-# we will use this as a boundary for trimming all the ecoregion maps
-canada <- st_read("canada.geojson", quiet = TRUE) # 1
-
-# add geojson map with ecoregion boundaries
-world_eco <- st_read("world_ecoregions.geojson", quiet = TRUE)
-# Trim geojson world map to canada ecoregions from native_occurrence_df
-canada_eco <- semi_join(world_eco, native_occurrence_df, by=("ECO_CODE")) 
-
-# clip ecoregions to canada national border
-canada_eco_subset <- st_intersection(canada_eco, canada)
-#geojsonio::geojson_write(canada_eco_subset, file = "canada_ecoregions_clipped.geojson")
-
+# add geojson map with province boundaries 
+canada_cd <- st_read("canada_provinces.geojson", quiet = TRUE) 
 canada_cd <- canada_cd %>%
   rename("province" = "name")
+
+# add geojson map clipped ecoregion boundaries 
+canada_eco_subset <- st_read("canada_ecoregions_clipped.geojson", quiet = TRUE)
+
+# province gap table
+# ecoregion gap table
 
 # Plot the maps
 # Define the maps' theme -- remove axes, ticks, borders, legends, etc.
@@ -255,6 +196,7 @@ accessions_summarized_by_eco <- all_garden_accessions_shapefile %>%
   add_tally # sum the number of accessions from each ecoregion
 # join the acession data with the ecoregion shapefile
 join_eco <- st_join(canada_eco_subset, accessions_summarized_by_eco, left = TRUE)
+
 # format for heat map
 join2_eco <- join_eco %>%
   # only want one row representing each ecoregion (since every row in same
