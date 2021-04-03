@@ -24,13 +24,16 @@ library(cartography)
 library(viridis)
 library(tigris)
 
-# load natural occurrence dataset
+# load and format natural occurrence dataset
 df <- read.csv("GBIF_by_Province.csv")
 
+# update this to include crop group when that's added
 df2 <- df %>%
   dplyr::select(Crop, sci_nam, ECO_CODE, ECO_NAME, PRENAME, geometry, X.1)
 
 # format natural occurrence dataset...
+# want to change this into a projected shapefile and 
+# so we need to isolate longitude and latitude
 # remove "()" and "c" from geometry and X.1, rename as longitude and latitude
 # change from chr to numeric
 df2$longitude <- as.numeric(str_sub(df2$geometry, 3))  
@@ -40,6 +43,7 @@ native_occurrence_df <- df2 %>% # drop unformatted columns, change chr to factor
   mutate(sci_nam = as.factor(sci_nam), Crop = as.factor(Crop), 
          PRENAME = as.factor(PRENAME), ECO_NAME = as.factor(ECO_NAME), 
          ECO_CODE = as.factor(ECO_CODE))
+
 
 cwr_list <- read.csv("CWR_Master_list.csv")
 cwr_list <- cwr_list %>% rename("sci_nam" = "sci_name")
@@ -487,7 +491,21 @@ native_occurrence_heatmap_provinces <- province_gap_table %>%
   group_by(province) %>%
   # tally the number of species
   add_tally() %>%
-  rename("native_crop_wild_relatives" = "n")
+  rename("native_crop_wild_relatives" = "n") %>%
+  ungroup() %>%
+  # identify endemic species per province
+  # species that occur in only one province
+  group_by(species) %>%
+  # if group is only one row, endemic = 1, else endemic = 0
+  add_tally() %>%
+  rename("native_provinces_for_species" = "n") %>%
+  mutate(is_endemic = ifelse(
+    native_provinces_for_species == 1, 1, 0)) %>%
+  ungroup() %>%
+  group_by(province) %>%
+  mutate(total_endemics_in_province = sum(is_endemic))
+  # for the shiny/report we could generate filtered tables of narrow endemics?
+
 
 native_occurrence_sf_provinces <- tigris::geo_join(canada_cd, native_occurrence_heatmap_provinces, by = "province")
 
@@ -509,7 +527,21 @@ native_occurrence_heatmap_ecoregion <- ecoregion_gap_table %>%
   group_by(ECO_NAME) %>%
   # tally the number of species
   add_tally() %>%
-  rename("native_crop_wild_relatives" = "n")
+  rename("native_crop_wild_relatives" = "n") %>%
+  ungroup() %>%
+  # identify endemic species per province
+  # species that occur in only one province
+  group_by(species) %>%
+  # if group is only one row, endemic = 1, else endemic = 0
+  add_tally() %>%
+  rename("native_ecoregions_for_species" = "n") %>%
+  mutate(is_endemic = ifelse(
+    native_ecoregions_for_species == 1, 1, 0)) %>%
+  ungroup() %>%
+  group_by(ECO_NAME) %>%
+  mutate(total_endemics_in_ecoregion = sum(is_endemic))
+  # for the shiny/report we could generate filtered tables of narrow endemics?
+
 
 native_occurrence_sf_ecoregions <- tigris::geo_join(canada_eco_subset, native_occurrence_heatmap_ecoregion, by = "ECO_NAME")
 

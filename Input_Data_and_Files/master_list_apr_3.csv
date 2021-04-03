@@ -1,0 +1,506 @@
+Group,Crop,sci_name
+Cereals,Amaranth,Amaranthus albus
+Cereals,Amaranth,Amaranthus californicus
+Cereals,Amaranth,Amaranthus graecizans
+Cereals,Amaranth,Amaranthus hybridus
+Cereals,Amaranth,Amaranthus retroflexus
+Cereals,Amaranth,Amaranthus tuberculatus
+Cereals,Barley,Hordeum brachyantherum
+Cereals,Barley,Hordeum depressum
+Cereals,Barley,Hordeum jubatum
+Cereals,Barley,Hordeum pusillum
+Cereals,Barley,Leymus mollis
+Cereals,Proso millet,Panicum bicknellii
+Cereals,Proso millet,Panicum boreale
+Cereals,Proso millet,Panicum capillare
+Cereals,Proso millet,Panicum clandestinum
+Cereals,Proso millet,Panicum colombianum
+Cereals,Proso millet,Panicum depauperatum
+Cereals,Proso millet,Panicum dichotomiflorum
+Cereals,Proso millet,Panicum dichotomum
+Cereals,Proso millet,Panicum flexile
+Cereals,Proso millet,Panicum lanuginosum
+Cereals,Proso millet,Panicum leibergii
+Cereals,Proso millet,Panicum linearifolium
+Cereals,Proso millet,Panicum longifolium
+Cereals,Proso millet,Panicum macrocarpon
+Cereals,Proso millet,Panicum meridionale
+Cereals,Proso millet,Panicum occidentale
+Cereals,Proso millet,Panicum oligosanther
+Cereals,Proso millet,Panicum pacificum
+Cereals,Proso millet,Panicum perlongum
+Cereals,Proso millet,Panicum philadelphicum
+Cereals,Proso millet,Panicum praecocius
+Cereals,Proso millet,Panicum rigidulum
+Cereals,Proso millet,Panicum sphaerocarpon
+Cereals,Proso millet,Panicum sprentum
+Cereals,Proso millet,Panicum subvillosum
+Cereals,Proso millet,Panicum thermale
+Cereals,Proso millet,Panicum villosissimum
+Cereals,Proso millet,Panicum virgatum
+Cereals,Proso millet,Panicum wilcoxianum
+Cereals,Proso millet,Panicum xanthophysum
+Cereals,Quinoa,Chenopodium berlandieri
+Cereals,Quinoa,Chenopodium capitatum
+Cereals,Quinoa,Chenopodium desiccatum
+Cereals,Quinoa,Chenopodium fremontii
+Cereals,Quinoa,Chenopodium hians
+Cereals,Quinoa,Chenopodium hybridum
+Cereals,Quinoa,Chenopodium leptophyllum
+Cereals,Quinoa,Chenopodium rubrum
+Cereals,Quinoa,Chenopodium standleyanum
+Cereals,Quinoa,Chenopodium watsonii
+Cereals,Wheat,Elymus alaskanus
+Cereals,Wheat,Elymus albicans
+Cereals,Wheat,Elymus curvatus
+Cereals,Wheat,Elymus elymoides
+Cereals,Wheat,Elymus lanceolatus
+Cereals,Wheat,Elymus macrourus
+Cereals,Wheat,Elymus scribneri
+Cereals,Wheat,Elymus trachycaulus
+Cereals,Wheat,Elymus violaceus
+Cereals,Wheat,Elymus wiegandii
+Cereals,Wheat,Leymus cinereus
+Cereals,Wheat,Leymus innovatus
+Cereals,Wheat,Leymus triticoides
+Cereals,Wild Rice,Zizania aquatica
+Cereals,Wild Rice,Zizania palustris
+Cereals,Wild Rye,Elymus canadensis
+Cereals,Wild Rye,Elymus diversiglumis
+Cereals,Wild Rye,Elymus glaucus
+Cereals,Wild Rye,Elymus hirsutus
+Cereals,Wild Rye,Elymus hystrix
+Cereals,Wild Rye,Elymus innovatus
+Cereals,Wild Rye,Elymus mollis
+Cereals,Wild Rye,Elymus piperi
+Cereals,Wild Rye,Elymus riparius
+Cereals,Wild Rye,Elymus sibiricus
+Cereals,Wild Rye,Elymus villosus
+Cereals,Wild Rye,Elymus virginicus
+Fruits/Berries,Apple,Malus coronaria
+Fruits/Berries,Apple,Malus fusca
+Fruits/Berries,Blueberry/Bilberry,Vaccinium alaskaense
+Fruits/Berries,Blueberry/Bilberry,Vaccinium angustifolium
+Fruits/Berries,Blueberry/Bilberry,Vaccinium atrococcum
+Fruits/Berries,Blueberry/Bilberry,Vaccinium boreale
+Fruits/Berries,Blueberry/Bilberry,Vaccinium caespitosum
+Fruits/Berries,Blueberry/Bilberry,Vaccinium cespitosum
+Fruits/Berries,Blueberry/Bilberry,Vaccinium corymbosum
+Fruits/Berries,Blueberry/Bilberry,Vaccinium corymbsum
+Fruits/Berries,Blueberry/Bilberry,Vaccinium deliciosum
+Fruits/Berries,Blueberry/Bilberry,Vaccinium fuscatum
+Fruits/Berries,Blueberry/Bilberry,Vaccinium membranaceum
+Fruits/Berries,Blueberry/Bilberry,Vaccinium myrtilloides
+Fruits/Berries,Blueberry/Bilberry,Vaccinium myrtillus
+Fruits/Berries,Blueberry/Bilberry,Vaccinium nubigeum
+Fruits/Berries,Blueberry/Bilberry,Vaccinium ovalifolium
+Fruits/Berries,Blueberry/Bilberry,Vaccinium ovatum
+Fruits/Berries,Blueberry/Bilberry,Vaccinium pallidum
+Fruits/Berries,Blueberry/Bilberry,Vaccinium parvifolium
+Fruits/Berries,Blueberry/Bilberry,Vaccinium scoparium
+Fruits/Berries,Blueberry/Bilberry,Vaccinium stamineum
+Fruits/Berries,Blueberry/Bilberry,Vaccinium uliginosum
+Fruits/Berries,Blueberry/Bilberry,Vaccinium vacillans
+Fruits/Berries,Buffaloberry,Sherpherdia argetea
+Fruits/Berries,Buffaloberry,Sherpherdia canadensis
+Fruits/Berries,Cherry/Plum/Apricot,Prunus americana
+Fruits/Berries,Cherry/Plum/Apricot,Prunus besseyi
+Fruits/Berries,Cherry/Plum/Apricot,Prunus emarginata
+Fruits/Berries,Cherry/Plum/Apricot,Prunus maritima
+Fruits/Berries,Cherry/Plum/Apricot,Prunus nigra
+Fruits/Berries,Cherry/Plum/Apricot,Prunus pensylvanica
+Fruits/Berries,Cherry/Plum/Apricot,Prunus pumila
+Fruits/Berries,Cherry/Plum/Apricot,Prunus serotina
+Fruits/Berries,Cherry/Plum/Apricot,Prunus virginiana
+Fruits/Berries,Cranberry,Vaccinium macrocarpus
+Fruits/Berries,Cranberry,Vaccinium microcarpus
+Fruits/Berries,Cranberry,Vaccinium ovalifolius
+Fruits/Berries,Cranberry,Vaccinium quadripetalus
+Fruits/Berries,Currant/Gooseberry,Ribes americanum
+Fruits/Berries,Currant/Gooseberry,Ribes aureum
+Fruits/Berries,Currant/Gooseberry,Ribes bracteosum
+Fruits/Berries,Currant/Gooseberry,Ribes cereum
+Fruits/Berries,Currant/Gooseberry,Ribes cynosbati
+Fruits/Berries,Currant/Gooseberry,Ribes divaricatum
+Fruits/Berries,Currant/Gooseberry,Ribes glandulosum
+Fruits/Berries,Currant/Gooseberry,Ribes hirtellum
+Fruits/Berries,Currant/Gooseberry,Ribes howellii
+Fruits/Berries,Currant/Gooseberry,Ribes hudsonianum
+Fruits/Berries,Currant/Gooseberry,Ribes inerme
+Fruits/Berries,Currant/Gooseberry,Ribes irriguum
+Fruits/Berries,Currant/Gooseberry,Ribes lacustre
+Fruits/Berries,Currant/Gooseberry,Ribes laxiflorum
+Fruits/Berries,Currant/Gooseberry,Ribes lobbii
+Fruits/Berries,Currant/Gooseberry,Ribes oxyacanthoides
+Fruits/Berries,Currant/Gooseberry,Ribes sanguineum
+Fruits/Berries,Currant/Gooseberry,Ribes setosum
+Fruits/Berries,Currant/Gooseberry,Ribes triste
+Fruits/Berries,Currant/Gooseberry,Ribes viscosissiumum
+Fruits/Berries,Currant/Gooseberry,Ribes watsonianum
+Fruits/Berries,Elderberry,Sambucus canadensis
+Fruits/Berries,Elderberry,Sambucus cerulea
+Fruits/Berries,Elderberry,Sambucus racemosa
+Fruits/Berries,Grape,Vitis aestivalis
+Fruits/Berries,Grape,Vitis riparia
+Fruits/Berries,Highbush Cranberry,Viburnum acerifolium
+Fruits/Berries,Highbush Cranberry,Viburnum alnifolium
+Fruits/Berries,Highbush Cranberry,Viburnum cassinoides
+Fruits/Berries,Highbush Cranberry,Viburnum dentatum
+Fruits/Berries,Highbush Cranberry,Viburnum edule
+Fruits/Berries,Highbush Cranberry,Viburnum lantana
+Fruits/Berries,Highbush Cranberry,Viburnum lentago
+Fruits/Berries,Highbush Cranberry,Viburnum rafinesquianum
+Fruits/Berries,Highbush Cranberry,Viburnum trilobum
+Fruits/Berries,Lingonberry,Vaccinium vitis-idaea
+Fruits/Berries,Mulberry,Morus rubra
+Fruits/Berries,Pawpaw,Asimina triloba
+Fruits/Berries,Raspberry/Blackberry,Rubus acualis
+Fruits/Berries,Raspberry/Blackberry,Rubus allegheniensis
+Fruits/Berries,Raspberry/Blackberry,Rubus arcticus
+Fruits/Berries,Raspberry/Blackberry,Rubus articus
+Fruits/Berries,Raspberry/Blackberry,Rubus canadensis
+Fruits/Berries,Raspberry/Blackberry,Rubus chamaemorus
+Fruits/Berries,Raspberry/Blackberry,Rubus enslenii
+Fruits/Berries,Raspberry/Blackberry,Rubus flagellaris
+Fruits/Berries,Raspberry/Blackberry,Rubus frondosus
+Fruits/Berries,Raspberry/Blackberry,Rubus glagellaris
+Fruits/Berries,Raspberry/Blackberry,Rubus hispidus
+Fruits/Berries,Raspberry/Blackberry,Rubus idaeus
+Fruits/Berries,Raspberry/Blackberry,Rubus laciniatus
+Fruits/Berries,Raspberry/Blackberry,Rubus lasiococcus
+Fruits/Berries,Raspberry/Blackberry,Rubus leucodermis
+Fruits/Berries,Raspberry/Blackberry,Rubus nivalis
+Fruits/Berries,Raspberry/Blackberry,Rubus nutkanus
+Fruits/Berries,Raspberry/Blackberry,Rubus occidentalis
+Fruits/Berries,Raspberry/Blackberry,Rubus odoratus
+Fruits/Berries,Raspberry/Blackberry,Rubus paracaulis
+Fruits/Berries,Raspberry/Blackberry,Rubus parviflorus
+Fruits/Berries,Raspberry/Blackberry,Rubus pedatus
+Fruits/Berries,Raspberry/Blackberry,Rubus pensilvanicus
+Fruits/Berries,Raspberry/Blackberry,Rubus procerus
+Fruits/Berries,Raspberry/Blackberry,Rubus pubescens
+Fruits/Berries,Raspberry/Blackberry,Rubus recurvicaulis
+Fruits/Berries,Raspberry/Blackberry,Rubus spectabilis
+Fruits/Berries,Raspberry/Blackberry,Rubus stellatus
+Fruits/Berries,Raspberry/Blackberry,Rubus ursinus
+Fruits/Berries,Raspberry/Blackberry,Rubus vermontanus
+Fruits/Berries,Saskatoon,Amelanchier alnifolia
+Fruits/Berries,Saskatoon,Amelanchier arborea
+Fruits/Berries,Saskatoon,Amelanchier bartramiana
+Fruits/Berries,Saskatoon,Amelanchier canadensis
+Fruits/Berries,Saskatoon,Amelanchier fernaldii
+Fruits/Berries,Saskatoon,Amelanchier gaspensis
+Fruits/Berries,Saskatoon,Amelanchier humilis
+Fruits/Berries,Saskatoon,Amelanchier huronensis
+Fruits/Berries,Saskatoon,Amelanchier intermedia
+Fruits/Berries,Saskatoon,Amelanchier laevis
+Fruits/Berries,Saskatoon,Amelanchier lucida
+Fruits/Berries,Saskatoon,Amelanchier mucronata
+Fruits/Berries,Saskatoon,Amelanchier sanguinea
+Fruits/Berries,Saskatoon,Amelanchier stolonifera
+Fruits/Berries,Saskatoon,Amelanchier wiegandii
+Fruits/Berries,Strawberry,Comarum palustre
+Fruits/Berries,Strawberry,Dasiphora fruticosa
+Fruits/Berries,Strawberry,Drymocallis glandulosa
+Fruits/Berries,Strawberry,Fragaria chiloensis
+Fruits/Berries,Strawberry,Fragaria vesca
+Fruits/Berries,Strawberry,Fragaria virginiana
+Fruits/Berries,Strawberry,Fragaria x ananassa
+Grasses,Bentgrass,Agrostis borealis
+Grasses,Bentgrass,Agrostis diegoensis
+Grasses,Bentgrass,Agrostis exarata
+Grasses,Bentgrass,Agrostis hyemalis
+Grasses,Bentgrass,Agrostis perennans
+Grasses,Bluegrass,Poa abbreviata
+Grasses,Bluegrass,Poa alpina
+Grasses,Bluegrass,Poa alsodes
+Grasses,Bluegrass,Poa ampla
+Grasses,Bluegrass,Poa arida
+Grasses,Bluegrass,Poa artica
+Grasses,Bluegrass,Poa canbyi
+Grasses,Bluegrass,Poa confinis
+Grasses,Bluegrass,Poa cusickii
+Grasses,Bluegrass,Poa eminens
+Grasses,Bluegrass,Poa epilis
+Grasses,Bluegrass,Poa gaspensis
+Grasses,Bluegrass,Poa gluaca
+Grasses,Bluegrass,Poa hartzii
+Grasses,Bluegrass,Poa howellii
+Grasses,Bluegrass,Poa juncifolia
+Grasses,Bluegrass,Poa labrodorica
+Grasses,Bluegrass,Poa laxa
+Grasses,Bluegrass,Poa leptocoma
+Grasses,Bluegrass,Poa lettermannii
+Grasses,Bluegrass,Poa macrantha
+Grasses,Bluegrass,Poa marcida
+Grasses,Bluegrass,Poa nemoralis
+Grasses,Bluegrass,Poa nervosa
+Grasses,Bluegrass,Poa nevadensis
+Grasses,Bluegrass,Poa occidentalis
+Grasses,Bluegrass,Poa palustris
+Grasses,Bluegrass,Poa pattersonii
+Grasses,Bluegrass,Poa pratensis
+Grasses,Bluegrass,Poa saltuensis
+Grasses,Bluegrass,Poa sandbergii
+Grasses,Bluegrass,Poa stenantha
+Grasses,Bluegrass,Poa trivialis
+Grasses,Bluegrass,Poa vaseyochloa
+Grasses,Bluejoint,Calamagrostis canadensis
+Grasses,Bluestem,Andropogon gerardii
+Grasses,Bluestem,Andropogon hallii
+Grasses,Bluestem,Andropogon scoparius
+Grasses,Bromegrass,Bromus anomalus
+Grasses,Bromegrass,Bromus canadensis
+Grasses,Bromegrass,Bromus carinatus
+Grasses,Bromegrass,Bromus cartharticus
+Grasses,Bromegrass,Bromus ciliatus
+Grasses,Bromegrass,Bromus inermis
+Grasses,Bromegrass,Bromus pacificus
+Grasses,Bromegrass,Bromus porteri
+Grasses,Bromegrass,Bromus pubescens
+Grasses,Bromegrass,Bromus purgans
+Grasses,Bromegrass,Bromus sitchensis
+Grasses,Bromegrass,Bromus vulgaris
+Grasses,Canary Grass,Phalaris arundinacea
+Grasses,Fescue,Festuca altaica
+Grasses,Fescue,Festuca obtusa
+Grasses,Fescue,Festuca occidentalis
+Grasses,Fescue,Festuca ovina
+Grasses,Fescue,Festuca rubra
+Grasses,Fescue,Festuca subulata
+Grasses,Fescue,Festuca subuliflora
+Grasses,Fescue,Festuca viridula
+Grasses,Wheatgrass,Agropyron albicans
+Grasses,Wheatgrass,Agropyron dasystachyum
+Grasses,Wheatgrass,Agropyron scribneri
+Grasses,Wheatgrass,Agropyron smithii
+Grasses,Wheatgrass,Agropyron spicatum
+Grasses,Wheatgrass,Agropyron trachycaulum
+Herbs/Medicinals/Ornamentals,Blanket Flower,Gaillardia aristata
+Herbs/Medicinals/Ornamentals,Bleeding Heart,Dicentra formosa
+Herbs/Medicinals/Ornamentals,Evening primrose,Oenothera andina
+Herbs/Medicinals/Ornamentals,Evening primrose,Oenothera biennis
+Herbs/Medicinals/Ornamentals,Evening primrose,Oenothera breviflora
+Herbs/Medicinals/Ornamentals,Evening primrose,Oenothera caespitosa
+Herbs/Medicinals/Ornamentals,Evening primrose,Oenothera contorta
+Herbs/Medicinals/Ornamentals,Evening primrose,Oenothera cruciata
+Herbs/Medicinals/Ornamentals,Evening primrose,Oenothera flava
+Herbs/Medicinals/Ornamentals,Evening primrose,Oenothera nuttallii
+Herbs/Medicinals/Ornamentals,Evening primrose,Oenothera pallida
+Herbs/Medicinals/Ornamentals,Evening primrose,Oenothera parviflora
+Herbs/Medicinals/Ornamentals,Evening primrose,Oenothera pernnis
+Herbs/Medicinals/Ornamentals,Evening primrose,Oenothera pilosella
+Herbs/Medicinals/Ornamentals,Evening primrose,Oenothera serrulata
+Herbs/Medicinals/Ornamentals,Fawn Lily,Erythronium oregonum
+Herbs/Medicinals/Ornamentals,Fern,Matteuccia struthipteris
+Herbs/Medicinals/Ornamentals,Heal All,Prunella vulgaris
+Herbs/Medicinals/Ornamentals,Hyssop,Agastache foeniculum
+Herbs/Medicinals/Ornamentals,Hyssop,Agastache neptoides
+Herbs/Medicinals/Ornamentals,Hyssop,Agastache scrophulariaefolia
+Herbs/Medicinals/Ornamentals,Hyssop,Agastache urticifolia
+Herbs/Medicinals/Ornamentals,Mint,Mentha arvensis
+Herbs/Medicinals/Ornamentals,Mint,Mentha canadensis
+Herbs/Medicinals/Ornamentals,Monarda,Monarda fistulosa
+Herbs/Medicinals/Ornamentals,Mountain Mint,Pycnanthemum virginianum
+Herbs/Medicinals/Ornamentals,Onosmodium,Onosmodium hipiddissimum
+Herbs/Medicinals/Ornamentals,Onosmodium,Onosmodium occidentale
+Herbs/Medicinals/Ornamentals,Spiderwort,Tradescantia virginiana
+Herbs/Medicinals/Ornamentals,Sunflower,Helianthus annuus
+Herbs/Medicinals/Ornamentals,Sunflower,Helianthus decapetalus
+Herbs/Medicinals/Ornamentals,Sunflower,Helianthus divaricatus
+Herbs/Medicinals/Ornamentals,Sunflower,Helianthus giganteus
+Herbs/Medicinals/Ornamentals,Sunflower,Helianthus hirsutus
+Herbs/Medicinals/Ornamentals,Sunflower,Helianthus laetiflorus
+Herbs/Medicinals/Ornamentals,Sunflower,Helianthus maximiliani
+Herbs/Medicinals/Ornamentals,Sunflower,Helianthus nuttallii
+Herbs/Medicinals/Ornamentals,Sunflower,Helianthus pauciflorus
+Herbs/Medicinals/Ornamentals,Sunflower,Helianthus petiolaris
+Herbs/Medicinals/Ornamentals,Sunflower,Helianthus strumosus
+Herbs/Medicinals/Ornamentals,Sunflower,Helianthus tuberosus
+Herbs/Medicinals/Ornamentals,Sunflower,Helianthus x laetiflorus
+Herbs/Medicinals/Ornamentals,Tobacco,Nicotiana attenuata
+Herbs/Medicinals/Ornamentals,Water Lily,Nymphaea tetragona
+Herbs/Medicinals/Ornamentals,Witch Hazel,Hamamelis virginiana
+Legumes,Clover,Trifolium bifidum
+Legumes,Clover,Trifolium cyathiferum
+Legumes,Clover,Trifolium depauperatum
+Legumes,Clover,Trifolium microcephalum
+Legumes,Clover,Trifolium microdon
+Legumes,Clover,Trifolium oliganthum
+Legumes,Clover,Trifolium reflexum
+Legumes,Clover,Trifolium tridentatum
+Legumes,Clover,Trifolium varigatum
+Legumes,Clover,Trifolium wormskjoldii
+Legumes,Lathyrus,Lathyrus bijugatus
+Legumes,Lathyrus,Lathyrus japonicus
+Legumes,Lathyrus,Lathyrus littoralis
+Legumes,Lathyrus,Lathyrus nevadensis
+Legumes,Lathyrus,Lathyrus ochrolucus
+Legumes,Lathyrus,Lathyrus palustris
+Legumes,Lathyrus,Lathyrus venosus
+Legumes,Lupin,Lupinus polyphyllus
+Legumes,Milk vetch,Astragalus adsurgens
+Legumes,Milk vetch,Astragalus agrestis
+Legumes,Milk vetch,Astragalus alpinus
+Legumes,Milk vetch,Astragalus americanus
+Legumes,Milk vetch,Astragalus beckwithii
+Legumes,Milk vetch,Astragalus bisulcatus
+Legumes,Milk vetch,Astragalus bodinii
+Legumes,Milk vetch,Astragalus bourgovii
+Legumes,Milk vetch,Astragalus canadensis
+Legumes,Milk vetch,Astragalus collinus
+Legumes,Milk vetch,Astragalus crassicarpus
+Legumes,Milk vetch,Astragalus drummondii
+Legumes,Milk vetch,Astragalus eucosmus
+Legumes,Milk vetch,Astragalus filipes
+Legumes,Milk vetch,Astragalus flexuosus
+Legumes,Milk vetch,Astragalus gilviflorus
+Legumes,Milk vetch,Astragalus gracilis
+Legumes,Milk vetch,Astragalus kentrophyta
+Legumes,Milk vetch,Astragalus lentiginosus
+Legumes,Milk vetch,Astragalus lotiflorus
+Legumes,Milk vetch,Astragalus microcystis
+Legumes,Milk vetch,Astragalus miser
+Legumes,Milk vetch,Astragalus missouriensis
+Legumes,Milk vetch,Astragalus neglectus
+Legumes,Milk vetch,Astragalus pectinatus
+Legumes,Milk vetch,Astragalus purshii
+Legumes,Milk vetch,Astragalus racemosus
+Legumes,Milk vetch,Astragalus robbinsii
+Legumes,Milk vetch,Astragalus sclerocarpus
+Legumes,Milk vetch,Astragalus spatulatus
+Legumes,Milk vetch,Astragalus tenellus
+Legumes,Milk vetch,Astragalus umbellatus
+Legumes,Milk vetch,Astragalus vexilliflexus
+Legumes,Milk vetch,Astragalus williamsii
+Legumes,Sainfoin,Hedysarum alpinum
+Legumes,Sainfoin,Hedysarum boreale
+Legumes,Sainfoin,Hedysarum occidentale
+Legumes,Sainfoin,Hedysarum sulphurescens
+Legumes,Timothy,Phleum alpinum
+Legumes,Trefoil,Lotus denticulatus
+Legumes,Trefoil,Lotus formosissimus
+Legumes,Trefoil,Lotus micranthus
+Legumes,Trefoil,Lotus pinnatus
+Legumes,Trefoil,Lotus purshianus
+Legumes,Vetch,Vicia americana
+Legumes,Vetch,Vicia carolinia
+Legumes,Vetch,Vicia gigantea
+Other Crops,Flax,Linum lewisii
+Other Crops,Flax,Linum medium
+Other Crops,Flax,Linum perenne
+Other Crops,Flax,Linum rigidum
+Other Crops,Flax,Linum sulcatum
+Other Crops,Flax,Linum virginianum
+Other Crops,Hop,Humulus lupulus
+Other Crops,Paysonia,Lesquerella alpina
+Other Crops,Paysonia,Lesquerella arctica
+Other Crops,Paysonia,Lesquerella douglasii
+Other Crops,Paysonia,Lesquerella ludoviciana
+Other Crops,Rosinweed,Silphium integrifolium
+Other Crops,Rosinweed,Silphium perfoliatum
+Treenuts,Butternut,Julans cinera
+Treenuts,Butternut,Julans nigra
+Treenuts,Chestnut,Castanea dentata
+Treenuts,European Filbert,Corylus californica
+Treenuts,Hazelnut,Corylus americana
+Treenuts,Hazelnut,Corylus cornuta
+Treenuts,Pecan/Hickory,Carya cordiformis
+Treenuts,Pecan/Hickory,Carya glabra
+Treenuts,Pecan/Hickory,Carya laciniosa
+Treenuts,Pecan/Hickory,Carya ovalis
+Treenuts,Pecan/Hickory,Carya ovata
+Treenuts,Pecan/Hickory,Carya tomentosa
+Treenuts,Walnut,Juglans cinerea
+Treenuts,Walnut,Juglans nigra
+Trees,Alder,Alnus rubra
+Trees,Alder,Alnus rugosa
+Trees,Alder,Alnus sinuata
+Trees,Ash,Fraxinus americana
+Trees,Ash,Fraxinus nigra
+Trees,Ash,Fraxinus pennsylvanica
+Trees,Ash,Fraxinus quadrangulata
+Trees,Beech,Fagus grandifolia
+Trees,Birch,Betula lenta
+Trees,Birch,Betula lutea
+Trees,Birch,Betula neoalaskana
+Trees,Birch,Betula occidentalis
+Trees,Birch,Betula papyrifera
+Trees,Birch,Betula populifolia
+Trees,Cedar,Thuja occidentalis
+Trees,Cedar,Thuja plicata
+Trees,Douglas fir,Pseudotsuga menziesii
+Trees,Elm,Ulmus americana
+Trees,Elm,Ulmus rubra
+Trees,Elm,Ulmus thomasii
+Trees,Fir,Abies amabilis
+Trees,Fir,Abies balsamea
+Trees,Fir,Abies grandis
+Trees,Fir,Abies lasiocarpa
+Trees,Hemlock,Tsuga canadensis
+Trees,Hemlock,Tsuga heterophylla
+Trees,Hemlock,Tsuga mertesiana
+Trees,Larch,Larix laricina
+Trees,Larch,Larix lyallii
+Trees,Larch,Larix occidentalis
+Trees,Linden,Tilia americana
+Trees,Magnolia,Magnolia acuminata
+Trees,Maple,Acer circinnatum
+Trees,Maple,Acer glabrum
+Trees,Maple,Acer macrophyllum
+Trees,Maple,Acer negundo
+Trees,Maple,Acer nigrum
+Trees,Maple,Acer pensylvanicum
+Trees,Maple,Acer rubrum
+Trees,Maple,Acer saccharinum
+Trees,Maple,Acer saccharum
+Trees,Maple,Acer spicatum
+Trees,Nootka Cypress,Chamaecyparis nootkatensis
+Trees,Oak,Quercus alba
+Trees,Oak,Quercus bicolor
+Trees,Oak,Quercus garryana
+Trees,Oak,Quercus marcrocarpa
+Trees,Oak,Quercus muehlenbergii
+Trees,Oak,Quercus palustris
+Trees,Oak,Quercus prinoides
+Trees,Oak,Quercus prinus
+Trees,Oak,Quercus rubra
+Trees,Oak,Quercus velutina
+Trees,Ornamental Hackberry,Celtis occidentalis
+Trees,Pine,Pinus albicaulis
+Trees,Pine,Pinus banksiana
+Trees,Pine,Pinus contorta
+Trees,Pine,Pinus flexilis
+Trees,Pine,Pinus monticola
+Trees,Pine,Pinus ponderosa
+Trees,Pine,Pinus resinosa
+Trees,Pine,Pinus rigida
+Trees,Pine,Pinus strobus
+Trees,Poplar,Populus angustifolia
+Trees,Poplar,Populus balsamifera
+Trees,Poplar,Populus deltoides
+Trees,Poplar,Populus grandidentata
+Trees,Poplar,Populus tremuloides
+Trees,Poplar,Populus trichocarpa
+Trees,Spruce,Picea engelmanii
+Trees,Spruce,Picea glauca
+Trees,Spruce,Picea mariana
+Trees,Spruce,Picea rubens
+Trees,Spruce,Picea sitchensis
+Trees,Taxus,Taxus brevifolia
+Trees,Taxus,Taxus canadensis
+Vegetables,Carrot,Daucus pusillus
+Vegetables,Horseradish,Armoracia aquatica
+Vegetables,Lettuce,Lactuca tatarica
+Vegetables,Onion,Allium acuminatum
+Vegetables,Onion,Allium amplectens
+Vegetables,Onion,Allium canadense
+Vegetables,Onion,Allium cernuum
+Vegetables,Onion,Allium crenulatum
+Vegetables,Onion,Allium geyeri
+Vegetables,Onion,Allium schoenoprasum
+Vegetables,Onion,Allium stellatum
+Vegetables,Onion,Allium textile
+Vegetables,Onion,Allium tricoccum
+Vegetables,Spinach,Blitum capitatum
+Vegetables,Spinach,Blitum nuttallianum
