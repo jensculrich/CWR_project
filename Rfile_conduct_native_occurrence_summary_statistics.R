@@ -69,39 +69,27 @@ ecoregion_gap_table_sf <- st_as_sf(ecoregion_gap_table,
                                    na.fail = FALSE)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ##############################
 # Explore Summary Statistics #
 ##############################
 
 # find ecoregions with the most total native CWRs
 # and most endemic native CWRs
-total_and_endemic_CWRs_ecoregion <- Native_Range_DF %>%
+total_and_endemic_CWRs_ecoregion <- ecoregion_gap_table_sf %>%
   # count total CWRs (unique sci_name in each ecoregion)
+  # want the rows where garden is NA (just the range data)
+  filter(is.na(garden)) %>%
   # group by ecoregion
   group_by(ECO_NAME) %>%
   # tally the number of unique CWR species
-  distinct(sci_nam, .keep_all = TRUE) %>%
+  distinct(species, .keep_all = TRUE) %>%
   add_tally() %>%
   rename(total_CWRs_in_ecoregion = "n") %>%
   mutate(total_CWRs_in_ecoregion = as.numeric(total_CWRs_in_ecoregion)) %>%
   ungroup() %>%
   
-  # count endemic CWRs (sci_name that occurs in only 1 ecoregion)
-  group_by(sci_nam) %>%
+  # count endemic CWRs (species that occurs in only 1 ecoregion)
+  group_by(species) %>%
   # if group is only one row, endemic = 1, else endemic = 0
   add_tally() %>%
   rename("native_ecoregions_for_species" = "n") %>%
@@ -111,27 +99,38 @@ total_and_endemic_CWRs_ecoregion <- Native_Range_DF %>%
   group_by(ECO_NAME) %>%
   mutate(endemic_CWRs_in_ecoregion = sum(is_endemic))
 
-total_CWRs_group_by_ecoregion <- df4 %>% # all I want for a graph is number of CWRS in each province
-  group_by(ECO_NAME) %>%
-  summarise(CWRs_per_Ecoregion = mean(total_CWRs_in_ecoregion))
-
-CWRs_group_by_ecoregion$ECO_NAME <- # order provinces by number of  CWRs 
-  factor(CWRs_group_by_ecoregion$ECO_NAME,
-         levels = CWRs_group_by_ecoregion$ECO_NAME[
-           order(CWRs_group_by_ecoregion$CWRs_per_Ecoregion)])
+# just want number of CWRS in each region
+# for a histogram and to easily see ranked list of top ecoregions
+# by total CWRs:
+total_CWRs_group_by_ecoregion <- total_and_endemic_CWRs_ecoregion %>% 
+  distinct(ECO_NAME, .keep_all = TRUE ) %>%
+  arrange(desc(total_CWRs_in_ecoregion))
+# and by endemic CWRs:
+total_CWRs_group_by_ecoregion <- total_CWRs_group_by_ecoregion %>% 
+  arrange(desc(endemic_CWRs_in_ecoregion))
 
 # Plot number CWRs in each province (as a histogram)
-p <- ggplot(CWRs_group_by_ecoregion, aes(x = CWRs_per_Ecoregion)) + theme_bw() + 
+P <- ggplot(total_CWRs_group_by_ecoregion, aes(x = total_CWRs_in_ecoregion)) + theme_bw() + 
   geom_histogram()
-p
+P
 
-# show five ecoregions with most CWRs
-top_n(CWRs_group_by_ecoregion, 5, wt = CWRs_per_Ecoregion)
-# show five ecoregions with least CWRs
-top_n(CWRs_group_by_ecoregion, -5, wt = CWRs_per_Ecoregion) 
-
-# maybe also look for number eco-endemic CWRs using df4?
+# Go ahead and add leaflet and/or heatmap here for ecoregions
+# using the total_and_endemic_CWRs_ecoregion table?
   
+# Everything through here has been checked
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # province with the most CWRs
 df5 <- Native_Range_DF %>%
