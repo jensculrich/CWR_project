@@ -1,3 +1,6 @@
+library(tidyverse)
+library(sf)
+
 ############################################################
 # in order to conduct a GAP ANALYSIS, we need to determine the ecoregion and province
 # represented by each of the CWR ex situ accessions in our gardens data sets.
@@ -82,8 +85,6 @@ sf_garden_accessions <- garden_accessions %>%
 # Section 3 - Load and format shapefile data
 ####################################################################################
 
-# 
-
 # CRS
 crs_string = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs" # 2
 
@@ -111,9 +112,6 @@ canada_eco_subset <- st_intersection(canada_eco, canada)
 ######################################################################################
 
 # Append Province to accession using lat and longitude
-points_sf = st_transform( st_as_sf(sf_garden_accessions), 
-                          coords = c("longitude", "latitude"), 
-                          crs = 4326, agr = "constant")
 # spatial join to add accession province
 points_polygon <- st_join(sf_garden_accessions, canada_cd, left = TRUE)
 # spatial join to add accession ecoregion
@@ -127,6 +125,7 @@ all_garden_accessions_shapefile <- points_polygon_2 %>%
   # format to remove "c(" and  ")"
   mutate(longitude = as.numeric(str_sub(longitude, 3)))  %>% 
   mutate(latitude = as.numeric(str_remove(latitude, "[)]"))) %>% 
+  
   # select columns that match garden accessions
   dplyr::select(X, garden, crop, species, variant, latitude, longitude, country,
                 IUCNRedList, province.x, province.y, ECO_CODE, ECO_NAME) %>%
@@ -151,7 +150,7 @@ native_occurrence_df_province_formatted <- native_occurrence_df %>%
   dplyr::select(-latitude, -longitude, -ECO_NAME, -ECO_CODE) %>%
   # now delete any repeated rows within CWR (caused by multiple ecoregions in each province)
   group_by(crop, species) %>%
-  distinct(province)
+  distinct(province, .keep_all = TRUE)
 
 native_occurrence_df_ecoregion_formatted <- native_occurrence_df %>%
   rename("province" = "PRENAME", "crop" = "Crop", "species" = "sci_nam") %>%
@@ -159,7 +158,7 @@ native_occurrence_df_ecoregion_formatted <- native_occurrence_df %>%
   dplyr::select(-latitude, -longitude, -province) %>%
   # now delete any repeated rows within CWR (caused by ecoregions spanning multiple province)
   group_by(crop, species) %>%
-  distinct(ECO_NAME)
+  distinct(ECO_NAME, .keep_all = TRUE) 
 
 province_gap_table <- full_join(native_occurrence_df_province_formatted, all_garden_accessions_shapefile)
 ecoregion_gap_table <- full_join(native_occurrence_df_ecoregion_formatted, all_garden_accessions_shapefile)
