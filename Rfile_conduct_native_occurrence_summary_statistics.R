@@ -136,10 +136,8 @@ P
 
 # Go ahead and add leaflet and/or heatmap here for ecoregions
 # using the total_and_endemic_CWRs_ecoregion table?
-  
-# Everything through here has been checked
 
-# 
+
 # find provinces with the most total native CWRs
 # and most endemic native CWRs
 total_and_endemic_CWRs_province <- province_gap_table_sf %>%
@@ -330,6 +328,12 @@ hotspots_by_crop_category_province <- native_cwrs_by_group_province %>%
   group_by(Group) %>%
   # keep row with max total_CWRs_in_province
   slice(which.max(total_CWRs_in_province))
+
+
+
+
+# Everything through here has been checked
+
 
 
 
