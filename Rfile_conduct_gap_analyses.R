@@ -14,6 +14,7 @@ library(ggplot2)
 library(raster)
 library(viridis)
 library(tigris)
+library(gridExtra)
 
 ######################################################################################
 
@@ -39,7 +40,7 @@ ecoregion_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/ecoregion_gap
 crs_string = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs" # 2
 
 # Define the maps' theme -- remove axes, ticks, borders, legends, etc.
-theme_map <- function(base_size=9, base_family="") { # 3
+theme_map <- function(base_size=10, base_family="") { # 3
   require(grid)
   theme_bw(base_size=base_size, base_family=base_family) %+replace%
     theme(axis.line=element_blank(),
@@ -510,28 +511,220 @@ for(i in 1:nrow(saskatoon_cwr_list)) {
   
 } 
 
-# proportion of taxa in each category w/
-# at least one accession, make a boxplot as well
 
-# group_by Group
-# sum_species_w_accessions = sum(at_least_one_accession)
-# tally rows
-# proportion_species_conserved = sum_species_w_accessions / tally
-# distinct(species, .keep_all = TRUE ) 
+##################################################
+# Plot Amelanchier Range Conservation Gap Analysis
 
-gap_analysis_df_by_ecoregion_2 <- gap_analysis_df_by_ecoregion %>%
-  group_by(Group) %>%
-  mutate(sum_species_w_accessions = sum(at_least_one_accession)) %>%
-  add_tally %>%
-  mutate(proportion_species_conserved = sum_species_w_accessions / n) %>%
-  ungroup()
+##############
+# By Province
 
-T <- ggplot(gap_analysis_df_by_ecoregion_2, aes(perc_province_range_covered, Group)) + 
-  geom_boxplot(outlier.shape = NA) + geom_jitter() + 
-  xlab("Proportion of native regions (ecoregions) represented in garden collections") + ylab("") +
-  theme_bw() +
-  scale_x_continuous(labels = function(x) paste0(x*100, "%"))
-T
+# Function to get plot data by taxon
+saskatoon_plotData <- function(taxon){
+  # filter province_gap_table frame and calculate species specific stats
+  provinceTableData <- saskatoon_province_gap_table %>%
+    # filter the table to the selected CWR
+    filter(saskatoon_province_gap_table$species == taxon) %>%
+    
+    # tally the number of rows in each province with an existing accession (garden is not NA)
+    group_by(province) %>%
+    add_tally(!is.na(garden)) %>%
+    rename("accessions_in_province" = "n")  %>%
+    ungroup() %>%
+    
+    # count the number of accessions w/ and w/out geographic data
+    mutate(total_accessions_for_species = sum(!is.na(garden))) %>%
+    mutate(accessions_no_geo_data = sum(is.na(province))) %>%
+    mutate(accessions_with_geo_data = sum(!is.na(province))) %>%
+    
+    # convert number of accessions to a binary "is there or is there not an accession from x region"
+    group_by(province) %>%
+    filter(row_number() == 1) %>%
+    filter(!is.na(province)) %>%
+    mutate(binary = ifelse(
+      accessions_in_province > 0, 1, 0)) %>%
+    ungroup() %>%
+    
+    # use the binary variable to determine the proportion of native regions with an accession
+    mutate(num_native_province = sum(!duplicated(province))) %>%
+    mutate(num_covered_province = sum(binary)) %>%
+    mutate(perc_province_range_covered = 
+             num_covered_province / num_native_province) 
+  
+  # join plot data with the spatial data frame necessary for projecting the plot  
+  tigris::geo_join(canada_provinces_geojson, provinceTableData,  
+                   by_sp = "name", by_df = "province")
+  
+} 
+
+make_a_plot <- function(taxon) {
+  plot <- ggplot(saskatoon_plotData(taxon = taxon)) +
+    geom_sf(aes(fill = as.factor(binary)),
+            color = "gray60", size = 0.1) +
+    coord_sf(crs = crs_string) +
+    scale_fill_manual(values = c("gray80", "gray18"), 
+                      labels = c("No accessions with geographic data held in collection", 
+                                 ">1 accession with geographic data held in collection", 
+                                 "Outside of native range")) +
+    # guides(fill = guide_legend(title = "Conservation Status in Botanic Gardens", 
+    #                            title.position = "top",
+    #                           title.theme = element_text(size = 10, face = "bold")
+    # )) +
+    theme_map() +
+    ggtitle(taxon) +
+    theme(panel.grid.major = element_line(color = "white"),
+          plot.title = element_text(color="black",
+                                    size=10, face="bold.italic", hjust = 0.5),
+          plot.margin=unit(c(0.1,-0.2,0.1,-0.2), "cm"),
+          legend.position = "none") # , legend.text = element_text(size=10)),
+  return(plot)
+}
+  
+test <- make_a_plot("Amelanchier arborea")
+test
+
+plot = list()
+p = 1
+for(i in 1:nrow(saskatoon_cwr_list)) {
+  
+  selected_taxon <- saskatoon_cwr_list[[i,3]] # r is species ("sci_name")
+  plot[[p]] <- make_a_plot(selected_taxon)
+  
+  p = p+1
+  
+} 
+
+# plot
+plot[c(5, 6, 8, 11, 12, 15)] <- NULL # remove species w no range data
+print(do.call(grid.arrange,plot))
+
+
+# need to get a legend
+single_species_plot_data <- saskatoon_plotData(taxon = "Amelanchier alnifolia")
+
+plot_single <- ggplot(single_species_plot_data) +
+  geom_sf(aes(fill = as.factor(binary)),
+          color = "gray60", size = 0.1) +
+  coord_sf(crs = crs_string) +
+  scale_fill_manual(values = c("gray80", "gray18"), 
+                    labels = c("No accessions with geographic data held in collection", 
+                               "1 or more accessions with geographic data held in collection", 
+                               "Outside of native range")) +
+  guides(fill = guide_legend(title = "Conservation Status in Botanic Gardens", 
+                              title.position = "top",
+                             title.theme = element_text(size = 10, face = "bold"))) +
+  theme_map() +
+  ggtitle("") +
+  theme(panel.grid.major = element_line(color = "white"),
+        plot.title = element_text(color="black",
+                                  size=10, face="bold.italic", hjust = 0.5),
+        plot.margin=unit(c(0.1,-0.2,0.1,-0.2), "cm"),
+        legend.text = element_text(size=10))
+plot_single
+
+##############
+# By Ecoregion
+# Function to get plot data by taxon
+saskatoon_plotData_ecoregion <- function(taxon){
+  # filter province_gap_table frame and calculate species specific stats
+  ecoregionTableData <- saskatoon_ecoregion_gap_table %>%
+    # filter the table to the selected CWR
+    filter(saskatoon_ecoregion_gap_table$species == taxon) %>%
+    
+    # tally the number of rows in each ecoregion with an existing accession (garden is not NA)
+    group_by(ECO_NAME) %>%
+    add_tally(!is.na(garden)) %>%
+    rename("accessions_in_ecoregion" = "n")  %>%
+    ungroup() %>%
+    
+    # count the number of accessions w/ and w/out geographic data
+    mutate(total_accessions_for_species = sum(!is.na(garden))) %>%
+    mutate(accessions_no_geo_data = sum(is.na(ECO_NAME))) %>%
+    mutate(accessions_with_geo_data = sum(!is.na(ECO_NAME))) %>%
+    
+    # convert number of accessions to a binary "is there or is there not an accession from x region"
+    group_by(ECO_NAME) %>%
+    filter(row_number() == 1) %>%
+    filter(!is.na(ECO_NAME)) %>%
+    mutate(binary = ifelse(
+      accessions_in_ecoregion > 0, 1, 0)) %>%
+    ungroup() %>%
+    
+    # use the binary variable to determine the proportion of native regions with an accession
+    mutate(num_native_ecoregion = sum(!duplicated(ECO_NAME))) %>%
+    mutate(num_covered_ecoregion = sum(binary)) %>%
+    mutate(perc_ecoregion_range_covered = 
+             num_covered_ecoregion / num_native_ecoregion) 
+  
+  # join plot data with the spatial data frame necessary for projecting the plot  
+  tigris::geo_join(canada_ecoregions_geojson, ecoregionTableData,  
+                   by_sp = "ECO_NAME", by_df = "ECO_NAME")
+  
+} 
+
+make_a_plot_ecoregion <- function(taxon) {
+  plot <- ggplot(saskatoon_plotData_ecoregion(taxon = taxon)) +
+    geom_sf(aes(fill = as.factor(binary)),
+            color = "gray60", size = 0.1) +
+    coord_sf(crs = crs_string) +
+    scale_fill_manual(values = c("gray80", "gray18"), 
+                      labels = c("No accessions with geographic data held in collection", 
+                                 ">1 accession with geographic data held in collection", 
+                                 "Outside of native range")) +
+    # guides(fill = guide_legend(title = "Conservation Status in Botanic Gardens", 
+    #                            title.position = "top",
+    #                           title.theme = element_text(size = 10, face = "bold")
+    # )) +
+    theme_map() +
+    ggtitle(taxon) +
+    theme(panel.grid.major = element_line(color = "white"),
+          plot.title = element_text(color="black",
+                                    size=10, face="bold.italic", hjust = 0.5),
+          plot.margin=unit(c(0.1,-0.2,0.1,-0.2), "cm"),
+          legend.position = "none") # , legend.text = element_text(size=10)),
+  return(plot)
+}
+
+test <- make_a_plot_ecoregion("Amelanchier arborea")
+test
+
+plot_ecoregions = list()
+q = 1
+for(i in 1:nrow(saskatoon_cwr_list)) {
+  
+  selected_taxon <- saskatoon_cwr_list[[i,3]] # r is species ("sci_name")
+  plot_ecoregions[[q]] <- make_a_plot_ecoregion(selected_taxon)
+  
+  q = q+1
+  
+} 
+
+# plot
+plot_ecoregions[c(5, 6, 8, 11, 12, 15)] <- NULL # remove species w no range data
+print(do.call(grid.arrange,plot_ecoregions))
+
+
+# need to get a legend
+single_species_plot_data <- saskatoon_plotData(taxon = "Amelanchier alnifolia")
+
+plot_single <- ggplot(single_species_plot_data) +
+  geom_sf(aes(fill = as.factor(binary)),
+          color = "gray60", size = 0.1) +
+  coord_sf(crs = crs_string) +
+  scale_fill_manual(values = c("gray80", "gray18"), 
+                    labels = c("No accessions with geographic data held in collection", 
+                               "1 or more accessions with geographic data held in collection", 
+                               "Outside of native range")) +
+  guides(fill = guide_legend(title = "Conservation Status in Botanic Gardens", 
+                             title.position = "top",
+                             title.theme = element_text(size = 10, face = "bold"))) +
+  theme_map() +
+  ggtitle("") +
+  theme(panel.grid.major = element_line(color = "white"),
+        plot.title = element_text(color="black",
+                                  size=10, face="bold.italic", hjust = 0.5),
+        plot.margin=unit(c(0.1,-0.2,0.1,-0.2), "cm"),
+        legend.text = element_text(size=10))
+plot_single
 
 
 
@@ -540,17 +733,7 @@ T
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+#############################
 # Append Province to accession using lat and longitude
 points_sf = st_transform( st_as_sf(sf_garden_accessions), 
                           coords = c("longitude", "latitude"), 
