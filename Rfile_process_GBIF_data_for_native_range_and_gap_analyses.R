@@ -42,6 +42,24 @@ native_occurrence_df <- native_occurrence_df %>%
   dplyr::select(-Crop.x) %>%
   rename("Crop" = "Crop.y") 
 
+#############################################################################
+# Attempt to make province and ecoregion unique tables to sub for the above #
+#############################################################################
+# Load data and format so that it can be changed into a projected shapefile
+df <- read.csv("./Input_Data_and_Files/GBIF_long.csv")
+df2 <- df %>%
+  dplyr::select(Crop, sci_nam, ECO_CODE, ECO_NAME, PRENAME, geometry, X.1)
+# remove "()" and "c" from geometry and X.1, rename as longitude and latitude
+# change from chr to numeric
+df2$longitude <- as.numeric(str_sub(df2$geometry, 3))  
+df2$latitude <- as.numeric(str_remove(df2$X.1, "[)]"))
+native_occurrence_df <- df2 %>% # drop unformatted columns, change chr to factor data class
+  dplyr::select(-geometry, -X.1) %>%
+  mutate(sci_nam = as.factor(sci_nam), Crop = as.factor(Crop), 
+         PRENAME = as.factor(PRENAME), ECO_NAME = as.factor(ECO_NAME), 
+         ECO_CODE = as.factor(ECO_CODE))
+
+
 #########################################################################################
 # Section 2 Load and format garden collection data                                
 #########################################################################################
