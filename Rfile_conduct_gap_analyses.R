@@ -36,6 +36,8 @@ canada_provinces_geojson <- st_read("./Geo_Data/canada_provinces.geojson", quiet
 province_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/province_gap_table.csv"))
 ecoregion_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/ecoregion_gap_table.csv"))
 
+garden_list <- as_tibble(read.csv("./Input_Data_and_Files/garden_list.csv"))
+  
 # CRS 
 crs_string = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs" # 2
 
@@ -77,42 +79,50 @@ ecoregion_gap_table_sf <- st_as_sf(ecoregion_gap_table,
                                   crs = 4326, 
                                   na.fail = FALSE)
 
-# For P and Q Maybe Also add points that represent our surveyed gardens?
+garden_list_sf <- st_as_sf(garden_list, 
+                                   coords = c("longitude", "latitude"), 
+                                   crs = 4326, 
+                                   na.fail = FALSE)
+
+#################################
+#   Map all garden accessions   #
+#################################
 
 # Plot By province
-Q <- ggplot() +
-  geom_sf(
-    # aes(fill = name), 
-    color = "gray60", size = 0.1, data = canada_provinces_geojson) +
-  geom_sf(data = province_gap_table_sf, color = '#001e73', alpha = 0.5, size = 3) + # 17
-  coord_sf(crs = crs_string) +
-  # scale_fill_manual(values = map_colors) +
-  guides(fill = FALSE) +
-  theme_map() +
-  ggtitle("Geographic Origins of Native CWR's in Surveyed Canadian Botanic Gardens") +
-  theme(panel.grid.major = element_line(color = "white"),
-        legend.key = element_rect(color = "gray40", size = 0.1),
-        plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5)
-  )
-Q
-
-
-# Plot Ecoregions
 P <- ggplot() +
   geom_sf(
     # aes(fill = name), 
-    color = "gray60", size = 0.1, data = canada_ecoregions_geojson) +
-  geom_sf(data = ecoregion_gap_table_sf, color = '#001e73', alpha = 0.5, size = 3) + # 17
+    color = "gray60", size = 0.1, data = canada_provinces_geojson) +
+  geom_sf(data = province_gap_table_sf, color = 'skyblue', alpha = 0.5, size = 2) + # 17
+  geom_sf(data = garden_list_sf, color = 'tomato1', alpha = 1, size = 3) +
   coord_sf(crs = crs_string) +
-  # scale_fill_manual(values = map_colors) +
-  guides(fill = FALSE) +
+  guides() +
   theme_map() +
-  ggtitle("Geographic Origins of Native CWR's in Surveyed Canadian Botanic Gardens") +
+  ggtitle("") +
   theme(panel.grid.major = element_line(color = "white"),
         legend.key = element_rect(color = "gray40", size = 0.1),
-        plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5)
+        plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5),
+        plot.margin=unit(c(0, -2, 0, -2), "cm")
   )
 P
+
+# Plot Ecoregions
+Q <- ggplot() +
+  geom_sf(
+    # aes(fill = name), 
+    color = "gray60", size = 0.1, data = canada_ecoregions_geojson) +
+  geom_sf(data = ecoregion_gap_table_sf, color = 'skyblue', alpha = 0.5, size = 2) + # 17
+  geom_sf(data = garden_list_sf, color = 'tomato1', alpha = 1, size = 3) +
+  coord_sf(crs = crs_string) +
+  guides() +
+  theme_map() +
+  ggtitle("") +
+  theme(panel.grid.major = element_line(color = "white"),
+        legend.key = element_rect(color = "gray40", size = 0.1),
+        plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5),
+        plot.margin=unit(c(0, -2, 0, -2), "cm")
+  )
+Q
 
 
 ######################################################################################
@@ -349,6 +359,11 @@ T <- ggplot(gap_analysis_df_by_ecoregion_2, aes(perc_ecoregion_range_covered, Gr
 T
 
 ################################
+# which taxa did we not do a gap analysis on because we lacked any GBIF data?
+anti_join_missing_cwrs <- anti_join(cwr_list, gap_analysis_df_by_province, by = c("sci_name" = "species"))
+write.csv(anti_join_missing_cwrs, "./Output_Data_and_Files/anti_join_missing_cwrs.csv")
+
+################################
 #   Amelanchier Case Study     #
 ################################
 
@@ -557,9 +572,13 @@ saskatoon_plotData <- function(taxon){
 } 
 
 make_a_plot <- function(taxon) {
+  subset_province_gap_table_sf <- province_gap_table_sf %>%
+    filter(species == taxon)
+  
   plot <- ggplot(saskatoon_plotData(taxon = taxon)) +
     geom_sf(aes(fill = as.factor(binary)),
             color = "gray60", size = 0.1) +
+    geom_sf(data = subset_province_gap_table_sf, color = 'skyblue', alpha = 0.5, size = 2) + 
     coord_sf(crs = crs_string) +
     scale_fill_manual(values = c("gray80", "gray18"), 
                       labels = c("No accessions with geographic data held in collection", 
@@ -733,7 +752,21 @@ plot_single
 
 
 
-#############################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Append Province to accession using lat and longitude
 points_sf = st_transform( st_as_sf(sf_garden_accessions), 
                           coords = c("longitude", "latitude"), 
