@@ -176,12 +176,8 @@ accessions_w_ecoregion_but_no_province <- all_garden_accessions_shapefile %>%
 
 
 province_gap_table <- full_join(native_occurrence_df_province_formatted, all_garden_accessions_shapefile)
-province_gap_table <- province_gap_table %>%
-  dplyr::select(Group, crop, species, province)
   
 ecoregion_gap_table <- full_join(native_occurrence_df_ecoregion_formatted, all_garden_accessions_shapefile)
-ecoregion_gap_table <- ecoregion_gap_table %>%
-  dplyr::select(Group, crop, species, ECO_NAME)
 
 
 #################################################################################
