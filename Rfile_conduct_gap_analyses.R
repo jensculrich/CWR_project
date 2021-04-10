@@ -36,7 +36,8 @@ canada_provinces_geojson <- st_read("./Geo_Data/canada_provinces.geojson", quiet
 province_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/province_gap_table.csv"))
 ecoregion_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/ecoregion_gap_table.csv"))
 
-garden_list <- as_tibble(read.csv("./Input_Data_and_Files/garden_list.csv"))
+garden_list <- as_tibble(read.csv("./Input_Data_and_Files/garden_list.csv")) %>%
+  mutate(type = "Surveyed Garden")
   
 # CRS 
 crs_string = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs" # 2
@@ -64,7 +65,8 @@ theme_map <- function(base_size=10, base_family="") { # 3
 ############################################################################
 
 province_gap_table <- province_gap_table %>%
-  dplyr::select(-geometry, -X, -ECO_CODE, -ECO_NAME)
+  dplyr::select(-geometry, -X, -ECO_CODE, -ECO_NAME) %>%
+  mutate(type = "Origin of CWR Garden Accession")
   
 province_gap_table_sf <- st_as_sf(province_gap_table, 
                                   coords = c("longitude", "latitude"), 
@@ -72,7 +74,8 @@ province_gap_table_sf <- st_as_sf(province_gap_table,
                                   na.fail = FALSE)
 
 ecoregion_gap_table <- ecoregion_gap_table %>%
-  dplyr::select(-geometry, -X, -province)
+  dplyr::select(-geometry, -X, -province) %>%
+  mutate(type = "Origin of CWR Garden Accession")
 
 ecoregion_gap_table_sf <- st_as_sf(ecoregion_gap_table, 
                                   coords = c("longitude", "latitude"), 
@@ -88,21 +91,25 @@ garden_list_sf <- st_as_sf(garden_list,
 #   Map all garden accessions   #
 #################################
 
+cols <- c("CWR geographical origin" = "blue", "Surveyed Garden" = "red")
 # Plot By province
 P <- ggplot() +
   geom_sf(
-    # aes(fill = name), 
     color = "gray60", size = 0.1, data = canada_provinces_geojson) +
-  geom_sf(data = province_gap_table_sf, color = 'steelblue2', alpha = 0.5, size = 2) + # 17
-  geom_sf(data = garden_list_sf, color = 'firebrick2', alpha = 1, size = 3) +
+  geom_sf(data = province_gap_table_sf, aes(color = type), alpha = 0.5, size = 2, 
+          show.legend = TRUE) + # 17
+  geom_sf(data = garden_list_sf, aes(color = type), alpha = 0.7, size = 3) +
   coord_sf(crs = crs_string) +
-  guides() +
   theme_map() +
   ggtitle("") +
+  scale_fill_manual(values = cols) +
+  labs(color='') + 
   theme(panel.grid.major = element_line(color = "white"),
         legend.key = element_rect(color = "gray40", size = 0.1),
         plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5),
-        plot.margin=unit(c(0, -2, 0, -2), "cm")
+        plot.margin=unit(c(0, -2, 0, -2), "cm"),
+        legend.text = element_text(size=11),
+        legend.background = element_rect(fill = "transparent")
   )
 P
 
@@ -111,16 +118,19 @@ Q <- ggplot() +
   geom_sf(
     # aes(fill = name), 
     color = "gray60", size = 0.1, data = canada_ecoregions_geojson) +
-  geom_sf(data = ecoregion_gap_table_sf, color = 'steelblue2', alpha = 0.5, size = 2) + # 17
-  geom_sf(data = garden_list_sf, color = 'firebrick2', alpha = 1, size = 3) +
+  geom_sf(data = ecoregion_gap_table_sf, aes(color = type), alpha = 0.5, size = 2) + # 17
+  geom_sf(data = garden_list_sf, aes(color = type), alpha = 0.7, size = 3) +
   coord_sf(crs = crs_string) +
-  guides() +
   theme_map() +
   ggtitle("") +
+  scale_fill_manual(values = cols) +
+  labs(color='') + 
   theme(panel.grid.major = element_line(color = "white"),
         legend.key = element_rect(color = "gray40", size = 0.1),
         plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5),
-        plot.margin=unit(c(0, -2, 0, -2), "cm")
+        plot.margin=unit(c(0, -2, 0, -2), "cm"),
+        legend.text = element_text(size=11),
+        legend.background = element_rect(fill = "transparent")
   )
 Q
 
@@ -129,6 +139,12 @@ Q
 #
 ######################################################################################
 
+
+
+
+######################################################################################
+#
+######################################################################################
 # Gap Analysis By Province
 # Need to run this across all taxa
 
