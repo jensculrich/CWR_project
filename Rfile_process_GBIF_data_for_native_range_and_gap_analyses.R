@@ -150,19 +150,18 @@ accessions_w_ecoregion_but_no_province <- all_garden_accessions_shapefile %>%
 
 
 province_gap_table <- native_occurrence_df_province_formatted %>%
-  full_join(all_garden_accessions_shapefile) %>%
   # need to rejoin with CWR list to get species crop categories and crop for species that weren't in the range maps
-  left_join(cwr_list, by = c("species" = "sci_nam")) %>%
+  full_join(cwr_list, by = c("species" = "sci_nam")) %>%
   dplyr::select(-Group.x, -crop) %>%
-  rename("Group" = "Group.y", "crop" = "Crop")
-
+  rename("Group" = "Group.y", "crop" = "Crop") %>%
+  full_join(all_garden_accessions_shapefile) 
 
 ecoregion_gap_table <- native_occurrence_df_ecoregion_formatted %>%
-  full_join(all_garden_accessions_shapefile) %>%
   # need to rejoin with CWR list to get species crop categories and crop for species that weren't in the range maps
-  left_join(cwr_list, by = c("species" = "sci_nam")) %>%
+  full_join(cwr_list, by = c("species" = "sci_nam")) %>%
   dplyr::select(-Group.x, -crop) %>%
-  rename("Group" = "Group.y", "crop" = "Crop")
+  rename("Group" = "Group.y", "crop" = "Crop") %>%
+  full_join(all_garden_accessions_shapefile) 
 
 
 #################################################################################
@@ -171,6 +170,6 @@ ecoregion_gap_table <- native_occurrence_df_ecoregion_formatted %>%
 
 # unselect when these files need to be overwritten
 # geojsonio::geojson_write(canada_eco_subset, file = "./Geo_Data/canada_ecoregions_clipped.geojson")
-write.csv(province_gap_table, "./Output_Data_and_Files/province_gap_table.csv")
-write.csv(ecoregion_gap_table, "./Output_Data_and_Files/ecoregion_gap_table.csv")
+# write.csv(province_gap_table, "./Output_Data_and_Files/province_gap_table.csv")
+# write.csv(ecoregion_gap_table, "./Output_Data_and_Files/ecoregion_gap_table.csv")
 
