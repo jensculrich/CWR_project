@@ -173,3 +173,4 @@ ecoregion_gap_table <- native_occurrence_df_ecoregion_formatted %>%
 # geojsonio::geojson_write(canada_eco_subset, file = "./Geo_Data/canada_ecoregions_clipped.geojson")
 write.csv(province_gap_table, "./Output_Data_and_Files/province_gap_table.csv")
 write.csv(ecoregion_gap_table, "./Output_Data_and_Files/ecoregion_gap_table.csv")
+
