@@ -173,3 +173,4 @@ ecoregion_gap_table <- native_occurrence_df_ecoregion_formatted %>%
 # write.csv(province_gap_table, "./Output_Data_and_Files/province_gap_table.csv")
 # write.csv(ecoregion_gap_table, "./Output_Data_and_Files/ecoregion_gap_table.csv")
 
+# note: delete "Oxycoccus sp." and "Julans sp." rows which were errors in the original list that was used to generate range maps and attaches to the gap tables

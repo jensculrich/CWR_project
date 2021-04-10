@@ -54,7 +54,7 @@ theme_map <- function(base_size=9, base_family="") { # 3
 ############################################################################
 
 province_gap_table <- province_gap_table %>%
-  dplyr::select(-geometry, -X, -X.1, -ECO_CODE, -ECO_NAME)
+  dplyr::select(-geometry, -X, -ECO_CODE, -ECO_NAME)
 
 province_gap_table_sf <- st_as_sf(province_gap_table, 
                                   coords = c("longitude", "latitude"), 
@@ -62,7 +62,7 @@ province_gap_table_sf <- st_as_sf(province_gap_table,
                                   na.fail = FALSE)
 
 ecoregion_gap_table <- ecoregion_gap_table %>%
-  dplyr::select(-geometry, -X, -X.1, -province)
+  dplyr::select(-geometry, -X, -province)
 
 ecoregion_gap_table_sf <- st_as_sf(ecoregion_gap_table, 
                                    coords = c("longitude", "latitude"), 
@@ -252,6 +252,7 @@ hotspots_by_crop_category_ecoregion <- native_cwrs_by_group_ecoregion %>%
   dplyr::select(-species, -crop, -variant, -latitude, -longitude, 
                 -country, -garden, -IUCNRedList, -ECO_CODE) %>%
   group_by(Group) %>%
+  filter(!is.na(ECO_NAME)) %>%
   # keep row with max total_CWRs_in_ecoregion
   slice(which.max(total_CWRs_in_ecoregion))
   
@@ -326,6 +327,7 @@ hotspots_by_crop_category_province <- native_cwrs_by_group_province %>%
   dplyr::select(-species, -crop, -variant, -latitude, -longitude, 
                 -country, -garden, -IUCNRedList) %>%
   group_by(Group) %>%
+  filter(!is.na(province)) %>%
   # keep row with max total_CWRs_in_province
   slice(which.max(total_CWRs_in_province))
 
@@ -334,7 +336,8 @@ hotspots_by_crop_category_province <- native_cwrs_by_group_province %>%
 
 # Everything through here has been checked
 
-
+############ 
+# delete everything below if not needed
 
 
 

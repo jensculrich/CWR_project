@@ -17,7 +17,7 @@ library(tigris)
 library(gridExtra)
 
 ######################################################################################
-
+# 1 INPUT DATA
 ######################################################################################
 
 # Load required data and shapefiles for building reactive maps and data tables
@@ -93,8 +93,8 @@ P <- ggplot() +
   geom_sf(
     # aes(fill = name), 
     color = "gray60", size = 0.1, data = canada_provinces_geojson) +
-  geom_sf(data = province_gap_table_sf, color = 'skyblue', alpha = 0.5, size = 2) + # 17
-  geom_sf(data = garden_list_sf, color = 'tomato1', alpha = 1, size = 3) +
+  geom_sf(data = province_gap_table_sf, color = 'steelblue2', alpha = 0.5, size = 2) + # 17
+  geom_sf(data = garden_list_sf, color = 'firebrick2', alpha = 1, size = 3) +
   coord_sf(crs = crs_string) +
   guides() +
   theme_map() +
@@ -111,8 +111,8 @@ Q <- ggplot() +
   geom_sf(
     # aes(fill = name), 
     color = "gray60", size = 0.1, data = canada_ecoregions_geojson) +
-  geom_sf(data = ecoregion_gap_table_sf, color = 'skyblue', alpha = 0.5, size = 2) + # 17
-  geom_sf(data = garden_list_sf, color = 'tomato1', alpha = 1, size = 3) +
+  geom_sf(data = ecoregion_gap_table_sf, color = 'steelblue2', alpha = 0.5, size = 2) + # 17
+  geom_sf(data = garden_list_sf, color = 'firebrick2', alpha = 1, size = 3) +
   coord_sf(crs = crs_string) +
   guides() +
   theme_map() +
