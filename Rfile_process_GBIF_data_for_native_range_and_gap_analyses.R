@@ -11,42 +11,16 @@ library(sf)
 # Section 1 Load and format GBIF native range data
 ###################################################################
 
-# the "GBIF_by_province.csv" dataset includes a row for each unique 
-# combination of ecoregion and province that a CWR naturally occurs in (given GBIF data), 
-# and one coordinate point for each of those unique ecoregion and 
-# province combinations to facilitate mapping.
-
-# not using this anymore
-# Load data and format so that it can be changed into a projected shapefile
-#df <- read.csv("./Input_Data_and_Files/GBIF_by_Province.csv")
-#df2 <- df %>%
-#  dplyr::select(Crop, sci_nam, ECO_CODE, ECO_NAME, PRENAME, geometry, X.1)
-# remove "()" and "c" from geometry and X.1, rename as longitude and latitude
-# change from chr to numeric
-#df2$longitude <- as.numeric(str_sub(df2$geometry, 3))  
-#df2$latitude <- as.numeric(str_remove(df2$X.1, "[)]"))
-#native_occurrence_df <- df2 %>% # drop unformatted columns, change chr to factor data class
-#  dplyr::select(-geometry, -X.1) %>%
-#  mutate(sci_nam = as.factor(sci_nam), Crop = as.factor(Crop), 
-#         PRENAME = as.factor(PRENAME), ECO_NAME = as.factor(ECO_NAME), 
-#         ECO_CODE = as.factor(ECO_CODE))
-
 # Load CWR master list. Length tells us how many taxa in our inventory
 cwr_list <- read.csv("./Input_Data_and_Files/master_list_apr_3.csv")
 cwr_list <- cwr_list %>% rename("sci_nam" = "sci_name")
 number_of_CWRs_in_our_checklist <- nrow(cwr_list)
 
-# join native_occurrence_df with updated CWR master list 
-# to add crop category and correct crop names (Crop.y)
-# not using this anymore
-#native_occurrence_df <- left_join(native_occurrence_df, cwr_list, by = "sci_nam")
-#native_occurrence_df <- native_occurrence_df %>%
-#  dplyr::select(-Crop.x) %>%
-#  rename("Crop" = "Crop.y") 
+# the "GBIF_by_province.csv" dataset includes a row for each unique 
+# combination of ecoregion and province that a CWR naturally occurs in (given GBIF data), 
+# and one coordinate point for each of those unique ecoregion and 
+# province combinations to facilitate mapping.
 
-#############################################################################
-# Attempt to make province and ecoregion unique tables to sub for the above #
-#############################################################################
 # Load data and format so that it can be changed into a projected shapefile
 df <- read.csv("./Input_Data_and_Files/GBIF_long.csv")
 
@@ -66,7 +40,7 @@ GBIF_ecoregion_new <- df %>%
 
 native_occurrence_df_province <- left_join(GBIF_province_new, cwr_list, by = "sci_nam")
 native_occurrence_df_province_formatted <- native_occurrence_df_province %>%
-  rename("province" = "PRENAME", "crop" = "Crop", "species" = "sci_nam")
+  rename("province" = "PRENAME", "crop" = "Crop", "species" = "sci_nam") 
 
 native_occurrence_df_ecoregion <- left_join(GBIF_ecoregion_new, cwr_list, by = "sci_nam")
 native_occurrence_df_ecoregion_formatted <- native_occurrence_df_ecoregion %>%
@@ -175,9 +149,20 @@ accessions_w_ecoregion_but_no_province <- all_garden_accessions_shapefile %>%
   filter(is.na(province))
 
 
-province_gap_table <- full_join(native_occurrence_df_province_formatted, all_garden_accessions_shapefile)
-  
-ecoregion_gap_table <- full_join(native_occurrence_df_ecoregion_formatted, all_garden_accessions_shapefile)
+province_gap_table <- native_occurrence_df_province_formatted %>%
+  full_join(all_garden_accessions_shapefile) %>%
+  # need to rejoin with CWR list to get species crop categories and crop for species that weren't in the range maps
+  left_join(cwr_list, by = c("species" = "sci_nam")) %>%
+  dplyr::select(-Group.x, -crop) %>%
+  rename("Group" = "Group.y", "crop" = "Crop")
+
+
+ecoregion_gap_table <- native_occurrence_df_ecoregion_formatted %>%
+  full_join(all_garden_accessions_shapefile) %>%
+  # need to rejoin with CWR list to get species crop categories and crop for species that weren't in the range maps
+  left_join(cwr_list, by = c("species" = "sci_nam")) %>%
+  dplyr::select(-Group.x, -crop) %>%
+  rename("Group" = "Group.y", "crop" = "Crop")
 
 
 #################################################################################
@@ -186,5 +171,5 @@ ecoregion_gap_table <- full_join(native_occurrence_df_ecoregion_formatted, all_g
 
 # unselect when these files need to be overwritten
 # geojsonio::geojson_write(canada_eco_subset, file = "./Geo_Data/canada_ecoregions_clipped.geojson")
-# write.csv(province_gap_table, "./Output_Data_and_Files/province_gap_table.csv")
-# write.csv(ecoregion_gap_table, "./Output_Data_and_Files/ecoregion_gap_table.csv")
+write.csv(province_gap_table, "./Output_Data_and_Files/province_gap_table.csv")
+write.csv(ecoregion_gap_table, "./Output_Data_and_Files/ecoregion_gap_table.csv")
