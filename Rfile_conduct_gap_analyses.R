@@ -64,7 +64,7 @@ theme_map <- function(base_size=10, base_family="") { # 3
 ############################################################################
 
 province_gap_table <- province_gap_table %>%
-  dplyr::select(-geometry, -X, -X.1, -ECO_CODE, -ECO_NAME)
+  dplyr::select(-geometry, -X, -ECO_CODE, -ECO_NAME)
   
 province_gap_table_sf <- st_as_sf(province_gap_table, 
                                   coords = c("longitude", "latitude"), 
@@ -72,7 +72,7 @@ province_gap_table_sf <- st_as_sf(province_gap_table,
                                   na.fail = FALSE)
 
 ecoregion_gap_table <- ecoregion_gap_table %>%
-  dplyr::select(-geometry, -X, -X.1, -province)
+  dplyr::select(-geometry, -X, -province)
 
 ecoregion_gap_table_sf <- st_as_sf(ecoregion_gap_table, 
                                   coords = c("longitude", "latitude"), 
