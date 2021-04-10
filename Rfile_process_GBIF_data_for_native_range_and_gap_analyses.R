@@ -131,12 +131,13 @@ all_garden_accessions_shapefile <- points_polygon_2 %>%
   mutate(latitude = as.numeric(str_remove(latitude, "[)]"))) %>% 
   
   # select columns that match garden accessions
-  dplyr::select(X, garden, crop, species, variant, latitude, longitude, country,
+  dplyr::select(X, garden, species, variant, latitude, longitude, country,
                 IUCNRedList, province.x, province.y, ECO_CODE, ECO_NAME) %>%
   #rename(new = province) %>% # add a dummy name for province 
   # take province from cd_canada unless was already provided by garden (just want one column)
   mutate(province = ifelse(is.na(province.x), province.y, province.x)) %>%
-  dplyr::select(-province.y, - province.x)
+  dplyr::select(-province.y, - province.x) 
+  
 
 # gardens often give province but no lat/long
 accessions_w_province_but_no_geo_data <- all_garden_accessions_shapefile %>%
@@ -150,18 +151,19 @@ accessions_w_ecoregion_but_no_province <- all_garden_accessions_shapefile %>%
 
 
 province_gap_table <- native_occurrence_df_province_formatted %>%
+  full_join(all_garden_accessions_shapefile, by = c("species", "province")) %>%
   # need to rejoin with CWR list to get species crop categories and crop for species that weren't in the range maps
   full_join(cwr_list, by = c("species" = "sci_nam")) %>%
   dplyr::select(-Group.x, -crop) %>%
-  rename("Group" = "Group.y", "crop" = "Crop") %>%
-  full_join(all_garden_accessions_shapefile) 
+  rename("Group" = "Group.y", "crop" = "Crop")
 
 ecoregion_gap_table <- native_occurrence_df_ecoregion_formatted %>%
+  full_join(all_garden_accessions_shapefile) %>%
   # need to rejoin with CWR list to get species crop categories and crop for species that weren't in the range maps
   full_join(cwr_list, by = c("species" = "sci_nam")) %>%
   dplyr::select(-Group.x, -crop) %>%
-  rename("Group" = "Group.y", "crop" = "Crop") %>%
-  full_join(all_garden_accessions_shapefile) 
+  rename("Group" = "Group.y", "crop" = "Crop") 
+
 
 
 #################################################################################
@@ -170,7 +172,7 @@ ecoregion_gap_table <- native_occurrence_df_ecoregion_formatted %>%
 
 # unselect when these files need to be overwritten
 # geojsonio::geojson_write(canada_eco_subset, file = "./Geo_Data/canada_ecoregions_clipped.geojson")
-# write.csv(province_gap_table, "./Output_Data_and_Files/province_gap_table.csv")
-# write.csv(ecoregion_gap_table, "./Output_Data_and_Files/ecoregion_gap_table.csv")
+write.csv(province_gap_table, "./Output_Data_and_Files/province_gap_table.csv")
+write.csv(ecoregion_gap_table, "./Output_Data_and_Files/ecoregion_gap_table.csv")
 
 # note: delete "Oxycoccus sp." and "Julans sp." rows which were errors in the original list that was used to generate range maps and attaches to the gap tables
