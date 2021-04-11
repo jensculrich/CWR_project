@@ -150,11 +150,15 @@ Q
 # Gap Analysis By Province
 # Need to run this across all taxa
 
+# filter to species for which we had a range map
+province_gap_table_in_Canada <- province_gap_table %>%
+  filter(country == "Canada" | is.na(country))
+
 province_gap_analysis <- function(taxon) {
   
-  provinceTableData <- province_gap_table %>%
+  provinceTableData <- province_gap_table_in_Canada %>%
     # filter the table to the selected CWR
-    filter(province_gap_table$species == taxon) %>%
+    filter(province_gap_table_in_Canada$species == taxon) %>%
     
     # tally the number of rows in each province with an existing accession (garden is not NA)
     group_by(province) %>%
@@ -284,11 +288,15 @@ SS
 # Gap Analysis By Ecoregion
 # Need to run this across all taxa
 
+# filter accessions to those coming from Canada 
+ecoregion_gap_table_in_Canada <- ecoregion_gap_table %>%
+  filter(country == "Canada" | is.na(country))
+
 ecoregion_gap_analysis <- function(taxon) {
   
-  ecoregionTableData <- ecoregion_gap_table %>%
+  ecoregionTableData <- ecoregion_gap_table_in_Canada %>%
     # filter the table to the selected CWR
-    filter(ecoregion_gap_table$species == taxon) %>%
+    filter(ecoregion_gap_table_in_Canada$species == taxon) %>%
     
     # tally the number of rows in each ecoregion with an existing accession (garden is not NA)
     group_by(ECO_NAME) %>%
@@ -376,6 +384,12 @@ T <- ggplot(gap_analysis_df_by_ecoregion_2, aes(perc_ecoregion_range_covered, Gr
   theme_bw() +
   scale_x_continuous(labels = function(x) paste0(x*100, "%"))
 T
+
+# what's the mean proportion?
+(mean_range <- mean(gap_analysis_df_by_ecoregion_2$perc_ecoregion_range_covered))
+(sd_range <- sd(gap_analysis_df_by_ecoregion_2$perc_ecoregion_range_covered))
+
+
 
 ################################
 # which taxa did we not do a gap analysis on because we lacked any GBIF data?
@@ -767,15 +781,20 @@ plot_single
 ################################################
 # Differences by Garden
 ################################################
-garden_accessions <- province_gap_table_sf %>%
+garden_accessions <- province_gap_table %>%
   filter(!is.na(garden)) %>%
   group_by(garden) %>%
   add_tally() %>%
-  ungroup() # %>%
-  distinct(garden, .keep_all = TRUE)
+  distinct(garden, .keep_all=TRUE) %>%
+  ungroup() %>%
+  dplyr::select(garden, n)
 
 U <- ggplot(garden_accessions) +
-  geom(hist(n))
+  geom_histogram(aes(n), breaks=c(0, 1000, 2000, 3000, 4000, 5000, 
+                                  6000, 7000, 8000, 9000, 10000)) + 
+  theme_bw() +
+  labs(x = "Number of CWR Accessions", y = "Number of Gardens")
+U
 #
 
 
