@@ -58,15 +58,15 @@ native_occurrence_df_ecoregion_formatted <- native_occurrence_df_ecoregion %>%
 
 # load data from garden collections (already filtered to only CWRs)
 # update and add new gardens as we receive additional datasets
-cwr_ubc <- read.csv("./Garden_Data/CWR_of_UBC.csv")
-cwr_rbg <- read.csv("./Garden_Data/CWR_of_RBG.csv")
-cwr_montreal <- read.csv("./Garden_Data/CWR_of_MontrealBG.csv")
-cwr_guelph <- read.csv("./Garden_Data/CWR_of_UofGuelph.csv")
-cwr_mountp <- read.csv("./Garden_Data/CWR_of_MountPleasantGroup.csv")
-cwr_vandusen <- read.csv("./Garden_Data/CWR_of_VanDusenBG.csv")
+cwr_ubc <- read.csv("./Garden_Data/CWR_of_UBC.csv", na.strings=c("","NA"))
+cwr_rbg <- read.csv("./Garden_Data/CWR_of_RBG.csv", na.strings=c("","NA"))
+cwr_montreal <- read.csv("./Garden_Data/CWR_of_MontrealBG.csv", na.strings=c("","NA"))
+cwr_guelph <- read.csv("./Garden_Data/CWR_of_UofGuelph.csv", na.strings=c("","NA"))
+cwr_mountp <- read.csv("./Garden_Data/CWR_of_MountPleasantGroup.csv", na.strings=c("","NA"))
+cwr_vandusen <- read.csv("./Garden_Data/CWR_of_VanDusenBG.csv", na.strings=c("","NA"))
 # cwr_pgrc <- read.csv("./Garden_Data/Amelanchier_PGRC.csv") # removing these subsetted data sets for now
 # cwr_usask <- read.csv("Amelanchier_UofSask.csv") # removing these subsetted data sets for now
-cwr_readerrock <- read.csv("./Garden_Data/CWR_of_ReaderRock.csv")
+cwr_readerrock <- read.csv("./Garden_Data/CWR_of_ReaderRock.csv", na.strings=c("","NA"))
 
 # join all garden data into one long table
 # update and add new gardens as we receive additional datasets
@@ -74,10 +74,10 @@ garden_accessions <- rbind(cwr_ubc, cwr_rbg, cwr_montreal, cwr_guelph, cwr_mount
                            cwr_readerrock)
 garden_accessions <- garden_accessions %>% # format columns
   mutate(latitude = as.numeric(latitude), 
-         longitude = as.numeric(longitude)) %>%
+         longitude = as.numeric(longitude)) # %>%
   # for now, we want to filter our data for coverage of ONLY CANADIAN ecoregions/admin districts
   # delete the follwoing line of code if the focus expands to North America or world
-  filter(country == "Canada")
+  # filter(country == "Canada")
 
 # Transform garden data into a projected shape file
 sf_garden_accessions <- garden_accessions %>%
@@ -148,6 +148,8 @@ accessions_w_province_but_no_geo_data <- all_garden_accessions_shapefile %>%
 accessions_w_ecoregion_but_no_province <- all_garden_accessions_shapefile %>%
   filter(!is.na(ECO_NAME)) %>%
   filter(is.na(province))
+accessions_lat_long <- all_garden_accessions_shapefile %>%
+  filter(!is.na(latitude))
 
 
 province_gap_table <- native_occurrence_df_province_formatted %>%
@@ -172,7 +174,8 @@ ecoregion_gap_table <- native_occurrence_df_ecoregion_formatted %>%
 
 # unselect when these files need to be overwritten
 # geojsonio::geojson_write(canada_eco_subset, file = "./Geo_Data/canada_ecoregions_clipped.geojson")
-write.csv(province_gap_table, "./Output_Data_and_Files/province_gap_table.csv")
+# write.csv(province_gap_table, "./Output_Data_and_Files/province_gap_table.csv")
 write.csv(ecoregion_gap_table, "./Output_Data_and_Files/ecoregion_gap_table.csv")
 
 # note: delete "Oxycoccus sp." and "Julans sp." rows which were errors in the original list that was used to generate range maps and attaches to the gap tables
+

@@ -72,6 +72,7 @@ province_gap_table_sf <- st_as_sf(province_gap_table,
                                   coords = c("longitude", "latitude"), 
                                   crs = 4326, 
                                   na.fail = FALSE)
+  # could filter to country = canada here
 
 ecoregion_gap_table <- ecoregion_gap_table %>%
   dplyr::select(-geometry, -X, -province) %>%
@@ -81,6 +82,7 @@ ecoregion_gap_table_sf <- st_as_sf(ecoregion_gap_table,
                                   coords = c("longitude", "latitude"), 
                                   crs = 4326, 
                                   na.fail = FALSE)
+  # could filter to country = canada here
 
 garden_list_sf <- st_as_sf(garden_list, 
                                    coords = c("longitude", "latitude"), 
@@ -241,40 +243,41 @@ R <- ggplot(gap_analysis_df_by_province_2, aes(perc_province_range_covered, Grou
   scale_x_continuous(labels = function(x) paste0(x*100, "%"))
 R
 
+# what's the mean proportion?
+(mean_range <- mean(gap_analysis_df_by_province_2$perc_province_range_covered))
+(sd_range <- sd(gap_analysis_df_by_province_2$perc_province_range_covered))
+
 
 # gap analysis w/out respect to geo data
 # ie how many species have at least one accession in one of our gardens?
 # by crop category
-S <- ggplot(gap_analysis_df_by_province_2, aes(proportion_species_conserved, Group)) +
-  geom_bar(stat="identity") + 
+gap_analysis_df_by_province_3 <- gap_analysis_df_by_province_2 %>%
+  distinct(Group, .keep_all = TRUE)
+
+S <- ggplot(gap_analysis_df_by_province_3, aes(x = Group,
+                                               y = proportion_species_conserved)) +
+  geom_bar(stat = "identity") + 
   theme_bw() +
-  xlim(0, 100) + 
-  xlab("Proportion of species represented in garden collections") + ylab("") +
-  scale_x_continuous(labels = function(x) paste0(x, "%")) 
+  coord_flip() +
+  ylab("Proportion of CWRs Represented in Garden Collections") + xlab("") +
+  scale_y_continuous(labels = function(x) paste0(x*100, "%"), limits = c(0, 1))
 S
 
 # across all taxa
-gap_analysis_df_by_province_3 <- gap_analysis_df_by_province_2 %>%
+gap_analysis_df_by_province_4 <- gap_analysis_df_by_province_2 %>%
   add_tally(name = "total_num_CWRs") %>%
   mutate(total_proportion_with_an_accession = sum(at_least_one_accession / 
                                                     total_num_CWRs)) %>%
   mutate(CWR = as_factor("All CWRs")) %>%
   slice(1)
-  
 
-SS <- ggplot(gap_analysis_df_by_province_3, 
-             aes(y=CWR, x=total_proportion_with_an_accession)) +
-  geom_bar(stat="identity") +
+SS <- ggplot(gap_analysis_df_by_province_4, aes(x = CWR, 
+                                                y = total_proportion_with_an_accession)) +
+  geom_bar(stat = "identity") + 
   theme_bw() +
-  xlim(0, 100) +
-  xlab("Proportion of species represented in garden collections") + ylab("") +
-  scale_x_continuous(labels = function(x) paste0(x*100, "%")) 
-SS
-+ 
-  theme_bw() +
-  xlim(0, 100) + 
-  xlab("Proportion of species represented in garden collections") + ylab("") +
-  scale_x_continuous(labels = function(x) paste0(x, "%")) 
+  coord_flip() +
+  ylab("Proportion of CWRs Represented in Garden Collections") + xlab("") +
+  scale_y_continuous(labels = function(x) paste0(x*100, "%"), limits = c(0, 1))
 SS
 
 ############################
@@ -761,6 +764,19 @@ plot_single <- ggplot(single_species_plot_data) +
         legend.text = element_text(size=10))
 plot_single
 
+################################################
+# Differences by Garden
+################################################
+garden_accessions <- province_gap_table_sf %>%
+  filter(!is.na(garden)) %>%
+  group_by(garden) %>%
+  add_tally() %>%
+  ungroup() # %>%
+  distinct(garden, .keep_all = TRUE)
+
+U <- ggplot(garden_accessions) +
+  geom(hist(n))
+#
 
 
 
@@ -776,11 +792,8 @@ plot_single
 
 
 
-
-
-
-
-
+########################### 
+# delete below if not needed
 
 
 # Append Province to accession using lat and longitude
