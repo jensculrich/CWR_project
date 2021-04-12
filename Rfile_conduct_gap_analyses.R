@@ -795,10 +795,9 @@ U <- ggplot(garden_accessions) +
   theme_bw() +
   labs(x = "Number of CWR Accessions", y = "Number of Gardens")
 U
-#
 
 
-
+##################
 
 
 
