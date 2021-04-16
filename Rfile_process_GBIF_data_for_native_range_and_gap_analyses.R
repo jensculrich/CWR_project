@@ -1,5 +1,7 @@
+###########
 library(tidyverse)
 library(sf)
+library(jsonlite)
 
 ############################################################
 # in order to conduct a GAP ANALYSIS, we need to determine the ecoregion and province
@@ -22,34 +24,43 @@ number_of_CWRs_in_our_checklist <- nrow(cwr_list)
 # province combinations to facilitate mapping.
 
 # Load data and format so that it can be changed into a projected shapefile
-df <- read.csv("./Input_Data_and_Files/GBIF_long.csv")
+#df <- read.csv("./Input_Data_and_Files/GBIF_long.csv")
+
+# tthe new json file is too big to open and save as a csv, try to open and edit directly in R
+df <- fromJSON("./Input_Data_and_Files/long_GBIF_2.json") %>% as.data.frame # this file is too big to upload to github
+# will keep this on personal file and drop in and read when needed
 
 # group by species
 # and then take one row per native province
 GBIF_province_new <- df %>%
-  group_by(Column1.sci_nam) %>%
-  distinct(Column1.PRENAME, .keep_all = TRUE) %>%
-  dplyr::select(Column1.sci_nam, Column1.PRENAME) %>%
-  rename("sci_nam" = "Column1.sci_nam", "PRENAME" = "Column1.PRENAME")
+  group_by(sci_nam) %>%
+  distinct(PRENAME, .keep_all = TRUE) %>%
+  dplyr::select(sci_nam, PRENAME) %>%
+  # distinct(sci_nam) # this line just to see how many species (remove for actual processing)
+  # has a bunch of extra species?
+  # join with cwr_list to pair it down?
+  left_join(cwr_list, .)
 
 GBIF_ecoregion_new <- df %>%
-  group_by(Column1.sci_nam) %>%
-  distinct(Column1.ECO_NAME, .keep_all = TRUE)%>%
-  dplyr::select(Column1.sci_nam, Column1.ECO_NAME) %>%
-  rename("sci_nam" = "Column1.sci_nam", "ECO_NAME" = "Column1.ECO_NAME")
-
-native_occurrence_df_province <- left_join(GBIF_province_new, cwr_list, by = "sci_nam")
-native_occurrence_df_province_formatted <- native_occurrence_df_province %>%
+  group_by(sci_nam) %>%
+  distinct(ECO_NAM, .keep_all = TRUE) %>%
+  dplyr::select(sci_nam, ECO_NAM) %>%
+  rename("ECO_NAME" = "ECO_NAM") %>%
+  left_join(cwr_list, .) 
+  
+  # use this to see how many species with a range (373)
+  # filter(!is.na(ECO_NAME)) %>%
+  # distinct(sci_nam, .keep_all = TRUE) 
+  
+native_occurrence_df_province_formatted <- GBIF_province_new %>%
   rename("province" = "PRENAME", "crop" = "Crop", "species" = "sci_nam") 
 
-native_occurrence_df_ecoregion <- left_join(GBIF_ecoregion_new, cwr_list, by = "sci_nam")
-native_occurrence_df_ecoregion_formatted <- native_occurrence_df_ecoregion %>%
+native_occurrence_df_ecoregion_formatted <- GBIF_ecoregion_new %>%
   rename("crop" = "Crop", "species" = "sci_nam")
 
 #########################################################################################
 # Section 2 Load and format garden collection data                                
 #########################################################################################
-
 
 
 ##########
@@ -64,14 +75,14 @@ cwr_montreal <- read.csv("./Garden_Data/CWR_of_MontrealBG.csv", na.strings=c("",
 cwr_guelph <- read.csv("./Garden_Data/CWR_of_UofGuelph.csv", na.strings=c("","NA"))
 cwr_mountp <- read.csv("./Garden_Data/CWR_of_MountPleasantGroup.csv", na.strings=c("","NA"))
 cwr_vandusen <- read.csv("./Garden_Data/CWR_of_VanDusenBG.csv", na.strings=c("","NA"))
-# cwr_pgrc <- read.csv("./Garden_Data/Amelanchier_PGRC.csv") # removing these subsetted data sets for now
+# cwr_pgrc <- read.csv("./Garden_Data/CWR_Amelanchier_PGRC.csv") # removing these subsetted data sets for now
 # cwr_usask <- read.csv("Amelanchier_UofSask.csv") # removing these subsetted data sets for now
 cwr_readerrock <- read.csv("./Garden_Data/CWR_of_ReaderRock.csv", na.strings=c("","NA"))
 
 # join all garden data into one long table
 # update and add new gardens as we receive additional datasets
 garden_accessions <- rbind(cwr_ubc, cwr_rbg, cwr_montreal, cwr_guelph, cwr_mountp, cwr_vandusen,
-                           cwr_readerrock)
+                           cwr_readerrock, cwr_pgrc)
 garden_accessions <- garden_accessions %>% # format columns
   mutate(latitude = as.numeric(latitude), 
          longitude = as.numeric(longitude)) # %>%
@@ -104,7 +115,7 @@ canada <- st_read("./Geo_Data/canada.geojson", quiet = TRUE) # 1
 # add geojson map with ecoregion boundaries
 world_eco <- st_read("./Geo_Data/world_ecoregions.geojson", quiet = TRUE)
 # Trim geojson world map to canada ecoregions from native_occurrence_df
-canada_eco <- semi_join(world_eco, native_occurrence_df_ecoregion, by=("ECO_NAME")) 
+canada_eco <- semi_join(world_eco, native_occurrence_df_ecoregion_formatted, by=("ECO_NAME")) 
 
 # clip ecoregions to canada national border
 canada_eco_subset <- st_intersection(canada_eco, canada)
@@ -175,7 +186,7 @@ ecoregion_gap_table <- native_occurrence_df_ecoregion_formatted %>%
 # unselect when these files need to be overwritten
 # geojsonio::geojson_write(canada_eco_subset, file = "./Geo_Data/canada_ecoregions_clipped.geojson")
 # write.csv(province_gap_table, "./Output_Data_and_Files/province_gap_table.csv")
-write.csv(ecoregion_gap_table, "./Output_Data_and_Files/ecoregion_gap_table.csv")
+# write.csv(ecoregion_gap_table, "./Output_Data_and_Files/ecoregion_gap_table.csv")
 
 # note: delete "Oxycoccus sp." and "Julans sp." rows which were errors in the original list that was used to generate range maps and attaches to the gap tables
 
