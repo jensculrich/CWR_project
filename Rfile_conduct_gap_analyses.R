@@ -33,8 +33,8 @@ cwr_list_summary <- cwr_list %>%
 canada_ecoregions_geojson <- st_read("./Geo_Data/canada_ecoregions_clipped.geojson", quiet = TRUE)
 canada_provinces_geojson <- st_read("./Geo_Data/canada_provinces.geojson", quiet = TRUE)
 
-province_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/province_gap_table.csv"))
-ecoregion_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/ecoregion_gap_table.csv"))
+province_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/province_gap_table_post_manual_range_edits.csv"))
+ecoregion_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/ecoregion_gap_table_post_manual_range_edits.csv"))
 
 garden_list <- as_tibble(read.csv("./Input_Data_and_Files/garden_list.csv")) %>%
   mutate(type = "Surveyed Garden")
