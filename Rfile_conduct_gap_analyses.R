@@ -92,13 +92,16 @@ garden_list_sf <- st_as_sf(garden_list,
 #################################
 #   Map all garden accessions   #
 #################################
+# filter to species for which we had a range map
+province_gap_table_sf_in_Canada <- province_gap_table_sf %>%
+  filter(country == "Canada" | is.na(country))
 
 cols <- c("CWR geographical origin" = "blue", "Surveyed Garden" = "red")
 # Plot By province
 P <- ggplot() +
   geom_sf(
     color = "gray60", size = 0.1, data = canada_provinces_geojson) +
-  geom_sf(data = province_gap_table_sf, aes(color = type), alpha = 0.5, size = 2, 
+  geom_sf(data = province_gap_table_sf_in_Canada, aes(color = type), alpha = 0.5, size = 2, 
           show.legend = TRUE) + # 17
   geom_sf(data = garden_list_sf, aes(color = type), alpha = 0.7, size = 3) +
   coord_sf(crs = crs_string) +
@@ -154,6 +157,7 @@ Q
 province_gap_table_in_Canada <- province_gap_table %>%
   filter(country == "Canada" | is.na(country))
 
+# define the gap analysis function
 province_gap_analysis <- function(taxon) {
   
   provinceTableData <- province_gap_table_in_Canada %>%
@@ -203,7 +207,7 @@ province_gap_analysis <- function(taxon) {
 
 }
 
-# test <- province_gap_analysis("Amelanchier arborea")
+# make an empty tibble that will be filled out with species rows
 gap_analysis_df_by_province <- data.frame("Group" = character(),
                                              "crop"= character(), 
                                              "species" = character(), 
@@ -213,7 +217,9 @@ gap_analysis_df_by_province <- data.frame("Group" = character(),
                                              "accessions lacking geographic data" = character(),
                                              stringsAsFactors=FALSE)
 
-
+# for each species with a range,
+# determine which regions in the range are represented by 1 or more accession
+# and then determine the proportion of native regions with 1 or more accession
 for(i in 1:nrow(cwr_list)) {
   
   selected_taxon <- cwr_list[[i,3]] # r is species ("sci_name")
@@ -224,43 +230,53 @@ for(i in 1:nrow(cwr_list)) {
   
 } 
 
-# proportion of taxa in each category w/
-# at least one accession, make a boxplot as well
-
-# group_by Group
-# sum_species_w_accessions = sum(at_least_one_accession)
-# tally rows
-# proportion_species_conserved = sum_species_w_accessions / tally
-# distinct(species, .keep_all = TRUE ) 
-
-gap_analysis_df_by_province_2 <- gap_analysis_df_by_province %>%
-  group_by(Group) %>%
-  mutate(sum_species_w_accessions = sum(at_least_one_accession)) %>%
-  add_tally %>%
-  mutate(proportion_species_conserved = sum_species_w_accessions / n) %>%
-  ungroup()
-
-R <- ggplot(gap_analysis_df_by_province_2, aes(perc_province_range_covered, Group)) + 
+# group by crop category and determine 
+R <- ggplot(gap_analysis_df_by_province, aes(perc_province_range_covered, Group)) + 
   geom_boxplot(outlier.shape = NA) + geom_jitter() + 
-  xlab("Proportion of native regions (Provinces) represented in garden collections") + ylab("") +
+  xlab("Proportion of native provinces represented in garden collections") + ylab("") +
   theme_bw() +
-  scale_x_continuous(labels = function(x) paste0(x*100, "%"))
+  scale_x_continuous(labels = function(x) paste0(x*100, "%")) +
+  theme(axis.text.x = element_text(size = 14),
+        axis.text.y = element_text(size = 14), 
+        axis.title.x = element_text(size = 14))
 R
 
 # what's the mean proportion?
-(mean_range <- mean(gap_analysis_df_by_province_2$perc_province_range_covered))
-(sd_range <- sd(gap_analysis_df_by_province_2$perc_province_range_covered))
+(mean_range <- mean(gap_analysis_df_by_province$perc_province_range_covered))
+(sd_range <- sd(gap_analysis_df_by_province$perc_province_range_covered))
 
 # mean and sd by group 
-group_means_sd <- gap_analysis_df_by_province_2 %>%
+group_means_sd <- gap_analysis_df_by_province %>%
   group_by(Group) %>%
   mutate(mean_range = mean(perc_province_range_covered)) %>%
-  mutate(sd_range = sd(perc_province_range_covered))
-
+  mutate(sd_range = sd(perc_province_range_covered)) %>%
+  distinct(Group, .keep_all = TRUE)
 
 # gap analysis w/out respect to geo data
 # ie how many species have at least one accession in one of our gardens?
 # by crop category
+
+gap_analysis_df_by_province_2 <- province_gap_table_in_Canada %>%
+# tally the number of rows in each province with an existing accession (garden is not NA)
+  group_by(species) %>%
+  add_tally(!is.na(garden)) %>%
+  rename("accessions_for_species" = "n")  %>%
+  ungroup() %>%
+
+  # convert number of accessions (per species) to a binary "is there or is there not an accession from x region"
+  group_by(species) %>%
+  filter(row_number() == 1) %>%
+  # filter(!is.na(province)) %>%
+  mutate(one_or_more_accession = ifelse(
+    accessions_for_species > 0, 1, 0)) %>%
+  ungroup() %>%
+
+  group_by(Group) %>%
+  mutate(sum_species_w_accessions = sum(one_or_more_accession)) %>%
+  add_tally %>%
+  mutate(proportion_species_conserved = sum_species_w_accessions / n) %>%
+  ungroup()
+
 gap_analysis_df_by_province_3 <- gap_analysis_df_by_province_2 %>%
   distinct(Group, .keep_all = TRUE)
 
@@ -270,13 +286,16 @@ S <- ggplot(gap_analysis_df_by_province_3, aes(x = Group,
   theme_bw() +
   coord_flip() +
   ylab("Proportion of CWRs Represented in Garden Collections") + xlab("") +
-  scale_y_continuous(labels = function(x) paste0(x*100, "%"), limits = c(0, 1))
+  scale_y_continuous(labels = function(x) paste0(x*100, "%"), limits = c(0, 1)) +
+  theme(axis.text.x = element_text(size = 14),
+        axis.text.y = element_text(size = 14), 
+        axis.title.x = element_text(size = 14))
 S
 
 # across all taxa
 gap_analysis_df_by_province_4 <- gap_analysis_df_by_province_2 %>%
   add_tally(name = "total_num_CWRs") %>%
-  mutate(total_proportion_with_an_accession = sum(at_least_one_accession / 
+  mutate(total_proportion_with_an_accession = sum(one_or_more_accession / 
                                                     total_num_CWRs)) %>%
   mutate(CWR = as_factor("All CWRs")) %>%
   slice(1)
@@ -368,15 +387,7 @@ for(i in 1:nrow(cwr_list)) {
   
 } 
 
-# proportion of taxa in each category w/
-# at least one accession, make a boxplot as well
-
-# group_by Group
-# sum_species_w_accessions = sum(at_least_one_accession)
-# tally rows
-# proportion_species_conserved = sum_species_w_accessions / tally
-# distinct(species, .keep_all = TRUE ) 
-
+# proportion of native range represented for each taxa hrouped by category w/
 gap_analysis_df_by_ecoregion_2 <- gap_analysis_df_by_ecoregion %>%
   group_by(Group) %>%
   mutate(sum_species_w_accessions = sum(at_least_one_accession)) %>%
@@ -388,7 +399,10 @@ T <- ggplot(gap_analysis_df_by_ecoregion_2, aes(perc_ecoregion_range_covered, Gr
   geom_boxplot(outlier.shape = NA) + geom_jitter() + 
   xlab("Proportion of native regions (ecoregions) represented in garden collections") + ylab("") +
   theme_bw() +
-  scale_x_continuous(labels = function(x) paste0(x*100, "%"))
+  scale_x_continuous(labels = function(x) paste0(x*100, "%")) +
+  theme(axis.text.x = element_text(size = 12),
+        axis.text.y = element_text(size = 14), 
+        axis.title.x = element_text(size = 14))
 T
 
 # what's the mean proportion?
@@ -400,7 +414,7 @@ T
 ################################
 # which taxa did we not do a gap analysis on because we lacked any GBIF data?
 anti_join_missing_cwrs <- anti_join(cwr_list, gap_analysis_df_by_province, by = c("sci_name" = "species"))
-write.csv(anti_join_missing_cwrs, "./Output_Data_and_Files/anti_join_missing_cwrs.csv")
+# write.csv(anti_join_missing_cwrs, "./Output_Data_and_Files/anti_join_missing_cwrs.csv")
 
 ################################
 #   Amelanchier Case Study     #
@@ -487,6 +501,7 @@ for(i in 1:nrow(saskatoon_cwr_list)) {
   
 } 
 
+# write.csv(saskatoon_gap_analysis_df_by_province, "./Output_Data_and_Files/saskatoon_gap_table_province.csv")
 
 ############################
 # Gap Analysis By Ecoregion
@@ -565,6 +580,7 @@ for(i in 1:nrow(saskatoon_cwr_list)) {
   
 } 
 
+# write.csv(saskatoon_gap_analysis_df_by_ecoregion, "./Output_Data_and_Files/saskatoon_gap_table_ecoregion.csv")
 
 ##################################################
 # Plot Amelanchier Range Conservation Gap Analysis
@@ -631,7 +647,7 @@ make_a_plot <- function(taxon) {
     ggtitle(taxon) +
     theme(panel.grid.major = element_line(color = "white"),
           plot.title = element_text(color="black",
-                                    size=10, face="bold.italic", hjust = 0.5),
+                                    size=14, face="bold.italic", hjust = 0.5),
           plot.margin=unit(c(0.1,-0.2,0.1,-0.2), "cm"),
           legend.position = "none") # , legend.text = element_text(size=10)),
   return(plot)
@@ -720,9 +736,13 @@ saskatoon_plotData_ecoregion <- function(taxon){
 } 
 
 make_a_plot_ecoregion <- function(taxon) {
+  subset_ecoregion_gap_table_sf <- ecoregion_gap_table_sf %>%
+    filter(species == taxon)
+  
   plot <- ggplot(saskatoon_plotData_ecoregion(taxon = taxon)) +
     geom_sf(aes(fill = as.factor(binary)),
             color = "gray60", size = 0.1) +
+    geom_sf(data = subset_ecoregion_gap_table_sf, color = 'skyblue', alpha = 0.5, size = 2) +
     coord_sf(crs = crs_string) +
     scale_fill_manual(values = c("gray80", "gray18"), 
                       labels = c("No accessions with geographic data held in collection", 
@@ -736,7 +756,7 @@ make_a_plot_ecoregion <- function(taxon) {
     ggtitle(taxon) +
     theme(panel.grid.major = element_line(color = "white"),
           plot.title = element_text(color="black",
-                                    size=10, face="bold.italic", hjust = 0.5),
+                                    size=14, face="bold.italic", hjust = 0.5),
           plot.margin=unit(c(0.1,-0.2,0.1,-0.2), "cm"),
           legend.position = "none") # , legend.text = element_text(size=10)),
   return(plot)
@@ -759,30 +779,6 @@ for(i in 1:nrow(saskatoon_cwr_list)) {
 # plot
 plot_ecoregions[c(5, 6, 8, 11, 12, 15)] <- NULL # remove species w no range data
 print(do.call(grid.arrange,plot_ecoregions))
-
-
-# need to get a legend
-single_species_plot_data <- saskatoon_plotData(taxon = "Amelanchier alnifolia")
-
-plot_single <- ggplot(single_species_plot_data) +
-  geom_sf(aes(fill = as.factor(binary)),
-          color = "gray60", size = 0.1) +
-  coord_sf(crs = crs_string) +
-  scale_fill_manual(values = c("gray80", "gray18"), 
-                    labels = c("No accessions with geographic data held in collection", 
-                               "1 or more accessions with geographic data held in collection", 
-                               "Outside of native range")) +
-  guides(fill = guide_legend(title = "Conservation Status in Botanic Gardens", 
-                             title.position = "top",
-                             title.theme = element_text(size = 10, face = "bold"))) +
-  theme_map() +
-  ggtitle("") +
-  theme(panel.grid.major = element_line(color = "white"),
-        plot.title = element_text(color="black",
-                                  size=10, face="bold.italic", hjust = 0.5),
-        plot.margin=unit(c(0.1,-0.2,0.1,-0.2), "cm"),
-        legend.text = element_text(size=10))
-plot_single
 
 ################################################
 # Differences by Garden

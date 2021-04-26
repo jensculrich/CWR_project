@@ -25,8 +25,8 @@ cwr_list <- read.csv("./Input_Data_and_Files/master_list_apr_3.csv")
 canada_ecoregions_geojson <- st_read("./Geo_Data/canada_ecoregions_clipped.geojson", quiet = TRUE)
 canada_provinces_geojson <- st_read("./Geo_Data/canada_provinces.geojson", quiet = TRUE)
 
-province_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/province_gap_table.csv"))
-ecoregion_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/ecoregion_gap_table.csv"))
+province_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/province_gap_table_post_manual_range_edits.csv"))
+ecoregion_gap_table <- as_tibble(read.csv("./Output_Data_and_Files/ecoregion_gap_table_post_manual_range_edits.csv"))
 
 # CRS 
 crs_string = "+proj=lcc +lat_1=49 +lat_2=77 +lon_0=-91.52 +x_0=0 +y_0=0 +datum=NAD83 +units=m +no_defs" # 2
@@ -81,13 +81,17 @@ cwr_list_summary <- cwr_list %>%
   add_tally() %>%
   distinct(Group, .keep_all = TRUE ) %>%
   arrange(desc(n)) %>%
-  dplyr::select(Group, n) 
-
-
+  dplyr::select(Group, n) %>%
+  # change level name to fit on the figure page
+  transform(Group=plyr::revalue(Group,c("Herbs/Medicinals/Ornamentals"="H/M/O")))
+ 
 par(mar=c(4,11,4,4))
-barplot(cwr_list_summary$n, main = "Native CWR Taxa in Broad Crop Categories",
+barplot(cwr_list_summary$n, #main = "Native CWR Taxa in Broad Crop Categories",
         names.arg = cwr_list_summary$Group, xlab = "", ylab = "",
-        cex.names=0.8, horiz=T, las=1, xlim = c(0,140))
+        cex.names=1.5, cex.axis=1.5, horiz=T, las=1, xlim = c(0,140))
+# revert level name
+cwr_list_summary <- cwr_list_summary %>%
+  transform(Group=plyr::revalue(Group,c("H/M/O"="Herbs/Medicinals/Ornamentals")))
 
 
 ##############################
@@ -189,11 +193,14 @@ Q
 # and most endemic native CWRs
 find_native_cwrs_by_group_ecoregion <- function(x) {
   temp <- ecoregion_gap_table %>%
+    # one unique row per province for each species
+    # this removes the duplicate rows when there are more than one accession per species
+    group_by(species) %>%
+    distinct(ECO_NAME, .keep_all=TRUE) %>%
+    ungroup() %>%
+    
     filter(Group == x)  %>%
-    # count total CWRs (unique sci_name in each ecoregion)
-    # want the rows where garden is NA (just the range data)
-    filter(is.na(garden)) %>%
-    # group by ecoregion
+    
     group_by(ECO_NAME) %>%
     # tally the number of unique CWR species
     distinct(species, .keep_all = TRUE) %>%
@@ -265,10 +272,14 @@ hotspots_by_crop_category_ecoregion <- native_cwrs_by_group_ecoregion %>%
 # and most endemic native CWRs
 find_native_cwrs_by_group_province <- function(x) {
   temp <- province_gap_table %>%
+    # one unique row per province for each species
+    # this removes the duplicate rows when there are more than one accession per species
+    group_by(species) %>%
+    distinct(province, .keep_all=TRUE) %>%
+    ungroup() %>%
+    
     filter(Group == x)  %>%
-    # count total CWRs (unique sci_name in each province)
-    # want the rows where garden is NA (just the range data)
-    filter(is.na(garden)) %>%
+    
     # group by province
     group_by(province) %>%
     # tally the number of unique CWR species
@@ -330,96 +341,3 @@ hotspots_by_crop_category_province <- native_cwrs_by_group_province %>%
   filter(!is.na(province)) %>%
   # keep row with max total_CWRs_in_province
   slice(which.max(total_CWRs_in_province))
-
-
-
-
-# Everything through here has been checked
-
-############ 
-# delete everything below if not needed
-
-
-
-
-
-
-
-
-# province with the most CWRs
-df5 <- Native_Range_DF %>%
-  group_by(PRENAME) %>% # group by province
-  distinct(sci_nam, .keep_all = TRUE) %>% # only one CWR per province (if it's in multiple ECOs in the same province can show up >1 times)
-  add_tally() %>% # tally number CWRs in tthe province
-  rename(num_CWRs_in_Province = "n") %>%
-  mutate(num_CWRs_in_Province = as.numeric(num_CWRs_in_Province))
-
-CWRS_group_by_province <- df5 %>% # all I want for a graph is number of CWRS in each province
-  group_by(PRENAME) %>%
-  summarise(CWRs = mean(num_CWRs_in_Province))
-
-CWRS_group_by_province$PRENAME <- # order provinces by number of  CWRs 
-  factor(CWRS_group_by_province$PRENAME,
-         levels = CWRS_group_by_province$PRENAME[
-           order(CWRS_group_by_province$CWRs)])
-
-# Plot number CWRs in each province
-q <- ggplot(CWRS_group_by_province, aes(x = PRENAME, y = CWRs)) + theme_bw() + 
-  geom_bar(stat = "identity") + theme(axis.text.x=element_text(angle=45, hjust=1))
-q
-
-# ecoregion with the most Amelanchier CWRs
-df6 <- Native_Range_DF %>%
-  group_by(ECO_NAME) %>%
-  filter(grepl('Amelanchier', sci_nam)) %>%
-  distinct(sci_nam, .keep_all = TRUE) %>%
-  add_tally() %>%
-  rename(num_Amelanchier_relatives_in_Ecoregion = "n") %>%
-  mutate(num_Amelanchier_relatives_in_Ecoregion = as.numeric(num_Amelanchier_relatives_in_Ecoregion))
-
-Amelanchier_group_by_ecoregion <- df6 %>% # all I want for a graph is number of CWRS in each province
-  group_by(ECO_CODE) %>%
-  summarise(Amelanchier_relatives = mean(num_Amelanchier_relatives_in_Ecoregion))
-
-Amelanchier_group_by_ecoregion$ECO_CODE <- # order provinces by number of  CWRs 
-  factor(Amelanchier_group_by_ecoregion$ECO_CODE,
-         levels = Amelanchier_group_by_ecoregion$ECO_CODE[
-           order(Amelanchier_group_by_ecoregion$Amelanchier_relatives)])
-
-# Plot number CWRs in each province
-r <- ggplot(Amelanchier_group_by_ecoregion, aes(x = ECO_CODE, y = Amelanchier_relatives)) + theme_bw() + 
-  geom_bar(stat = "identity") + theme(axis.text.x=element_text(angle=45, hjust=1))
-r
-
-# show five ecoregions with most CWRs
-top_n(Amelanchier_group_by_ecoregion, 5, wt = Amelanchier_relatives)
-# show five ecoregions with least CWRs
-top_n(Amelanchier_group_by_ecoregion, -5, wt = Amelanchier_relatives) 
-
-
-# province with the most Amelanchier CWRs
-df7 <- Native_Range_DF %>%
-  group_by(PRENAME) %>%
-  filter(grepl('Amelanchier', sci_nam)) %>%
-  distinct(sci_nam, .keep_all = TRUE) %>%
-  add_tally() %>%
-  rename(num_Amelanchier_relatives_in_Province = "n") %>%
-  mutate(num_Amelanchier_relatives_in_Province = as.numeric(num_Amelanchier_relatives_in_Province))
-
-Amelanchier_group_by_Province <- df7 %>% # all I want for a graph is number of CWRS in each province
-  group_by(PRENAME) %>%
-  summarise(Amelanchier_relatives = mean(num_Amelanchier_relatives_in_Province))
-
-Amelanchier_group_by_Province$PRENAME <- # order provinces by number of  CWRs 
-  factor(Amelanchier_group_by_Province$PRENAME,
-         levels = Amelanchier_group_by_Province$PRENAME[
-           order(Amelanchier_group_by_Province$Amelanchier_relatives)])
-
-# Plot number CWRs in each province
-s <- ggplot(Amelanchier_group_by_Province, aes(x = PRENAME, y = Amelanchier_relatives)) + theme_bw() + 
-  geom_bar(stat = "identity") + theme(axis.text.x=element_text(angle=45, hjust=1))
-s
-
-# lat/long of one GBIF occurrence per species per ecoregion
-plot(Native_Range_DF$long, Native_Range_DF$lat)
-
