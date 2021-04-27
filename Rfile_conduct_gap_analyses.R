@@ -397,7 +397,7 @@ gap_analysis_df_by_ecoregion_2 <- gap_analysis_df_by_ecoregion %>%
 
 T <- ggplot(gap_analysis_df_by_ecoregion_2, aes(perc_ecoregion_range_covered, Group)) + 
   geom_boxplot(outlier.shape = NA) + geom_jitter() + 
-  xlab("Proportion of native regions (ecoregions) represented in garden collections") + ylab("") +
+  xlab("Proportion of native ecoregions represented in garden collections") + ylab("") +
   theme_bw() +
   scale_x_continuous(labels = function(x) paste0(x*100, "%")) +
   theme(axis.text.x = element_text(size = 12),
