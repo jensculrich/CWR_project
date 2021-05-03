@@ -11,8 +11,6 @@ library(magrittr) # data wrangling
 library(dplyr)
 library(tidyverse)
 library(ggplot2)
-library(raster)
-library(viridis)
 library(tigris)
 
 ######################################################################################
@@ -184,13 +182,10 @@ Q <- ggplot(total_CWRs_group_by_province, aes(x = total_CWRs_in_province)) + the
 Q
 
 ##############################
-# regional richness and endemics by crop category
+# identify regional CWR richness and endemics by category
+# by ecoregion
 
-# for each category:
-# filter to category
-# then...
-# find ecoregions with the most total native CWRs
-# and most endemic native CWRs
+# function for identifying the native CWRs in each region given a category (x)
 find_native_cwrs_by_group_ecoregion <- function(x) {
   temp <- ecoregion_gap_table %>%
     # one unique row per province for each species
@@ -227,7 +222,7 @@ find_native_cwrs_by_group_ecoregion <- function(x) {
   
 } 
 
-
+# create an empty dataframe to be filled in by the function
 native_cwrs_by_group_ecoregion <- data.frame("species" = character(),
                  "ECO_CODE"= character(), 
                  "ECO_NAME" = character(), 
@@ -244,7 +239,7 @@ native_cwrs_by_group_ecoregion <- data.frame("species" = character(),
                  "endemic_CWRs_in_ecoregion" = character(),
                  stringsAsFactors=FALSE)
 
-
+# run the function across all categories (there are 9 crop categories)
 for(i in 1:9) {
   
   group_name <- cwr_list_summary[[i,1]]
@@ -255,6 +250,7 @@ for(i in 1:9) {
 
 } 
 
+# find "hotspot" regions (regions with most CWR species) for each CWR category
 hotspots_by_crop_category_ecoregion <- native_cwrs_by_group_ecoregion %>%
   dplyr::select(-species, -crop, -variant, -latitude, -longitude, 
                 -country, -garden, -IUCNRedList, -ECO_CODE) %>%
@@ -265,11 +261,8 @@ hotspots_by_crop_category_ecoregion <- native_cwrs_by_group_ecoregion %>%
   
 #################
 # by province
-# for each category:
-# filter to category
-# then...
-# find province with the most total native CWRs
-# and most endemic native CWRs
+
+# function for identifying the native CWRs in each region given a category (x)
 find_native_cwrs_by_group_province <- function(x) {
   temp <- province_gap_table %>%
     # one unique row per province for each species
@@ -307,7 +300,7 @@ find_native_cwrs_by_group_province <- function(x) {
   
 } 
 
-
+# create an empty dataframe to be filled in by the function
 native_cwrs_by_group_province <- data.frame("species" = character(),
                                              "province"= character(), 
                                              "Group" = character(), 
@@ -323,7 +316,7 @@ native_cwrs_by_group_province <- data.frame("species" = character(),
                                              "endemic_CWRs_in_ecoregion" = character(),
                                              stringsAsFactors=FALSE)
 
-
+# run the function across all categories (there are 9 crop categories)
 for(i in 1:9) {
   
   group_name <- cwr_list_summary[[i,1]]
@@ -334,6 +327,7 @@ for(i in 1:9) {
   
 } 
 
+# find "hotspot" regions (regions with most CWR species) for each CWR category
 hotspots_by_crop_category_province <- native_cwrs_by_group_province %>%
   dplyr::select(-species, -crop, -variant, -latitude, -longitude, 
                 -country, -garden, -IUCNRedList) %>%

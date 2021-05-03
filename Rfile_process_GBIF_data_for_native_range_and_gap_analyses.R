@@ -26,9 +26,12 @@ number_of_CWRs_in_our_checklist <- nrow(cwr_list)
 # Load data and format so that it can be changed into a projected shapefile
 #df <- read.csv("./Input_Data_and_Files/GBIF_long.csv")
 
-# tthe new json file is too big to open and save as a csv, try to open and edit directly in R
-df <- fromJSON("./Input_Data_and_Files/long_GBIF_2.json") %>% as.data.frame # this file is too big to upload to github
-# will keep this on personal file and drop in and read when needed
+# this file is too big to upload to github
+# IMPORTANT!!! You will need to store this file on a local directory and read
+# it from the local directory here. Make sure to edit the directory in fromJSON()
+# to match your local directory
+df <- fromJSON("long_GBIF_2.json") %>% as.data.frame 
+
 
 # group by species
 # and then take one row per native province

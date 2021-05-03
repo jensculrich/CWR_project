@@ -1,0 +1,142 @@
+occurrenceId,verbatimScientificName,scientificName,key,matchType,confidence,status,rank,kingdom,phylum,class,order,family,genus,species
+,amaranthus hybridus,Amaranthus hybridus L.,5384364,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Caryophyllales,Amaranthaceae,Amaranthus,Amaranthus hybridus
+,hordeum depressum,Hordeum depressum (Scribn. & J.G.Sm.) Rydb.,2706064,EXACT,100,ACCEPTED,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Hordeum,Hordeum depressum
+,hordeum pusillum,Hordeum pusillum Nutt.,2706070,EXACT,100,ACCEPTED,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Hordeum,Hordeum pusillum
+,panicum colombianum,Panicum columbianum Scribn.,4151425,FUZZY,96,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Panicum,Panicum portoricense
+,panicum lanuginosum,Panicum L.,2705064,HIGHERRANK,96,ACCEPTED,GENUS,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Panicum,
+,panicum longifolium,Panicum L.,2705064,HIGHERRANK,96,ACCEPTED,GENUS,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Panicum,
+,panicum macrocarpon,Panicum L.,2705064,HIGHERRANK,96,ACCEPTED,GENUS,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Panicum,
+,panicum meridionale,Panicum meridionale Ashe,2702690,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Panicum,Panicum acuminatum
+,panicum occidentale,Panicum L.,2705064,HIGHERRANK,96,ACCEPTED,GENUS,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Panicum,
+,panicum oligosanther,Panicum oligosanthes Schult.,4132147,FUZZY,96,ACCEPTED,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Panicum,Panicum oligosanthes
+,panicum pacificum,Panicum L.,2705064,HIGHERRANK,96,ACCEPTED,GENUS,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Panicum,
+,panicum perlongum,Panicum perlongum Nash,2702673,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Panicum,Panicum linearifolium
+,panicum praecocius,Panicum praecocius Hitchc. & Chase,4128601,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Panicum,Panicum acuminatum
+,panicum rigidulum,Panicum rigidulum Bosc ex Nees,2705137,EXACT,98,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Coleataenia,Coleataenia rigidula
+,panicum sprentum,Panicum spretum Schult.,2702586,FUZZY,95,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Panicum,Panicum acuminatum
+,panicum subvillosum,Panicum subvillosum Ashe,4122695,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Panicum,Panicum aciculare
+,panicum thermale,Panicum thermale Bol.,4121927,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Panicum,Panicum acuminatum
+,panicum villosissimum,Panicum villosissimum Nash,4119878,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Panicum,Panicum acuminatum
+,panicum wilcoxianum,Panicum wilcoxianum Vasey,2702547,EXACT,100,ACCEPTED,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Panicum,Panicum wilcoxianum
+,chenopodium capitatum,"Chenopodium capitatum Linnaeus, 1753",8612033,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Caryophyllales,Amaranthaceae,Chenopodium,Chenopodium capitatum
+,chenopodium hybridum,Chenopodium ×hybridum E.H.L.Krause,7981602,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Caryophyllales,Amaranthaceae,Chenopodium,Chenopodium hybridum
+,chenopodium rubrum,Chenopodium L.,3083823,HIGHERRANK,96,ACCEPTED,GENUS,Plantae,Tracheophyta,Magnoliopsida,Caryophyllales,Amaranthaceae,Chenopodium,
+,chenopodium standleyanum,Chenopodium standleyanum Aellen,3083883,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Caryophyllales,Amaranthaceae,Chenopodiastrum,Chenopodiastrum standleyanum
+,elymus trachycaulus,Elymus trachycaulus (Link) Gould ex Shinners,5290270,EXACT,98,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Elymus,Elymus violaceus
+,elymus wiegandii,Elymus wiegandii Fernald,5290311,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Elymus,Elymus canadensis
+,elymus innovatus,Elymus innovatus Beal,5290222,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Leymus,Leymus innovatus
+,elymus mollis,Elymus L.,10465436,HIGHERRANK,95,ACCEPTED,GENUS,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Elymus,
+,elymus piperi,Elymus piperi Bowden,5290215,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Leymus,Leymus cinereus
+,vaccinium atrococcum,Vaccinium atrococcum (A.Gray) A.Heller,2882967,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Ericales,Ericaceae,Vaccinium,Vaccinium fuscatum
+,vaccinium caespitosum,Vaccinium caespitosum Michx.,2882860,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Ericales,Ericaceae,Vaccinium,Vaccinium cespitosum
+,vaccinium corymbsum,Vaccinium corymbosum L.,2882849,FUZZY,95,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Ericales,Ericaceae,Vaccinium,Vaccinium corymbosum
+,vaccinium fuscatum,Vaccinium fuscatum Aiton,2882965,EXACT,100,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Ericales,Ericaceae,Vaccinium,Vaccinium fuscatum
+,vaccinium nubigeum,Vaccinium ×nubigenum Fernald,2882832,FUZZY,96,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Ericales,Ericaceae,Vaccinium,Vaccinium nubigenum
+,vaccinium vacillans,"Vaccinium vacillans Sol. ex A.Gray, 1848",8032646,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Ericales,Ericaceae,Vaccinium,Vaccinium vacillans
+,sherpherdia argetea,Shepherdia argentea (Pursh) Nutt.,5372429,FUZZY,80,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Elaeagnaceae,Shepherdia,Shepherdia argentea
+,sherpherdia canadensis,Shepherdia canadensis (L.) Nutt.,5372427,FUZZY,87,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Elaeagnaceae,Shepherdia,Shepherdia canadensis
+,prunus besseyi,Prunus besseyi L.H.Bailey,3021083,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Rosaceae,Prunus,Prunus pumila
+,vaccinium macrocarpus,Vaccinium macrocarpum Aiton,7777960,FUZZY,97,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Ericales,Ericaceae,Vaccinium,Vaccinium macrocarpum
+,vaccinium microcarpus,Vaccinium microcarpum (Turcz. ex Rupr.) Schmalh. ex Busch,8344892,FUZZY,96,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Ericales,Ericaceae,Vaccinium,Vaccinium microcarpum
+,vaccinium ovalifolius,Vaccinium ovalifolium Sm.,2882894,FUZZY,97,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Ericales,Ericaceae,Vaccinium,Vaccinium ovalifolium
+,vaccinium quadripetalus,Vaccinium L.,2882813,HIGHERRANK,96,ACCEPTED,GENUS,Plantae,Tracheophyta,Magnoliopsida,Ericales,Ericaceae,Vaccinium,
+,ribes howellii,Ribes howellii Greene,2986190,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Saxifragales,Grossulariaceae,Ribes,Ribes acerifolium
+,ribes irriguum,Ribes L.,2986095,HIGHERRANK,96,ACCEPTED,GENUS,Plantae,Tracheophyta,Magnoliopsida,Saxifragales,Grossulariaceae,Ribes,
+,ribes setosum,Ribes L.,2986095,HIGHERRANK,96,ACCEPTED,GENUS,Plantae,Tracheophyta,Magnoliopsida,Saxifragales,Grossulariaceae,Ribes,
+,ribes viscosissiumum,Ribes viscosissimum Pursh,2986172,FUZZY,96,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Saxifragales,Grossulariaceae,Ribes,Ribes viscosissimum
+,ribes watsonianum,Ribes watsonianum Koehne,2986142,EXACT,100,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Saxifragales,Grossulariaceae,Ribes,Ribes watsonianum
+,viburnum alnifolium,Viburnum alnifolium Marshall,2888603,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Dipsacales,Adoxaceae,Viburnum,Viburnum lantanoides
+,rubus acualis,Rubus acaulis Michx.,2992056,FUZZY,95,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Rosaceae,Rubus,Rubus arcticus
+,rubus articus,Rubus arvinus Lefèvre & P.J.Müll.,2997519,FUZZY,95,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Rosaceae,Rubus,Rubus arvinus
+,rubus enslenii,Rubus enslenii Tratt.,2998356,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Rosaceae,Rubus,Rubus flagellaris
+,rubus frondosus,Rubus frondosus Bigelow,2997679,EXACT,100,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Rosaceae,Rubus,Rubus frondosus
+,rubus glagellaris,Rubus L.,2988638,HIGHERRANK,95,ACCEPTED,GENUS,Plantae,Tracheophyta,Magnoliopsida,Rosales,Rosaceae,Rubus,
+,rubus nutkanus,Rubus nutkanus Moc. ex Ser.,2994229,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Rosaceae,Rubus,Rubus nutkanus
+,rubus procerus,Rubus procerus P.J.Müll.,8699639,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Rosaceae,Rubus,Rubus procerus
+,rubus stellatus,Rubus stellatus Sm.,6368424,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Rosaceae,Rubus,Rubus arcticus
+,amelanchier fernaldii,Amelanchier fernaldii Wiegand,3023944,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Rosaceae,Amelanchier,Amelanchier canadensis
+,amelanchier gaspensis,Amelanchier gaspensis (Wiegand) Fernald & Weath.,3023842,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Rosaceae,Amelanchier,Amelanchier sanguinea
+,amelanchier huronensis,Amelanchier huronensis Wiegand,3023844,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Rosaceae,Amelanchier,Amelanchier sanguinea
+,amelanchier lucida,Amelanchier lucida (Fernald) Fernald,3024025,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Rosaceae,Amelanchier,Amelanchier canadensis
+,amelanchier mucronata,Amelanchier mucronata Gand.,8336231,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Rosaceae,Amelanchier,Amelanchier mucronata
+,amelanchier wiegandii,Amelanchier ×wiegandii Nielsen,3024098,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Rosales,Rosaceae,Amelanchier,Amelanchier interior
+,fragaria x ananassa,Plantae,6,HIGHERRANK,99,ACCEPTED,KINGDOM,Plantae,,,,,,
+,agrostis borealis,Agrostis borealis Hartm.,2706519,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Agrostis,Agrostis mertensii
+,agrostis diegoensis,Agrostis diegoensis Vasey,2706475,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Agrostis,Agrostis pallens
+,poa ampla,Poa ampla Merr.,2704288,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Poa,Poa secunda
+,poa artica,Poa L.,2704173,HIGHERRANK,95,ACCEPTED,GENUS,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Poa,
+,poa canbyi,Poa canbyi (Scribn.) Howell,2704298,EXACT,98,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Poa,Poa secunda
+,poa eminens,Poa eminens J.Presl,2704271,EXACT,98,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Arctopoa,Arctopoa eminens
+,poa epilis,Poa epilis Scribn.,4108121,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Poa,Poa cusickii
+,poa gluaca,Poa glauca Vahl,2704218,FUZZY,95,ACCEPTED,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Poa,Poa glauca
+,poa labrodorica,Poa labradorica Fernald,4119363,FUZZY,94,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Dupoa,Dupoa labradorica
+,poa lettermannii,Poa lettermanii Vasey,2704303,FUZZY,97,ACCEPTED,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Poa,Poa lettermanii
+,poa nevadensis,Poa L.,2704173,HIGHERRANK,95,ACCEPTED,GENUS,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Poa,
+,poa sandbergii,Poa sandbergii Vasey,2704282,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Poa,Poa secunda
+,poa vaseyochloa,Poa vaseyochloa Scribn.,2704269,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Poa,Poa leibergii
+,andropogon scoparius,Andropogon L.,2706077,HIGHERRANK,96,ACCEPTED,GENUS,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Andropogon,
+,bromus canadensis,Bromus canadensis Michx.,4115925,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Bromus,Bromus ciliatus
+,bromus cartharticus,Bromus L.,2703642,HIGHERRANK,95,ACCEPTED,GENUS,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Bromus,
+,bromus pubescens,Bromus pubescens Muhl. ex Willd.,2703706,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Bromus,Bromus pubescens
+,bromus purgans,Bromus purgans L.,2703645,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Bromus,Bromus kalmii
+,bromus sitchensis,Bromus sitchensis Trin.,2703698,EXACT,100,ACCEPTED,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Bromus,Bromus sitchensis
+,festuca obtusa,Festuca obtusa Spreng.,2704977,EXACT,98,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Festuca,Festuca subverticillata
+,festuca occidentalis,Festuca occidentalis Hook.,2705003,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Festuca,Festuca occidentalis
+,festuca rubra,Festuca rubra L.,2704922,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Festuca,Festuca rubra
+,festuca viridula,Festuca viridula Vasey,2705006,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Festuca,Festuca viridula
+,agropyron albicans,Agropyron albicans Scribn. & J.G.Sm.,2706618,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Elymus,Elymus albicans
+,agropyron dasystachyum,Agropyron dasystachyum (Hook.) Scribn.,4133245,EXACT,98,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Elymus,Elymus lanceolatus
+,agropyron scribneri,Agropyron scribneri Vasey,2706578,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Elymus,Elymus scribneri
+,agropyron smithii,Agropyron smithii Rydb.,2705777,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Elymus,Elymus smithii
+,agropyron spicatum,Agropyron spicatum (Pursh) Scribn. & J.G.Sm.,4128774,EXACT,98,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Elymus,Elymus spicatus
+,agropyron trachycaulum,Agropyron trachycaulum (Link) Steud.,4127992,EXACT,98,SYNONYM,SPECIES,Plantae,Tracheophyta,Liliopsida,Poales,Poaceae,Elymus,Elymus violaceus
+,oenothera andina,Oenothera andina Nutt.,3189041,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Myrtales,Onagraceae,Neoholmgrenia,Neoholmgrenia andina
+,oenothera breviflora,Oenothera breviflora Torr. & A.Gray,3188946,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Myrtales,Onagraceae,Camissonia,Camissonia breviflora
+,oenothera caespitosa,Oenothera L.,3188799,HIGHERRANK,96,ACCEPTED,GENUS,Plantae,Tracheophyta,Magnoliopsida,Myrtales,Onagraceae,Oenothera,
+,oenothera contorta,Oenothera contorta Bol.,8391973,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Myrtales,Onagraceae,Oenothera,Oenothera contorta
+,oenothera cruciata,Oenothera L.,3188799,HIGHERRANK,96,ACCEPTED,GENUS,Plantae,Tracheophyta,Magnoliopsida,Myrtales,Onagraceae,Oenothera,
+,oenothera pernnis,Oenothera perennis L.,3188838,FUZZY,96,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Myrtales,Onagraceae,Oenothera,Oenothera perennis
+,matteuccia struthipteris,Matteuccia struthiopteris (L.) Tod.,2650999,FUZZY,95,ACCEPTED,SPECIES,Plantae,Tracheophyta,Polypodiopsida,Polypodiales,Onocleaceae,Matteuccia,Matteuccia struthiopteris
+,agastache neptoides,Agastache nepetoides (L.) Kuntze,2926408,FUZZY,95,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Lamiales,Lamiaceae,Agastache,Agastache nepetoides
+,agastache scrophulariaefolia,Agastache scrophulariifolia (Willd.) Kuntze,2926394,FUZZY,94,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Lamiales,Lamiaceae,Agastache,Agastache scrophulariifolia
+,onosmodium hipiddissimum,Onosmodium Michx.,2925848,HIGHERRANK,96,SYNONYM,GENUS,Plantae,Tracheophyta,Magnoliopsida,Boraginales,Boraginaceae,Lithospermum,
+,onosmodium occidentale,Onosmodium occidentale Mack.,6396111,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Boraginales,Boraginaceae,Lithospermum,Lithospermum occidentale
+,helianthus hirsutus,Helianthus hirsutus Raf.,3119209,EXACT,100,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Asterales,Asteraceae,Helianthus,Helianthus hirsutus
+,helianthus x laetiflorus,Plantae,6,HIGHERRANK,99,ACCEPTED,KINGDOM,Plantae,,,,,,
+,nicotiana attenuata,Nicotiana attenuata Torr. ex S.Watson,2928765,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Solanales,Solanaceae,Nicotiana,Nicotiana attenuata
+,trifolium bifidum,Trifolium bifidum A.Gray,5359517,EXACT,100,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Trifolium,Trifolium bifidum
+,trifolium tridentatum,Trifolium Tourn. ex L.,2973363,HIGHERRANK,95,ACCEPTED,GENUS,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Trifolium,
+,trifolium varigatum,Trifolium variegatum Nutt.,7930596,FUZZY,95,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Trifolium,Trifolium variegatum
+,trifolium wormskjoldii,Trifolium wormskioldii Lehm.,5359148,FUZZY,97,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Trifolium,Trifolium wormskioldii
+,lathyrus bijugatus,Lathyrus bijugatus T.G.White,5356758,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Lathyrus,Lathyrus lanszwertii
+,lathyrus ochrolucus,Lathyrus ochroleucus Hook.,5356371,FUZZY,95,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Lathyrus,Lathyrus ochroleucus
+,astragalus adsurgens,Astragalus L.,2933951,HIGHERRANK,96,ACCEPTED,GENUS,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Astragalus,
+,astragalus gracilis,Astragalus gracilis Nutt.,5347122,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Astragalus,Astragalus gracilis
+,astragalus microcystis,Astragalus microcystis A.Gray,5343493,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Astragalus,Astragalus microcystis
+,lotus denticulatus,Lotus denticulatus Greene,5359803,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Acmispon,Acmispon denticulatus
+,lotus formosissimus,Lotus formosissimus Greene,5347484,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Hosackia,Hosackia gracilis
+,lotus micranthus,Lotus micranthus (Benth.) Benth.,5359800,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Acmispon,Acmispon parviflorus
+,lotus pinnatus,Lotus pinnatus Hook.,5347468,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Hosackia,Hosackia pinnata
+,lotus purshianus,Lotus purshianus (Lindl.) Ottley,5359812,EXACT,98,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Acmispon,Acmispon americanus
+,vicia carolinia,Vicia caroliniana Walter,2975000,FUZZY,95,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Vicia,Vicia caroliniana
+,vicia gigantea,Vicia gigantea Hook.,7402443,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fabales,Fabaceae,Vicia,Vicia gigantea
+,lesquerella alpina,Lesquerella alpina (Nutt.) S.Watson,5375839,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Brassicales,Brassicaceae,Physaria,Physaria reediana
+,lesquerella arctica,Lesquerella arctica (Wormsk. ex Hornem.) S.Watson,8622101,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Brassicales,Brassicaceae,Physaria,Physaria arctica
+,lesquerella douglasii,Lesquerella douglasii S.Watson,5375737,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Brassicales,Brassicaceae,Physaria,Physaria douglasii
+,lesquerella ludoviciana,Lesquerella ludoviciana (Nutt.) S.Watson,5375741,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Brassicales,Brassicaceae,Physaria,Physaria ludoviciana
+,silphium integrifolium,Silphium integrifolium Michx.,3092564,EXACT,100,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Asterales,Asteraceae,Silphium,Silphium integrifolium
+,julans cinera,Plantae,6,HIGHERRANK,99,ACCEPTED,KINGDOM,Plantae,,,,,,
+,julans nigra,Plantae,6,HIGHERRANK,99,ACCEPTED,KINGDOM,Plantae,,,,,,
+,corylus californica,"Corylus californica hort. ex K.Koch, 1873",7407135,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fagales,Betulaceae,Corylus,Corylus californica
+,carya tomentosa,Carya tomentosa Poir.,10749160,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fagales,Juglandaceae,Carya,Carya tomentosa
+,alnus rubra,Alnus rubra Bong.,2876176,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fagales,Betulaceae,Alnus,Alnus rubra
+,alnus rugosa,"Alnus rugosa hort. ex Regel, 1868",7981746,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fagales,Betulaceae,Alnus,Alnus rugosa
+,alnus sinuata,Alnus sinuata (Regel) Rydb.,2876309,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fagales,Betulaceae,Alnus,Alnus alnobetula
+,betula lutea,Betula lutea F.Michx.,5331789,EXACT,99,SYNONYM,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fagales,Betulaceae,Betula,Betula alleghaniensis
+,tsuga mertesiana,Tsuga mertensiana (Bong.) Carrière,2687201,FUZZY,95,ACCEPTED,SPECIES,Plantae,Tracheophyta,Pinopsida,Pinales,Pinaceae,Tsuga,Tsuga mertensiana
+,acer circinnatum,Acer circinatum Pursh,3189884,FUZZY,97,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Sapindales,Sapindaceae,Acer,Acer circinatum
+,chamaecyparis nootkatensis,Chamaecyparis nootkatensis (D.Don) Spach,2683900,EXACT,98,SYNONYM,SPECIES,Plantae,Tracheophyta,Pinopsida,Pinales,Cupressaceae,Xanthocyparis,Xanthocyparis nootkatensis
+,quercus marcrocarpa,Quercus macrocarpa Michx.,2878213,FUZZY,95,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fagales,Fagaceae,Quercus,Quercus macrocarpa
+,quercus prinus,Quercus prinus M.A.Curtis,7931933,EXACT,99,ACCEPTED,SPECIES,Plantae,Tracheophyta,Magnoliopsida,Fagales,Fagaceae,Quercus,Quercus prinus
+,picea engelmanii,Picea engelmannii Parry ex Engelm.,5284917,FUZZY,96,ACCEPTED,SPECIES,Plantae,Tracheophyta,Pinopsida,Pinales,Pinaceae,Picea,Picea engelmannii
+,armoracia aquatica,"Armoracia G.Gaertn., B.Mey. & Scherb.",3041017,HIGHERRANK,96,ACCEPTED,GENUS,Plantae,Tracheophyta,Magnoliopsida,Brassicales,Brassicaceae,Armoracia,
