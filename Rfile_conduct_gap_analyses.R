@@ -11,8 +11,6 @@ library(magrittr) # data wrangling
 library(dplyr)
 library(tidyverse)
 library(ggplot2)
-library(raster)
-library(viridis)
 library(tigris)
 library(gridExtra)
 
@@ -61,7 +59,7 @@ theme_map <- function(base_size=10, base_family="") { # 3
 }
 
 ############################################################################
-# Reformat Gap Tables So That Garden Points Can Be Projected alternates
+# Reformat Gap Tables So That Garden Points Can Be Projected              ##
 ############################################################################
 
 province_gap_table <- province_gap_table %>%
@@ -84,6 +82,7 @@ ecoregion_gap_table_sf <- st_as_sf(ecoregion_gap_table,
                                   na.fail = FALSE)
   # could filter to country = canada here
 
+# also project the garden list so that we can graphically map our surveyed gardens
 garden_list_sf <- st_as_sf(garden_list, 
                                    coords = c("longitude", "latitude"), 
                                    crs = 4326, 
@@ -92,10 +91,13 @@ garden_list_sf <- st_as_sf(garden_list,
 #################################
 #   Map all garden accessions   #
 #################################
-# filter to species for which we had a range map
+
+# filter to the garden occurrence points that were in Canada
 province_gap_table_sf_in_Canada <- province_gap_table_sf %>%
   filter(country == "Canada" | is.na(country))
 
+# Plot the origin of wild collected garden accessions (for those with available data)
+# as well as the gardens that participated in the study
 cols <- c("CWR geographical origin" = "blue", "Surveyed Garden" = "red")
 # Plot By province
 P <- ggplot() +
@@ -119,11 +121,15 @@ P <- ggplot() +
 P
 
 # Plot Ecoregions
+# filter to the garden occurrence points that were in Canada
+ecoregion_gap_table_sf_in_Canada <- ecoregion_gap_table_sf %>%
+  filter(country == "Canada" | is.na(country))
+
 Q <- ggplot() +
   geom_sf(
     # aes(fill = name), 
     color = "gray60", size = 0.1, data = canada_ecoregions_geojson) +
-  geom_sf(data = ecoregion_gap_table_sf, aes(color = type), alpha = 0.5, size = 2) + # 17
+  geom_sf(data = ecoregion_gap_table_sf_in_Canada, aes(color = type), alpha = 0.5, size = 2) + # 17
   geom_sf(data = garden_list_sf, aes(color = type), alpha = 0.7, size = 3) +
   coord_sf(crs = crs_string) +
   theme_map() +
@@ -140,20 +146,16 @@ Q <- ggplot() +
 Q
 
 
-######################################################################################
-#
-######################################################################################
 
+#####################################################
+# Conduct Geographic Conservation Gap Analyses      #
+#####################################################
+# we determined the proportion of native regions (province or ecoregion) where 
+# each CWR baturally occurs that were represented in garden collections
 
-
-
-######################################################################################
-#
-######################################################################################
 # Gap Analysis By Province
-# Need to run this across all taxa
 
-# filter to species for which we had a range map
+# filter to the garden occurrence points that were in Canada
 province_gap_table_in_Canada <- province_gap_table %>%
   filter(country == "Canada" | is.na(country))
 
@@ -165,7 +167,10 @@ province_gap_analysis <- function(taxon) {
     filter(province_gap_table_in_Canada$species == taxon) %>%
     
     # tally the number of rows in each province with an existing accession (garden is not NA)
-    group_by(province) %>%
+    # IMPORTANT: This step drop species without range data
+    # We were unable to determine the native ranges for 123 of the 
+    # 499 native Canadian CWRs due to a lack of available occurrence data via GBIF.
+    group_by(province) %>% 
     add_tally(!is.na(garden)) %>%
     rename("accessions_in_province" = "n")  %>%
     ungroup() %>%
@@ -217,12 +222,13 @@ gap_analysis_df_by_province <- data.frame("Group" = character(),
                                              "accessions lacking geographic data" = character(),
                                              stringsAsFactors=FALSE)
 
-# for each species with a range,
+# for each species
 # determine which regions in the range are represented by 1 or more accession
 # and then determine the proportion of native regions with 1 or more accession
+# add that species as a row to the gap analysis df
 for(i in 1:nrow(cwr_list)) {
   
-  selected_taxon <- cwr_list[[i,3]] # r is species ("sci_name")
+  selected_taxon <- cwr_list[[i,3]] # column 3 is species ("sci_name")
   as.data.frame(temp <- province_gap_analysis(
     taxon = selected_taxon)) 
   gap_analysis_df_by_province <- rbind(
@@ -252,71 +258,14 @@ group_means_sd <- gap_analysis_df_by_province %>%
   mutate(sd_range = sd(perc_province_range_covered)) %>%
   distinct(Group, .keep_all = TRUE)
 
-# gap analysis w/out respect to geo data
-# ie how many species have at least one accession in one of our gardens?
-# by crop category
-
-gap_analysis_df_by_province_2 <- province_gap_table_in_Canada %>%
-# tally the number of rows in each province with an existing accession (garden is not NA)
-  group_by(species) %>%
-  add_tally(!is.na(garden)) %>%
-  rename("accessions_for_species" = "n")  %>%
-  ungroup() %>%
-
-  # convert number of accessions (per species) to a binary "is there or is there not an accession from x region"
-  group_by(species) %>%
-  filter(row_number() == 1) %>%
-  # filter(!is.na(province)) %>%
-  mutate(one_or_more_accession = ifelse(
-    accessions_for_species > 0, 1, 0)) %>%
-  ungroup() %>%
-
-  group_by(Group) %>%
-  mutate(sum_species_w_accessions = sum(one_or_more_accession)) %>%
-  add_tally %>%
-  mutate(proportion_species_conserved = sum_species_w_accessions / n) %>%
-  ungroup()
-
-gap_analysis_df_by_province_3 <- gap_analysis_df_by_province_2 %>%
-  distinct(Group, .keep_all = TRUE)
-
-S <- ggplot(gap_analysis_df_by_province_3, aes(x = Group,
-                                               y = proportion_species_conserved)) +
-  geom_bar(stat = "identity") + 
-  theme_bw() +
-  coord_flip() +
-  ylab("Proportion of CWRs Represented in Garden Collections") + xlab("") +
-  scale_y_continuous(labels = function(x) paste0(x*100, "%"), limits = c(0, 1)) +
-  theme(axis.text.x = element_text(size = 14),
-        axis.text.y = element_text(size = 14), 
-        axis.title.x = element_text(size = 14))
-S
-
-# across all taxa
-gap_analysis_df_by_province_4 <- gap_analysis_df_by_province_2 %>%
-  add_tally(name = "total_num_CWRs") %>%
-  mutate(total_proportion_with_an_accession = sum(one_or_more_accession / 
-                                                    total_num_CWRs)) %>%
-  mutate(CWR = as_factor("All CWRs")) %>%
-  slice(1)
-
-SS <- ggplot(gap_analysis_df_by_province_4, aes(x = CWR, 
-                                                y = total_proportion_with_an_accession)) +
-  geom_bar(stat = "identity") + 
-  theme_bw() +
-  coord_flip() +
-  ylab("Proportion of CWRs Represented in Garden Collections") + xlab("") +
-  scale_y_continuous(labels = function(x) paste0(x*100, "%"), limits = c(0, 1))
-SS
-
 ############################
 # Gap Analysis By Ecoregion
-# Need to run this across all taxa
 
-# filter accessions to those coming from Canada 
+# filter to the garden occurrence points that were in Canada
 ecoregion_gap_table_in_Canada <- ecoregion_gap_table %>%
   filter(country == "Canada" | is.na(country))
 
+# define the gap analysis function
 ecoregion_gap_analysis <- function(taxon) {
   
   ecoregionTableData <- ecoregion_gap_table_in_Canada %>%
@@ -324,6 +273,9 @@ ecoregion_gap_analysis <- function(taxon) {
     filter(ecoregion_gap_table_in_Canada$species == taxon) %>%
     
     # tally the number of rows in each ecoregion with an existing accession (garden is not NA)
+    # IMPORTANT: This step drop species without range data
+    # We were unable to determine the native ranges for 123 of the 
+    # 499 native Canadian CWRs due to a lack of available occurrence data via GBIF.
     group_by(ECO_NAME) %>%
     add_tally(!is.na(garden)) %>%
     rename("accessions_in_ecoregion" = "n")  %>%
@@ -366,7 +318,7 @@ ecoregion_gap_analysis <- function(taxon) {
   
 }
 
-# test <- province_gap_analysis("Amelanchier arborea")
+# create an empty data frame that will be filled by the iterative function
 gap_analysis_df_by_ecoregion <- data.frame("Group" = character(),
                                           "crop"= character(), 
                                           "species" = character(), 
@@ -376,7 +328,10 @@ gap_analysis_df_by_ecoregion <- data.frame("Group" = character(),
                                           "accessions lacking geographic data" = character(),
                                           stringsAsFactors=FALSE)
 
-
+# for each species
+# determine which regions in the range are represented by 1 or more accession
+# and then determine the proportion of native regions with 1 or more accession
+# add that species as a row to the gap analysis df
 for(i in 1:nrow(cwr_list)) {
   
   selected_taxon <- cwr_list[[i,3]] # r is species ("sci_name")
@@ -409,12 +364,111 @@ T
 (mean_range <- mean(gap_analysis_df_by_ecoregion_2$perc_ecoregion_range_covered))
 (sd_range <- sd(gap_analysis_df_by_ecoregion_2$perc_ecoregion_range_covered))
 
+#######################################################
+# Other Summary Analysis                              #
+#######################################################
+
+# gap analysis w/out respect to geo data
+# ie how many species have at least one accession in one of our gardens?
+# by crop category
+# this is currently set up for ALL CWR species, not just the ones that 
+# we could define native ranges for
+
+gap_analysis_df_by_province_2 <- province_gap_table_in_Canada %>%
+  # tally the number of rows in each province with an existing accession (garden is not NA)
+  group_by(species) %>%
+  add_tally(!is.na(garden)) %>%
+  rename("accessions_for_species" = "n")  %>%
+  ungroup() %>%
+  
+  # convert number of accessions (per species) to a binary "is there or is there not an accession from x region"
+  group_by(species) %>%
+  filter(row_number() == 1) %>%
+  # filter(!is.na(province)) %>%
+  mutate(one_or_more_accession = ifelse(
+    accessions_for_species > 0, 1, 0)) %>%
+  ungroup() %>%
+  
+  group_by(Group) %>%
+  mutate(sum_species_w_accessions = sum(one_or_more_accession)) %>%
+  add_tally %>%
+  mutate(proportion_species_conserved = sum_species_w_accessions / n) %>%
+  ungroup()
+
+gap_analysis_df_by_province_3 <- gap_analysis_df_by_province_2 %>%
+  distinct(Group, .keep_all = TRUE)
+
+S <- ggplot(gap_analysis_df_by_province_3, aes(x = Group,
+                                               y = proportion_species_conserved)) +
+  geom_bar(stat = "identity") + 
+  theme_bw() +
+  coord_flip() +
+  ylab("Proportion of CWRs Represented in Garden Collections") + xlab("") +
+  scale_y_continuous(labels = function(x) paste0(x*100, "%"), limits = c(0, 1)) +
+  theme(axis.text.x = element_text(size = 14),
+        axis.text.y = element_text(size = 14), 
+        axis.title.x = element_text(size = 14))
+S
+
+# across all taxa
+gap_analysis_df_by_province_4 <- gap_analysis_df_by_province_2 %>%
+  add_tally(name = "total_num_CWRs") %>%
+  mutate(total_proportion_with_an_accession = sum(one_or_more_accession / 
+                                                    total_num_CWRs)) %>%
+  mutate(CWR = as_factor("All CWRs")) %>%
+  slice(1)
+
+SS <- ggplot(gap_analysis_df_by_province_4, aes(x = CWR, 
+                                                y = total_proportion_with_an_accession)) +
+  geom_bar(stat = "identity") + 
+  theme_bw() +
+  coord_flip() +
+  ylab("Proportion of CWRs Represented in Garden Collections") + xlab("") +
+  scale_y_continuous(labels = function(x) paste0(x*100, "%"), limits = c(0, 1))
+SS
 
 
 ################################
 # which taxa did we not do a gap analysis on because we lacked any GBIF data?
 anti_join_missing_cwrs <- anti_join(cwr_list, gap_analysis_df_by_province, by = c("sci_name" = "species"))
 # write.csv(anti_join_missing_cwrs, "./Output_Data_and_Files/anti_join_missing_cwrs.csv")
+
+################################
+# see the distribution of number of CWRs in each garden
+garden_accessions <- province_gap_table %>%
+  filter(!is.na(garden)) %>%
+  group_by(garden) %>%
+  add_tally() %>%
+  distinct(garden, .keep_all=TRUE) %>%
+  ungroup() %>%
+  dplyr::select(garden, n)
+
+U <- ggplot(garden_accessions) +
+  geom_histogram(aes(n), breaks=c(0, 1000, 2000, 3000, 4000, 5000, 
+                                  6000, 7000, 8000, 9000, 10000)) + 
+  theme_bw() +
+  labs(x = "Number of CWR Accessions", y = "Number of Gardens")
+U
+
+
+##################
+
+# determine the number of unique crop types
+
+num_crops <- province_gap_table %>%
+  distinct(crop)
+
+
+
+
+
+
+
+
+
+
+
+
 
 ################################
 #   Amelanchier Case Study     #
@@ -426,7 +480,6 @@ saskatoon_cwr_list <- cwr_list %>%
   filter(Crop == "Saskatoon")
 
 # Gap Analysis By Province
-# Need to run this across all taxa
 
 saskatoon_province_gap_table <- province_gap_table %>%
   filter(crop == "Saskatoon")
@@ -780,29 +833,4 @@ for(i in 1:nrow(saskatoon_cwr_list)) {
 plot_ecoregions[c(5, 6, 8, 11, 12, 15)] <- NULL # remove species w no range data
 print(do.call(grid.arrange,plot_ecoregions))
 
-################################################
-# Differences by Garden
-################################################
-garden_accessions <- province_gap_table %>%
-  filter(!is.na(garden)) %>%
-  group_by(garden) %>%
-  add_tally() %>%
-  distinct(garden, .keep_all=TRUE) %>%
-  ungroup() %>%
-  dplyr::select(garden, n)
-
-U <- ggplot(garden_accessions) +
-  geom_histogram(aes(n), breaks=c(0, 1000, 2000, 3000, 4000, 5000, 
-                                  6000, 7000, 8000, 9000, 10000)) + 
-  theme_bw() +
-  labs(x = "Number of CWR Accessions", y = "Number of Gardens")
-U
-
-
-##################
-
-# number of crops
-
-num_crops <- province_gap_table %>%
- distinct(crop)
 
