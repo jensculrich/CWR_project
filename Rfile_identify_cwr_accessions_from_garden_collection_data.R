@@ -1,8 +1,8 @@
 ##GOAL: Compare Botanical Garden accession list with our Master Canadian CWR list
 ##END-RESULT: A list of all CWR accessions from Botanical Garden
 
-setwd("~/Desktop/RES500/CWR project")
-master_list <- read.csv("CWR_Master_list.csv")
+# read list of CWR taxa
+master_list <- read.csv(".Input_Data_and_Files/master_list_apr_3.csv")
 
 #read data for whichever garden you want to compare
 rbg<- read.csv("RBG_all.csv")
