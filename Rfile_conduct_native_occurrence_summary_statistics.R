@@ -19,7 +19,7 @@ library(tigris)
 
 ######################################################################################
 
-# Load required data and shapefiles for building reactive maps and data tables
+# Load required data and shapefiles for plotting occurrence maps and data tables
 cwr_list <- read.csv("./Input_Data_and_Files/master_list_apr_3.csv")
 
 canada_ecoregions_geojson <- st_read("./Geo_Data/canada_ecoregions_clipped.geojson", quiet = TRUE)
